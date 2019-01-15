@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="algorithm,">
 
 
 
@@ -79,14 +79,18 @@
 
 
 
+<meta name="description" content="relation between MMD and densityMMD: first-order informationDensity: second-order information, the larger variance, the sparser, the small variance, the densercombination of MMD and density: my unders">
+<meta name="keywords" content="algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GMM">
+<meta property="og:title" content="MMD and density">
 <meta property="og:url" content="http://yoursite.com/2019/01/15/GMM/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="relation between MMD and densityMMD: first-order informationDensity: second-order information, the larger variance, the sparser, the small variance, the densercombination of MMD and density: my unders">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-15T02:31:01.492Z">
+<meta property="og:updated_time" content="2019-01-15T04:04:37.188Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GMM">
+<meta name="twitter:title" content="MMD and density">
+<meta name="twitter:description" content="relation between MMD and densityMMD: first-order informationDensity: second-order information, the larger variance, the sparser, the small variance, the densercombination of MMD and density: my unders">
 
 
 
@@ -122,7 +126,7 @@
 
 
 
-  <title>GMM | Hexo</title>
+  <title>MMD and density | Hexo</title>
   
 
 
@@ -246,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">GMM</h1>
+          <h1 class="post-title" itemprop="name headline">MMD and density</h1>
         
 
         <div class="post-meta">
@@ -296,7 +300,12 @@
       
 
       
-        
+        <h3 id="relation-between-MMD-and-density"><a href="#relation-between-MMD-and-density" class="headerlink" title="relation between MMD and density"></a>relation between MMD and density</h3><p>MMD: first-order information<br>Density: second-order information, the larger variance, the sparser, the small variance, the denser<br>combination of MMD and density: my understanding is that we can obtain MMD, density, prior weights from GMM, when GMM can be calculated from ground-trurh label of dataset A and pseudo label of dataset B </p>
+<h3 id="GMM"><a href="#GMM" class="headerlink" title="GMM"></a>GMM</h3><p>$ Gaussian Mixed Model: A Gaussian mixture model is a probabilistic model that assumes all the data points are generated from a mixture of a finite number of Gaussian distributions with unknown parameters. One can think of mixture models as generalizing k-means clustering to incorporate information about the covariance structure of the data as well as the centers of the latent Gaussians.</p>
+<p>$applied to clusters and density estimation</p>
+<p>$differentce between k-means and GMM: k-means notes that each point is assigned to different clusters, while GMM can calculate the probabiliy of each point belong to each clusters.</p>
+<p>$import parameters of GMM: K Gaussion models, also K clusters, \pi_k, \mu_k, \Sigma_k<br>\displaystyle<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) \<br>     &amp; = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</p>
+
       
     </div>
     
@@ -310,6 +319,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/algorithm/" rel="tag"># algorithm</a>
+          
+        </div>
       
 
       
@@ -380,8 +395,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -405,6 +429,15 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
 
           </nav>
 
@@ -423,6 +456,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#relation-between-MMD-and-density"><span class="nav-number">1.</span> <span class="nav-text">relation between MMD and density</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GMM"><span class="nav-number">2.</span> <span class="nav-text">GMM</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
