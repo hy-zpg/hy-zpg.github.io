@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="1### relation between MMD and density dataset A and pseudo label of dataset B  MMD: first-order informationDensity: second-order information, the larger variance, the sparser, the small variance, the">
+<meta name="description" content="relation between MMD and densitydataset A and pseudo label of dataset B  1$ MMD: first-order information Density: second-order information, the larger variance, the sparser, the small variance, the de">
 <meta name="keywords" content="algorithm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MMD and density">
 <meta property="og:url" content="http://yoursite.com/2019/01/15/GMM/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1### relation between MMD and density dataset A and pseudo label of dataset B  MMD: first-order informationDensity: second-order information, the larger variance, the sparser, the small variance, the">
+<meta property="og:description" content="relation between MMD and densitydataset A and pseudo label of dataset B  1$ MMD: first-order information Density: second-order information, the larger variance, the sparser, the small variance, the de">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-15T04:10:23.833Z">
+<meta property="og:updated_time" content="2019-01-15T04:12:37.555Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MMD and density">
-<meta name="twitter:description" content="1### relation between MMD and density dataset A and pseudo label of dataset B  MMD: first-order informationDensity: second-order information, the larger variance, the sparser, the small variance, the">
+<meta name="twitter:description" content="relation between MMD and densitydataset A and pseudo label of dataset B  1$ MMD: first-order information Density: second-order information, the larger variance, the sparser, the small variance, the de">
 
 
 
@@ -300,13 +300,14 @@
       
 
       
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### relation between MMD and density</span></span><br></pre></td></tr></table></figure>
-<p>dataset A and pseudo label of dataset B </p>
-<p>MMD: first-order information<br>Density: second-order information, the larger variance, the sparser, the small variance, the denser<br>combination of MMD and density: my understanding is that we can obtain MMD, density, prior weights from GMM, when GMM can be calculated from ground-trurh label of </p>
-<h3 id="GMM"><a href="#GMM" class="headerlink" title="GMM"></a>GMM</h3><p>$ Gaussian Mixed Model: A Gaussian mixture model is a probabilistic model that assumes all the data points are generated from a mixture of a finite number of Gaussian distributions with unknown parameters. One can think of mixture models as generalizing k-means clustering to incorporate information about the covariance structure of the data as well as the centers of the latent Gaussians.</p>
-<p>$applied to clusters and density estimation</p>
-<p>$differentce between k-means and GMM: k-means notes that each point is assigned to different clusters, while GMM can calculate the probabiliy of each point belong to each clusters.</p>
-<p>$import parameters of GMM: K Gaussion models, also K clusters, \pi_k, \mu_k, \Sigma_k<br>\displaystyle<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) \<br>     &amp; = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</p>
+        <h3 id="relation-between-MMD-and-density"><a href="#relation-between-MMD-and-density" class="headerlink" title="relation between MMD and density"></a>relation between MMD and density</h3><p>dataset A and pseudo label of dataset B </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ MMD: first-order information</span><br></pre></td></tr></table></figure>
+<p>Density: second-order information, the larger variance, the sparser, the small variance, the denser<br>combination of MMD and density: my understanding is that we can obtain MMD, density, prior weights from GMM, when GMM can be calculated from ground-trurh label of </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### GMM</span></span><br></pre></td></tr></table></figure>
+<p>$ Gaussian Mixed Model: A Gaussian mixture model is a probabilistic model that assumes all the data points are generated from a mixture of a finite number of Gaussian distributions with unknown parameters. One can think of mixture models as generalizing k-means clustering to incorporate information about the covariance structure of the data as well as the centers of the latent Gaussians.</p>
+<p>$ applied to clusters and density estimation</p>
+<p>$ differentce between k-means and GMM: k-means notes that each point is assigned to different clusters, while GMM can calculate the probabiliy of each point belong to each clusters.</p>
+<p>$ import parameters of GMM: K Gaussion models, also K clusters, \pi_k, \mu_k, \Sigma_k<br>\displaystyle<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) \<br>     &amp; = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</p>
 
       
     </div>
@@ -468,7 +469,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#GMM"><span class="nav-number">1.</span> <span class="nav-text">GMM</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#relation-between-MMD-and-density"><span class="nav-number">1.</span> <span class="nav-text">relation between MMD and density</span></a></li></ol></div>
             
 
           </div>
