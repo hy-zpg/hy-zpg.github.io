@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Relation between MMD and Density MMDfirst-order information  Densitysecond-order information, the larger variance, the sparser, the small variance, the denser    $ combination of MMD and density: my u">
+<meta name="description" content="Relation between MMD and Density12345671. MMDfirst-order information2. Densitysecond-order information, the larger variance, the sparser, the small variance, the denser $ combination of MMD and densit">
 <meta name="keywords" content="algorithm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MMD and Density">
 <meta property="og:url" content="http://yoursite.com/2019/01/15/GMM/index.html">
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
-<meta property="og:description" content="Relation between MMD and Density MMDfirst-order information  Densitysecond-order information, the larger variance, the sparser, the small variance, the denser    $ combination of MMD and density: my u">
+<meta property="og:description" content="Relation between MMD and Density12345671. MMDfirst-order information2. Densitysecond-order information, the larger variance, the sparser, the small variance, the denser $ combination of MMD and densit">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-17T08:30:32.019Z">
+<meta property="og:updated_time" content="2019-01-17T08:34:07.249Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MMD and Density">
-<meta name="twitter:description" content="Relation between MMD and Density MMDfirst-order information  Densitysecond-order information, the larger variance, the sparser, the small variance, the denser    $ combination of MMD and density: my u">
+<meta name="twitter:description" content="Relation between MMD and Density12345671. MMDfirst-order information2. Densitysecond-order information, the larger variance, the sparser, the small variance, the denser $ combination of MMD and densit">
 
 
 
@@ -300,18 +300,8 @@
       
 
       
-        <h2 id="Relation-between-MMD-and-Density"><a href="#Relation-between-MMD-and-Density" class="headerlink" title="Relation between MMD and Density"></a>Relation between MMD and Density</h2><ol>
-<li><p>MMD<br>first-order information</p>
-</li>
-<li><p>Density<br>second-order information, the larger variance, the sparser, the small variance, the denser </p>
-</li>
-</ol>
-<p>$ combination of MMD and density: my understanding is that we can obtain MMD, density, prior weights from GMM, when GMM can be calculated from ground-trurh label of </p>
-<h3 id="GMM"><a href="#GMM" class="headerlink" title="GMM"></a>GMM</h3><p>$ Gaussian Mixed Model: A Gaussian mixture model is a probabilistic model that assumes all the data points are generated from a mixture of a finite number of Gaussian distributions with unknown parameters. One can think of mixture models as generalizing k-means clustering to incorporate information about the covariance structure of the data as well as the centers of the latent Gaussians.</p>
-<p>$ Applied to clusters and density estimation</p>
-<p>$ Differentce between k-means and GMM: k-means notes that each point is assigned to different clusters, while GMM can calculate the probabiliy of each point belong to each clusters.</p>
-<p>$ Import parameters of GMM: K Gaussion models, also K clusters, \pi_k, \mu_k, \Sigma_k</p>
-<p>‘’‘<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}<br>’‘’</p>
+        <h2 id="Relation-between-MMD-and-Density"><a href="#Relation-between-MMD-and-Density" class="headerlink" title="Relation between MMD and Density"></a>Relation between MMD and Density</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1. MMD</span><br><span class="line">first-order information</span><br><span class="line"></span><br><span class="line">2. Density</span><br><span class="line">second-order information, the larger variance, the sparser, the small variance, the denser </span><br><span class="line"></span><br><span class="line">$ combination of MMD and density: my understanding is that we can obtain MMD, density, prior weights from GMM, when GMM can be calculated from ground-trurh label of</span><br></pre></td></tr></table></figure>
+<h3 id="GMM"><a href="#GMM" class="headerlink" title="GMM"></a>GMM</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ Gaussian Mixed Model: A Gaussian mixture model is a probabilistic model that assumes all the data points are generated from a mixture of a finite number of Gaussian distributions with unknown parameters. One can think of mixture models as generalizing k-means clustering to incorporate information about the covariance structure of the data as well as the centers of the latent Gaussians.</span><br><span class="line"></span><br><span class="line">$ Applied to clusters and density estimation</span><br><span class="line"></span><br><span class="line">$ Differentce between k-means and GMM: k-means notes that each point is assigned to different clusters, <span class="keyword">while</span> GMM can calculate the probabiliy of each point belong to each clusters.</span><br><span class="line"></span><br><span class="line">$ Import parameters of GMM: K Gaussion models, also K clusters, \pi_k, \mu_k, \Sigma_k</span><br><span class="line"></span><br><span class="line">‘’‘</span><br><span class="line">\begin&#123;aligned&#125;</span><br><span class="line">p(x) &amp; = \sum_&#123;k=1&#125;^K p(k)p(x|k) = \sum_&#123;k=1&#125;^K \pi_k \mathcal&#123;N&#125;(x|\mu_k, \Sigma_k)</span><br><span class="line">\end&#123;aligned&#125;</span><br><span class="line">’‘’</span><br></pre></td></tr></table></figure>
 
       
     </div>
