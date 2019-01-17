@@ -309,8 +309,7 @@
 <li>input data appear inf<br>$ result: the parameters of model no longer updated </li>
 </ol>
 <h3 id="Cross-entropy-loss-with-missing-labels"><a href="#Cross-entropy-loss-with-missing-labels" class="headerlink" title="Cross_entropy_loss with missing labels"></a>Cross_entropy_loss with missing labels</h3><p>$ leveraging fixed zero array or ones array as ground truth and generating mask in loss function</p>
-<pre><code class="bash"><span class="comment"># leveraging zero arrays</span>
-def mask_cross_entropy_loss(y_true,y_pred):
+<pre><code class="bash">def mask_cross_entropy_loss(y_true,y_pred):
     mask=K.all(K.equal(y_true,0),axis=-1)
     mask=1-K.cast(mask,K.floatx())
     loss = K.categorical_crossentropy(y_true,y_pred)*mask
