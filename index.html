@@ -562,7 +562,9 @@
       
         
           
-            
+            <h2 id="one-hot-labels-preprocessing"><a href="#one-hot-labels-preprocessing" class="headerlink" title="one-hot labels preprocessing"></a>one-hot labels preprocessing</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ weighting samples with confidence score</span><br><span class="line">index = np.ragmax(predicted_result,axis=1)</span><br><span class="line">arg = np_utils.to_categorical(index,classes)</span><br><span class="line">weighted_one_hot=predicted_result*arg</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ selection &amp;&amp; weighting samples with confidence score</span><br><span class="line">weighted_selected_one_hot=np.where(predicted_result&gt;k,predicted_result,0)</span><br></pre></td></tr></table></figure>
+
           
         
       
@@ -1022,7 +1024,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
