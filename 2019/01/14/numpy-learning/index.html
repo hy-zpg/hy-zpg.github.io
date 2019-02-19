@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
 <meta property="og:description" content="one-hot labels preprocessing1234$ weighting samples with confidence scoreindex = np.ragmax(predicted_result,axis=1)arg = np_utils.to_categorical(index,classes)weighted_one_hot=predicted_result*arg 12$">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-16T09:23:49.964Z">
+<meta property="og:updated_time" content="2019-02-18T13:09:40.581Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Numpy learning">
 <meta name="twitter:description" content="one-hot labels preprocessing1234$ weighting samples with confidence scoreindex = np.ragmax(predicted_result,axis=1)arg = np_utils.to_categorical(index,classes)weighted_one_hot=predicted_result*arg 12$">
@@ -385,6 +385,7 @@
       
         <h2 id="one-hot-labels-preprocessing"><a href="#one-hot-labels-preprocessing" class="headerlink" title="one-hot labels preprocessing"></a>one-hot labels preprocessing</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ weighting samples with confidence score</span><br><span class="line">index = np.ragmax(predicted_result,axis=1)</span><br><span class="line">arg = np_utils.to_categorical(index,classes)</span><br><span class="line">weighted_one_hot=predicted_result*arg</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ selection &amp;&amp; weighting samples with confidence score</span><br><span class="line">weighted_selected_one_hot=np.where(predicted_result&gt;k,predicted_result,0)</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ extending vector into matrix</span><br><span class="line">xx = [np.full(classes,value) <span class="keyword">for</span> value <span class="keyword">in</span> x]</span><br></pre></td></tr></table></figure>
 
       
     </div>
