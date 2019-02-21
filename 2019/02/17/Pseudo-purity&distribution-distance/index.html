@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="Purity based density &amp;amp; distribution distance based GMMPurity based density reference  ECCV 2018  adding url links: CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images  original r">
+<meta name="description" content="Purity based density &amp;amp; distribution distance based GMMPurity based density reference  ECCV 2018  CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images   original reference Science">
 <meta name="keywords" content="pesudo labels">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pseudo purity &amp;&amp; dataset distribution distance">
 <meta property="og:url" content="https://www.yanhong.me/2019/02/17/Pseudo-purity&distribution-distance/index.html">
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
-<meta property="og:description" content="Purity based density &amp;amp; distribution distance based GMMPurity based density reference  ECCV 2018  adding url links: CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images  original r">
+<meta property="og:description" content="Purity based density &amp;amp; distribution distance based GMMPurity based density reference  ECCV 2018  CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images   original reference Science">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-21T07:31:09.527Z">
+<meta property="og:updated_time" content="2019-02-21T07:39:52.222Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pseudo purity &amp;&amp; dataset distribution distance">
-<meta name="twitter:description" content="Purity based density &amp;amp; distribution distance based GMMPurity based density reference  ECCV 2018  adding url links: CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images  original r">
+<meta name="twitter:description" content="Purity based density &amp;amp; distribution distance based GMMPurity based density reference  ECCV 2018  CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images   original reference Science">
 
 
 
@@ -384,47 +384,45 @@
 
       
         <h2 id="Purity-based-density-amp-distribution-distance-based-GMM"><a href="#Purity-based-density-amp-distribution-distance-based-GMM" class="headerlink" title="Purity based density &amp; distribution distance based GMM"></a>Purity based density &amp; distribution distance based GMM</h2><h3 id="Purity-based-density"><a href="#Purity-based-density" class="headerlink" title="Purity based density"></a>Purity based density</h3><blockquote>
-<p>reference  ECCV 2018</p>
+<p>reference  ECCV 2018 <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Sheng_Guo_CurriculumNet_Learning_from_ECCV_2018_paper.pdf" target="_blank" rel="noopener"> CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images</a></p>
 </blockquote>
-<p>adding url links:<br><a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Sheng_Guo_CurriculumNet_Learning_from_ECCV_2018_paper.pdf" target="_blank" rel="noopener"> CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images</a></p>
 <blockquote>
-<p>original reference Science 2004</p>
+<p>original reference Science 2004 <a href="http://sites.psu.edu/mcnl/files/2017/03/9-2dhti48.pdf" target="_blank" rel="noopener">Clustering by fast search and find of density peaks</a></p>
 </blockquote>
-<p>adding url link:<br><a href="http://sites.psu.edu/mcnl/files/2017/03/9-2dhti48.pdf" target="_blank" rel="noopener">Clustering by fast search and find of density peaks</a></p>
 <h4 id="creativity"><a href="#creativity" class="headerlink" title="creativity"></a>creativity</h4><ul>
 <li>leveraging data distribution density in feature space to evaluate the complexity of the data<br>  ours – evaluating the purity of pseudo label data by data density in feature space</li>
 <li>noisy data can be regared as regularied method to improve the model generalization<br>  ours – pesudo labels can improve the model generalization </li>
 </ul>
 <h4 id="technical-detail"><a href="#technical-detail" class="headerlink" title="technical detail"></a>technical detail</h4><p>Density based clustering algorithm</p>
-<pre><code>* generating features
-* calculating Euclidean distance D_ij
-  * calculating local density of each image
-  * calculating distance of each image: maximun local distance is regarded as cluster centre, image with smaller distance between its distance and cluster centre represents that its label have high confidence 
-</code></pre><h3 id="Distribution-distance-based-GMM"><a href="#Distribution-distance-based-GMM" class="headerlink" title="Distribution distance based GMM"></a>Distribution distance based GMM</h3><h4 id="Clustring-based-GMM"><a href="#Clustring-based-GMM" class="headerlink" title="Clustring based GMM"></a>Clustring based GMM</h4><p>related code</p>
 <ul>
+<li>generating features</li>
+<li>calculating Euclidean distance D_ij</li>
+<li>calculating local density of each image</li>
+<li>calculating distance of each image: maximun local distance is regarded as cluster centre, image with smaller distance between its distance and cluster centre represents that its label have high confidence </li>
+</ul>
+<h3 id="Distribution-distance-based-GMM"><a href="#Distribution-distance-based-GMM" class="headerlink" title="Distribution distance based GMM"></a>Distribution distance based GMM</h3><h4 id="Clustring-based-GMM"><a href="#Clustring-based-GMM" class="headerlink" title="Clustring based GMM"></a>Clustring based GMM</h4><h5 id="GMM-with-EM"><a href="#GMM-with-EM" class="headerlink" title="GMM with EM"></a>GMM with EM</h5><ul>
+<li><p>original definition<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}<br>\pi_k  represent the possibility of sample belong to kth category</p>
+</li>
+<li><p>new definition for coding<br>\begin{aligned}<br>\sum_{k} z_k = 1<br>\end{aligned}</p>
+</li>
+</ul>
+<h5 id="Related-code"><a href="#Related-code" class="headerlink" title="Related code"></a>Related code</h5><ul>
 <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html" target="_blank" rel="noopener">sklearn.mixture.GaussianMixture</a></li>
 </ul>
 <h4 id="Data-distribution-distance-EMD"><a href="#Data-distribution-distance-EMD" class="headerlink" title="Data distribution distance EMD"></a>Data distribution distance EMD</h4><blockquote>
-<p>reference IJCV 2000</p>
+<p>reference <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cui_Large_Scale_Fine-Grained_CVPR_2018_paper.pdf" target="_blank" rel="noopener"> Large Scale Fine-Grained Categorization and Domain-Specific Transfer Learning</a><br>original reference <a href="http://robotics.stanford.edu/~rubner/papers/rubnerIjcv00.pdf" target="_blank" rel="noopener">The Earth Mover’s Distance as a Metric for Image Retrieval</a></p>
 </blockquote>
-<p>$ adding url links<br><a href="http://robotics.stanford.edu/~rubner/papers/rubnerIjcv00.pdf" target="_blank" rel="noopener">The Earth Mover’s Distance as a Metric for Image Retrieval</a></p>
 <ul>
-<li><p>EDM: Signature matching can be naturally cast as a transportation problem by de fining one signature as the supplier and the other as the consumer, and by setting the cost for a supplier-consumer pair to equal the ground distance between an element in the fi rst signature and an element in the second</p>
+<li><p>EDM definition: Signature matching can be naturally cast as a transportation problem by de fining one signature as the supplier and the other as the consumer, and by setting the cost for a supplier-consumer pair to equal the ground distance between an element in the fi rst signature and an element in the second</p>
 </li>
-<li><p>signature<br>\begin{aligned}<br>s= (feature,weights)<br>\end{aligned}</p>
+<li><p>EMD data signature:<br>\begin{aligned}<br>s= (feature,weights)<br>\end{aligned}</p>
 </li>
 <li><p>related code</p>
 <ul>
-<li><a href="https://pypi.org/project/pyemd/" target="_blank" rel="noopener">pyemd-1D data</a><br>*<a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.wasserstein_distance.html" target="_blank" rel="noopener">scipy.atats.wasserstein_distance</a></li>
+<li><a href="https://pypi.org/project/pyemd/" target="_blank" rel="noopener">pyemd-1D data</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.wasserstein_distance.html" target="_blank" rel="noopener">scipy.atats.wasserstein_distance</a></li>
 </ul>
 </li>
-</ul>
-<h2 id="Purity-and-distribution-distance-based-gmm"><a href="#Purity-and-distribution-distance-based-gmm" class="headerlink" title="Purity and distribution distance based gmm"></a>Purity and distribution distance based gmm</h2><h3 id="GMM-with-EM"><a href="#GMM-with-EM" class="headerlink" title="GMM with EM"></a>GMM with EM</h3><ul>
-<li>original definition<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</li>
-</ul>
-<p>\pi_k  represent the possibility of sample belong to kth category</p>
-<ul>
-<li>new definition for coding<br>\begin{aligned}<br>\sum_{k} z_k = 1<br>\end{aligned}</li>
 </ul>
 
       
@@ -619,7 +617,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Purity-based-density-amp-distribution-distance-based-GMM"><span class="nav-number">1.</span> <span class="nav-text">Purity based density &amp; distribution distance based GMM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Purity-based-density"><span class="nav-number">1.1.</span> <span class="nav-text">Purity based density</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#creativity"><span class="nav-number">1.1.1.</span> <span class="nav-text">creativity</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#technical-detail"><span class="nav-number">1.1.2.</span> <span class="nav-text">technical detail</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Distribution-distance-based-GMM"><span class="nav-number">1.2.</span> <span class="nav-text">Distribution distance based GMM</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Clustring-based-GMM"><span class="nav-number">1.2.1.</span> <span class="nav-text">Clustring based GMM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Data-distribution-distance-EMD"><span class="nav-number">1.2.2.</span> <span class="nav-text">Data distribution distance EMD</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Purity-and-distribution-distance-based-gmm"><span class="nav-number">2.</span> <span class="nav-text">Purity and distribution distance based gmm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GMM-with-EM"><span class="nav-number">2.1.</span> <span class="nav-text">GMM with EM</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Purity-based-density-amp-distribution-distance-based-GMM"><span class="nav-number">1.</span> <span class="nav-text">Purity based density &amp; distribution distance based GMM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Purity-based-density"><span class="nav-number">1.1.</span> <span class="nav-text">Purity based density</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#creativity"><span class="nav-number">1.1.1.</span> <span class="nav-text">creativity</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#technical-detail"><span class="nav-number">1.1.2.</span> <span class="nav-text">technical detail</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Distribution-distance-based-GMM"><span class="nav-number">1.2.</span> <span class="nav-text">Distribution distance based GMM</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Clustring-based-GMM"><span class="nav-number">1.2.1.</span> <span class="nav-text">Clustring based GMM</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#GMM-with-EM"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">GMM with EM</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Related-code"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">Related code</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Data-distribution-distance-EMD"><span class="nav-number">1.2.2.</span> <span class="nav-text">Data distribution distance EMD</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
