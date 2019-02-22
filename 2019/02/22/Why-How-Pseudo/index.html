@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="algorithm,">
+  <meta name="keywords" content="pesudo labels,">
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="Relation between MMD and Density12345671. MMDfirst-order information2. Densitysecond-order information, the larger variance, the sparser, the small variance, the denser $ combination of MMD and densit">
-<meta name="keywords" content="algorithm">
+<meta name="description" content="Pseudo labels in multi-task learning Pseudo data selection with density and distribution distance  Pseudo labels$ Reason   reference CurriculumNet: Weakly Supervised Learning from Large-Scale Web Ima">
+<meta name="keywords" content="pesudo labels">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MMD and Density">
-<meta property="og:url" content="https://www.yanhong.me/2019/01/15/GMM/index.html">
+<meta property="og:title" content="Why-How-Pseudo">
+<meta property="og:url" content="https://www.yanhong.me/2019/02/22/Why-How-Pseudo/index.html">
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
-<meta property="og:description" content="Relation between MMD and Density12345671. MMDfirst-order information2. Densitysecond-order information, the larger variance, the sparser, the small variance, the denser $ combination of MMD and densit">
+<meta property="og:description" content="Pseudo labels in multi-task learning Pseudo data selection with density and distribution distance  Pseudo labels$ Reason   reference CurriculumNet: Weakly Supervised Learning from Large-Scale Web Ima">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-16T09:26:30.171Z">
+<meta property="og:updated_time" content="2019-02-22T06:31:42.891Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MMD and Density">
-<meta name="twitter:description" content="Relation between MMD and Density12345671. MMDfirst-order information2. Densitysecond-order information, the larger variance, the sparser, the small variance, the denser $ combination of MMD and densit">
+<meta name="twitter:title" content="Why-How-Pseudo">
+<meta name="twitter:description" content="Pseudo labels in multi-task learning Pseudo data selection with density and distribution distance  Pseudo labels$ Reason   reference CurriculumNet: Weakly Supervised Learning from Large-Scale Web Ima">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://www.yanhong.me/2019/01/15/GMM/">
+  <link rel="canonical" href="https://www.yanhong.me/2019/02/22/Why-How-Pseudo/">
 
 
 
 
 
-  <title>MMD and Density | Hongyan's Notes</title>
+  <title>Why-How-Pseudo | Hongyan's Notes</title>
   
 
 
@@ -275,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/01/15/GMM/">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/22/Why-How-Pseudo/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hongyan">
@@ -292,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">MMD and Density</h1>
+          <h1 class="post-title" itemprop="name headline">Why-How-Pseudo</h1>
         
 
         <div class="post-meta">
@@ -304,8 +304,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-15T10:31:01+08:00">
-                2019-01-15
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-22T10:53:37+08:00">
+                2019-02-22
               </time>
             
 
@@ -383,10 +383,56 @@
       
 
       
-        <h2 id="Relation-between-MMD-and-Density"><a href="#Relation-between-MMD-and-Density" class="headerlink" title="Relation between MMD and Density"></a>Relation between MMD and Density</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1. MMD</span><br><span class="line">first-order information</span><br><span class="line"></span><br><span class="line">2. Density</span><br><span class="line">second-order information, the larger variance, the sparser, the small variance, the denser </span><br><span class="line"></span><br><span class="line">$ combination of MMD and density: my understanding is that we can obtain MMD, density, prior weights from GMM, when GMM can be calculated from ground-trurh label of</span><br></pre></td></tr></table></figure>
-<h3 id="GMM"><a href="#GMM" class="headerlink" title="GMM"></a>GMM</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ Gaussian Mixed Model: A Gaussian mixture model is a probabilistic model that assumes all the data points are generated from a mixture of a finite number of Gaussian distributions with unknown parameters. One can think of mixture models as generalizing k-means clustering to incorporate information about the covariance structure of the data as well as the centers of the latent Gaussians.</span><br><span class="line"></span><br><span class="line">$ Applied to clusters and density estimation</span><br><span class="line"></span><br><span class="line">$ Differentce between k-means and GMM: k-means notes that each point is assigned to different clusters, <span class="keyword">while</span> GMM can calculate the probabiliy of each point belong to each clusters.</span><br></pre></td></tr></table></figure>
-<p>$ Import parameters of GMM: K Gaussion models, also K clusters, \pi_k, \mu_k, \Sigma_k</p>
-<p>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</p>
+        <ul>
+<li>Pseudo labels in multi-task learning</li>
+<li>Pseudo data selection with density and distribution distance</li>
+</ul>
+<h2 id="Pseudo-labels"><a href="#Pseudo-labels" class="headerlink" title="Pseudo labels"></a>Pseudo labels</h2><p>$ Reason</p>
+<ul>
+<li><blockquote>
+<p>reference <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Sheng_Guo_CurriculumNet_Learning_from_ECCV_2018_paper.pdf" target="_blank" rel="noopener">CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images</a>, demonstrating that training a CNN from scratch using both clean and noisy data is better than just using the clean one, on the condition that the amount of pseudo data is limited.</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>reference <a href="https://arxiv.org/pdf/1609.06426.pdf" target="_blank" rel="noopener">From Facial Expression Recognition to Interpersonal Relation Prediction Zhanpeng</a>, stating explaination that pseudo data can bridge the gap between heterogeneous data.</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>reference <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Misra_Seeing_Through_the_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Seeing through the Human Reporting Bias: Visual Classifiers from Noisy Human-Centric Labels</a>, ‘what’s the all attributs of images’ versus ‘what’s the labeled attributes’, labeling missing attributes. The novalty may be regarded as a baseline (waiting to understand the detail).</p>
+</blockquote>
+</li>
+<li>data imbalance in joint training strategy, such as 20k~ pose dataset AFLW and 90k~ emotion dataset ExpW.</li>
+</ul>
+<h2 id="Pseudo-data-selection"><a href="#Pseudo-data-selection" class="headerlink" title="Pseudo data selection"></a>Pseudo data selection</h2><p>Because much noisy data can effect the model performance and even disturb the model training process, leading to poor model performance, pseudo data selection can control the ratio of pseudo data in the whole datasets.</p>
+<h3 id="Density"><a href="#Density" class="headerlink" title="Density"></a>Density</h3><ul>
+<li>reason: because clusters are easily detected by the local density of data points, in the pseudo data belong to same categoty have similar feature. Appling a density based clustering algorithm that measures the complexity of psuedo data using data distribution density in. each category.</li>
+<li>implementation detail: measuring the purity of data with pseudo label based on its distribution density in a feature space, and rank the purity to generate pseudo weights, pseudo data with higher density is assigned larger weights, while smaller weights are assigned to low-density pseudo data.</li>
+</ul>
+<h3 id="Distribution-distance"><a href="#Distribution-distance" class="headerlink" title="Distribution distance"></a>Distribution distance</h3><ul>
+<li>reason: <ul>
+<li>‘transfer learning is one important method in machine learning, it can relax the condition of the independent identical distribution in train dataset and test dataset, so that knowledge can be transfered from source domain to target domain’,’its main application includes domain adaptation and multi-domain tranferation’.</li>
+<li>instance-based domain adaption: calculating the distance between source domain data and target domain data, then adjusting the weights of target domain instance so that the target data can be matched with source domain data. In detail, the smaller distance, the higher similarity.</li>
+</ul>
+</li>
+<li>implementation detail: <ol>
+<li>GMM<ul>
+<li>reason:</li>
+<li>implementation: generating Gaussian Mixture models (GMM) based on A1 (data with pseuodo label) and B (data with ground truth) in each categoty. Assuming GMM has K Gaussian models, we obtain G(A1_1), …, G(A1_K), G(B1_1), …, G(B1_K); </li>
+</ul>
+</li>
+<li>EMD<ul>
+<li>reason: &gt;reference <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cui_Large_Scale_Fine-Grained_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Large Scale Fine-Grained Categorization and Domain-Specific Transfer Learning</a>,  which takes domain scale into account by adding a scale factor. In this paper, transfer learning can be viewed as moving a set of images from the source domain S to the target domain T. The work needed to be done by moving an image to another can be defined as their feature Euaullean distance, so the distance between two domains can be defined as the least amount of total work needed. This definition of domain similarity can be calculated by the Earth Mover’s Distance (EMD). <ul>
+<li>original EMD equation<br>\begin{aligned}<br>EMD(P,Q)={\frac {\sum _{i=1}^{m}\sum <em>{j=1}^{n}f</em>{i,j}d_{i,j}}{\sum _{i=1}^{m}\sum <em>{j=1}^{n}f</em>{i,j}}}}<br>P={(p_{1},w_{p1}),(p_{2},w_{p2}),…,(p_{m},w_{pm})}<br>Q={(q_{1},w_{q1}),(q_{2},w_{q2}),…,(q_{n},w_{qn})}<br>\end{aligned}</li>
+<li>reference paper EMD application<br>\begin{aligned}<br>d(S,T)=EMD(S,T)={\frac {\sum _{i=1}^{m}\sum <em>{j=1}^{n}f</em>{i,j}d_{i,j}}{\sum _{i=1}^{m}\sum <em>{j=1}^{n}f</em>{i,j}}}}<br>S={(s_{1},w_{s1}),(s_{2},w_{s2}),…,(s_{m},w_{sm})}<br>T={(t_{1},w_{t1}),(t_{2},w_{t2}),…,(t_{n},w_{tn})}<br>D=[d_{i,j}] = || g(s_{i}) − g(t_{j})||<br>g(s_{i}) = mean value of image features in category i from source domain<br>g(t_{i}) = mean value of image features in category i from target domain<br>sim(S, T) = e−γd(S,T )<br>\end{aligned}</li>
+<li>EMD application for pseudo data selection<br>\begin{aligned}<br>d(P,G)=EMD(S,T)={\frac {\sum _{i=1}^{m}\sum <em>{j=1}^{n}f</em>{i,j}d_{i,j}}{\sum _{i=1}^{m}\sum <em>{j=1}^{n}f</em>{i,j}}}}<br>P={(p_{1},w_{p1}),(p_{2},w_{p2}),…,(p_{m},w_{pm})}<br>G={(g_{1},w_{g1}),(g_{2},w_{g2}),…,(g_{n},w_{gn})}<br>D=[d_{i,j}] = || g(p_{i}) − g(g_{j})||<br>g(p) = mean value of image features in specific cluster from the same category in source domain<br>g(g_{i}) = mean value of image features in cluster i from the same category in target domain<br>sim(S, T) = e−γd(S,T )<br>\end{aligned</li>
+</ul>
+</li>
+<li>implementation: calculating the distance between G(A1_i) and the whole cluster in G(B1). As for distance calculation with EMD method, we obtain P={G(A1_i)_mean,G(A1_i)_probs} and Q={[G(B1_1)_mean, …, G(B1_K)_mean],[G(B1_1)_probs, …, G(B1_K)_probs]}, so we can calculate distance vector D=(emd_1,emd_k), which is used for obtaining distribution weights weights_g.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
 
       
     </div>
@@ -404,7 +450,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/algorithm/" rel="tag"># algorithm</a>
+            <a href="/tags/pesudo-labels/" rel="tag"># pesudo labels</a>
           
         </div>
       
@@ -417,8 +463,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/14/numpy-learning/" rel="next" title="Numpy learning">
-                <i class="fa fa-chevron-left"></i> Numpy learning
+              <a href="/2019/02/21/Density-Distribution/" rel="next" title="Density & Distribution">
+                <i class="fa fa-chevron-left"></i> Density & Distribution
               </a>
             
           </div>
@@ -426,10 +472,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/16/cross-entropy-loss/" rel="prev" title="Cross_entropy_loss">
-                Cross_entropy_loss <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -584,7 +626,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Relation-between-MMD-and-Density"><span class="nav-number">1.</span> <span class="nav-text">Relation between MMD and Density</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GMM"><span class="nav-number">1.1.</span> <span class="nav-text">GMM</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Pseudo-labels"><span class="nav-number">1.</span> <span class="nav-text">Pseudo labels</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pseudo-data-selection"><span class="nav-number">2.</span> <span class="nav-text">Pseudo data selection</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Density"><span class="nav-number">2.1.</span> <span class="nav-text">Density</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Distribution-distance"><span class="nav-number">2.2.</span> <span class="nav-text">Distribution distance</span></a></li></ol></li></ol></div>
             
 
           </div>
