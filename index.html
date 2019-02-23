@@ -429,7 +429,7 @@
 <ul>
 <li><p>reason: &gt;reference <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cui_Large_Scale_Fine-Grained_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Large Scale Fine-Grained Categorization and Domain-Specific Transfer Learning</a>,  which takes domain scale into account by adding a scale factor. In this paper, transfer learning can be viewed as moving a set of images from the source domain S to the target domain T. The work needed to be done by moving an image to another can be defined as their feature Euaullean distance, so the distance between two domains can be defined as the least amount of total work needed. This definition of domain similarity can be calculated by the Earth Mover’s Distance (EMD). </p>
 <ul>
-<li><p>original EMD equation<br>\begin{aligned}<br>EMD(P,Q)=\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}=\min \left{\ \sum_{i=1}^{m}w_{pi},\quad \sum_{j=1}^{n}w_{qj}\ \right}<br>\end{aligned}</p>
+<li><p>original EMD equation<br>\begin{aligned}<br>EMD(P,Q)=\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}=\min \sum_{i=1}^{m}w_{pi},\quad \sum_{j=1}^{n}w_{qj}<br>\end{aligned}</p>
 <p>\begin{aligned}<br>P={(p_{1},w_{p1}),(p_{2},w_{p2}),…,(p_{m},w_{pm})}<br>\end{aligned}</p>
 <p>\begin{aligned}<br>Q={(q_{1},w_{q1}),(q_{2},w_{q2}),…,(q_{n},w_{qn})}<br>\end{aligned}</p>
 </li>
