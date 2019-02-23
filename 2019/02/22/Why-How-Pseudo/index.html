@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
 <meta property="og:description" content="Pseudo labels in multi-task learning Pseudo data selection with density and distribution distance  Pseudo labels$ Reason   reference CurriculumNet: Weakly Supervised Learning from Large-Scale Web Ima">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-23T12:08:44.331Z">
+<meta property="og:updated_time" content="2019-02-23T12:42:09.091Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Why-How-Pseudo">
 <meta name="twitter:description" content="Pseudo labels in multi-task learning Pseudo data selection with density and distribution distance  Pseudo labels$ Reason   reference CurriculumNet: Weakly Supervised Learning from Large-Scale Web Ima">
@@ -425,13 +425,11 @@
 <ul>
 <li><p>reason: &gt;reference <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cui_Large_Scale_Fine-Grained_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Large Scale Fine-Grained Categorization and Domain-Specific Transfer Learning</a>,  which takes domain scale into account by adding a scale factor. In this paper, transfer learning can be viewed as moving a set of images from the source domain S to the target domain T. The work needed to be done by moving an image to another can be defined as their feature Euaullean distance, so the distance between two domains can be defined as the least amount of total work needed. This definition of domain similarity can be calculated by the Earth Mover’s Distance (EMD). </p>
 <ul>
-<li><p>original EMD equation<br>\begin{aligned}<br>EMD(P,Q)={\sum _{i=1}^{m}\sum <em>{j=1}^{n}f</em>{i,j}=\min \left{\ \sum <em>{i=1}^{m}w</em>{pi},\quad \sum <em>{j=1}^{n}w</em>{qj}}</p>
-<p>\end{aligned}</p>
+<li><p>original EMD equation<br>\begin{aligned}<br>EMD(P,Q)={\sum _{i=1}^{m}\sum <em>{j=1}^{n}f</em>{i,j}=\min \left{\ \sum <em>{i=1}^{m}w</em>{pi},\quad \sum <em>{j=1}^{n}w</em>{qj}}<br>\end{aligned}</p>
 <p>\begin{aligned}<br>P={(p_{1},w_{p1}),(p_{2},w_{p2}),…,(p_{m},w_{pm})}<br>\end{aligned}</p>
 <p>\begin{aligned}<br>Q={(q_{1},w_{q1}),(q_{2},w_{q2}),…,(q_{n},w_{qn})}<br>\end{aligned}</p>
 </li>
-<li><p>reference paper EMD application<br>\begin{aligned}<br>EMD(S,T)={\displaystyle \sum _{i=1}^{m}\sum <em>{j=1}^{n}f</em>{i,j}=\min \left{\ \sum <em>{i=1}^{m}w</em>{pi},\quad \sum <em>{j=1}^{n}w</em>{qj}\ \right}}</p>
-<p>\end{aligned}</p>
+<li><p>reference paper EMD application<br>\begin{aligned}<br>EMD(P,Q)={\sum _{i=1}^{m}\sum <em>{j=1}^{n}f</em>{i,j}=\min \left{\ \sum <em>{i=1}^{m}w</em>{pi},\quad \sum <em>{j=1}^{n}w</em>{qj}}<br>\end{aligned}</p>
 <p>\begin{aligned}<br>S={(s_{1},w_{s1}),(s_{2},w_{s2}),…,(s_{m},w_{sm})}<br>\end{aligned}</p>
 <p>\begin{aligned}<br>T={(t_{1},w_{t1}),(t_{2},w_{t2}),…,(t_{n},w_{tn})}<br>\end{aligned}</p>
 <p>\begin{aligned}<br>D=[d_{i,j}] = || g(s_{i}) − g(t_{j})||<br>\end{aligned}</p>
@@ -439,8 +437,7 @@
 <p>\begin{aligned}<br>g(t_{i}) = mean value of image features in category i from target domain<br>\end{aligned}</p>
 <p>\begin{aligned}<br>sim(S, T) = e−γd(S,T )<br>\end{aligned}</p>
 </li>
-<li><p>EMD application for pseudo data selection<br>\begin{aligned}<br>EMD(S,T)={\displaystyle \sum _{i=1}^{m}\sum <em>{j=1}^{n}f</em>{i,j}=\min \left{\ \sum <em>{i=1}^{m}w</em>{pi},\quad \sum <em>{j=1}^{n}w</em>{qj}\ \right}}</p>
-<p>\end{aligned}</p>
+<li><p>EMD application for pseudo data selection<br>\begin{aligned}<br>EMD(P,Q)={\sum _{i=1}^{m}\sum <em>{j=1}^{n}f</em>{i,j}=\min \left{\ \sum <em>{i=1}^{m}w</em>{pi},\quad \sum <em>{j=1}^{n}w</em>{qj}}<br>\end{aligned}</p>
 <p>\begin{aligned}<br>P={(p_{1},w_{p1}),(p_{2},w_{p2}),…,(p_{m},w_{pm})}<br>\end{aligned}</p>
 <p>\begin{aligned}<br>G={(g_{1},w_{g1}),(g_{2},w_{g2}),…,(g_{n},w_{gn})}<br>\end{aligned}</p>
 <p>\begin{aligned}<br>D=[d_{i,j}] = || g(p_{i}) − g(g_{j})||<br>\end{aligned}</p>
