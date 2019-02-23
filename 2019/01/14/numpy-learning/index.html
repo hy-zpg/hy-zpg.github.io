@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="one-hot labels preprocessing1234$ weighting samples with confidence scoreindex = np.ragmax(predicted_result,axis=1)arg = np_utils.to_categorical(index,classes)weighted_one_hot=predicted_result*arg 12$">
+<meta name="description" content="One-hot labels preprocessing  Weighting samples with confidence score 123index = np.ragmax(predicted_result,axis=1)arg = np_utils.to_categorical(index,classes)weighted_one_hot=predicted_result*arg  Se">
 <meta name="keywords" content="numpy">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Numpy learning">
 <meta property="og:url" content="https://www.yanhong.me/2019/01/14/numpy-learning/index.html">
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
-<meta property="og:description" content="one-hot labels preprocessing1234$ weighting samples with confidence scoreindex = np.ragmax(predicted_result,axis=1)arg = np_utils.to_categorical(index,classes)weighted_one_hot=predicted_result*arg 12$">
+<meta property="og:description" content="One-hot labels preprocessing  Weighting samples with confidence score 123index = np.ragmax(predicted_result,axis=1)arg = np_utils.to_categorical(index,classes)weighted_one_hot=predicted_result*arg  Se">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-18T13:09:40.581Z">
+<meta property="og:updated_time" content="2019-02-23T11:51:09.889Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Numpy learning">
-<meta name="twitter:description" content="one-hot labels preprocessing1234$ weighting samples with confidence scoreindex = np.ragmax(predicted_result,axis=1)arg = np_utils.to_categorical(index,classes)weighted_one_hot=predicted_result*arg 12$">
+<meta name="twitter:description" content="One-hot labels preprocessing  Weighting samples with confidence score 123index = np.ragmax(predicted_result,axis=1)arg = np_utils.to_categorical(index,classes)weighted_one_hot=predicted_result*arg  Se">
 
 
 
@@ -383,9 +383,18 @@
       
 
       
-        <h2 id="one-hot-labels-preprocessing"><a href="#one-hot-labels-preprocessing" class="headerlink" title="one-hot labels preprocessing"></a>one-hot labels preprocessing</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ weighting samples with confidence score</span><br><span class="line">index = np.ragmax(predicted_result,axis=1)</span><br><span class="line">arg = np_utils.to_categorical(index,classes)</span><br><span class="line">weighted_one_hot=predicted_result*arg</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ selection &amp;&amp; weighting samples with confidence score</span><br><span class="line">weighted_selected_one_hot=np.where(predicted_result&gt;k,predicted_result,0)</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ extending vector into matrix</span><br><span class="line">xx = [np.full(classes,value) <span class="keyword">for</span> value <span class="keyword">in</span> x]</span><br></pre></td></tr></table></figure>
+        <p>One-hot labels preprocessing</p>
+<ul>
+<li><p>Weighting samples with confidence score</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">index = np.ragmax(predicted_result,axis=1)</span><br><span class="line">arg = np_utils.to_categorical(index,classes)</span><br><span class="line">weighted_one_hot=predicted_result*arg</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Selection &amp;&amp; weighting samples with confidence score</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">weighted_selected_one_hot=np.where(predicted_result&gt;k,predicted_result,0)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Extending vector into matrix</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xx = [np.full(classes,value) <span class="keyword">for</span> value <span class="keyword">in</span> x]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
@@ -480,17 +489,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -527,7 +527,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -573,22 +573,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#one-hot-labels-preprocessing"><span class="nav-number">1.</span> <span class="nav-text">one-hot labels preprocessing</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
