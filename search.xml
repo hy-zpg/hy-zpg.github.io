@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Critical-points-in-multitask]]></title>
+    <url>%2F2019%2F02%2F27%2FCritical-points-in-multitask%2F</url>
+    <content type="text"><![CDATA[Several tips for heterogeneous multitask learning core problem - heterogeneity structrues in tasks[age and gender], source[documents and images], feature[generated from model for classification or regression tasks], samples[one labeled with age while another annotated with gender] network with suitabel initialization and learning rate construct feature relationship in network, offering trainable parameters, refer to [cross-stitch network] feature selection, sparsity and factorization, which means that the specific branch layers to ontain task-specific fearures in a common feature space. Research directions feature relationship from the level of network. feature processing from the level fo feature space, such as selection, sparsity and facorization.]]></content>
+      <categories>
+        <category>Deep learning</category>
+      </categories>
+      <tags>
+        <tag>multitask</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Cross-stitch-network]]></title>
     <url>%2F2019%2F02%2F27%2FCross-stitch-network%2F</url>
     <content type="text"><![CDATA[cross-stitch-network reference CVPR 2016Cross-stitch Networks for Multi-task Learning tensorflow-code problem: existing multi-task approaches rely on enumerating multiple net- work architectures specific to the tasks at hand, that do not generalize. method: proposing a new sharing unit: “cross-stitch” unit. These units combine the activations from multiple networks. self-defined cross-stitch layer in keras with tensorflow as backbone12345678910111213141516171819202122232425262728class Cross_stitch(Layer): # basic parameter setting def __init__(self,input_shape_1,input_shape_2, **kwargs): super(Cross_stitch, self).__init__(**kwargs) self.input_shape_1 = input_shape_1 self.input_shape_2 = input_shape_2 # apply trainable parameters in network, similar to convolutional layer # shape is important, you must to calculate specific size based on the shape of input and output # in cross-stitch network: [xa,xb]*[papameter]=[xa',xb'], the detail refer to the paper def build(self, input_shape): shape = self.input_shape_1 + self.input_shape_2 self.cross_stitch = self.add_weight( shape=(shape,shape), initializer=tf.initializers.identity(), name='cross_stitch') self.built = True # conduct implement of the detailed algorithm calculation # inputs represent the output of upper layer, such as x=Dense(parameter)(inputs) def call(self,inputs): inputss = tf.concat((inputs[0], inputs[1]), axis=1) output = tf.matmul(inputss, self.cross_stitch) output1 = tf.reshape(output[:,:self.input_shape_1],shape=[-1,self.input_shape_1]) output2 = tf.reshape(output[:,self.input_shape_2:],shape=[-1,self.input_shape_2]) return [output1, output2] def get_config(self): config = &#123;'input_shape_1': self.input_shape_1,'input_shape_2': self.input_shape_2&#125; base_config = super(Cross_stitch, self).get_config() return dict(list(base_config.items()) + list(config.items()))]]></content>
