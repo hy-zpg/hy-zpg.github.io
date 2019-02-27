@@ -275,6 +275,173 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/27/Cross-stitch-network/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/27/Cross-stitch-network/" itemprop="url">Cross-stitch-network</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-27T14:03:23+08:00">
+                2019-02-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="cross-stitch-network"><a href="#cross-stitch-network" class="headerlink" title="cross-stitch-network"></a>cross-stitch-network</h2><blockquote>
+<p>reference CVPR 2016<a href="https://arxiv.org/pdf/1604.03539.pdf" target="_blank" rel="noopener">Cross-stitch Networks for Multi-task Learning</a> <a href="https://github.com/helloyide/Cross-stitch-Networks-for-Multi-task-Learning/blob/master/gender_age_multi_task_learning.py" target="_blank" rel="noopener">tensorflow-code</a></p>
+</blockquote>
+<ul>
+<li>problem: existing multi-task approaches rely on enumerating multiple net- work architectures specific to the tasks at hand, that do not generalize.</li>
+<li>method: proposing a new sharing unit: “cross-stitch” unit. These units combine the activations from multiple networks.</li>
+</ul>
+<h2 id="self-defined-cross-stitch-layer-in-keras-with-tensorflow-as-backbone"><a href="#self-defined-cross-stitch-layer-in-keras-with-tensorflow-as-backbone" class="headerlink" title="self-defined cross-stitch layer in keras with tensorflow as backbone"></a>self-defined cross-stitch layer in keras with tensorflow as backbone</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class Cross_stitch(Layer):</span><br><span class="line">	<span class="comment"># basic parameter setting</span></span><br><span class="line">    def __init__(self,input_shape_1,input_shape_2, **kwargs):</span><br><span class="line">        super(Cross_stitch, self).__init__(**kwargs)</span><br><span class="line">        self.input_shape_1 = input_shape_1</span><br><span class="line">        self.input_shape_2 = input_shape_2</span><br><span class="line">    <span class="comment"># apply trainable parameters in network, similar to convolutional layer </span></span><br><span class="line">    <span class="comment"># shape is important, you must to calculate specific size based on the shape of input and output</span></span><br><span class="line">    <span class="comment"># in cross-stitch network: [xa,xb]*[papameter]=[xa',xb'], the detail refer to the paper</span></span><br><span class="line">    def build(self, input_shape):</span><br><span class="line">        shape = self.input_shape_1 + self.input_shape_2</span><br><span class="line">        self.cross_stitch = self.add_weight(</span><br><span class="line">            shape=(shape,shape),</span><br><span class="line">            initializer=tf.initializers.identity(),</span><br><span class="line">            name=<span class="string">'cross_stitch'</span>)</span><br><span class="line">        self.built = True</span><br><span class="line">    <span class="comment"># conduct implement of the detailed algorithm calculation</span></span><br><span class="line">    <span class="comment"># inputs represent the output of upper layer, such as x=Dense(parameter)(inputs)</span></span><br><span class="line">    def call(self,inputs):</span><br><span class="line">        inputss = tf.concat((inputs[0], inputs[1]), axis=1)</span><br><span class="line">        output = tf.matmul(inputss, self.cross_stitch)</span><br><span class="line">        output1 = tf.reshape(output[:,:self.input_shape_1],shape=[-1,self.input_shape_1])</span><br><span class="line">        output2 = tf.reshape(output[:,self.input_shape_2:],shape=[-1,self.input_shape_2])</span><br><span class="line">        <span class="built_in">return</span> [output1, output2]</span><br><span class="line">    def get_config(self):</span><br><span class="line">        config = &#123;<span class="string">'input_shape_1'</span>: self.input_shape_1,<span class="string">'input_shape_2'</span>: self.input_shape_2&#125;</span><br><span class="line">        base_config = super(Cross_stitch, self).get_config()</span><br><span class="line">        <span class="built_in">return</span> dict(list(base_config.items()) + list(config.items()))</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/26/Heterogeneous-Multitask/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -2008,7 +2175,7 @@ u=702257389,1274025419&amp;fm=27&amp;gp=0.jpg" alt="blockchain" title="Block cha
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
