@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <title><![CDATA[Critical-points-in-multitask]]></title>
-    <url>%2F2019%2F02%2F27%2FCritical-Points-in-Multitask%2F</url>
+    <url>%2F2019%2F02%2F27%2FCritical-points-in-multitask%2F</url>
     <content type="text"><![CDATA[Several tips for heterogeneous multitask learning core problem - heterogeneity structrues in tasks[age and gender], source[documents and images], feature[generated from model for classification or regression tasks], samples[one labeled with age while another annotated with gender] network with suitabel initialization and learning rate construct feature relationship in network, offering trainable parameters, refer to [cross-stitch network] feature selection, sparsity and factorization, which means that the specific branch layers to ontain task-specific fearures in a common feature space. Research directions feature relationship from the level of network. feature processing from the level fo feature space, such as selection, sparsity and facorization.]]></content>
       <categories>
         <category>Deep learning</category>
