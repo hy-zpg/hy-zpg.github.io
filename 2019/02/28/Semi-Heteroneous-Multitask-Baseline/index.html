@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
 <meta property="og:description" content="reference non-DL Semi-supervised Feature Analysis by Mining Correlations among Multiple Tasks   why: ‘Since the objective function is non-smooth and difficult to solve, we propose an iterative algori">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-28T14:09:17.743Z">
+<meta property="og:updated_time" content="2019-02-28T14:12:52.120Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Semi-Heteroneous-Multitask-Baseline">
 <meta name="twitter:description" content="reference non-DL Semi-supervised Feature Analysis by Mining Correlations among Multiple Tasks   why: ‘Since the objective function is non-smooth and difficult to solve, we propose an iterative algori">
@@ -389,8 +389,9 @@
 <ul>
 <li><p>why: ‘Since the objective function is non-smooth and difficult to solve, we propose an iterative algorithm with fast convergence.’ ‘These previous works, however, independently select features for each task, which fails to consider correlations among multiple related tasks.’ ‘Despite of their good performances, these classical algorithms are all implemented only with labeled training data.’</p>
 </li>
-<li><p>how: ‘ignoring the correlations among different features -&gt;apply the sparse coefficients to the feature vectors -&gt; proposing multiple feature selection’<br>Baseline: undetermined (hard to complete)</p>
+<li><p>how: ‘ignoring the correlations among different features -&gt;apply the sparse coefficients to the feature vectors -&gt; proposing multiple feature selection’</p>
 </li>
+<li>baseline: undetermined (hard to complete)</li>
 </ul>
 <blockquote>
 <p><a href="https://arxiv.org/pdf/1803.04062.pdf" target="_blank" rel="noopener">Pseudo-task Augmentation: From Deep Multitask Learning to Intratask Sharing—and Back</a></p>
@@ -400,11 +401,12 @@
 <li>‘how learned structure is shared across tasks’:<ol>
 <li>supervise different tasks at different depths of the shared structure <a href=""></a></li>
 <li>duplicate the shared structure into columns and define mechanisms for sharing information across columns <a href="https://arxiv.org/pdf/1704.01631.pdf" target="_blank" rel="noopener">Multitask Learning with Low-Level Auxiliary Tasks for Encoder-Decoder Based Speech Recognition
-</a>, using intermediate representations as auxiliary supervision for low-level task recognition to improve final task performance.<br>Baseline: no( pose-emotion both are high-level task, not similar to keypoint detection)</li>
+</a>, using intermediate representations as auxiliary supervision for low-level task recognition to improve final task performance.</li>
 </ol>
 </li>
 </ul>
 </li>
+<li>baseline: no( pose-emotion both are high-level task, not similar to keypoint detection)</li>
 </ul>
 <blockquote>
 <p>reference NLP <a href="https://arxiv.org/pdf/1802.09913.pdf" target="_blank" rel="noopener">Multi-task Learning of Pairwise Sequence Classification Tasks Over Disparate Label Spaces</a></p>
@@ -419,7 +421,8 @@
 <p>‘proposing an effective learning approach that progressively improves the quality pseudo from a coarse initialization,the detection network parameters Θ and pseudo masks Mpseudo are alternatively optimized following a EM-like way’</p>
 </li>
 <li>probelm: object detection without mask annotation</li>
-<li>method: pseudo mask (alternatively,initialization,pseudo mask with refinement algorithm[graphical model, because the pixel charaterization])<br>Baseline: yes(uing graphical model with learned information as input to refine pseudo label)</li>
+<li>method: pseudo mask (alternatively,initialization,pseudo mask with refinement algorithm[graphical model, because the pixel charaterization])</li>
+<li>baseline: yes(uing graphical model with learned information as input to refine pseudo label)</li>
 </ul>
 
       
