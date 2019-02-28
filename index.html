@@ -275,6 +275,206 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/28/Semi-Heteroneous-Multitask-Baseline/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/28/Semi-Heteroneous-Multitask-Baseline/" itemprop="url">Semi-Heteroneous-Multitask-Baseline</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-28T15:23:11+08:00">
+                2019-02-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>reference non-DL <a href="http://de.arxiv.org/pdf/1411.6232" target="_blank" rel="noopener">Semi-supervised Feature Analysis by Mining Correlations among Multiple Tasks</a></p>
+</blockquote>
+<ul>
+<li><p>why: ‘Since the objective function is non-smooth and difficult to solve, we propose an iterative algorithm with fast convergence.’</p>
+<pre><code>&apos;These previous works, however, independently select features for each task, which fails to consider correlations among multiple related tasks.&apos;
+&apos;Despite of their good performances, these classical algorithms are all implemented only with labeled training data.&apos;
+</code></pre></li>
+<li><p>how: ‘ignoring the correlations among different features -&gt;apply the sparse coefficients to the feature vectors -&gt; proposing multiple feature selection’<br>Baseline: undetermined (hard to complete)</p>
+</li>
+</ul>
+<blockquote>
+<p><a href="https://arxiv.org/pdf/1803.04062.pdf" target="_blank" rel="noopener">Pseudo-task Augmentation: From Deep Multitask Learning to Intratask Sharing—and Back</a></p>
+</blockquote>
+<ul>
+<li>related work conclude papers of joint training of models for multiple tasks.<ul>
+<li>‘how learned structure is shared across tasks’:<ol>
+<li>supervise different tasks at different depths of the shared structure <a href=""></a></li>
+<li>duplicate the shared structure into columns and define mechanisms for sharing information across columns <a href="https://arxiv.org/pdf/1704.01631.pdf" target="_blank" rel="noopener">Multitask Learning with Low-Level Auxiliary Tasks for Encoder-Decoder Based Speech Recognition
+</a>, using intermediate representations as auxiliary supervision for low-level task recognition to improve final task performance.<br>Baseline: no( pose-emotion both are high-level task, not similar to keypoint detection)</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>reference NLP <a href="https://arxiv.org/pdf/1802.09913.pdf" target="_blank" rel="noopener">Multi-task Learning of Pairwise Sequence Classification Tasks Over Disparate Label Spaces</a></p>
+</blockquote>
+<p>‘we should be able to not only model their relationship, but also to directly estimate the corresponding label of the target task based on auxiliary predictions.’</p>
+<ul>
+<li>probelm: jointly using unlabelled data and auxiliary, annotated datasets; domain gap; missing labels</li>
+<li><p>method: training the Label Transfer Network, minimise the squared error between the model predictions and the pseudo label<br>Baseline: yes (how to calculate loss funtion [squared error] based on pseudo label)</p>
+<blockquote>
+<p>reference CVPR 2018<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhao_Pseudo_Mask_Augmented_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Pseudo Mask Augmented Object Detection</a></p>
+</blockquote>
+<p>‘proposing an effective learning approach that progressively improves the quality pseudo from a coarse initialization,the detection network parameters Θ and pseudo masks Mpseudo are alternatively optimized following a EM-like way’</p>
+</li>
+<li>probelm: object detection without mask annotation</li>
+<li>method: pseudo mask (alternatively,initialization,pseudo mask with refinement algorithm[graphical model, because the pixel charaterization])<br>Baseline: yes(uing graphical model with learned information as input to refine pseudo label)</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/28/Research-Point-Multitask/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1952,182 +2152,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/01/15/GMM/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/15/GMM/" itemprop="url">MMD and Density</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-15T10:31:01+08:00">
-                2019-01-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Theory/" itemprop="url" rel="index">
-                    <span itemprop="name">Theory</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Relation-between-MMD-and-density-for-pseudo-data-selection"><a href="#Relation-between-MMD-and-density-for-pseudo-data-selection" class="headerlink" title="Relation between MMD and density for pseudo data selection"></a>Relation between MMD and density for pseudo data selection</h2><p>combination of MMD and density: my understanding is that we can obtain MMD, density, prior weights from GMM, when GMM can be calculated from ground-trurh label of </p>
-<ul>
-<li><p>MMD: first-order information</p>
-</li>
-<li><p>Density: second-order information, the larger variance, the sparser, the small variance, the denser </p>
-</li>
-</ul>
-<h3 id="GMM"><a href="#GMM" class="headerlink" title="GMM"></a>GMM</h3><ul>
-<li>Gaussian Mixed Model: A Gaussian mixture model is a probabilistic model that assumes all the data points are generated from a mixture of a finite number of Gaussian distributions with unknown parameters. One can think of mixture models as generalizing k-means clustering to incorporate information about the covariance structure of the data as well as the centers of the latent Gaussians.</li>
-</ul>
-<ul>
-<li><p>Differentce between k-means and GMM: k-means notes that each point is assigned to different clusters, while GMM can calculate the probabiliy of each point belong to each clusters.</p>
-</li>
-<li><p>Import parameters of GMM: K Gaussion models, also K clusters, \pi, \mu, \Sigma<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2178,7 +2202,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
