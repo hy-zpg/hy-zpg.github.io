@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Parameters-Selection-for-Pseudo]]></title>
-    <url>%2F2019%2F02%2F27%2FParameters-Selection-for-Pseudo%2F</url>
-    <content type="text"><![CDATA[temperature in distilled knowledge reference-1 Distilling the Knowledge in a Neural Network aim: distilling the knowledge in an ensemble of models into a single modeltemperature: the higher the temperature T, the softer the probability distribution over classes. ‘For the distillation we tried temperatures of [1, 2, 5, 10] and used a relative weight of 0.5 on the cross-entropy for the hard targets, where bold font indicates the best value’ reference-2 from reference-1 Learning without Forgetting aim: useing only new task data to train the network while preserving the original capabilitiestemperature: T=2, grid search method density threshold in local feature densitydistribution distance is transfered into weights]]></content>
-      <categories>
-        <category>Deep learning</category>
-      </categories>
-      <tags>
-        <tag>pesudo labels</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Critical-points-in-multitask]]></title>
-    <url>%2F2019%2F02%2F27%2FCritical-points-in-multitask%2F</url>
+    <title><![CDATA[Critical-Points-in-Multitask]]></title>
+    <url>%2F2019%2F02%2F28%2FCritical-Points-in-Multitask-0%2F</url>
     <content type="text"><![CDATA[Several tips for heterogeneous multitask learning core problem - heterogeneity structrues in tasks[age and gender], source[documents and images], feature[generated from model for classification or regression tasks], samples[one labeled with age while another annotated with gender] network with suitabel initialization and learning rate construct feature relationship in network, offering trainable parameters, refer to [cross-stitch network] feature selection, sparsity and factorization, which means that the specific branch layers to ontain task-specific fearures in a common feature space. Research directions feature relationship from the level of network. feature processing from the level fo feature space, such as selection, sparsity and facorization.]]></content>
       <categories>
         <category>Deep learning</category>

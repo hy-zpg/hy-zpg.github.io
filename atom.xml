@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yanhong.me/"/>
-  <updated>2019-02-28T02:56:45.079Z</updated>
+  <updated>2019-02-28T03:17:09.755Z</updated>
   <id>https://www.yanhong.me/</id>
   
   <author>
@@ -17,36 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Parameters-Selection-for-Pseudo</title>
-    <link href="https://www.yanhong.me/2019/02/27/Parameters-Selection-for-Pseudo/"/>
-    <id>https://www.yanhong.me/2019/02/27/Parameters-Selection-for-Pseudo/</id>
-    <published>2019-02-27T07:52:24.000Z</published>
-    <updated>2019-02-28T02:56:45.079Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="temperature-in-distilled-knowledge"><a href="#temperature-in-distilled-knowledge" class="headerlink" title="temperature in distilled knowledge"></a>temperature in distilled knowledge</h2><blockquote><p>reference-1 <a href="https://arxiv.org/pdf/1503.02531.pdf" target="_blank" rel="noopener">Distilling the Knowledge in a Neural Network</a></p></blockquote><p>aim: distilling the knowledge in an ensemble of models into a single model<br>temperature: the higher the temperature T, the softer the probability distribution over classes. ‘For the distillation we tried temperatures of [1, 2, 5, 10] and used a relative weight of 0.5 on the cross-entropy for the hard targets, where bold font indicates the best value’</p><blockquote><p>reference-2 from reference-1 <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8107520" target="_blank" rel="noopener">Learning without Forgetting</a></p></blockquote><p>aim: useing only new task data to train the network while preserving the original capabilities<br>temperature: T=2, grid search method</p><h2 id="density-threshold-in-local-feature-density"><a href="#density-threshold-in-local-feature-density" class="headerlink" title="density threshold in local feature density"></a>density threshold in local feature density</h2><h2 id="distribution-distance-is-transfered-into-weights"><a href="#distribution-distance-is-transfered-into-weights" class="headerlink" title="distribution distance is transfered into weights"></a>distribution distance is transfered into weights</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;temperature-in-distilled-knowledge&quot;&gt;&lt;a href=&quot;#temperature-in-distilled-knowledge&quot; class=&quot;headerlink&quot; title=&quot;temperature in distilled
-      
-    
-    </summary>
-    
-      <category term="Deep learning" scheme="https://www.yanhong.me/categories/Deep-learning/"/>
-    
-    
-      <category term="pesudo labels" scheme="https://www.yanhong.me/tags/pesudo-labels/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Critical-points-in-multitask</title>
-    <link href="https://www.yanhong.me/2019/02/27/Critical-points-in-multitask/"/>
-    <id>https://www.yanhong.me/2019/02/27/Critical-points-in-multitask/</id>
-    <published>2019-02-27T06:25:43.000Z</published>
-    <updated>2019-02-28T03:14:11.698Z</updated>
+    <title>Critical-Points-in-Multitask</title>
+    <link href="https://www.yanhong.me/2019/02/28/Critical-Points-in-Multitask-0/"/>
+    <id>https://www.yanhong.me/2019/02/28/Critical-Points-in-Multitask-0/</id>
+    <published>2019-02-28T03:16:26.000Z</published>
+    <updated>2019-02-28T03:17:09.755Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Several-tips-for-heterogeneous-multitask-learning"><a href="#Several-tips-for-heterogeneous-multitask-learning" class="headerlink" title="Several tips for heterogeneous multitask learning"></a>Several tips for heterogeneous multitask learning</h2><ul><li>core problem - heterogeneity structrues in tasks[age and gender], source[documents and images], feature[generated from model for classification or regression tasks], samples[one labeled with age while another annotated with gender]</li></ul><ol><li>network with suitabel initialization and learning rate</li><li>construct feature relationship in network, offering trainable parameters, refer to [cross-stitch network]</li><li>feature selection, sparsity and factorization, which means that the specific branch layers to ontain task-specific fearures in a common feature space.</li></ol><h2 id="Research-directions"><a href="#Research-directions" class="headerlink" title="Research directions"></a>Research directions</h2><ul><li>feature relationship from the level of network.</li><li>feature processing from the level fo feature space, such as selection, sparsity and facorization.</li></ul>]]></content>
     
@@ -71,7 +46,7 @@
     <link href="https://www.yanhong.me/2019/02/27/Cross-Stitch-Network/"/>
     <id>https://www.yanhong.me/2019/02/27/Cross-Stitch-Network/</id>
     <published>2019-02-27T06:03:23.000Z</published>
-    <updated>2019-02-27T06:24:57.726Z</updated>
+    <updated>2019-02-28T03:13:48.446Z</updated>
     
     <content type="html"><![CDATA[<h2 id="cross-stitch-network"><a href="#cross-stitch-network" class="headerlink" title="cross-stitch-network"></a>cross-stitch-network</h2><blockquote><p>reference CVPR 2016<a href="https://arxiv.org/pdf/1604.03539.pdf" target="_blank" rel="noopener">Cross-stitch Networks for Multi-task Learning</a> <a href="https://github.com/helloyide/Cross-stitch-Networks-for-Multi-task-Learning/blob/master/gender_age_multi_task_learning.py" target="_blank" rel="noopener">tensorflow-code</a></p></blockquote><ul><li>problem: existing multi-task approaches rely on enumerating multiple net- work architectures specific to the tasks at hand, that do not generalize.</li><li>method: proposing a new sharing unit: “cross-stitch” unit. These units combine the activations from multiple networks.</li></ul><h2 id="self-defined-cross-stitch-layer-in-keras-with-tensorflow-as-backbone"><a href="#self-defined-cross-stitch-layer-in-keras-with-tensorflow-as-backbone" class="headerlink" title="self-defined cross-stitch layer in keras with tensorflow as backbone"></a>self-defined cross-stitch layer in keras with tensorflow as backbone</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class Cross_stitch(Layer):</span><br><span class="line"><span class="comment"># basic parameter setting</span></span><br><span class="line">    def __init__(self,input_shape_1,input_shape_2, **kwargs):</span><br><span class="line">        super(Cross_stitch, self).__init__(**kwargs)</span><br><span class="line">        self.input_shape_1 = input_shape_1</span><br><span class="line">        self.input_shape_2 = input_shape_2</span><br><span class="line">    <span class="comment"># apply trainable parameters in network, similar to convolutional layer </span></span><br><span class="line">    <span class="comment"># shape is important, you must to calculate specific size based on the shape of input and output</span></span><br><span class="line">    <span class="comment"># in cross-stitch network: [xa,xb]*[papameter]=[xa',xb'], the detail refer to the paper</span></span><br><span class="line">    def build(self, input_shape):</span><br><span class="line">        shape = self.input_shape_1 + self.input_shape_2</span><br><span class="line">        self.cross_stitch = self.add_weight(</span><br><span class="line">            shape=(shape,shape),</span><br><span class="line">            initializer=tf.initializers.identity(),</span><br><span class="line">            name=<span class="string">'cross_stitch'</span>)</span><br><span class="line">        self.built = True</span><br><span class="line">    <span class="comment"># conduct implement of the detailed algorithm calculation</span></span><br><span class="line">    <span class="comment"># inputs represent the output of upper layer, such as x=Dense(parameter)(inputs)</span></span><br><span class="line">    def call(self,inputs):</span><br><span class="line">        inputss = tf.concat((inputs[0], inputs[1]), axis=1)</span><br><span class="line">        output = tf.matmul(inputss, self.cross_stitch)</span><br><span class="line">        output1 = tf.reshape(output[:,:self.input_shape_1],shape=[-1,self.input_shape_1])</span><br><span class="line">        output2 = tf.reshape(output[:,self.input_shape_2:],shape=[-1,self.input_shape_2])</span><br><span class="line">        <span class="built_in">return</span> [output1, output2]</span><br><span class="line">    def get_config(self):</span><br><span class="line">        config = &#123;<span class="string">'input_shape_1'</span>: self.input_shape_1,<span class="string">'input_shape_2'</span>: self.input_shape_2&#125;</span><br><span class="line">        base_config = super(Cross_stitch, self).get_config()</span><br><span class="line">        <span class="built_in">return</span> dict(list(base_config.items()) + list(config.items()))</span><br></pre></td></tr></table></figure>]]></content>
     
