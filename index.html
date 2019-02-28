@@ -391,9 +391,9 @@
 <p>reference non-DL <a href="http://de.arxiv.org/pdf/1411.6232" target="_blank" rel="noopener">Semi-supervised Feature Analysis by Mining Correlations among Multiple Tasks</a></p>
 </blockquote>
 <ul>
-<li><p>why: ‘Since the objective function is non-smooth and difficult to solve, we propose an iterative algorithm with fast convergence.’ ‘These previous works, however, independently select features for each task, which fails to consider correlations among multiple related tasks.’ ‘Despite of their good performances, these classical algorithms are all implemented only with labeled training data.’</p>
+<li><p>problem: ‘Since the objective function is non-smooth and difficult to solve, we propose an iterative algorithm with fast convergence.’ ‘These previous works, however, independently select features for each task, which fails to consider correlations among multiple related tasks.’ ‘Despite of their good performances, these classical algorithms are all implemented only with labeled training data.’</p>
 </li>
-<li><p>how: ‘ignoring the correlations among different features -&gt;apply the sparse coefficients to the feature vectors -&gt; proposing multiple feature selection’</p>
+<li><p>method: ‘ignoring the correlations among different features -&gt;apply the sparse coefficients to the feature vectors -&gt; proposing multiple feature selection’</p>
 </li>
 <li>baseline: undetermined (hard to complete)</li>
 </ul>
@@ -418,12 +418,14 @@
 <p>‘we should be able to not only model their relationship, but also to directly estimate the corresponding label of the target task based on auxiliary predictions.’</p>
 <ul>
 <li>probelm: jointly using unlabelled data and auxiliary, annotated datasets; domain gap; missing labels</li>
-<li><p>method: training the Label Transfer Network, minimise the squared error between the model predictions and the pseudo label<br>Baseline: yes (how to calculate loss funtion [squared error] based on pseudo label)</p>
+<li>method: training the Label Transfer Network, minimise the squared error between the model predictions and the pseudo label</li>
+<li>baseline: yes (how to calculate loss funtion [squared error] based on pseudo label)</li>
+</ul>
 <blockquote>
 <p>reference CVPR 2018<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhao_Pseudo_Mask_Augmented_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Pseudo Mask Augmented Object Detection</a></p>
 </blockquote>
-<p>‘proposing an effective learning approach that progressively improves the quality pseudo from a coarse initialization,the detection network parameters Θ and pseudo masks Mpseudo are alternatively optimized following a EM-like way’</p>
-</li>
+<p> ‘proposing an effective learning approach that progressively improves the quality pseudo from a coarse initialization,the detection network parameters Θ and pseudo masks Mpseudo are alternatively optimized following a EM-like way’</p>
+<ul>
 <li>probelm: object detection without mask annotation</li>
 <li>method: pseudo mask (alternatively,initialization,pseudo mask with refinement algorithm[graphical model, because the pixel charaterization])</li>
 <li>baseline: yes(uing graphical model with learned information as input to refine pseudo label)</li>
