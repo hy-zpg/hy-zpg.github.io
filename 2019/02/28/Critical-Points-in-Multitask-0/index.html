@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="pesudo labels,">
+  <meta name="keywords" content="multitask,">
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="Purity and distribution distance based densityData density reference  ECCV 2018  CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images  creativity leveraging data distribution density">
-<meta name="keywords" content="pesudo labels">
+<meta name="description" content="Several tips for heterogeneous multitask learning core problem - heterogeneity structrues in tasks[age and gender], source[documents and images], feature[generated from model for classification or reg">
+<meta name="keywords" content="multitask">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Pseudo Purity &amp;&amp; Dataset Distribution Distance">
-<meta property="og:url" content="https://www.yanhong.me/2019/02/17/Pseudo-purity&distribution-distance/index.html">
+<meta property="og:title" content="Critical-Points-in-Multitask">
+<meta property="og:url" content="https://www.yanhong.me/2019/02/28/Critical-Points-in-Multitask-0/index.html">
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
-<meta property="og:description" content="Purity and distribution distance based densityData density reference  ECCV 2018  CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images  creativity leveraging data distribution density">
+<meta property="og:description" content="Several tips for heterogeneous multitask learning core problem - heterogeneity structrues in tasks[age and gender], source[documents and images], feature[generated from model for classification or reg">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-23T12:00:27.580Z">
+<meta property="og:updated_time" content="2019-02-28T05:33:46.061Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pseudo Purity &amp;&amp; Dataset Distribution Distance">
-<meta name="twitter:description" content="Purity and distribution distance based densityData density reference  ECCV 2018  CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images  creativity leveraging data distribution density">
+<meta name="twitter:title" content="Critical-Points-in-Multitask">
+<meta name="twitter:description" content="Several tips for heterogeneous multitask learning core problem - heterogeneity structrues in tasks[age and gender], source[documents and images], feature[generated from model for classification or reg">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://www.yanhong.me/2019/02/17/Pseudo-purity&distribution-distance/">
+  <link rel="canonical" href="https://www.yanhong.me/2019/02/28/Critical-Points-in-Multitask-0/">
 
 
 
 
 
-  <title>Pseudo Purity && Dataset Distribution Distance | Hongyan's Notes</title>
+  <title>Critical-Points-in-Multitask | Hongyan's Notes</title>
   
 
 
@@ -275,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/17/Pseudo-purity&distribution-distance/">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/28/Critical-Points-in-Multitask-0/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hongyan">
@@ -292,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Pseudo Purity && Dataset Distribution Distance</h1>
+          <h1 class="post-title" itemprop="name headline">Critical-Points-in-Multitask</h1>
         
 
         <div class="post-meta">
@@ -304,8 +304,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-17T18:07:47+08:00">
-                2019-02-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-28T11:16:26+08:00">
+                2019-02-28
               </time>
             
 
@@ -327,8 +327,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Theory/" itemprop="url" rel="index">
-                    <span itemprop="name">Theory</span>
+                  <a href="/categories/Deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Deep learning</span>
                   </a>
                 </span>
 
@@ -383,37 +383,17 @@
       
 
       
-        <h2 id="Purity-and-distribution-distance-based-density"><a href="#Purity-and-distribution-distance-based-density" class="headerlink" title="Purity and distribution distance based density"></a>Purity and distribution distance based density</h2><h3 id="Data-density"><a href="#Data-density" class="headerlink" title="Data density"></a>Data density</h3><blockquote>
-<p>reference  ECCV 2018 <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Sheng_Guo_CurriculumNet_Learning_from_ECCV_2018_paper.pdf" target="_blank" rel="noopener"> CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images</a></p>
-</blockquote>
-<h4 id="creativity"><a href="#creativity" class="headerlink" title="creativity"></a>creativity</h4><ol>
-<li>leveraging data distribution density in feature space to evaluate the complexity of the data<br> ours – evaluating the purity of pseudo label data by data density in feature space</li>
-<li>noisy data can be regared as regularied method to improve the model generalization<br> ours – pesudo labels can improve the model generalization </li>
-</ol>
-<h4 id="technical-detail"><a href="#technical-detail" class="headerlink" title="technical detail"></a>technical detail</h4><ol>
-<li>density based clustering algorithm<ul>
-<li>generating features</li>
-<li>calculating Euclidean distance D_ij<ul>
-<li>calculating local density of each image</li>
-<li>calculating distance of each image: maximun local distance is regarded as cluster centre, image with smaller distance between its distance and cluster centre represents that its label have high confidence </li>
+        <h2 id="Several-tips-for-heterogeneous-multitask-learning"><a href="#Several-tips-for-heterogeneous-multitask-learning" class="headerlink" title="Several tips for heterogeneous multitask learning"></a>Several tips for heterogeneous multitask learning</h2><ul>
+<li>core problem - heterogeneity structrues in tasks[age and gender], source[documents and images], feature[generated from model for classification or regression tasks], samples[one labeled with age while another annotated with gender]</li>
 </ul>
-</li>
-</ul>
-</li>
+<ol>
+<li>network with suitabel initialization and learning rate</li>
+<li>construct feature relationship in network, offering trainable parameters, refer to [cross-stitch network]</li>
+<li>feature selection, sparsity and factorization, which means that the specific branch layers to ontain task-specific fearures in a common feature space.</li>
 </ol>
-<h3 id="Data-distribution-distance-EMD"><a href="#Data-distribution-distance-EMD" class="headerlink" title="Data distribution distance EMD"></a>Data distribution distance EMD</h3><blockquote>
-<p>reference IJCV 2000 <a href="http://robotics.stanford.edu/~rubner/papers/rubnerIjcv00.pdf" target="_blank" rel="noopener">The Earth Mover’s Distance as a Metric for Image Retrieval</a></p>
-</blockquote>
-<h4 id="definition"><a href="#definition" class="headerlink" title="definition"></a>definition</h4><ol>
-<li>EDM: Signature matching can be naturally cast as a transportation problem by de fining one signature as the supplier and the other as the consumer, and by setting the cost for a supplier-consumer pair to equal the ground distance between an element in the fi rst signature and an element in the second</li>
-<li>signature:<br>\begin{aligned}<br>s= (feature,weights)<br>\end{aligned}</li>
-</ol>
-<h2 id="Purity-and-distribution-distance-based-gmm"><a href="#Purity-and-distribution-distance-based-gmm" class="headerlink" title="Purity and distribution distance based gmm"></a>Purity and distribution distance based gmm</h2><h3 id="GMM-with-EM"><a href="#GMM-with-EM" class="headerlink" title="GMM with EM"></a>GMM with EM</h3><ul>
-<li>original definition<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</li>
-</ul>
-<p>\pi_k  represent the possibility of sample belong to kth category</p>
-<ul>
-<li>new definition for coding<br>\begin{aligned}<br>\sum_{k} z_k = 1<br>\end{aligned}</li>
+<h2 id="Research-directions"><a href="#Research-directions" class="headerlink" title="Research directions"></a>Research directions</h2><ul>
+<li>feature relationship from the level of network.</li>
+<li>feature processing from the level fo feature space, such as selection, sparsity and facorization.</li>
 </ul>
 
       
@@ -432,7 +412,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/pesudo-labels/" rel="tag"># pesudo labels</a>
+            <a href="/tags/multitask/" rel="tag"># multitask</a>
           
         </div>
       
@@ -445,8 +425,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/16/Cross_entropy_loss/" rel="next" title="Cross_entropy_loss">
-                <i class="fa fa-chevron-left"></i> Cross_entropy_loss
+              <a href="/2019/02/27/Parameters-Selection-for-Pseudo/" rel="next" title="Parameters-Selection-for-Pseudo">
+                <i class="fa fa-chevron-left"></i> Parameters-Selection-for-Pseudo
               </a>
             
           </div>
@@ -455,8 +435,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/02/21/Density-Distribution/" rel="prev" title="Density & Distribution">
-                Density & Distribution <i class="fa fa-chevron-right"></i>
+              <a href="/2019/02/28/Research-Point-Multitask/" rel="prev" title="Research-Point-Multitask">
+                Research-Point-Multitask <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -612,7 +592,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Purity-and-distribution-distance-based-density"><span class="nav-number">1.</span> <span class="nav-text">Purity and distribution distance based density</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-density"><span class="nav-number">1.1.</span> <span class="nav-text">Data density</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#creativity"><span class="nav-number">1.1.1.</span> <span class="nav-text">creativity</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#technical-detail"><span class="nav-number">1.1.2.</span> <span class="nav-text">technical detail</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-distribution-distance-EMD"><span class="nav-number">1.2.</span> <span class="nav-text">Data distribution distance EMD</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#definition"><span class="nav-number">1.2.1.</span> <span class="nav-text">definition</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Purity-and-distribution-distance-based-gmm"><span class="nav-number">2.</span> <span class="nav-text">Purity and distribution distance based gmm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GMM-with-EM"><span class="nav-number">2.1.</span> <span class="nav-text">GMM with EM</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Several-tips-for-heterogeneous-multitask-learning"><span class="nav-number">1.</span> <span class="nav-text">Several tips for heterogeneous multitask learning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Research-directions"><span class="nav-number">2.</span> <span class="nav-text">Research directions</span></a></li></ol></div>
             
 
           </div>

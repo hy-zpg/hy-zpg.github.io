@@ -42,9 +42,59 @@
   </entry>
   
   <entry>
+    <title>Critical-Points-in-Multitask</title>
+    <link href="https://www.yanhong.me/2019/02/28/Critical-Points-in-Multitask-0/"/>
+    <id>https://www.yanhong.me/2019/02/28/Critical-Points-in-Multitask-0/</id>
+    <published>2019-02-28T03:16:26.000Z</published>
+    <updated>2019-02-28T05:33:46.061Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Several-tips-for-heterogeneous-multitask-learning"><a href="#Several-tips-for-heterogeneous-multitask-learning" class="headerlink" title="Several tips for heterogeneous multitask learning"></a>Several tips for heterogeneous multitask learning</h2><ul><li>core problem - heterogeneity structrues in tasks[age and gender], source[documents and images], feature[generated from model for classification or regression tasks], samples[one labeled with age while another annotated with gender]</li></ul><ol><li>network with suitabel initialization and learning rate</li><li>construct feature relationship in network, offering trainable parameters, refer to [cross-stitch network]</li><li>feature selection, sparsity and factorization, which means that the specific branch layers to ontain task-specific fearures in a common feature space.</li></ol><h2 id="Research-directions"><a href="#Research-directions" class="headerlink" title="Research directions"></a>Research directions</h2><ul><li>feature relationship from the level of network.</li><li>feature processing from the level fo feature space, such as selection, sparsity and facorization.</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Several-tips-for-heterogeneous-multitask-learning&quot;&gt;&lt;a href=&quot;#Several-tips-for-heterogeneous-multitask-learning&quot; class=&quot;headerlink&quot; t
+      
+    
+    </summary>
+    
+      <category term="Deep learning" scheme="https://www.yanhong.me/categories/Deep-learning/"/>
+    
+    
+      <category term="multitask" scheme="https://www.yanhong.me/tags/multitask/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Parameters-Selection-for-Pseudo</title>
+    <link href="https://www.yanhong.me/2019/02/27/Parameters-Selection-for-Pseudo/"/>
+    <id>https://www.yanhong.me/2019/02/27/Parameters-Selection-for-Pseudo/</id>
+    <published>2019-02-27T07:52:24.000Z</published>
+    <updated>2019-02-28T05:33:56.607Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="temperature-in-distilled-knowledge"><a href="#temperature-in-distilled-knowledge" class="headerlink" title="temperature in distilled knowledge"></a>temperature in distilled knowledge</h2><blockquote><p>reference-1 <a href="https://arxiv.org/pdf/1503.02531.pdf" target="_blank" rel="noopener">Distilling the Knowledge in a Neural Network</a></p></blockquote><p>aim: distilling the knowledge in an ensemble of models into a single model<br>temperature: the higher the temperature T, the softer the probability distribution over classes. ‘For the distillation we tried temperatures of [1, 2, 5, 10] and used a relative weight of 0.5 on the cross-entropy for the hard targets, where bold font indicates the best value’</p><blockquote><p>reference-2 from reference-1 <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8107520" target="_blank" rel="noopener">Learning without Forgetting</a></p></blockquote><p>aim: useing only new task data to train the network while preserving the original capabilities<br>temperature: T=2, grid search method</p><h2 id="density-threshold-in-local-feature-density"><a href="#density-threshold-in-local-feature-density" class="headerlink" title="density threshold in local feature density"></a>density threshold in local feature density</h2><h2 id="distribution-distance-is-transfered-into-weights"><a href="#distribution-distance-is-transfered-into-weights" class="headerlink" title="distribution distance is transfered into weights"></a>distribution distance is transfered into weights</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;temperature-in-distilled-knowledge&quot;&gt;&lt;a href=&quot;#temperature-in-distilled-knowledge&quot; class=&quot;headerlink&quot; title=&quot;temperature in distilled
+      
+    
+    </summary>
+    
+      <category term="Deep learning" scheme="https://www.yanhong.me/categories/Deep-learning/"/>
+    
+    
+      <category term="pesudo labels" scheme="https://www.yanhong.me/tags/pesudo-labels/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Cross-stitch-network</title>
-    <link href="https://www.yanhong.me/2019/02/27/Cross-Stitch-Network/"/>
-    <id>https://www.yanhong.me/2019/02/27/Cross-Stitch-Network/</id>
+    <link href="https://www.yanhong.me/2019/02/27/Cross-stitch-network/"/>
+    <id>https://www.yanhong.me/2019/02/27/Cross-stitch-network/</id>
     <published>2019-02-27T06:03:23.000Z</published>
     <updated>2019-02-28T03:13:48.446Z</updated>
     
@@ -172,8 +222,8 @@
   
   <entry>
     <title>Cross_entropy_loss</title>
-    <link href="https://www.yanhong.me/2019/01/16/Cross-Entropy-Loss/"/>
-    <id>https://www.yanhong.me/2019/01/16/Cross-Entropy-Loss/</id>
+    <link href="https://www.yanhong.me/2019/01/16/Cross_entropy_loss/"/>
+    <id>https://www.yanhong.me/2019/01/16/Cross_entropy_loss/</id>
     <published>2019-01-16T02:37:13.000Z</published>
     <updated>2019-02-23T11:56:38.362Z</updated>
     
@@ -222,8 +272,8 @@
   
   <entry>
     <title>Numpy learning</title>
-    <link href="https://www.yanhong.me/2019/01/14/Numpy-Learning/"/>
-    <id>https://www.yanhong.me/2019/01/14/Numpy-Learning/</id>
+    <link href="https://www.yanhong.me/2019/01/14/Numpy%20learning/"/>
+    <id>https://www.yanhong.me/2019/01/14/Numpy learning/</id>
     <published>2019-01-14T14:25:55.000Z</published>
     <updated>2019-02-23T11:51:09.889Z</updated>
     

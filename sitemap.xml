@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.yanhong.me/2019/02/27/Parameters-Selection-for-Pseudo/</loc>
+    
+    <lastmod>2019-02-28T05:33:56.607Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yanhong.me/2019/02/28/Critical-Points-in-Multitask-0/</loc>
+    
+    <lastmod>2019-02-28T05:33:46.061Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.yanhong.me/2019/02/28/Research-Point-Multitask/</loc>
     
     <lastmod>2019-02-28T03:26:05.600Z</lastmod>
@@ -9,7 +23,7 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/02/27/Cross-Stitch-Network/</loc>
+    <loc>https://www.yanhong.me/2019/02/27/Cross-stitch-network/</loc>
     
     <lastmod>2019-02-28T03:13:48.446Z</lastmod>
     
@@ -58,14 +72,14 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/01/16/Cross-Entropy-Loss/</loc>
+    <loc>https://www.yanhong.me/2019/01/16/Cross_entropy_loss/</loc>
     
     <lastmod>2019-02-23T11:56:38.362Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/01/14/Numpy-Learning/</loc>
+    <loc>https://www.yanhong.me/2019/01/14/Numpy%20learning/</loc>
     
     <lastmod>2019-02-23T11:51:09.889Z</lastmod>
     
