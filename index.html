@@ -387,7 +387,42 @@
       
         
           
-            <blockquote>
+            <h2 id="high-related"><a href="#high-related" class="headerlink" title="high-related"></a>high-related</h2><blockquote>
+<p>reference <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8107520" target="_blank" rel="noopener">Learning without Forgetting</a></p>
+</blockquote>
+<ul>
+<li>distilled knowledge</li>
+</ul>
+<blockquote>
+<p>reference <a href="https://arxiv.org/pdf/1611.00851.pdf" target="_blank" rel="noopener">An All-In-One Convolutional Neural Network for Face Analysis</a></p>
+</blockquote>
+<ul>
+<li>naive joint</li>
+</ul>
+<blockquote>
+<p>reference <a href="https://arxiv.org/pdf/1609.06426.pdf" target="_blank" rel="noopener">From Facial Expression Recognition to Interpersonal Relation Prediction<br>Zhanpeng</a></p>
+</blockquote>
+<ul>
+<li>pseudo label</li>
+</ul>
+<blockquote>
+<p>reference NLP <a href="https://arxiv.org/pdf/1802.09913.pdf" target="_blank" rel="noopener">Multi-task Learning of Pairwise Sequence Classification Tasks Over Disparate Label Spaces</a></p>
+</blockquote>
+<p>‘we should be able to not only model their relationship, but also to directly estimate the corresponding label of the target task based on auxiliary predictions.’</p>
+<ul>
+<li>probelm: jointly using unlabelled data and auxiliary, annotated datasets; domain gap; missing labels</li>
+<li>method: training the Label Transfer Network, minimise the squared error between the model predictions and the pseudo label</li>
+<li>baseline: yes (how to calculate loss funtion [squared error] based on pseudo label)</li>
+</ul>
+<blockquote>
+<p>reference <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Misra_Seeing_Through_the_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Seeing through the Human Reporting Bias: Visual Classifiers from Noisy Human-Centric Labels Ishan</a></p>
+</blockquote>
+<ul>
+<li>confidence score</li>
+<li>same apply scene</li>
+<li>refer to paper writting</li>
+</ul>
+<blockquote>
 <p>reference non-DL <a href="http://de.arxiv.org/pdf/1411.6232" target="_blank" rel="noopener">Semi-supervised Feature Analysis by Mining Correlations among Multiple Tasks</a></p>
 </blockquote>
 <ul>
@@ -412,16 +447,7 @@
 </li>
 <li>baseline: no( pose-emotion both are high-level task, not similar to keypoint detection)</li>
 </ul>
-<blockquote>
-<p>reference NLP <a href="https://arxiv.org/pdf/1802.09913.pdf" target="_blank" rel="noopener">Multi-task Learning of Pairwise Sequence Classification Tasks Over Disparate Label Spaces</a></p>
-</blockquote>
-<p>‘we should be able to not only model their relationship, but also to directly estimate the corresponding label of the target task based on auxiliary predictions.’</p>
-<ul>
-<li>probelm: jointly using unlabelled data and auxiliary, annotated datasets; domain gap; missing labels</li>
-<li>method: training the Label Transfer Network, minimise the squared error between the model predictions and the pseudo label</li>
-<li>baseline: yes (how to calculate loss funtion [squared error] based on pseudo label)</li>
-</ul>
-<blockquote>
+<h2 id="pseudo-method-related"><a href="#pseudo-method-related" class="headerlink" title="pseudo method related"></a>pseudo method related</h2><blockquote>
 <p>reference CVPR 2018<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhao_Pseudo_Mask_Augmented_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Pseudo Mask Augmented Object Detection</a></p>
 </blockquote>
 <p> ‘proposing an effective learning approach that progressively improves the quality pseudo from a coarse initialization,the detection network parameters Θ and pseudo masks Mpseudo are alternatively optimized following a EM-like way’</p>
@@ -429,6 +455,16 @@
 <li>probelm: object detection without mask annotation</li>
 <li>method: pseudo mask (alternatively,initialization,pseudo mask with refinement algorithm[graphical model, because the pixel charaterization])</li>
 <li>baseline: yes(uing graphical model with learned information as input to refine pseudo label)</li>
+</ul>
+<blockquote>
+<p>reference <a href="http://papers.nips.cc/paper/4292-clustered-multi-task-learning-via-alternating-structure-optimization.pdf" target="_blank" rel="noopener">Clustered Multi-Task Learning Via Alternating Structure Optimization
+</a></p>
+</blockquote>
+<ul>
+<li><p>‘ASO which aims to identify a shared low-dimensional predictive structure for all tasks’,’based on the standard assump- tion that each task can learn equally well from any other task’,’the clustering view of ASO has not been explored before’</p>
+</li>
+<li><p>hard to understand, pure theories.</p>
+</li>
 </ul>
 
           
@@ -2205,7 +2241,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

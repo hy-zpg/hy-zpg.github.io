@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yanhong.me/"/>
-  <updated>2019-02-28T14:15:32.382Z</updated>
+  <updated>2019-03-01T18:38:07.078Z</updated>
   <id>https://www.yanhong.me/</id>
   
   <author>
@@ -21,16 +21,16 @@
     <link href="https://www.yanhong.me/2019/02/28/Semi-Heteroneous-Multitask-Baseline/"/>
     <id>https://www.yanhong.me/2019/02/28/Semi-Heteroneous-Multitask-Baseline/</id>
     <published>2019-02-28T07:23:11.000Z</published>
-    <updated>2019-02-28T14:15:32.382Z</updated>
+    <updated>2019-03-01T18:38:07.078Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>reference non-DL <a href="http://de.arxiv.org/pdf/1411.6232" target="_blank" rel="noopener">Semi-supervised Feature Analysis by Mining Correlations among Multiple Tasks</a></p></blockquote><ul><li><p>problem: ‘Since the objective function is non-smooth and difficult to solve, we propose an iterative algorithm with fast convergence.’ ‘These previous works, however, independently select features for each task, which fails to consider correlations among multiple related tasks.’ ‘Despite of their good performances, these classical algorithms are all implemented only with labeled training data.’</p></li><li><p>method: ‘ignoring the correlations among different features -&gt;apply the sparse coefficients to the feature vectors -&gt; proposing multiple feature selection’</p></li><li>baseline: undetermined (hard to complete)</li></ul><blockquote><p><a href="https://arxiv.org/pdf/1803.04062.pdf" target="_blank" rel="noopener">Pseudo-task Augmentation: From Deep Multitask Learning to Intratask Sharing—and Back</a></p></blockquote><ul><li>related work conclude papers of joint training of models for multiple tasks.<ul><li>‘how learned structure is shared across tasks’:<ol><li>supervise different tasks at different depths of the shared structure <a href=""></a></li><li>duplicate the shared structure into columns and define mechanisms for sharing information across columns <a href="https://arxiv.org/pdf/1704.01631.pdf" target="_blank" rel="noopener">Multitask Learning with Low-Level Auxiliary Tasks for Encoder-Decoder Based Speech Recognition</a>, using intermediate representations as auxiliary supervision for low-level task recognition to improve final task performance.</li></ol></li></ul></li><li>baseline: no( pose-emotion both are high-level task, not similar to keypoint detection)</li></ul><blockquote><p>reference NLP <a href="https://arxiv.org/pdf/1802.09913.pdf" target="_blank" rel="noopener">Multi-task Learning of Pairwise Sequence Classification Tasks Over Disparate Label Spaces</a></p></blockquote><p>‘we should be able to not only model their relationship, but also to directly estimate the corresponding label of the target task based on auxiliary predictions.’</p><ul><li>probelm: jointly using unlabelled data and auxiliary, annotated datasets; domain gap; missing labels</li><li>method: training the Label Transfer Network, minimise the squared error between the model predictions and the pseudo label</li><li>baseline: yes (how to calculate loss funtion [squared error] based on pseudo label)</li></ul><blockquote><p>reference CVPR 2018<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhao_Pseudo_Mask_Augmented_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Pseudo Mask Augmented Object Detection</a></p></blockquote><p> ‘proposing an effective learning approach that progressively improves the quality pseudo from a coarse initialization,the detection network parameters Θ and pseudo masks Mpseudo are alternatively optimized following a EM-like way’</p><ul><li>probelm: object detection without mask annotation</li><li>method: pseudo mask (alternatively,initialization,pseudo mask with refinement algorithm[graphical model, because the pixel charaterization])</li><li>baseline: yes(uing graphical model with learned information as input to refine pseudo label)</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="high-related"><a href="#high-related" class="headerlink" title="high-related"></a>high-related</h2><blockquote><p>reference <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8107520" target="_blank" rel="noopener">Learning without Forgetting</a></p></blockquote><ul><li>distilled knowledge</li></ul><blockquote><p>reference <a href="https://arxiv.org/pdf/1611.00851.pdf" target="_blank" rel="noopener">An All-In-One Convolutional Neural Network for Face Analysis</a></p></blockquote><ul><li>naive joint</li></ul><blockquote><p>reference <a href="https://arxiv.org/pdf/1609.06426.pdf" target="_blank" rel="noopener">From Facial Expression Recognition to Interpersonal Relation Prediction<br>Zhanpeng</a></p></blockquote><ul><li>pseudo label</li></ul><blockquote><p>reference NLP <a href="https://arxiv.org/pdf/1802.09913.pdf" target="_blank" rel="noopener">Multi-task Learning of Pairwise Sequence Classification Tasks Over Disparate Label Spaces</a></p></blockquote><p>‘we should be able to not only model their relationship, but also to directly estimate the corresponding label of the target task based on auxiliary predictions.’</p><ul><li>probelm: jointly using unlabelled data and auxiliary, annotated datasets; domain gap; missing labels</li><li>method: training the Label Transfer Network, minimise the squared error between the model predictions and the pseudo label</li><li>baseline: yes (how to calculate loss funtion [squared error] based on pseudo label)</li></ul><blockquote><p>reference <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Misra_Seeing_Through_the_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Seeing through the Human Reporting Bias: Visual Classifiers from Noisy Human-Centric Labels Ishan</a></p></blockquote><ul><li>confidence score</li><li>same apply scene</li><li>refer to paper writting</li></ul><blockquote><p>reference non-DL <a href="http://de.arxiv.org/pdf/1411.6232" target="_blank" rel="noopener">Semi-supervised Feature Analysis by Mining Correlations among Multiple Tasks</a></p></blockquote><ul><li><p>problem: ‘Since the objective function is non-smooth and difficult to solve, we propose an iterative algorithm with fast convergence.’ ‘These previous works, however, independently select features for each task, which fails to consider correlations among multiple related tasks.’ ‘Despite of their good performances, these classical algorithms are all implemented only with labeled training data.’</p></li><li><p>method: ‘ignoring the correlations among different features -&gt;apply the sparse coefficients to the feature vectors -&gt; proposing multiple feature selection’</p></li><li>baseline: undetermined (hard to complete)</li></ul><blockquote><p><a href="https://arxiv.org/pdf/1803.04062.pdf" target="_blank" rel="noopener">Pseudo-task Augmentation: From Deep Multitask Learning to Intratask Sharing—and Back</a></p></blockquote><ul><li>related work conclude papers of joint training of models for multiple tasks.<ul><li>‘how learned structure is shared across tasks’:<ol><li>supervise different tasks at different depths of the shared structure <a href=""></a></li><li>duplicate the shared structure into columns and define mechanisms for sharing information across columns <a href="https://arxiv.org/pdf/1704.01631.pdf" target="_blank" rel="noopener">Multitask Learning with Low-Level Auxiliary Tasks for Encoder-Decoder Based Speech Recognition</a>, using intermediate representations as auxiliary supervision for low-level task recognition to improve final task performance.</li></ol></li></ul></li><li>baseline: no( pose-emotion both are high-level task, not similar to keypoint detection)</li></ul><h2 id="pseudo-method-related"><a href="#pseudo-method-related" class="headerlink" title="pseudo method related"></a>pseudo method related</h2><blockquote><p>reference CVPR 2018<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhao_Pseudo_Mask_Augmented_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Pseudo Mask Augmented Object Detection</a></p></blockquote><p> ‘proposing an effective learning approach that progressively improves the quality pseudo from a coarse initialization,the detection network parameters Θ and pseudo masks Mpseudo are alternatively optimized following a EM-like way’</p><ul><li>probelm: object detection without mask annotation</li><li>method: pseudo mask (alternatively,initialization,pseudo mask with refinement algorithm[graphical model, because the pixel charaterization])</li><li>baseline: yes(uing graphical model with learned information as input to refine pseudo label)</li></ul><blockquote><p>reference <a href="http://papers.nips.cc/paper/4292-clustered-multi-task-learning-via-alternating-structure-optimization.pdf" target="_blank" rel="noopener">Clustered Multi-Task Learning Via Alternating Structure Optimization</a></p></blockquote><ul><li><p>‘ASO which aims to identify a shared low-dimensional predictive structure for all tasks’,’based on the standard assump- tion that each task can learn equally well from any other task’,’the clustering view of ASO has not been explored before’</p></li><li><p>hard to understand, pure theories.</p></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;blockquote&gt;
-&lt;p&gt;reference non-DL &lt;a href=&quot;http://de.arxiv.org/pdf/1411.6232&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Semi-supervised Feature Analysis
+        &lt;h2 id=&quot;high-related&quot;&gt;&lt;a href=&quot;#high-related&quot; class=&quot;headerlink&quot; title=&quot;high-related&quot;&gt;&lt;/a&gt;high-related&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;reference &lt;a href
       
     
     </summary>
@@ -293,6 +293,34 @@
     
     
       <category term="pseudo labels" scheme="https://www.yanhong.me/tags/pseudo-labels/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Numpy learning</title>
+    <link href="https://www.yanhong.me/2019/01/14/numpy-learning/"/>
+    <id>https://www.yanhong.me/2019/01/14/numpy-learning/</id>
+    <published>2019-01-14T14:25:55.000Z</published>
+    <updated>2019-03-01T02:20:53.571Z</updated>
+    
+    <content type="html"><![CDATA[<p>One-hot labels preprocessing</p><ul><li><p>Weighting samples with confidence score</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">index = np.ragmax(predicted_result,axis=1)</span><br><span class="line">arg = np_utils.to_categorical(index,classes)</span><br><span class="line">weighted_one_hot=predicted_result*arg</span><br></pre></td></tr></table></figure></li><li><p>Selection &amp;&amp; weighting samples with confidence score</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">weighted_selected_one_hot=np.where(predicted_result&gt;k,predicted_result,0)</span><br></pre></td></tr></table></figure></li><li><p>Extending vector into matrix</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xx = [np.full(classes,value) <span class="keyword">for</span> value <span class="keyword">in</span> x]</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;One-hot labels preprocessing&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Weighting samples with confidence score&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cl
+      
+    
+    </summary>
+    
+      <category term="Codes" scheme="https://www.yanhong.me/categories/Codes/"/>
+    
+    
+      <category term="numpy" scheme="https://www.yanhong.me/tags/numpy/"/>
     
   </entry>
   
