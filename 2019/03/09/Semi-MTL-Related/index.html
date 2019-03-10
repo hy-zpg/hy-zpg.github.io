@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="pesudo labels,">
+  <meta name="keywords" content="multitask,">
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="Pseudo labels in multi-task learning Pseudo data selection with density and distribution distance  Pseudo labelsThe reason why need to apply pseudo data into model training    reference CurriculumNet">
-<meta name="keywords" content="pesudo labels">
+<meta name="description" content="MTLLearning Methods Supervised Semi-supervised  Scenarios Homogeneous Heterogeneous Heterogeneous Tasks (Document &amp;amp; Images &amp;amp; Audio) Hterogeneous Datsets (Each dataset with a set of labels)">
+<meta name="keywords" content="multitask">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Why-How-Pseudo">
-<meta property="og:url" content="https://www.yanhong.me/2019/02/22/Why-How-Pseudo/index.html">
+<meta property="og:title" content="Semi-MTL Related">
+<meta property="og:url" content="https://www.yanhong.me/2019/03/09/Semi-MTL-Related/index.html">
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
-<meta property="og:description" content="Pseudo labels in multi-task learning Pseudo data selection with density and distribution distance  Pseudo labelsThe reason why need to apply pseudo data into model training    reference CurriculumNet">
+<meta property="og:description" content="MTLLearning Methods Supervised Semi-supervised  Scenarios Homogeneous Heterogeneous Heterogeneous Tasks (Document &amp;amp; Images &amp;amp; Audio) Hterogeneous Datsets (Each dataset with a set of labels)">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-24T05:04:16.985Z">
+<meta property="og:updated_time" content="2019-03-09T09:00:30.491Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Why-How-Pseudo">
-<meta name="twitter:description" content="Pseudo labels in multi-task learning Pseudo data selection with density and distribution distance  Pseudo labelsThe reason why need to apply pseudo data into model training    reference CurriculumNet">
+<meta name="twitter:title" content="Semi-MTL Related">
+<meta name="twitter:description" content="MTLLearning Methods Supervised Semi-supervised  Scenarios Homogeneous Heterogeneous Heterogeneous Tasks (Document &amp;amp; Images &amp;amp; Audio) Hterogeneous Datsets (Each dataset with a set of labels)">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://www.yanhong.me/2019/02/22/Why-How-Pseudo/">
+  <link rel="canonical" href="https://www.yanhong.me/2019/03/09/Semi-MTL-Related/">
 
 
 
 
 
-  <title>Why-How-Pseudo | Hongyan's Notes</title>
+  <title>Semi-MTL Related | Hongyan's Notes</title>
   
 
 
@@ -275,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/22/Why-How-Pseudo/">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/03/09/Semi-MTL-Related/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hongyan">
@@ -292,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Why-How-Pseudo</h1>
+          <h1 class="post-title" itemprop="name headline">Semi-MTL Related</h1>
         
 
         <div class="post-meta">
@@ -304,8 +304,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-22T10:53:37+08:00">
-                2019-02-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-09T14:59:07+08:00">
+                2019-03-09
               </time>
             
 
@@ -327,8 +327,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Theory/" itemprop="url" rel="index">
-                    <span itemprop="name">Theory</span>
+                  <a href="/categories/Deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Deep learning</span>
                   </a>
                 </span>
 
@@ -383,75 +383,71 @@
       
 
       
-        <ul>
-<li>Pseudo labels in multi-task learning</li>
-<li>Pseudo data selection with density and distribution distance</li>
+        <h2 id="MTL"><a href="#MTL" class="headerlink" title="MTL"></a>MTL</h2><h3 id="Learning-Methods"><a href="#Learning-Methods" class="headerlink" title="Learning Methods"></a>Learning Methods</h3><ul>
+<li>Supervised</li>
+<li>Semi-supervised</li>
 </ul>
-<h2 id="Pseudo-labels"><a href="#Pseudo-labels" class="headerlink" title="Pseudo labels"></a>Pseudo labels</h2><p>The reason why need to apply pseudo data into model training </p>
-<ul>
-<li><blockquote>
-<p>reference <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Sheng_Guo_CurriculumNet_Learning_from_ECCV_2018_paper.pdf" target="_blank" rel="noopener">CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images</a>, demonstrating that training a CNN from scratch using both clean and noisy data is better than just using the clean one, on the condition that the amount of pseudo data is limited.</p>
+<h3 id="Scenarios"><a href="#Scenarios" class="headerlink" title="Scenarios"></a>Scenarios</h3><ul>
+<li>Homogeneous</li>
+<li>Heterogeneous<ul>
+<li>Heterogeneous Tasks (Document &amp; Images &amp; Audio)</li>
+<li>Hterogeneous Datsets (Each dataset with a set of labels)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Improvement-Ideas"><a href="#Improvement-Ideas" class="headerlink" title="Improvement Ideas"></a>Improvement Ideas</h3><ul>
+<li>Network Structure</li>
+<li>Feature Selection</li>
+</ul>
+<h3 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h3><ul>
+<li>CV</li>
+<li>NLP</li>
+</ul>
+<p>ALL MTL is the combination of above mentioned.<br>Our method is semi-supervised MTL with heterogeneous datasets, comparison including supervised or semi-supervised MTL with heterogeneous dataset.</p>
+<blockquote>
+<p>reference <a href="https://arxiv.org/pdf/1411.6232.pdf" target="_blank" rel="noopener">Semi-supervised Feature Analysis by Mining Correlations among Multiple Tasks</a></p>
 </blockquote>
-</li>
-<li><blockquote>
-<p>reference <a href="https://arxiv.org/pdf/1609.06426.pdf" target="_blank" rel="noopener">From Facial Expression Recognition to Interpersonal Relation Prediction Zhanpeng</a>, stating explaination that pseudo data can bridge the gap between heterogeneous data.</p>
-</blockquote>
-</li>
-<li><blockquote>
-<p>reference <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Misra_Seeing_Through_the_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Seeing through the Human Reporting Bias: Visual Classifiers from Noisy Human-Centric Labels</a>, ‘what’s the all attributs of images’ versus ‘what’s the labeled attributes’, labeling missing attributes. The novalty may be regarded as a baseline (waiting to understand the detail).</p>
-</blockquote>
-</li>
-<li>data imbalance in joint training strategy, such as 20k~ pose dataset AFLW and 90k~ emotion dataset ExpW.</li>
-</ul>
-<h2 id="Pseudo-data-selection"><a href="#Pseudo-data-selection" class="headerlink" title="Pseudo data selection"></a>Pseudo data selection</h2><p>Because much noisy data can effect the model performance and even disturb the model training process, leading to poor model performance, pseudo data selection can control the ratio of pseudo data in the whole datasets.</p>
-<h3 id="Density"><a href="#Density" class="headerlink" title="Density"></a>Density</h3><ul>
-<li>reason: because clusters are easily detected by the local density of data points, in the pseudo data belong to same categoty have similar feature. Appling a density based clustering algorithm that measures the complexity of psuedo data using data distribution density in. each category.</li>
-<li>implementation detail: measuring the purity of data with pseudo label based on its distribution density in a feature space, and rank the purity to generate pseudo weights, pseudo data with higher density is assigned larger weights, while smaller weights are assigned to low-density pseudo data.</li>
-</ul>
-<h3 id="Distribution-distance"><a href="#Distribution-distance" class="headerlink" title="Distribution distance"></a>Distribution distance</h3><ul>
-<li>reason: <ul>
-<li>‘transfer learning is one important method in machine learning, it can relax the condition of the independent identical distribution in train dataset and test dataset, so that knowledge can be transfered from source domain to target domain’,’its main application includes domain adaptation and multi-domain tranferation’.</li>
-<li>instance-based domain adaption: calculating the distance between source domain data and target domain data, then adjusting the weights of target domain instance so that the target data can be matched with source domain data. In detail, the smaller distance, the higher similarity.</li>
-</ul>
-</li>
-<li><p>implementation detail: </p>
-<ol>
-<li>GMM<ul>
-<li>reason:</li>
-<li>implementation: generating Gaussian Mixture models (GMM) based on A1 (data with pseuodo label) and B (data with ground truth) in each categoty. Assuming GMM has K Gaussian models, we obtain G(A1_1), …, G(A1_K), G(B1_1), …, G(B1_K); </li>
-</ul>
-</li>
-<li><p>EMD</p>
 <ul>
-<li><p>reason: &gt;reference <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cui_Large_Scale_Fine-Grained_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Large Scale Fine-Grained Categorization and Domain-Specific Transfer Learning</a>,  which takes domain scale into account by adding a scale factor. In this paper, transfer learning can be viewed as moving a set of images from the source domain S to the target domain T. The work needed to be done by moving an image to another can be defined as their feature Euaullean distance, so the distance between two domains can be defined as the least amount of total work needed. This definition of domain similarity can be calculated by the Earth Mover’s Distance (EMD). </p>
+<li>semi-supervised, heterogeneou datasets, feature selection.</li>
+<li>scenario: CV, dataset A for tasks A[labeled and unlabeled], dataset B for tasks B[labeled and unlabeled]</li>
+<li>method: manifold learning, mining feature correlation by sparse coefficients.</li>
+<li>No</li>
+</ul>
+<blockquote>
+<p>reference <a href="https://arxiv.org/pdf/1604.01335.pdf" target="_blank" rel="noopener">Deep Cross Residual Learning for Multitask Visual Recognition</a></p>
+</blockquote>
 <ul>
-<li><p>original EMD equation</p>
-<p>\begin{aligned}<br>\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}=\min {\sum_{i=1}^{m}w_{pi},\quad \sum_{j=1}^{n}w_{qj}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}d_{i,j}}{\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>P={(p_{1},w_{p1}),(p_{2},w_{p2}),…,(p_{m},w_{pm})}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>Q={(q_{1},w_{q1}),(q_{2},w_{q2}),…,(q_{n},w_{qn})}<br>\end{aligned}</p>
-</li>
-<li><p>reference paper EMD application<br>g(s_{i}) from the mean value of image features in category i from source domain<br>g(t_{i}) from the mean value of image features in category i from target domain<br>\begin{aligned}<br>\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}=\min {\sum_{i=1}^{m}w_{pi},\quad \sum_{j=1}^{n}w_{qj}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}d_{i,j}}{\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>S={(s_{1},w_{s1}),(s_{2},w_{s2}),…,(s_{m},w_{sm})}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>T={(t_{1},w_{t1}),(t_{2},w_{t2}),…,(t_{n},w_{tn})}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>D=[d_{i,j}] = || g(s_{i}) − g(t_{j})||<br>\end{aligned}</p>
-<p>\begin{aligned}<br>sim(S, T) = e−γd(S,T )<br>\end{aligned}</p>
-</li>
-<li><p>EMD application for pseudo data selection<br>  g(p) = mean value of image features in specific cluster from the same category in source domain<br>  g(g_{i}) = mean value of image features in cluster i from the same category in target domain<br>\begin{aligned}<br>\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}=\min {\sum_{i=1}^{m}w_{pi},\quad \sum_{j=1}^{n}w_{qj}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}d_{i,j}}{\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>P={(p_{1},w_{p1}),(p_{2},w_{p2}),…,(p_{m},w_{pm})}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>G={(g_{1},w_{g1}),(g_{2},w_{g2}),…,(g_{n},w_{gn})}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>D=[d_{i,j}] = || g(p_{i}) − g(g_{j})||<br>\end{aligned}</p>
-<p>\begin{aligned}<br>sim(S, T) = e−γd(S,T )<br>\end{aligned}</p>
-</li>
+<li>supervised, heterogeneou datasets, network structure.</li>
+<li>scenario: CV, dataset A for tasks A[labeled], dataset B for tasks B[labeled]</li>
+<li>method: enables intuitive learning across multiple related tasks using cross-connections called cross-residuals</li>
+<li>Yes? Netowrk realization?</li>
 </ul>
-</li>
-<li>implementation: calculating the distance between G(A1_i) and the whole cluster in G(B1). As for distance calculation with EMD method, we obtain P={G(A1_i)_mean,G(A1_i)_probs} and Q={[G(B1_1)_mean, …, G(B1_K)_mean],[G(B1_1)_probs, …, G(B1_K)_probs]}, so we can calculate distance vector D=(emd_1,emd_k), which is used for obtaining distribution weights weights_g.</li>
+<blockquote>
+<p>reference <a href="http://www.jmlr.org/papers/volume6/ando05a/ando05a.pdf" target="_blank" rel="noopener">A Framework for Learning Predictive Structures from Multiple Tasks and Unlabeled Data</a></p>
+</blockquote>
+<ul>
+<li>semi-supervised, heterogeneou datasets, network structure.</li>
+<li>scenario: </li>
+<li>method: </li>
+<li>No</li>
 </ul>
-</li>
-</ol>
-</li>
+<blockquote>
+<p>reference <a href="https://arxiv.org/pdf/1802.09913.pdf" target="_blank" rel="noopener">Multi-task Learning of Pairwise Sequence Classification Tasks Over Disparate Label Spaces</a></p>
+</blockquote>
+<ul>
+<li>supervised, heterogeneou datasets, network structure.</li>
+<li>scenario: text classification, dataset A for tasks A[labeled], dataset B for tasks B[labeled]</li>
+<li>method: combining multi-task learning and semi- supervised learning by inducing a joint embed- ding space between disparate label spaces and learning transfer functions between label embeddings. LTN can be used to label unlabelled and auxiliary task data by utilising the ‘distilling knowledge’ contained in auxiliary model predictions. not only model their relationship, but also to directly estimate the cor- responding label of the target task based on auxil- iary predictions</li>
+<li>Yes: embedding, prediction, output, temperature=1, embedding can be realized with cross-stich network</li>
+</ul>
+<blockquote>
+<p>reference <a href="http://www.aclweb.org/anthology/D16-1070" target="_blank" rel="noopener">Neural Network for Heterogeneous Annotations</a></p>
+</blockquote>
+<ul>
+<li>supervised, heterogeneou datasets, multi-view &amp; stacking setting</li>
+<li>scenario: NLP, dataset A for tasks A[labeled], dataset B for tasks B[labeled]</li>
+<li>method: multi-view, stacking, neurual network</li>
+<li>Yes: not understand</li>
 </ul>
 
       
@@ -470,7 +466,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/pesudo-labels/" rel="tag"># pesudo labels</a>
+            <a href="/tags/multitask/" rel="tag"># multitask</a>
           
         </div>
       
@@ -483,8 +479,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/21/Density-Distribution/" rel="next" title="Density & Distribution">
-                <i class="fa fa-chevron-left"></i> Density & Distribution
+              <a href="/2019/02/28/Semi-Heteroneous-Multitask-Baseline/" rel="next" title="Semi-Heteroneous-Multitask-Baseline">
+                <i class="fa fa-chevron-left"></i> Semi-Heteroneous-Multitask-Baseline
               </a>
             
           </div>
@@ -492,10 +488,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/26/Heterogeneous-Multitask/" rel="prev" title="Heterogeneous Multitask">
-                Heterogeneous Multitask <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -650,7 +642,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Pseudo-labels"><span class="nav-number">1.</span> <span class="nav-text">Pseudo labels</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pseudo-data-selection"><span class="nav-number">2.</span> <span class="nav-text">Pseudo data selection</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Density"><span class="nav-number">2.1.</span> <span class="nav-text">Density</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Distribution-distance"><span class="nav-number">2.2.</span> <span class="nav-text">Distribution distance</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MTL"><span class="nav-number">1.</span> <span class="nav-text">MTL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Learning-Methods"><span class="nav-number">1.1.</span> <span class="nav-text">Learning Methods</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scenarios"><span class="nav-number">1.2.</span> <span class="nav-text">Scenarios</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Improvement-Ideas"><span class="nav-number">1.3.</span> <span class="nav-text">Improvement Ideas</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Application"><span class="nav-number">1.4.</span> <span class="nav-text">Application</span></a></li></ol></li></ol></div>
             
 
           </div>
