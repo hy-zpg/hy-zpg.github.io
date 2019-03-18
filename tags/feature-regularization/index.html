@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="pseudo labels,">
+  <meta name="keywords" content="Hongyan's Notes, NexT">
 
 
 
@@ -81,18 +81,17 @@
 
 
 
-<meta name="description" content="Relation between MMD and density for pseudo data selectioncombination of MMD and density: my understanding is that we can obtain MMD, density, prior weights from GMM, when GMM can be calculated from g">
-<meta name="keywords" content="pseudo labels">
-<meta property="og:type" content="article">
-<meta property="og:title" content="MMD and Density">
-<meta property="og:url" content="https://www.yanhong.me/2019/01/15/GMM/index.html">
+<meta name="description" content="New Rhythm">
+<meta name="keywords" content="Coding &amp;&amp; Learning">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hongyan&#39;s Notes">
+<meta property="og:url" content="https://www.yanhong.me/tags/feature-regularization/index.html">
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
-<meta property="og:description" content="Relation between MMD and density for pseudo data selectioncombination of MMD and density: my understanding is that we can obtain MMD, density, prior weights from GMM, when GMM can be calculated from g">
+<meta property="og:description" content="New Rhythm">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-23T12:01:25.654Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MMD and Density">
-<meta name="twitter:description" content="Relation between MMD and density for pseudo data selectioncombination of MMD and density: my understanding is that we can obtain MMD, density, prior weights from GMM, when GMM can be calculated from g">
+<meta name="twitter:title" content="Hongyan&#39;s Notes">
+<meta name="twitter:description" content="New Rhythm">
 
 
 
@@ -122,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://www.yanhong.me/2019/01/15/GMM/">
+  <link rel="canonical" href="https://www.yanhong.me/tags/feature-regularization/">
 
 
 
 
 
-  <title>MMD and Density | Hongyan's Notes</title>
+  <title>Tag: feature regularization | Hongyan's Notes</title>
   
 
 
@@ -147,7 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -293,207 +292,52 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block tag">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>feature regularization<small>Tag</small>
+        </h1>
+      </div>
 
-  
-  
-  
+      
+        
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/01/15/GMM/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
+            <a class="post-title-link" href="/2019/03/18/Manifold-Learning/" itemprop="url">
+              
+                <span itemprop="name">Manifold Learning</span>
+              
+            </a>
         
-          <h1 class="post-title" itemprop="name headline">MMD and Density</h1>
-        
+      </h2>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-15T10:31:01+08:00">
-                2019-01-15
-              </time>
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-03-18T16:24:56+08:00" content="2019-03-18">
+          03-18
+        </time>
+      </div>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Theory/" itemprop="url" rel="index">
-                    <span itemprop="name">Theory</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h2 id="Relation-between-MMD-and-density-for-pseudo-data-selection"><a href="#Relation-between-MMD-and-density-for-pseudo-data-selection" class="headerlink" title="Relation between MMD and density for pseudo data selection"></a>Relation between MMD and density for pseudo data selection</h2><p>combination of MMD and density: my understanding is that we can obtain MMD, density, prior weights from GMM, when GMM can be calculated from ground-trurh label of </p>
-<ul>
-<li><p>MMD: first-order information</p>
-</li>
-<li><p>Density: second-order information, the larger variance, the sparser, the small variance, the denser </p>
-</li>
-</ul>
-<h3 id="GMM"><a href="#GMM" class="headerlink" title="GMM"></a>GMM</h3><ul>
-<li>Gaussian Mixed Model: A Gaussian mixture model is a probabilistic model that assumes all the data points are generated from a mixture of a finite number of Gaussian distributions with unknown parameters. One can think of mixture models as generalizing k-means clustering to incorporate information about the covariance structure of the data as well as the centers of the latent Gaussians.</li>
-</ul>
-<ul>
-<li><p>Differentce between k-means and GMM: k-means notes that each point is assigned to different clusters, while GMM can calculate the probabiliy of each point belong to each clusters.</p>
-</li>
-<li><p>Import parameters of GMM: K Gaussion models, also K clusters, \pi, \mu, \Sigma<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</p>
-</li>
-</ul>
-
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/pseudo-labels/" rel="tag"># pseudo labels</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/01/14/numpy-learning/" rel="next" title="Numpy learning">
-                <i class="fa fa-chevron-left"></i> Numpy learning
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/16/Cross_entropy_loss/" rel="prev" title="Cross_entropy_loss">
-                Cross_entropy_loss <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
       
     </div>
+
   </div>
+  
+  
+  
+
+  
 
 
           </div>
@@ -501,10 +345,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -525,17 +365,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -618,22 +449,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Relation-between-MMD-and-density-for-pseudo-data-selection"><span class="nav-number">1.</span> <span class="nav-text">Relation between MMD and density for pseudo data selection</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GMM"><span class="nav-number">1.1.</span> <span class="nav-text">GMM</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -768,10 +583,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 

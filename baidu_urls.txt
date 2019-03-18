@@ -1,4 +1,4 @@
-https://www.yanhong.me/2019/03/18/linux-download-filels/
+https://www.yanhong.me/2019/03/18/Manifold-Learning/
 https://www.yanhong.me/2019/03/09/Semi-MTL-Related/
 https://www.yanhong.me/2019/02/28/Semi-Heteroneous-Multitask-Baseline/
 https://www.yanhong.me/2019/02/28/Research-Point-Multitask/
