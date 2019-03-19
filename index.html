@@ -436,6 +436,17 @@
 <h3 id="Semi-supervised-Multi-task-Learning-with-Manifold-Learning"><a href="#Semi-supervised-Multi-task-Learning-with-Manifold-Learning" class="headerlink" title="Semi-supervised Multi-task Learning with Manifold Learning"></a>Semi-supervised Multi-task Learning with Manifold Learning</h3><blockquote>
 <p>reference [Semisupervised feature analysis by mining correlations among multiple tasks]{<a href="https://arxiv.org/pdf/1411.6232.pdf}" target="_blank" rel="noopener">https://arxiv.org/pdf/1411.6232.pdf}</a></p>
 </blockquote>
+<ul>
+<li>aim: feature selection in semi-supervised MTL</li>
+<li>method: sparce coefficients learnt <pre><code>\begin{aligned}
+p(x) &amp; = \min_{w_t} \sum_(l=1}^t (loss(w_l) + \alpha ||w_l||_{1,2} + \gamma ||w||_{\*})
+\end{aligned}
+including $l_{1,2}$ norm and Laplacian norm:
+\begin{aligned}
+\gamma ||w|| = \min_{w,b}\sum_{l=1}{t}Tr(w^Tx_lL_lx_l^Tw)
+\end{aligned}
+</code></pre></li>
+</ul>
 <blockquote>
 <p>reference [Semi-supervised multitask learning]{<a href="http://papers.nips.cc/paper/3198-semi-supervised-multitask-learning.pdf}" target="_blank" rel="noopener">http://papers.nips.cc/paper/3198-semi-supervised-multitask-learning.pdf}</a></p>
 </blockquote>
