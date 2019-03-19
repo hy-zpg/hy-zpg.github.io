@@ -438,10 +438,13 @@
 </blockquote>
 <ul>
 <li>aim: feature selection in semi-supervised MTL</li>
-<li>method: sparce coefficients learnt <pre><code>\begin{aligned}
+<li><p>method: sparce coefficients learnt </p>
+<pre><code>\begin{aligned}
 p(x) &amp; = \min_{w_t} \sum_(l=1}^t (loss(w_l) + \alpha ||w_l||_{1,2} + \gamma ||w||_{\*})
 \end{aligned}
+
 including $l_{1,2}$ norm and Laplacian norm:
+
 \begin{aligned}
 \gamma ||w|| = \min_{w,b}\sum_{l=1}{t}Tr(w^Tx_lL_lx_l^Tw)
 \end{aligned}

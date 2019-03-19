@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
 <meta property="og:description" content="Manifold Leanring for Semi-supervised Learning the model trained with labeled samples and unlabeled samples introducing manifold learning to learn the geometry of marginal distribution &amp;gt;reference f">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-19T07:18:02.245Z">
+<meta property="og:updated_time" content="2019-03-19T07:19:47.799Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Manifold Learning">
 <meta name="twitter:description" content="Manifold Leanring for Semi-supervised Learning the model trained with labeled samples and unlabeled samples introducing manifold learning to learn the geometry of marginal distribution &amp;gt;reference f">
@@ -434,10 +434,13 @@
 </blockquote>
 <ul>
 <li>aim: feature selection in semi-supervised MTL</li>
-<li>method: sparce coefficients learnt <pre><code>\begin{aligned}
+<li><p>method: sparce coefficients learnt </p>
+<pre><code>\begin{aligned}
 p(x) &amp; = \min_{w_t} \sum_(l=1}^t (loss(w_l) + \alpha ||w_l||_{1,2} + \gamma ||w||_{\*})
 \end{aligned}
+
 including $l_{1,2}$ norm and Laplacian norm:
+
 \begin{aligned}
 \gamma ||w|| = \min_{w,b}\sum_{l=1}{t}Tr(w^Tx_lL_lx_l^Tw)
 \end{aligned}
