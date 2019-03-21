@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yanhong.me/"/>
-  <updated>2019-03-21T05:57:07.709Z</updated>
+  <updated>2019-03-21T05:35:00.750Z</updated>
   <id>https://www.yanhong.me/</id>
   
   <author>
@@ -15,20 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Writting Paper</title>
-    <link href="https://www.yanhong.me/2019/03/21/Writting-Paper/"/>
-    <id>https://www.yanhong.me/2019/03/21/Writting-Paper/</id>
-    <published>2019-03-21T05:57:07.000Z</published>
-    <updated>2019-03-21T05:57:07.709Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>Manifold Learning</title>
