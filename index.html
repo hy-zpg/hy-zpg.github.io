@@ -422,10 +422,12 @@
             <h2 id="Meta-learning"><a href="#Meta-learning" class="headerlink" title="Meta learning"></a>Meta learning</h2><h3 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h3><ul>
 <li><p>“learn to learn”, intends to design models that can learn <em>new</em> skills or adapt to <em>new</em> environment <em>rapidly</em> with <em>a few</em> traing samples, like <em>human learning</em>. The detail can be posted in <a href="https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html" target="_blank" rel="noopener">Meta-Learning: Learning to Learn Fast</a></p>
 </li>
-<li><p>Optimization aims<br>\begin{aligned}<br>\theta^* = \arg\min_\theta \mathbb{E}<em>{\mathcal{D}\sim p(\mathcal{D})} [\mathcal{L}</em>\theta(\mathcal{D})]<br>\end{aligned}<br>where $\mathcal{D}=\langle S, B\rangle$, Support set and Batch set.</p>
+<li><p>Optimization aims<br>\begin{aligned}<br>\theta^* = \arg\min_\theta \mathbb{E}<em>{\mathcal{D}\sim p(\mathcal{D})} [\mathcal{L}</em>\theta(\mathcal{D})]<br>\end{aligned}</p>
 </li>
-<li><p>Training steps</p>
-</li>
+</ul>
+<p>where $\mathcal{D}=\langle S, B\rangle$, Support set and Batch set.</p>
+<ul>
+<li>Training steps</li>
 </ul>
 <ol>
 <li>sample a subset of labels $L\subset\mathcal{L}$.</li>
@@ -438,7 +440,7 @@
 <li>Traning stages</li>
 </ul>
 <ol>
-<li>meta-learner: a optimizer gϕ learns how to update the learner model’s parameters via the support set $S$, $\theta’ = g_\phi(\theta, S)$</li>
+<li>meta-learner: a optimizer $g_\phi$ learns how to update the learner model’s parameters via the support set $S$, $\theta’ = g_\phi(\theta, S)$</li>
 <li>learner: A classifier $f_\theta$ is the “learner” model, trained for operating a given task.<br>final learning objective:<br>\begin{aligned}<br>\mathbb{E}<em>{L\subset\mathcal{L}}[ \mathbb{E}</em>{S^L \subset\mathcal{D}, B^L \subset\mathcal{D}} [\sum_{(\mathbf{x}, y)\in B^L} P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})]]<br>\end{aligned}</li>
 </ol>
 <h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><p>how to model $P_\theta(y \vert \mathbf{x})$, a noce summary is posted at <a href="http://metalearning-symposium.ml/files/vinyals.pdf" target="_blank" rel="noopener">NIPS talk</a><br>{: class=”info”} | ————- | ————- | ————- | ————- | | | Model-based | Metric-based | Optimization-based | | ————- | ————- | ————- | ————- | | Key idea | RNN; memory | Metric learning | Gradient descent | | How $$P_\theta(y \vert \mathbf{x})$$ is modeled? | $$f_\theta(\mathbf{x}, S)$$ | $$\sum_{(\mathbf{x}i, y_i) \in S} k\theta(\mathbf{x}, \mathbf{x}i)y_i$$ (*) | $$P{g_\phi(\theta, S^L)}(y \vert \mathbf{x})$$ |</p>
