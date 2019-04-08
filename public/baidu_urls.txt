@@ -1,5 +1,5 @@
+https://www.yanhong.me/2019/04/08/GAN/
+https://www.yanhong.me/2019/04/04/Few-shot-Image-generation/
 https://www.yanhong.me/2019/03/18/Manifold-Learning/
 https://www.yanhong.me/2019/03/09/Semi-MTL-Related/
 https://www.yanhong.me/2019/02/28/Semi-Heteroneous-Multitask-Baseline/
-https://www.yanhong.me/2019/02/28/Research-Point-Multitask/
-https://www.yanhong.me/2019/02/28/Critical-Points-in-Multitask-0/
