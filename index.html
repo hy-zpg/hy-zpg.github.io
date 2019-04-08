@@ -441,7 +441,9 @@
 </ul>
 <ol>
 <li>meta-learner: a optimizer $g_\phi$ learns how to update the learner model’s parameters via the support set $S$, $\theta’ = g_\phi(\theta, S)$</li>
-<li>learner: A classifier $f_\theta$ is the “learner” model, trained for operating a given task.<br>final learning objective is $\mathbb{E}<em>{L\subset\mathcal{L}}[ \mathbb{E}</em>{S^L \subset\mathcal{D}, B^L \subset\mathcal{D}} [\sum_{(\mathbf{x}, y)\in B^L} P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})]]$</li>
+<li>learner: A classifier $f_\theta$ is the “learner” model, trained for operating a given task.<br>final learning objective is<br><code>$$
+\mathbb{E}_{L\subset\mathcal{L}}[ \mathbb{E}_{S^L \subset\mathcal{D}, B^L \subset\mathcal{D}} [\sum_{(\mathbf{x}, y)\in B^L} P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})]]
+$$</code></li>
 </ol>
 <h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><h4 id="model-based-f-theta-mathbf-x-S"><a href="#model-based-f-theta-mathbf-x-S" class="headerlink" title="model-based: $f_\theta(\mathbf{x}, S)$"></a>model-based: $f_\theta(\mathbf{x}, S)$</h4><ul>
 <li>use <em>recurrent</em> network with <em>internal (or external)</em> memory</li>
