@@ -432,19 +432,19 @@
 </ul>
 <h2 id="Cross-entropy-loss-with-missing-labels"><a href="#Cross-entropy-loss-with-missing-labels" class="headerlink" title="Cross_entropy_loss with missing labels"></a>Cross_entropy_loss with missing labels</h2><ul>
 <li><p>leveraging fixed zero array or ones array as ground truth and generating mask in loss function</p>
-<pre><code class="lang-bash">def mask_cross_entropy_loss(y_true,y_pred):
+<pre><code class="bash">def mask_cross_entropy_loss(y_true,y_pred):
   mask=K.all(K.equal(y_true,0),axis=-1)
   mask=1-K.cast(mask,K.floatx())
   loss = K.categorical_crossentropy(y_true,y_pred)*mask
-  return (K.sum(loss)/K.sum(mask)
+  <span class="built_in">return</span> (K.sum(loss)/K.sum(mask)
 </code></pre>
 </li>
 <li><p>corresponding accuracy with mask</p>
-<pre><code class="lang-bash">def mask_cross_entropy_acc(y_true,y_pred):
+<pre><code class="bash">def mask_cross_entropy_acc(y_true,y_pred):
   mask=K.all(K.equal(y_true,0),axis=-1)
   mask=1-K.cast(mask,K.floatx())
   acc = K.cast(K.equal(K.argmax(y_true,axis=-1),K.argmax(y_pred,axis=-1)),K.floatx()))*mask
-  return (K.sum(acc)/K.sum(mask)
+  <span class="built_in">return</span> (K.sum(acc)/K.sum(mask)
 </code></pre>
 </li>
 </ul>

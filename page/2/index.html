@@ -421,11 +421,13 @@
           
             <h2 id="Purity-based-density-amp-distribution-distance-based-GMM"><a href="#Purity-based-density-amp-distribution-distance-based-GMM" class="headerlink" title="Purity based density &amp; distribution distance based GMM"></a>Purity based density &amp; distribution distance based GMM</h2><h3 id="Purity-based-density"><a href="#Purity-based-density" class="headerlink" title="Purity based density"></a>Purity based density</h3><blockquote>
 <p>reference：ECCV 2018 <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Sheng_Guo_CurriculumNet_Learning_from_ECCV_2018_paper.pdf" target="_blank" rel="noopener">CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images</a></p>
+</blockquote>
+<blockquote>
 <p>original reference： Science 2004 <a href="http://sites.psu.edu/mcnl/files/2017/03/9-2dhti48.pdf" target="_blank" rel="noopener">Clustering by fast search and find of density peaks</a></p>
 </blockquote>
 <h4 id="Creativity"><a href="#Creativity" class="headerlink" title="Creativity"></a>Creativity</h4><ul>
-<li>leveraging data distribution density in feature space to evaluate the complexity of the data<br>ours — evaluating the purity of pseudo label data by data density in feature space</li>
-<li>noisy data can be regared as regularied method to improve the model generalization<br>ours — pesudo labels can improve the model generalization </li>
+<li>leveraging data distribution density in feature space to evaluate the complexity of the data<br>ours – evaluating the purity of pseudo label data by data density in feature space</li>
+<li>noisy data can be regared as regularied method to improve the model generalization<br>ours – pesudo labels can improve the model generalization </li>
 </ul>
 <h4 id="Technical-detail"><a href="#Technical-detail" class="headerlink" title="Technical detail"></a>Technical detail</h4><p>Density based clustering algorithm</p>
 <ul>
@@ -435,7 +437,7 @@
 <li>calculating distance of each image: maximun local distance is regarded as cluster centre, image with smaller distance between its distance and cluster centre represents that its label have high confidence </li>
 </ul>
 <h3 id="Distribution-distance-based-GMM"><a href="#Distribution-distance-based-GMM" class="headerlink" title="Distribution distance based GMM"></a>Distribution distance based GMM</h3><h4 id="Clustring-based-GMM"><a href="#Clustring-based-GMM" class="headerlink" title="Clustring based GMM"></a>Clustring based GMM</h4><h5 id="GMM-with-EM"><a href="#GMM-with-EM" class="headerlink" title="GMM with EM"></a>GMM with EM</h5><ul>
-<li><p>original definition<br>\begin{aligned}<br>p(x) &amp; = \sum<em>{k=1}^K p(k)p(x|k) = \sum</em>{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}<br>\pi_k  represent the possibility of sample belong to kth category</p>
+<li><p>original definition<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}<br>\pi_k  represent the possibility of sample belong to kth category</p>
 </li>
 <li><p>new definition for coding<br>\begin{aligned}<br>\sum_{k} z_k = 1<br>\end{aligned}</p>
 </li>
@@ -621,8 +623,8 @@
 <p>reference  ECCV 2018 <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Sheng_Guo_CurriculumNet_Learning_from_ECCV_2018_paper.pdf" target="_blank" rel="noopener"> CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images</a></p>
 </blockquote>
 <h4 id="creativity"><a href="#creativity" class="headerlink" title="creativity"></a>creativity</h4><ol>
-<li>leveraging data distribution density in feature space to evaluate the complexity of the data<br> ours — evaluating the purity of pseudo label data by data density in feature space</li>
-<li>noisy data can be regared as regularied method to improve the model generalization<br> ours — pesudo labels can improve the model generalization </li>
+<li>leveraging data distribution density in feature space to evaluate the complexity of the data<br> ours – evaluating the purity of pseudo label data by data density in feature space</li>
+<li>noisy data can be regared as regularied method to improve the model generalization<br> ours – pesudo labels can improve the model generalization </li>
 </ol>
 <h4 id="technical-detail"><a href="#technical-detail" class="headerlink" title="technical detail"></a>technical detail</h4><ol>
 <li>density based clustering algorithm<ul>
@@ -643,7 +645,7 @@
 <li>signature:<br>\begin{aligned}<br>s= (feature,weights)<br>\end{aligned}</li>
 </ol>
 <h2 id="Purity-and-distribution-distance-based-gmm"><a href="#Purity-and-distribution-distance-based-gmm" class="headerlink" title="Purity and distribution distance based gmm"></a>Purity and distribution distance based gmm</h2><h3 id="GMM-with-EM"><a href="#GMM-with-EM" class="headerlink" title="GMM with EM"></a>GMM with EM</h3><ul>
-<li>original definition<br>\begin{aligned}<br>p(x) &amp; = \sum<em>{k=1}^K p(k)p(x|k) = \sum</em>{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</li>
+<li>original definition<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</li>
 </ul>
 <p>\pi_k  represent the possibility of sample belong to kth category</p>
 <ul>
@@ -826,19 +828,19 @@
 </ul>
 <h2 id="Cross-entropy-loss-with-missing-labels"><a href="#Cross-entropy-loss-with-missing-labels" class="headerlink" title="Cross_entropy_loss with missing labels"></a>Cross_entropy_loss with missing labels</h2><ul>
 <li><p>leveraging fixed zero array or ones array as ground truth and generating mask in loss function</p>
-<pre><code class="lang-bash">def mask_cross_entropy_loss(y_true,y_pred):
+<pre><code class="bash">def mask_cross_entropy_loss(y_true,y_pred):
   mask=K.all(K.equal(y_true,0),axis=-1)
   mask=1-K.cast(mask,K.floatx())
   loss = K.categorical_crossentropy(y_true,y_pred)*mask
-  return (K.sum(loss)/K.sum(mask)
+  <span class="built_in">return</span> (K.sum(loss)/K.sum(mask)
 </code></pre>
 </li>
 <li><p>corresponding accuracy with mask</p>
-<pre><code class="lang-bash">def mask_cross_entropy_acc(y_true,y_pred):
+<pre><code class="bash">def mask_cross_entropy_acc(y_true,y_pred):
   mask=K.all(K.equal(y_true,0),axis=-1)
   mask=1-K.cast(mask,K.floatx())
   acc = K.cast(K.equal(K.argmax(y_true,axis=-1),K.argmax(y_pred,axis=-1)),K.floatx()))*mask
-  return (K.sum(acc)/K.sum(mask)
+  <span class="built_in">return</span> (K.sum(acc)/K.sum(mask)
 </code></pre>
 </li>
 </ul>
@@ -1015,7 +1017,7 @@
 <ul>
 <li><p>Differentce between k-means and GMM: k-means notes that each point is assigned to different clusters, while GMM can calculate the probabiliy of each point belong to each clusters.</p>
 </li>
-<li><p>Import parameters of GMM: K Gaussion models, also K clusters, \pi, \mu, \Sigma<br>\begin{aligned}<br>p(x) &amp; = \sum<em>{k=1}^K p(k)p(x|k) = \sum</em>{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</p>
+<li><p>Import parameters of GMM: K Gaussion models, also K clusters, \pi, \mu, \Sigma<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</p>
 </li>
 </ul>
 
