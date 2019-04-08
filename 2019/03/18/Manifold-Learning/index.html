@@ -435,24 +435,20 @@
 <ul>
 <li>aim: feature selection in semi-supervised MTL</li>
 <li><p>method: sparce coefficients learnt </p>
-<pre><code>\begin{aligned}
-p(x) &amp; = \min_{w_t} \sum_(l=1}^t (loss(w_l) + \alpha ||w_l||_{1,2} + \gamma ||w||_{\*})
-\end{aligned}
+<pre><code>   \begin{aligned}
+   p(x) &amp; = \min_{w_t} \sum_(l=1}^t (loss(w_l) + \alpha ||w_l||_{1,2} + \gamma ||w||_{\*})
+   \end{aligned}
 
-including $l_{1,2}$ norm and Laplacian norm:
+   including $l_{1,2}$ norm and Laplacian norm:
 
-\begin{aligned}
-\gamma ||w|| = \min_{w,b}\sum_{l=1}{t}Tr(w^Tx_lL_lx_l^Tw)
-\end{aligned}
+   \begin{aligned}
+   \gamma ||w|| = \min_{w,b}\sum_{l=1}{t}Tr(w^Tx_lL_lx_l^Tw)
+   \end{aligned}
 </code></pre></li>
 </ul>
 <blockquote>
 <p>reference [Semi-supervised multitask learning]{<a href="http://papers.nips.cc/paper/3198-semi-supervised-multitask-learning.pdf}" target="_blank" rel="noopener">http://papers.nips.cc/paper/3198-semi-supervised-multitask-learning.pdf}</a></p>
-</blockquote>
-<blockquote>
 <p>reference [Semi-supervised multi-task learning with task regularizations]{<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.194.1854&amp;rep=rep1&amp;type=pdf}" target="_blank" rel="noopener">http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.194.1854&amp;rep=rep1&amp;type=pdf}</a></p>
-</blockquote>
-<blockquote>
 <p>reference [Semi-supervised multitask learning for scene recognition]{<a href="https://www.researchgate.net/profile/Lichao_Mou/publication/268880603_Semi-Supervised_Multitask_Learning_for_Scene_Recognition/links/567a67f608ae7fea2e9a08f1.pdf}" target="_blank" rel="noopener">https://www.researchgate.net/profile/Lichao_Mou/publication/268880603_Semi-Supervised_Multitask_Learning_for_Scene_Recognition/links/567a67f608ae7fea2e9a08f1.pdf}</a></p>
 </blockquote>
 
