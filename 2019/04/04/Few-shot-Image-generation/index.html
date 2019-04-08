@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="Meta learningDefinition “learn to learn”, intends to design models that can learn new skills or adapt to new environment rapidly with a few traing samples, like human learning. The detail can be poste">
+<meta name="description" content="Meta learningDefinition “learn to learn”, intends to design models that can learn new skills or adapt to new environment rapidly with a few traing samples, like human learning way. The detail can be p">
 <meta name="keywords" content="few-shot learning">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Few-shot Image generation">
 <meta property="og:url" content="https://www.yanhong.me/2019/04/04/Few-shot-Image-generation/index.html">
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
-<meta property="og:description" content="Meta learningDefinition “learn to learn”, intends to design models that can learn new skills or adapt to new environment rapidly with a few traing samples, like human learning. The detail can be poste">
+<meta property="og:description" content="Meta learningDefinition “learn to learn”, intends to design models that can learn new skills or adapt to new environment rapidly with a few traing samples, like human learning way. The detail can be p">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-08T02:22:24.870Z">
+<meta property="og:updated_time" content="2019-04-08T02:50:15.006Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Few-shot Image generation">
-<meta name="twitter:description" content="Meta learningDefinition “learn to learn”, intends to design models that can learn new skills or adapt to new environment rapidly with a few traing samples, like human learning. The detail can be poste">
+<meta name="twitter:description" content="Meta learningDefinition “learn to learn”, intends to design models that can learn new skills or adapt to new environment rapidly with a few traing samples, like human learning way. The detail can be p">
 
 
 
@@ -416,9 +416,9 @@
 
       
         <h2 id="Meta-learning"><a href="#Meta-learning" class="headerlink" title="Meta learning"></a>Meta learning</h2><h3 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h3><ul>
-<li><p>“learn to learn”, intends to design models that can learn <em>new</em> skills or adapt to <em>new</em> environment <em>rapidly</em> with <em>a few</em> traing samples, like <em>human learning</em>. The detail can be posted in <a href="https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html" target="_blank" rel="noopener">Meta-Learning: Learning to Learn Fast</a></p>
+<li><p>“learn to learn”, intends to design models that can learn <em><strong>new</strong></em> skills or adapt to <em><strong>new</strong></em> environment <em><strong>rapidly</strong></em> with <em><strong>a few</strong></em> traing samples, like <em><strong>human learning way</strong></em>. The detail can be posted in <a href="https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html" target="_blank" rel="noopener">Meta-Learning: Learning to Learn Fast</a></p>
 </li>
-<li><p>Optimization aims:<br>$$<br>\theta^* = \arg\min_\theta \mathbb{E}<em>{\mathcal{D}\sim p(\mathcal{D})} [\mathcal{L}</em>\theta(\mathcal{D})]<br>$$</p>
+<li><p>Optimization aims:<br>$\theta^* = \arg\min<em>\theta \mathbb{E}</em>{\mathcal{D}\sim p(\mathcal{D})} [\mathcal{L}_\theta(\mathcal{D})]$</p>
 </li>
 </ul>
 <p>where $\mathcal{D}=\langle S, B\rangle$, Support set and Batch set.</p>
@@ -431,21 +431,21 @@
 <li>support set is the input of model.</li>
 <li>the update of model parameters is based on the loss in backpropagation calculated from the mini-batch $B^L$.</li>
 </ol>
-<p>each pair of sampled dataset $(S^L, B^L)$ is regarded as one data point, such that trained models can generalize to other datasets. Symbols in red are added for meta-learning in addition to the general supervised learning objective.<br>\begin{aligned}<br>\theta = \arg\max_\theta \color{red}{E_{L\subset\mathcal{L}}[} E_{\color{red}{S^L \subset\mathcal{D}, }B^L \subset\mathcal{D}} [\sum_{(x, y)\in B^L} P_\theta(x, y\color{red}{, S^L})] \color{red}{]}<br>\end{aligned}</p>
+<p>each pair of sampled dataset $(S^L, B^L)$ is regarded as one data point, such that trained models can generalize to other datasets. Symbols in red are added for meta-learning in addition to the general supervised learning objective.<br>\begin{aligned}<br>\theta = \arg\max<em>\theta \color{red}{E</em>{L\subset\mathcal{L}}[} E<em>{\color{red}{S^L \subset\mathcal{D}, }B^L \subset\mathcal{D}} [\sum</em>{(x, y)\in B^L} P_\theta(x, y\color{red}{, S^L})] \color{red}{]}<br>\end{aligned}</p>
 <ul>
 <li>Traning stages</li>
 </ul>
 <ol>
-<li>meta-learner: a optimizer $g_\phi$ learns how to update the learner model’s parameters via the support set $S$, $\theta’ = g_\phi(\theta, S)$</li>
-<li>learner: A classifier $f_\theta$ is the “learner” model, trained for operating a given task.<br>final learning objective is<br>\begin{aligned}<br>\mathbb{E}<em>{L\subset\mathcal{L}}[ \mathbb{E}</em>{S^L \subset\mathcal{D}, B^L \subset\mathcal{D}} [\sum_{(\mathbf{x}, y)\in B^L} P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})]]<br>\end{aligned}</li>
+<li>meta-learner: a optimizer $g<em>\phi$ learns how to update the learner model’s parameters via the support set $S$, $\theta’ = g</em>\phi(\theta, S)$</li>
+<li>learner: A classifier $f<em>\theta$ is the “learner” model, trained for operating a given task.<br>final learning objective is $\mathbb{E}</em>{L\subset\mathcal{L}}[ \mathbb{E}<em>{S^L \subset\mathcal{D}, B^L \subset\mathcal{D}} [\sum</em>{(\mathbf{x}, y)\in B^L} P<em>{g</em>\phi(\theta, S^L)}(y \vert \mathbf{x})]]$</li>
 </ol>
 <h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><h4 id="model-based-f-theta-mathbf-x-S"><a href="#model-based-f-theta-mathbf-x-S" class="headerlink" title="model-based: $f_\theta(\mathbf{x}, S)$"></a>model-based: $f_\theta(\mathbf{x}, S)$</h4><ul>
 <li>use <em>recurrent</em> network with <em>internal (or external)</em> memory</li>
 </ul>
-<h4 id="metric-based-sum-mathbf-x-i-y-i-in-S-k-theta-mathbf-x-mathbf-x-i-y-i"><a href="#metric-based-sum-mathbf-x-i-y-i-in-S-k-theta-mathbf-x-mathbf-x-i-y-i" class="headerlink" title="metric-based: $\sum_{(\mathbf{x}_i, y_i) \in S} k_\theta(\mathbf{x}, \mathbf{x}_i)y_i$"></a>metric-based: $\sum_{(\mathbf{x}_i, y_i) \in S} k_\theta(\mathbf{x}, \mathbf{x}_i)y_i$</h4><ul>
+<h4 id="metric-based-sum-mathbf-x-i-y-i-in-S-k-theta-mathbf-x-mathbf-x-i-y-i"><a href="#metric-based-sum-mathbf-x-i-y-i-in-S-k-theta-mathbf-x-mathbf-x-i-y-i" class="headerlink" title="metric-based: $\sum{(\mathbf{x}_i, y_i) \in S} k\theta(\mathbf{x}, \mathbf{x}_i)y_i$"></a>metric-based: $\sum<em>{(\mathbf{x}_i, y_i) \in S} k</em>\theta(\mathbf{x}, \mathbf{x}_i)y_i$</h4><ul>
 <li>learn <em>efficient</em> distance metric</li>
 </ul>
-<h4 id="optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x"><a href="#optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x" class="headerlink" title="optimization-based: $P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})$"></a>optimization-based: $P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})$</h4><ul>
+<h4 id="optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x"><a href="#optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x" class="headerlink" title="optimization-based: $P{g\phi(\theta, S^L)}(y \vert \mathbf{x})$"></a>optimization-based: $P<em>{g</em>\phi(\theta, S^L)}(y \vert \mathbf{x})$</h4><ul>
 <li>optimize the model parameter explicitly for fast learning</li>
 </ul>
 
@@ -641,7 +641,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Meta-learning"><span class="nav-number">1.</span> <span class="nav-text">Meta learning</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Definition"><span class="nav-number">1.1.</span> <span class="nav-text">Definition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Methods"><span class="nav-number">1.2.</span> <span class="nav-text">Methods</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#model-based-f-theta-mathbf-x-S"><span class="nav-number">1.2.1.</span> <span class="nav-text">model-based: $f_\theta(\mathbf{x}, S)$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#metric-based-sum-mathbf-x-i-y-i-in-S-k-theta-mathbf-x-mathbf-x-i-y-i"><span class="nav-number">1.2.2.</span> <span class="nav-text">metric-based: $\sum_{(\mathbf{x}_i, y_i) \in S} k_\theta(\mathbf{x}, \mathbf{x}_i)y_i$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x"><span class="nav-number">1.2.3.</span> <span class="nav-text">optimization-based: $P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})$</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Meta-learning"><span class="nav-number">1.</span> <span class="nav-text">Meta learning</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Definition"><span class="nav-number">1.1.</span> <span class="nav-text">Definition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Methods"><span class="nav-number">1.2.</span> <span class="nav-text">Methods</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#model-based-f-theta-mathbf-x-S"><span class="nav-number">1.2.1.</span> <span class="nav-text">model-based: $f_\theta(\mathbf{x}, S)$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#metric-based-sum-mathbf-x-i-y-i-in-S-k-theta-mathbf-x-mathbf-x-i-y-i"><span class="nav-number">1.2.2.</span> <span class="nav-text">metric-based: $\sum{(\mathbf{x}_i, y_i) \in S} k\theta(\mathbf{x}, \mathbf{x}_i)y_i$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x"><span class="nav-number">1.2.3.</span> <span class="nav-text">optimization-based: $P{g\phi(\theta, S^L)}(y \vert \mathbf{x})$</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

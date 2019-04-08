@@ -420,9 +420,9 @@
         
           
             <h2 id="Meta-learning"><a href="#Meta-learning" class="headerlink" title="Meta learning"></a>Meta learning</h2><h3 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h3><ul>
-<li><p>“learn to learn”, intends to design models that can learn <em>new</em> skills or adapt to <em>new</em> environment <em>rapidly</em> with <em>a few</em> traing samples, like <em>human learning</em>. The detail can be posted in <a href="https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html" target="_blank" rel="noopener">Meta-Learning: Learning to Learn Fast</a></p>
+<li><p>“learn to learn”, intends to design models that can learn <em><strong>new</strong></em> skills or adapt to <em><strong>new</strong></em> environment <em><strong>rapidly</strong></em> with <em><strong>a few</strong></em> traing samples, like <em><strong>human learning way</strong></em>. The detail can be posted in <a href="https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html" target="_blank" rel="noopener">Meta-Learning: Learning to Learn Fast</a></p>
 </li>
-<li><p>Optimization aims:<br>$$<br>\theta^* = \arg\min_\theta \mathbb{E}<em>{\mathcal{D}\sim p(\mathcal{D})} [\mathcal{L}</em>\theta(\mathcal{D})]<br>$$</p>
+<li><p>Optimization aims:<br>$\theta^* = \arg\min<em>\theta \mathbb{E}</em>{\mathcal{D}\sim p(\mathcal{D})} [\mathcal{L}_\theta(\mathcal{D})]$</p>
 </li>
 </ul>
 <p>where $\mathcal{D}=\langle S, B\rangle$, Support set and Batch set.</p>
@@ -435,21 +435,21 @@
 <li>support set is the input of model.</li>
 <li>the update of model parameters is based on the loss in backpropagation calculated from the mini-batch $B^L$.</li>
 </ol>
-<p>each pair of sampled dataset $(S^L, B^L)$ is regarded as one data point, such that trained models can generalize to other datasets. Symbols in red are added for meta-learning in addition to the general supervised learning objective.<br>\begin{aligned}<br>\theta = \arg\max_\theta \color{red}{E_{L\subset\mathcal{L}}[} E_{\color{red}{S^L \subset\mathcal{D}, }B^L \subset\mathcal{D}} [\sum_{(x, y)\in B^L} P_\theta(x, y\color{red}{, S^L})] \color{red}{]}<br>\end{aligned}</p>
+<p>each pair of sampled dataset $(S^L, B^L)$ is regarded as one data point, such that trained models can generalize to other datasets. Symbols in red are added for meta-learning in addition to the general supervised learning objective.<br>\begin{aligned}<br>\theta = \arg\max<em>\theta \color{red}{E</em>{L\subset\mathcal{L}}[} E<em>{\color{red}{S^L \subset\mathcal{D}, }B^L \subset\mathcal{D}} [\sum</em>{(x, y)\in B^L} P_\theta(x, y\color{red}{, S^L})] \color{red}{]}<br>\end{aligned}</p>
 <ul>
 <li>Traning stages</li>
 </ul>
 <ol>
-<li>meta-learner: a optimizer $g_\phi$ learns how to update the learner model’s parameters via the support set $S$, $\theta’ = g_\phi(\theta, S)$</li>
-<li>learner: A classifier $f_\theta$ is the “learner” model, trained for operating a given task.<br>final learning objective is<br>\begin{aligned}<br>\mathbb{E}<em>{L\subset\mathcal{L}}[ \mathbb{E}</em>{S^L \subset\mathcal{D}, B^L \subset\mathcal{D}} [\sum_{(\mathbf{x}, y)\in B^L} P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})]]<br>\end{aligned}</li>
+<li>meta-learner: a optimizer $g<em>\phi$ learns how to update the learner model’s parameters via the support set $S$, $\theta’ = g</em>\phi(\theta, S)$</li>
+<li>learner: A classifier $f<em>\theta$ is the “learner” model, trained for operating a given task.<br>final learning objective is $\mathbb{E}</em>{L\subset\mathcal{L}}[ \mathbb{E}<em>{S^L \subset\mathcal{D}, B^L \subset\mathcal{D}} [\sum</em>{(\mathbf{x}, y)\in B^L} P<em>{g</em>\phi(\theta, S^L)}(y \vert \mathbf{x})]]$</li>
 </ol>
 <h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><h4 id="model-based-f-theta-mathbf-x-S"><a href="#model-based-f-theta-mathbf-x-S" class="headerlink" title="model-based: $f_\theta(\mathbf{x}, S)$"></a>model-based: $f_\theta(\mathbf{x}, S)$</h4><ul>
 <li>use <em>recurrent</em> network with <em>internal (or external)</em> memory</li>
 </ul>
-<h4 id="metric-based-sum-mathbf-x-i-y-i-in-S-k-theta-mathbf-x-mathbf-x-i-y-i"><a href="#metric-based-sum-mathbf-x-i-y-i-in-S-k-theta-mathbf-x-mathbf-x-i-y-i" class="headerlink" title="metric-based: $\sum_{(\mathbf{x}_i, y_i) \in S} k_\theta(\mathbf{x}, \mathbf{x}_i)y_i$"></a>metric-based: $\sum_{(\mathbf{x}_i, y_i) \in S} k_\theta(\mathbf{x}, \mathbf{x}_i)y_i$</h4><ul>
+<h4 id="metric-based-sum-mathbf-x-i-y-i-in-S-k-theta-mathbf-x-mathbf-x-i-y-i"><a href="#metric-based-sum-mathbf-x-i-y-i-in-S-k-theta-mathbf-x-mathbf-x-i-y-i" class="headerlink" title="metric-based: $\sum{(\mathbf{x}_i, y_i) \in S} k\theta(\mathbf{x}, \mathbf{x}_i)y_i$"></a>metric-based: $\sum<em>{(\mathbf{x}_i, y_i) \in S} k</em>\theta(\mathbf{x}, \mathbf{x}_i)y_i$</h4><ul>
 <li>learn <em>efficient</em> distance metric</li>
 </ul>
-<h4 id="optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x"><a href="#optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x" class="headerlink" title="optimization-based: $P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})$"></a>optimization-based: $P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})$</h4><ul>
+<h4 id="optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x"><a href="#optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x" class="headerlink" title="optimization-based: $P{g\phi(\theta, S^L)}(y \vert \mathbf{x})$"></a>optimization-based: $P<em>{g</em>\phi(\theta, S^L)}(y \vert \mathbf{x})$</h4><ul>
 <li>optimize the model parameter explicitly for fast learning</li>
 </ul>
 
@@ -632,24 +632,20 @@
 <ul>
 <li>aim: feature selection in semi-supervised MTL</li>
 <li><p>method: sparce coefficients learnt </p>
-<pre><code>\begin{aligned}
-p(x) &amp; = \min_{w_t} \sum_(l=1}^t (loss(w_l) + \alpha ||w_l||_{1,2} + \gamma ||w||_{\*})
-\end{aligned}
+<pre><code>   \begin{aligned}
+   p(x) &amp; = \min_{w_t} \sum_(l=1}^t (loss(w_l) + \alpha ||w_l||_{1,2} + \gamma ||w||_{\*})
+   \end{aligned}
 
-including $l_{1,2}$ norm and Laplacian norm:
+   including $l_{1,2}$ norm and Laplacian norm:
 
-\begin{aligned}
-\gamma ||w|| = \min_{w,b}\sum_{l=1}{t}Tr(w^Tx_lL_lx_l^Tw)
-\end{aligned}
+   \begin{aligned}
+   \gamma ||w|| = \min_{w,b}\sum_{l=1}{t}Tr(w^Tx_lL_lx_l^Tw)
+   \end{aligned}
 </code></pre></li>
 </ul>
 <blockquote>
 <p>reference [Semi-supervised multitask learning]{<a href="http://papers.nips.cc/paper/3198-semi-supervised-multitask-learning.pdf}" target="_blank" rel="noopener">http://papers.nips.cc/paper/3198-semi-supervised-multitask-learning.pdf}</a></p>
-</blockquote>
-<blockquote>
 <p>reference [Semi-supervised multi-task learning with task regularizations]{<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.194.1854&amp;rep=rep1&amp;type=pdf}" target="_blank" rel="noopener">http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.194.1854&amp;rep=rep1&amp;type=pdf}</a></p>
-</blockquote>
-<blockquote>
 <p>reference [Semi-supervised multitask learning for scene recognition]{<a href="https://www.researchgate.net/profile/Lichao_Mou/publication/268880603_Semi-Supervised_Multitask_Learning_for_Scene_Recognition/links/567a67f608ae7fea2e9a08f1.pdf}" target="_blank" rel="noopener">https://www.researchgate.net/profile/Lichao_Mou/publication/268880603_Semi-Supervised_Multitask_Learning_for_Scene_Recognition/links/567a67f608ae7fea2e9a08f1.pdf}</a></p>
 </blockquote>
 
@@ -1043,44 +1039,32 @@ including $l_{1,2}$ norm and Laplacian norm:
 <ul>
 <li>distilled knowledge</li>
 </ul>
-</blockquote>
-<blockquote>
 <p>reference <a href="https://arxiv.org/pdf/1611.00851.pdf" target="_blank" rel="noopener">An All-In-One Convolutional Neural Network for Face Analysis</a></p>
 <ul>
 <li>naive joint</li>
 </ul>
-</blockquote>
-<blockquote>
 <p>reference <a href="https://arxiv.org/pdf/1609.06426.pdf" target="_blank" rel="noopener">From Facial Expression Recognition to Interpersonal Relation Prediction<br>Zhanpeng</a></p>
 <ul>
 <li>pseudo label</li>
 </ul>
-</blockquote>
-<blockquote>
 <p>reference NLP <a href="https://arxiv.org/pdf/1802.09913.pdf" target="_blank" rel="noopener">Multi-task Learning of Pairwise Sequence Classification Tasks Over Disparate Label Spaces</a><br>‘we should be able to not only model their relationship, but also to directly estimate the corresponding label of the target task based on auxiliary predictions.’</p>
 <ul>
 <li>probelm: jointly using unlabelled data and auxiliary, annotated datasets; domain gap; missing labels</li>
 <li>method: training the Label Transfer Network, minimise the squared error between the model predictions and the pseudo label</li>
 <li>baseline: yes (how to calculate loss funtion [squared error] based on pseudo label)</li>
 </ul>
-</blockquote>
-<blockquote>
 <p>reference <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Misra_Seeing_Through_the_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Seeing through the Human Reporting Bias: Visual Classifiers from Noisy Human-Centric Labels Ishan</a></p>
 <ul>
 <li>confidence score</li>
 <li>same apply scene</li>
 <li>refer to paper writting</li>
 </ul>
-</blockquote>
-<blockquote>
 <p>reference non-DL <a href="http://de.arxiv.org/pdf/1411.6232" target="_blank" rel="noopener">Semi-supervised Feature Analysis by Mining Correlations among Multiple Tasks</a></p>
 <ul>
 <li>problem: ‘Since the objective function is non-smooth and difficult to solve, we propose an iterative algorithm with fast convergence.’ ‘These previous works, however, independently select features for each task, which fails to consider correlations among multiple related tasks.’ ‘Despite of their good performances, these classical algorithms are all implemented only with labeled training data.’</li>
 <li>method: ‘ignoring the correlations among different features -&gt;apply the sparse coefficients to the feature vectors -&gt; proposing multiple feature selection’</li>
 <li>baseline: undetermined (hard to complete)</li>
 </ul>
-</blockquote>
-<blockquote>
 <p><a href="https://arxiv.org/pdf/1803.04062.pdf" target="_blank" rel="noopener">Pseudo-task Augmentation: From Deep Multitask Learning to Intratask Sharing—and Back</a></p>
 <ul>
 <li>related work conclude papers of joint training of models for multiple tasks.<ul>
@@ -1102,15 +1086,11 @@ including $l_{1,2}$ norm and Laplacian norm:
 <li>method: pseudo mask (alternatively,initialization,pseudo mask with refinement algorithm[graphical model, because the pixel charaterization])</li>
 <li>baseline: yes(uing graphical model with learned information as input to refine pseudo label)</li>
 </ul>
-</blockquote>
-<blockquote>
 <p>reference <a href="https://arxiv.org/pdf/1703.02391.pdf" target="_blank" rel="noopener">Learning from Noisy Labels with Distillation</a></p>
 <ul>
 <li>interpolation between noisy label and distilled knowledge</li>
 <li>baseline: yes</li>
 </ul>
-</blockquote>
-<blockquote>
 <p>reference <a href="http://papers.nips.cc/paper/4292-clustered-multi-task-learning-via-alternating-structure-optimization.pdf" target="_blank" rel="noopener">Clustered Multi-Task Learning Via Alternating Structure Optimization
 </a></p>
 <ul>
@@ -2196,23 +2176,23 @@ including $l_{1,2}$ norm and Laplacian norm:
 <li><p>reason: &gt;reference <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cui_Large_Scale_Fine-Grained_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Large Scale Fine-Grained Categorization and Domain-Specific Transfer Learning</a>,  which takes domain scale into account by adding a scale factor. In this paper, transfer learning can be viewed as moving a set of images from the source domain S to the target domain T. The work needed to be done by moving an image to another can be defined as their feature Euaullean distance, so the distance between two domains can be defined as the least amount of total work needed. This definition of domain similarity can be calculated by the Earth Mover’s Distance (EMD). </p>
 <ul>
 <li><p>original EMD equation</p>
-<p>\begin{aligned}<br>\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}=\min {\sum_{i=1}^{m}w_{pi},\quad \sum_{j=1}^{n}w_{qj}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}d_{i,j}}{\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>P={(p_{1},w_{p1}),(p_{2},w_{p2}),…,(p_{m},w_{pm})}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>Q={(q_{1},w_{q1}),(q_{2},w_{q2}),…,(q_{n},w_{qn})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f<em>{i,j}=\min {\sum</em>{i=1}^{m}w<em>{pi},\quad \sum</em>{j=1}^{n}w_{qj}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f<em>{i,j}d</em>{i,j}}{\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>P={(p<em>{1},w</em>{p1}),(p<em>{2},w</em>{p2}),…,(p<em>{m},w</em>{pm})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>Q={(q<em>{1},w</em>{q1}),(q<em>{2},w</em>{q2}),…,(q<em>{n},w</em>{qn})}<br>\end{aligned}</p>
 </li>
-<li><p>reference paper EMD application<br>g(s_{i}) from the mean value of image features in category i from source domain<br>g(t_{i}) from the mean value of image features in category i from target domain<br>\begin{aligned}<br>\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}=\min {\sum_{i=1}^{m}w_{pi},\quad \sum_{j=1}^{n}w_{qj}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}d_{i,j}}{\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>S={(s_{1},w_{s1}),(s_{2},w_{s2}),…,(s_{m},w_{sm})}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>T={(t_{1},w_{t1}),(t_{2},w_{t2}),…,(t_{n},w_{tn})}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>D=[d_{i,j}] = || g(s_{i}) − g(t_{j})||<br>\end{aligned}</p>
+<li><p>reference paper EMD application<br>g(s<em>{i}) from the mean value of image features in category i from source domain<br>g(t</em>{i}) from the mean value of image features in category i from target domain<br>\begin{aligned}<br>\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f<em>{i,j}=\min {\sum</em>{i=1}^{m}w<em>{pi},\quad \sum</em>{j=1}^{n}w_{qj}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f<em>{i,j}d</em>{i,j}}{\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>S={(s<em>{1},w</em>{s1}),(s<em>{2},w</em>{s2}),…,(s<em>{m},w</em>{sm})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>T={(t<em>{1},w</em>{t1}),(t<em>{2},w</em>{t2}),…,(t<em>{n},w</em>{tn})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>D=[d<em>{i,j}] = || g(s</em>{i}) − g(t_{j})||<br>\end{aligned}</p>
 <p>\begin{aligned}<br>sim(S, T) = e−γd(S,T )<br>\end{aligned}</p>
 </li>
-<li><p>EMD application for pseudo data selection<br>  g(p) = mean value of image features in specific cluster from the same category in source domain<br>  g(g_{i}) = mean value of image features in cluster i from the same category in target domain<br>\begin{aligned}<br>\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}=\min {\sum_{i=1}^{m}w_{pi},\quad \sum_{j=1}^{n}w_{qj}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}d_{i,j}}{\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>P={(p_{1},w_{p1}),(p_{2},w_{p2}),…,(p_{m},w_{pm})}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>G={(g_{1},w_{g1}),(g_{2},w_{g2}),…,(g_{n},w_{gn})}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>D=[d_{i,j}] = || g(p_{i}) − g(g_{j})||<br>\end{aligned}</p>
+<li><p>EMD application for pseudo data selection<br>  g(p) = mean value of image features in specific cluster from the same category in source domain<br>  g(g<em>{i}) = mean value of image features in cluster i from the same category in target domain<br>\begin{aligned}<br>\sum</em>{i=1}^{m}\sum<em>{j=1}^{n}f</em>{i,j}=\min {\sum<em>{i=1}^{m}w</em>{pi},\quad \sum<em>{j=1}^{n}w</em>{qj}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f<em>{i,j}d</em>{i,j}}{\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>P={(p<em>{1},w</em>{p1}),(p<em>{2},w</em>{p2}),…,(p<em>{m},w</em>{pm})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>G={(g<em>{1},w</em>{g1}),(g<em>{2},w</em>{g2}),…,(g<em>{n},w</em>{gn})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>D=[d<em>{i,j}] = || g(p</em>{i}) − g(g_{j})||<br>\end{aligned}</p>
 <p>\begin{aligned}<br>sim(S, T) = e−γd(S,T )<br>\end{aligned}</p>
 </li>
 </ul>
