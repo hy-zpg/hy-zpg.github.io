@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.yanhong.me/2019/04/09/Overview-of-GAN/</loc>
+    
+    <lastmod>2019-04-09T10:33:13.711Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.yanhong.me/2019/04/04/Few-shot-Image-generation/</loc>
     
-    <lastmod>2019-04-08T08:11:34.984Z</lastmod>
+    <lastmod>2019-04-09T10:33:06.189Z</lastmod>
     
   </url>
   
@@ -37,14 +44,14 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/01/15/GMM/</loc>
+    <loc>https://www.yanhong.me/2019/03/18/Manifold-Learning/</loc>
     
     <lastmod>2019-03-21T05:35:00.750Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/03/18/Manifold-Learning/</loc>
+    <loc>https://www.yanhong.me/2019/01/15/GMM/</loc>
     
     <lastmod>2019-03-21T05:35:00.750Z</lastmod>
     
@@ -72,13 +79,6 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/02/28/Critical-Points-in-Multitask-0/</loc>
-    
-    <lastmod>2019-03-21T05:35:00.748Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.yanhong.me/2019/02/26/Heterogeneous-Multitask/</loc>
     
     <lastmod>2019-03-21T05:35:00.748Z</lastmod>
@@ -86,9 +86,9 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/02/21/Density-Distribution/</loc>
+    <loc>https://www.yanhong.me/2019/02/28/Critical-Points-in-Multitask-0/</loc>
     
-    <lastmod>2019-03-21T05:35:00.747Z</lastmod>
+    <lastmod>2019-03-21T05:35:00.748Z</lastmod>
     
   </url>
   
@@ -100,14 +100,21 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/02/17/Pseudo-purity&distribution-distance/</loc>
+    <loc>https://www.yanhong.me/2019/02/21/Density-Distribution/</loc>
+    
+    <lastmod>2019-03-21T05:35:00.747Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yanhong.me/2019/02/28/Semi-Heteroneous-Multitask-Baseline/</loc>
     
     <lastmod>2019-03-21T05:35:00.746Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/02/28/Semi-Heteroneous-Multitask-Baseline/</loc>
+    <loc>https://www.yanhong.me/2019/02/17/Pseudo-purity&distribution-distance/</loc>
     
     <lastmod>2019-03-21T05:35:00.746Z</lastmod>
     
