@@ -600,7 +600,7 @@
 <li>to learn feature $z$ by reconstruction error: $x$ -&gt; $z$ -&gt; $\halt_{x}$ with encoder and decoder.</li>
 </ul>
 <h4 id="Variational-Autoenconders-for-generation-problem"><a href="#Variational-Autoenconders-for-generation-problem" class="headerlink" title="Variational Autoenconders for generation problem"></a>Variational Autoenconders for generation problem</h4><ul>
-<li><p>Assuming training data $x(i)$ representation $z$ is generated from latent representation $z$. Specifically, first sampling $z$ from true prior $p<em>{\theta}(z)$, then sampling $x$ from true conditional $p</em>{\theta}(x|z^(i))$</p>
+<li><p>Assuming training data $x(i)$ representation $z$ is generated from latent representation $z$. Specifically, first sampling $z$ from true prior $p_{\theta}(z)$, then sampling $x$ from true conditional $p_{\theta}(x|z^(i))$</p>
 </li>
 <li><p>the aim is to estimate the true parameter $\theta$ by maximuming likelihood of training data:</p>
 </li>
@@ -774,11 +774,10 @@
         
           
             <h2 id="Meta-learning"><a href="#Meta-learning" class="headerlink" title="Meta learning"></a>Meta learning</h2><h3 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h3><ul>
-<li>“learn to learn”, intends to design models that can learn <em><strong>new</strong></em> skills or adapt to <em><strong>new</strong></em> environment <em><strong>rapidly</strong></em> with <em><strong>a few</strong></em> traing samples, like <em><strong>human learning way</strong></em>. The detail can be posted in <a href="https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html" target="_blank" rel="noopener">Meta-Learning: Learning to Learn Fast</a></li>
-</ul>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<ul>
-<li>Optimization aims:<br>\begin{equation}<br>\theta^{*}=\arg \min _{\theta} \mathbb{E}_{\mathcal{D} \sim p(\mathcal{D})}\left[\mathcal{L}_{\theta}(\mathcal{D})\right]<h1 id="end-equation"><a href="#end-equation" class="headerlink" title="\end{equation}"></a>\end{equation}</h1></li>
+<li><p>“learn to learn”, intends to design models that can learn <em><strong>new</strong></em> skills or adapt to <em><strong>new</strong></em> environment <em><strong>rapidly</strong></em> with <em><strong>a few</strong></em> traing samples, like <em><strong>human learning way</strong></em>. The detail can be posted in <a href="https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html" target="_blank" rel="noopener">Meta-Learning: Learning to Learn Fast</a></p>
+</li>
+<li><p>Optimization aims:<br>\begin{equation}<br>\theta^{*}=\arg \min _{\theta} \mathbb{E}_{\mathcal{D} \sim p(\mathcal{D})} \left[\mathcal{L}_{\theta}(\mathcal{D})]\right<br>\end{equation}</p>
+</li>
 <li>Optimization aims:<br>$\theta^* = \arg\min_\theta \mathbb{E}_{\mathcal{D}\sim p(\mathcal{D})} [\mathcal{L}_\theta(\mathcal{D})]$</li>
 </ul>
 <p>where $\mathcal{D}=\langle S, B\rangle$, Support set and Batch set.</p>
@@ -791,7 +790,7 @@
 <li>support set is the input of model.</li>
 <li>the update of model parameters is based on the loss in backpropagation calculated from the mini-batch $B^L$.</li>
 </ol>
-<p>each pair of sampled dataset $(S^L, B^L)$ is regarded as one data point, such that trained models can generalize to other datasets. Symbols in red are added for meta-learning in addition to the general supervised learning objective.<br>\begin{aligned}<br>\theta = \arg\max<em>\theta \color{red}{E\</em>{L\subset\mathcal{L}}[} E_{\color{red}{S^L \subset\mathcal{D}, }B^L \subset\mathcal{D}} [\sum_{(x, y)\in B^L} P_\theta(x, y\color{red}{, S^L})] \color{red}{]}<br>\end{aligned}</p>
+<p>each pair of sampled dataset $(S^L, B^L)$ is regarded as one data point, such that trained models can generalize to other datasets. Symbols in red are added for meta-learning in addition to the general supervised learning objective.<br>\begin{aligned}<br>\theta = \arg\max_\theta \color{red}{E_{L\subset\mathcal{L}}[} E_{\color{red}{S^L \subset\mathcal{D}, }B^L \subset\mathcal{D}} [\sum_{(x, y)\in B^L} P_\theta(x, y\color{red}{, S^L})] \color{red}{]}<br>\end{aligned}</p>
 <ul>
 <li>Traning stages<br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</li>
 </ul>
