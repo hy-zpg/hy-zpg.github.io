@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hongyan's Notes, NexT">
+  <meta name="keywords" content="few-shot learning,">
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="New Rhythm">
-<meta name="keywords" content="Coding &amp;&amp; Learning">
+<meta name="description" content="Meta learningDefinition “learn to learn”, intends to design models that can learn new skills or adapt to new environment rapidly with a few traing samples, like human learning way. The detail can be p">
+<meta name="keywords" content="few-shot learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GAN">
-<meta property="og:url" content="https://www.yanhong.me/2019/04/08/GAN/index.html">
+<meta property="og:title" content="Few-shot Image generation">
+<meta property="og:url" content="https://www.yanhong.me/2019/04/04/Few-shot-Image-generation/index.html">
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
-<meta property="og:description" content="New Rhythm">
+<meta property="og:description" content="Meta learningDefinition “learn to learn”, intends to design models that can learn new skills or adapt to new environment rapidly with a few traing samples, like human learning way. The detail can be p">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-18T06:04:08.522Z">
+<meta property="og:updated_time" content="2019-04-18T12:37:46.125Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GAN">
-<meta name="twitter:description" content="New Rhythm">
+<meta name="twitter:title" content="Few-shot Image generation">
+<meta name="twitter:description" content="Meta learningDefinition “learn to learn”, intends to design models that can learn new skills or adapt to new environment rapidly with a few traing samples, like human learning way. The detail can be p">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://www.yanhong.me/2019/04/08/GAN/">
+  <link rel="canonical" href="https://www.yanhong.me/2019/04/04/Few-shot-Image-generation/">
 
 
 
 
 
-  <title>GAN | Hongyan's Notes</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Few-shot Image generation | Hongyan's Notes</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -307,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/04/08/GAN/">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/04/04/Few-shot-Image-generation/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hongyan">
@@ -324,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">GAN</h1>
+          <h1 class="post-title" itemprop="name headline">Few-shot Image generation</h1>
         
 
         <div class="post-meta">
@@ -336,8 +336,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-08T14:31:25+08:00">
-                2019-04-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-04T13:44:00+08:00">
+                2019-04-04
               </time>
             
 
@@ -346,6 +346,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Meta-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Meta-learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -393,7 +415,117 @@
       
 
       
-        
+        <h2 id="Meta-learning"><a href="#Meta-learning" class="headerlink" title="Meta learning"></a>Meta learning</h2><h3 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h3><ul>
+<li>“learn to learn”, intends to design models that can learn <em><strong>new</strong></em> skills or adapt to <em><strong>new</strong></em> environment <em><strong>rapidly</strong></em> with <em><strong>a few</strong></em> traing samples, like <em><strong>human learning way</strong></em>. The detail can be posted in <a href="https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html" target="_blank" rel="noopener">Meta-Learning: Learning to Learn Fast</a></li>
+</ul>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<ul>
+<li>Optimization aims:<br>\begin{equation}<br>\theta^{*}=\arg \min _{\theta} \mathbb{E}_{\mathcal{D} \sim p(\mathcal{D})}\left[\mathcal{L}_{\theta}(\mathcal{D})\right]<h1 id="end-equation"><a href="#end-equation" class="headerlink" title="\end{equation}"></a>\end{equation}</h1></li>
+<li>Optimization aims:<br>$\theta^* = \arg\min_\theta \mathbb{E}_{\mathcal{D}\sim p(\mathcal{D})} [\mathcal{L}_\theta(\mathcal{D})]$</li>
+</ul>
+<p>where $\mathcal{D}=\langle S, B\rangle$, Support set and Batch set.</p>
+<ul>
+<li>Training steps</li>
+</ul>
+<ol>
+<li>sample a subset of labels $L\subset\mathcal{L}$.</li>
+<li>samples a support set $S^L \subset \mathcal{D}$ and a training batch $B^L \subset \mathcal{D}$. Both of them belong to the sampled label set $L$, $y \in L, \forall (x, y) \in S^L, B^L$.</li>
+<li>support set is the input of model.</li>
+<li>the update of model parameters is based on the loss in backpropagation calculated from the mini-batch $B^L$.</li>
+</ol>
+<p>each pair of sampled dataset $(S^L, B^L)$ is regarded as one data point, such that trained models can generalize to other datasets. Symbols in red are added for meta-learning in addition to the general supervised learning objective.<br>\begin{aligned}<br>\theta = \arg\max<em>\theta \color{red}{E\</em>{L\subset\mathcal{L}}[} E_{\color{red}{S^L \subset\mathcal{D}, }B^L \subset\mathcal{D}} [\sum_{(x, y)\in B^L} P_\theta(x, y\color{red}{, S^L})] \color{red}{]}<br>\end{aligned}</p>
+<ul>
+<li>Traning stages<br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</li>
+</ul>
+<h1 id="1-meta-learner-a-optimizer-g-phi-learns-how-to-update-the-learner-model’s-parameters-via-the-support-set-S-theta’-g-phi-theta-S"><a href="#1-meta-learner-a-optimizer-g-phi-learns-how-to-update-the-learner-model’s-parameters-via-the-support-set-S-theta’-g-phi-theta-S" class="headerlink" title="1. meta-learner: a optimizer $ g_\phi $ learns how to update the learner model’s parameters via the support set $S$, $\theta’ = g_\phi(\theta, S)$"></a>1. meta-learner: a optimizer $ g_\phi $ learns how to update the learner model’s parameters via the support set $S$, $\theta’ = g_\phi(\theta, S)$</h1><ol>
+<li>meta-learner: a optimizer $g_\phi$ learns how to update the learner model’s parameters via the support set $S$, $\theta’ = g_\phi(\theta, S)$</li>
+<li>learner: A classifier $f_\theta$ is the “learner” model, trained for operating a given task.<!-- final learning objective is $\mathbb{E}_{L\subset\mathcal{L}}[ \mathbb{E}_{S^L \subset\mathcal{D}, B^L \subset\mathcal{D}} [\sum_{(\mathbf{x}, y)\in B^L} P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})]]$ -->
+</li>
+</ol>
+<h3 id="Common-methods"><a href="#Common-methods" class="headerlink" title="Common methods"></a>Common methods</h3><h4 id="model-based-f-theta-mathbf-x-S"><a href="#model-based-f-theta-mathbf-x-S" class="headerlink" title="model-based: $f_\theta(\mathbf{x}, S)$"></a>model-based: $f_\theta(\mathbf{x}, S)$</h4><ul>
+<li>use <em><strong>recurrent</strong></em> network with <em><strong>internal (or external)</strong></em> memory.<br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</li>
+<li>rapid parameter update achieved by <em><strong>meta-learner model</strong></em> or <em><strong>internal architecture</strong></em>.</li>
+<li>memory-augmented neural network for meta-learning<ul>
+<li>using <em>external memory storage</em> to facilate learning process <em>without forgetting</em> new information in future.</li>
+<li>encoding new information <em>quicly</em>, so adapt to new tasks after only <em>a few samples</em>.</li>
+<li>memory-augmented neural networkc: how to assign weights to attention vector. memory serves as knowledge repository, the controller learns to read and write memory rows. ttention weights generation by addressing mechanism: control-based + location-based.</li>
+<li>MANN for meta-learning: the update of memory for efficient information retrievel and storage, how to read from memory and how to write into memory.</li>
+</ul>
+</li>
+<li>meta network<ul>
+<li>architecture</li>
+<li>loss gradients are used as meta information to populate models to learn fast weights.</li>
+</ul>
+</li>
+</ul>
+<h4 id="metric-based"><a href="#metric-based" class="headerlink" title="metric-based:"></a>metric-based:</h4><p>=======</p>
+<h4 id="metric-based-sum-mathbf-x-i-y-i-in-S-k-theta-mathbf-x-mathbf-x-i-y-i"><a href="#metric-based-sum-mathbf-x-i-y-i-in-S-k-theta-mathbf-x-mathbf-x-i-y-i" class="headerlink" title="metric-based: $\sum_{(\mathbf{x}_i, y_i) \in S} k_\theta(\mathbf{x}, \mathbf{x}_i)y_i$"></a>metric-based: $\sum_{(\mathbf{x}_i, y_i) \in S} k_\theta(\mathbf{x}, \mathbf{x}_i)y_i$</h4><ul>
+<li>learn <em><strong>efficient</strong></em> distance metric.</li>
+<li>similar to <em><strong>nearnest neighbors algorithm</strong></em> (KNN,k-means) and <em><strong>kernel density estimation</strong></em>.</li>
+<li><p>the predicted possibility of labeled samples is from is a <em><strong>weighted sum of support set samples</strong></em>, and the weight is generated by a kernel function $k<em>\theta$, which can measure the *<em>_similarity</em></em>* of twp data samples:</p>
+<script type="math/tex; mode=display">
+P\_\theta(y \vert \mathbf{x}, S) = \sum\_{(\mathbf{x}\_i, y\_i) \in S} k\_\theta(\mathbf{x}, \mathbf{x}\_i)y\_{i}</script></li>
+<li><p>crucial points: <em><strong>good kernel</strong></em></p>
+</li>
+<li>solution: learning <em><strong>embedding vector</strong></em> of input data explicitly and use them to design <em><strong>proper kernel</strong></em> functions.</li>
+<li>Siamese networks: <ul>
+<li>assumption: the <em>learned embedding</em> can be <em>generalized</em> to be useful for measuring the distance between images of unknown categories.</li>
+<li><em>verification</em>, images pairs.</li>
+<li>final prediction is the class of the support image with highest probability.</li>
+</ul>
+</li>
+<li>Matching networks:<ul>
+<li>$g_{\theta}$ with $k$ classifiers for k classes, while $f_{\theta}$ for testing images.</li>
+<li><em>attention kernel</em> depends on two embedding functions $g$ and $f$, in simple version where $f=g$. in complex version where integrating full contextual embedding (FCE), it achieves improvement on hard tasks, not for simple tasks.</li>
+</ul>
+</li>
+<li>Relation networks<ul>
+<li>image pairs, <em>feature concatenation</em>.</li>
+<li>relation modeled: <em>mse</em> loss function.</li>
+</ul>
+</li>
+<li>Prototypical networks<ul>
+<li>images of <em>each class</em> are embedded into $M$ dimensional feature vector, each class has <em>prototype</em> feature vector from the mean vector of the embedded support data samples in each class.</li>
+<li><em>squared euclidean distance</em> loss.</li>
+</ul>
+</li>
+</ul>
+<h4 id="optimization-based"><a href="#optimization-based" class="headerlink" title="optimization-based:"></a>optimization-based:</h4><ul>
+<li>optimize the <em><strong>model parameter</strong></em> explicitly for <em><strong>fast</strong></em> learning.</li>
+<li>modeling <em><strong>optimization algorithm</strong></em> exploitly.</li>
+<li>LSTM meta-learner</li>
+<li>MAML</li>
+<li><p>reptile</p>
+</li>
+<li><p>crucial keys: <em><strong>good kernel</strong></em></p>
+</li>
+<li>solution: learning <em><strong>embedding vector</strong></em> of input data explicitly and use them to design <em><strong>proper kernel</strong></em> functions.</li>
+<li>Siamese networks: <ul>
+<li>assumption: the <em><strong>learned embedding</strong></em> can be <em><strong>generalized</strong></em> to be useful for measuring the distance between images of unknown categories.</li>
+<li><em><strong>verification</strong></em>, images pairs.</li>
+<li>final prediction is the class of the support image with highest probability.</li>
+</ul>
+</li>
+<li>Matching networks:<ul>
+<li>$g_{\theta}$ with $k$ classifiers for k classes, while $f_{\theta}$ for testing images.</li>
+<li>attention kernel depends on two embedding functions $g$ and $f$, in simple version where $f=g$. in complex version where integrating full contextual embedding (FCE), it achieves improvement on hard tasks, not for simple tasks.</li>
+</ul>
+</li>
+<li>Relation network<ul>
+<li>image pairs, feature concatenation.</li>
+<li>relation modeled: mse loss function.</li>
+</ul>
+</li>
+<li>Prototypical<ul>
+<li>images of each class are embedded into $M$ dimensional feature vector, each class has <em>prototype</em> feature vector from the mean vector of the embedded support data samples in each class.</li>
+<li>squared euclidean distance.</li>
+</ul>
+</li>
+</ul>
+<h4 id="optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x"><a href="#optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x" class="headerlink" title="optimization-based: $P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})$"></a>optimization-based: $P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})$</h4><ul>
+<li>optimize the <em><strong>model parameter</strong></em> explicitly for <em><strong>fast</strong></em> learning</li>
+</ul>
+
       
     </div>
     
@@ -407,6 +539,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/few-shot-learning/" rel="tag"># few-shot learning</a>
+          
+        </div>
       
 
       
@@ -481,8 +619,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -508,7 +655,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -519,7 +666,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -565,6 +712,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Meta-learning"><span class="nav-number">1.</span> <span class="nav-text">Meta learning</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Definition"><span class="nav-number">1.1.</span> <span class="nav-text">Definition</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#end-equation"><span class="nav-number"></span> <span class="nav-text">\end{equation}</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-meta-learner-a-optimizer-g-phi-learns-how-to-update-the-learner-model’s-parameters-via-the-support-set-S-theta’-g-phi-theta-S"><span class="nav-number"></span> <span class="nav-text">1. meta-learner: a optimizer $ g_\phi $ learns how to update the learner model’s parameters via the support set $S$, $\theta’ = g_\phi(\theta, S)$</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-methods"><span class="nav-number">0.1.</span> <span class="nav-text">Common methods</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#model-based-f-theta-mathbf-x-S"><span class="nav-number">0.1.1.</span> <span class="nav-text">model-based: $f_\theta(\mathbf{x}, S)$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#metric-based"><span class="nav-number">0.1.2.</span> <span class="nav-text">metric-based:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#metric-based-sum-mathbf-x-i-y-i-in-S-k-theta-mathbf-x-mathbf-x-i-y-i"><span class="nav-number">0.1.3.</span> <span class="nav-text">metric-based: $\sum_{(\mathbf{x}_i, y_i) \in S} k_\theta(\mathbf{x}, \mathbf{x}_i)y_i$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#optimization-based"><span class="nav-number">0.1.4.</span> <span class="nav-text">optimization-based:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x"><span class="nav-number">0.1.5.</span> <span class="nav-text">optimization-based: $P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})$</span></a></li></ol></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

@@ -594,7 +594,7 @@
 <h3 id="Variational-Autoenconders"><a href="#Variational-Autoenconders" class="headerlink" title="Variational Autoenconders"></a>Variational Autoenconders</h3><ul>
 <li>this method defines <strong><em>intractable density function</em></strong> with latent $z$:</li>
 </ul>
-<p>\begin{aligned}<br>$p<em>{\theta}(x)=\int p</em>{\theta}(z) p_{\theta}(x | z) d z$<br>\end{aligned}</p>
+<p>\begin{aligned}<br>p_{\theta}(x)=\int p_{\theta}(z) p_{\theta}(x | z) d z<br>\end{aligned}</p>
 <h4 id="Autoencoders"><a href="#Autoencoders" class="headerlink" title="Autoencoders"></a>Autoencoders</h4><ul>
 <li>mapping image $x$ to features $z$ with deep neural networks, $z$ is regarded to capture meaningful factors of variation in data.</li>
 <li>to learn feature $z$ by reconstruction error: $x$ -&gt; $z$ -&gt; $\halt_{x}$ with encoder and decoder.</li>
@@ -605,12 +605,12 @@
 <li><p>the aim is to estimate the true parameter $\theta$ by maximuming likelihood of training data:</p>
 </li>
 </ul>
-<p>\begin{equation}<br>p<em>{\theta}(x)=\int p</em>{\theta}(z) p_{\theta}(x | z) d z<br>\end{equation}</p>
+<p>\begin{equation}<br>p_{\theta}(x)=\int p_{\theta}(z) p_{\theta}(x | z) d z<br>\end{equation}</p>
 <p>where $p<em>{\theta}(z)$ is gaussion prior, and $p</em>{\theta}(x | z) $ is decoder.</p>
 <ul>
 <li><p>intractable optimization problem, because it’s impossible to compute $p(x | z)$ for every $z$ which means the integral operation is fail in this condition. </p>
 </li>
-<li><p>posterior density $p<em>{\theta}(z | x)=p</em>{\theta}(x | z) p<em>{\theta}(z) / p</em>{\theta}(x)$ is also intractable, since $p_{\theta}(x)$ is intractable data likelihood. </p>
+<li><p>posterior density $p_{\theta}(z | x)=p_{\theta}(x | z) p_{\theta}(z) / p_{\theta}(x)$ is also intractable, since $p_{\theta}(x)$ is intractable data likelihood. </p>
 </li>
 </ul>
 
@@ -661,7 +661,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/04/08/GAN/">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/04/04/Few-shot-Image-generation/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hongyan">
@@ -680,7 +680,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/04/08/GAN/" itemprop="url">GAN</a></h1>
+                <a class="post-title-link" href="/2019/04/04/Few-shot-Image-generation/" itemprop="url">Few-shot Image generation</a></h1>
         
 
         <div class="post-meta">
@@ -692,8 +692,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-08T14:31:25+08:00">
-                2019-04-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-04T13:44:00+08:00">
+                2019-04-04
               </time>
             
 
@@ -702,6 +702,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Meta-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Meta-learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -751,7 +773,117 @@
       
         
           
-            
+            <h2 id="Meta-learning"><a href="#Meta-learning" class="headerlink" title="Meta learning"></a>Meta learning</h2><h3 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h3><ul>
+<li>“learn to learn”, intends to design models that can learn <em><strong>new</strong></em> skills or adapt to <em><strong>new</strong></em> environment <em><strong>rapidly</strong></em> with <em><strong>a few</strong></em> traing samples, like <em><strong>human learning way</strong></em>. The detail can be posted in <a href="https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html" target="_blank" rel="noopener">Meta-Learning: Learning to Learn Fast</a></li>
+</ul>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<ul>
+<li>Optimization aims:<br>\begin{equation}<br>\theta^{*}=\arg \min _{\theta} \mathbb{E}_{\mathcal{D} \sim p(\mathcal{D})}\left[\mathcal{L}_{\theta}(\mathcal{D})\right]<h1 id="end-equation"><a href="#end-equation" class="headerlink" title="\end{equation}"></a>\end{equation}</h1></li>
+<li>Optimization aims:<br>$\theta^* = \arg\min_\theta \mathbb{E}_{\mathcal{D}\sim p(\mathcal{D})} [\mathcal{L}_\theta(\mathcal{D})]$</li>
+</ul>
+<p>where $\mathcal{D}=\langle S, B\rangle$, Support set and Batch set.</p>
+<ul>
+<li>Training steps</li>
+</ul>
+<ol>
+<li>sample a subset of labels $L\subset\mathcal{L}$.</li>
+<li>samples a support set $S^L \subset \mathcal{D}$ and a training batch $B^L \subset \mathcal{D}$. Both of them belong to the sampled label set $L$, $y \in L, \forall (x, y) \in S^L, B^L$.</li>
+<li>support set is the input of model.</li>
+<li>the update of model parameters is based on the loss in backpropagation calculated from the mini-batch $B^L$.</li>
+</ol>
+<p>each pair of sampled dataset $(S^L, B^L)$ is regarded as one data point, such that trained models can generalize to other datasets. Symbols in red are added for meta-learning in addition to the general supervised learning objective.<br>\begin{aligned}<br>\theta = \arg\max<em>\theta \color{red}{E\</em>{L\subset\mathcal{L}}[} E_{\color{red}{S^L \subset\mathcal{D}, }B^L \subset\mathcal{D}} [\sum_{(x, y)\in B^L} P_\theta(x, y\color{red}{, S^L})] \color{red}{]}<br>\end{aligned}</p>
+<ul>
+<li>Traning stages<br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</li>
+</ul>
+<h1 id="1-meta-learner-a-optimizer-g-phi-learns-how-to-update-the-learner-model’s-parameters-via-the-support-set-S-theta’-g-phi-theta-S"><a href="#1-meta-learner-a-optimizer-g-phi-learns-how-to-update-the-learner-model’s-parameters-via-the-support-set-S-theta’-g-phi-theta-S" class="headerlink" title="1. meta-learner: a optimizer $ g_\phi $ learns how to update the learner model’s parameters via the support set $S$, $\theta’ = g_\phi(\theta, S)$"></a>1. meta-learner: a optimizer $ g_\phi $ learns how to update the learner model’s parameters via the support set $S$, $\theta’ = g_\phi(\theta, S)$</h1><ol>
+<li>meta-learner: a optimizer $g_\phi$ learns how to update the learner model’s parameters via the support set $S$, $\theta’ = g_\phi(\theta, S)$</li>
+<li>learner: A classifier $f_\theta$ is the “learner” model, trained for operating a given task.<!-- final learning objective is $\mathbb{E}_{L\subset\mathcal{L}}[ \mathbb{E}_{S^L \subset\mathcal{D}, B^L \subset\mathcal{D}} [\sum_{(\mathbf{x}, y)\in B^L} P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})]]$ -->
+</li>
+</ol>
+<h3 id="Common-methods"><a href="#Common-methods" class="headerlink" title="Common methods"></a>Common methods</h3><h4 id="model-based-f-theta-mathbf-x-S"><a href="#model-based-f-theta-mathbf-x-S" class="headerlink" title="model-based: $f_\theta(\mathbf{x}, S)$"></a>model-based: $f_\theta(\mathbf{x}, S)$</h4><ul>
+<li>use <em><strong>recurrent</strong></em> network with <em><strong>internal (or external)</strong></em> memory.<br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</li>
+<li>rapid parameter update achieved by <em><strong>meta-learner model</strong></em> or <em><strong>internal architecture</strong></em>.</li>
+<li>memory-augmented neural network for meta-learning<ul>
+<li>using <em>external memory storage</em> to facilate learning process <em>without forgetting</em> new information in future.</li>
+<li>encoding new information <em>quicly</em>, so adapt to new tasks after only <em>a few samples</em>.</li>
+<li>memory-augmented neural networkc: how to assign weights to attention vector. memory serves as knowledge repository, the controller learns to read and write memory rows. ttention weights generation by addressing mechanism: control-based + location-based.</li>
+<li>MANN for meta-learning: the update of memory for efficient information retrievel and storage, how to read from memory and how to write into memory.</li>
+</ul>
+</li>
+<li>meta network<ul>
+<li>architecture</li>
+<li>loss gradients are used as meta information to populate models to learn fast weights.</li>
+</ul>
+</li>
+</ul>
+<h4 id="metric-based"><a href="#metric-based" class="headerlink" title="metric-based:"></a>metric-based:</h4><p>=======</p>
+<h4 id="metric-based-sum-mathbf-x-i-y-i-in-S-k-theta-mathbf-x-mathbf-x-i-y-i"><a href="#metric-based-sum-mathbf-x-i-y-i-in-S-k-theta-mathbf-x-mathbf-x-i-y-i" class="headerlink" title="metric-based: $\sum_{(\mathbf{x}_i, y_i) \in S} k_\theta(\mathbf{x}, \mathbf{x}_i)y_i$"></a>metric-based: $\sum_{(\mathbf{x}_i, y_i) \in S} k_\theta(\mathbf{x}, \mathbf{x}_i)y_i$</h4><ul>
+<li>learn <em><strong>efficient</strong></em> distance metric.</li>
+<li>similar to <em><strong>nearnest neighbors algorithm</strong></em> (KNN,k-means) and <em><strong>kernel density estimation</strong></em>.</li>
+<li><p>the predicted possibility of labeled samples is from is a <em><strong>weighted sum of support set samples</strong></em>, and the weight is generated by a kernel function $k<em>\theta$, which can measure the *<em>_similarity</em></em>* of twp data samples:</p>
+<script type="math/tex; mode=display">
+P\_\theta(y \vert \mathbf{x}, S) = \sum\_{(\mathbf{x}\_i, y\_i) \in S} k\_\theta(\mathbf{x}, \mathbf{x}\_i)y\_{i}</script></li>
+<li><p>crucial points: <em><strong>good kernel</strong></em></p>
+</li>
+<li>solution: learning <em><strong>embedding vector</strong></em> of input data explicitly and use them to design <em><strong>proper kernel</strong></em> functions.</li>
+<li>Siamese networks: <ul>
+<li>assumption: the <em>learned embedding</em> can be <em>generalized</em> to be useful for measuring the distance between images of unknown categories.</li>
+<li><em>verification</em>, images pairs.</li>
+<li>final prediction is the class of the support image with highest probability.</li>
+</ul>
+</li>
+<li>Matching networks:<ul>
+<li>$g_{\theta}$ with $k$ classifiers for k classes, while $f_{\theta}$ for testing images.</li>
+<li><em>attention kernel</em> depends on two embedding functions $g$ and $f$, in simple version where $f=g$. in complex version where integrating full contextual embedding (FCE), it achieves improvement on hard tasks, not for simple tasks.</li>
+</ul>
+</li>
+<li>Relation networks<ul>
+<li>image pairs, <em>feature concatenation</em>.</li>
+<li>relation modeled: <em>mse</em> loss function.</li>
+</ul>
+</li>
+<li>Prototypical networks<ul>
+<li>images of <em>each class</em> are embedded into $M$ dimensional feature vector, each class has <em>prototype</em> feature vector from the mean vector of the embedded support data samples in each class.</li>
+<li><em>squared euclidean distance</em> loss.</li>
+</ul>
+</li>
+</ul>
+<h4 id="optimization-based"><a href="#optimization-based" class="headerlink" title="optimization-based:"></a>optimization-based:</h4><ul>
+<li>optimize the <em><strong>model parameter</strong></em> explicitly for <em><strong>fast</strong></em> learning.</li>
+<li>modeling <em><strong>optimization algorithm</strong></em> exploitly.</li>
+<li>LSTM meta-learner</li>
+<li>MAML</li>
+<li><p>reptile</p>
+</li>
+<li><p>crucial keys: <em><strong>good kernel</strong></em></p>
+</li>
+<li>solution: learning <em><strong>embedding vector</strong></em> of input data explicitly and use them to design <em><strong>proper kernel</strong></em> functions.</li>
+<li>Siamese networks: <ul>
+<li>assumption: the <em><strong>learned embedding</strong></em> can be <em><strong>generalized</strong></em> to be useful for measuring the distance between images of unknown categories.</li>
+<li><em><strong>verification</strong></em>, images pairs.</li>
+<li>final prediction is the class of the support image with highest probability.</li>
+</ul>
+</li>
+<li>Matching networks:<ul>
+<li>$g_{\theta}$ with $k$ classifiers for k classes, while $f_{\theta}$ for testing images.</li>
+<li>attention kernel depends on two embedding functions $g$ and $f$, in simple version where $f=g$. in complex version where integrating full contextual embedding (FCE), it achieves improvement on hard tasks, not for simple tasks.</li>
+</ul>
+</li>
+<li>Relation network<ul>
+<li>image pairs, feature concatenation.</li>
+<li>relation modeled: mse loss function.</li>
+</ul>
+</li>
+<li>Prototypical<ul>
+<li>images of each class are embedded into $M$ dimensional feature vector, each class has <em>prototype</em> feature vector from the mean vector of the embedded support data samples in each class.</li>
+<li>squared euclidean distance.</li>
+</ul>
+</li>
+</ul>
+<h4 id="optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x"><a href="#optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x" class="headerlink" title="optimization-based: $P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})$"></a>optimization-based: $P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})$</h4><ul>
+<li>optimize the <em><strong>model parameter</strong></em> explicitly for <em><strong>fast</strong></em> learning</li>
+</ul>
+
           
         
       
@@ -932,13 +1064,13 @@
 <li>aim: feature selection in semi-supervised MTL</li>
 <li><p>method: sparce coefficients learnt </p>
 <pre><code>   \begin{aligned}
-   p(x) &amp; = \min_{w_t} \sum_(l=1}^t (loss(w_l) + \alpha ||w_l||_{1,2} + \gamma ||w||_{\*})
+   p(x) &amp; = \min\_{w_t} \sum\_(l=1}^t (loss(w\_l) + \alpha ||w\_l||\_{1,2} + \gamma ||w||\_{\*})
    \end{aligned}
 
    including $l_{1,2}$ norm and Laplacian norm:
 
    \begin{aligned}
-   \gamma ||w|| = \min_{w,b}\sum_{l=1}{t}Tr(w^Tx_lL_lx_l^Tw)
+   \gamma ||w|| = \min\_{w,b}\sum_{l=1}{t}Tr(w^Tx\_lL\_lx\_l^Tw)
    \end{aligned}
 </code></pre></li>
 </ul>
@@ -1908,7 +2040,7 @@
 <blockquote>
 <p>reference-2 from reference-1 <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8107520" target="_blank" rel="noopener">Learning without Forgetting</a></p>
 </blockquote>
-<p>aim: useing only new task data to train the network while preserving the original capabilities<br>temperature: T=2, grid search method</p>
+<p>aim: useing only new task data to train the network while preserving the original capabilities<br>temperature: $T=2$, grid search method</p>
 <h2 id="density-threshold-in-local-feature-density"><a href="#density-threshold-in-local-feature-density" class="headerlink" title="density threshold in local feature density"></a>density threshold in local feature density</h2><h2 id="distribution-distance-is-transfered-into-weights"><a href="#distribution-distance-is-transfered-into-weights" class="headerlink" title="distribution distance is transfered into weights"></a>distribution distance is transfered into weights</h2>
           
         
@@ -2172,7 +2304,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2183,7 +2315,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

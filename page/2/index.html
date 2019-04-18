@@ -658,28 +658,28 @@
 <li><p>reason: &gt;reference <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cui_Large_Scale_Fine-Grained_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Large Scale Fine-Grained Categorization and Domain-Specific Transfer Learning</a>,  which takes domain scale into account by adding a scale factor. In this paper, transfer learning can be viewed as moving a set of images from the source domain S to the target domain T. The work needed to be done by moving an image to another can be defined as their feature Euaullean distance, so the distance between two domains can be defined as the least amount of total work needed. This definition of domain similarity can be calculated by the Earth Mover’s Distance (EMD). </p>
 <ul>
 <li><p>original EMD equation</p>
-<p>\begin{aligned}<br>\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f<em>{i,j}=\min {\sum</em>{i=1}^{m}w<em>{pi},\quad \sum</em>{j=1}^{n}w_{qj}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f<em>{i,j}d</em>{i,j}}{\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>P={(p<em>{1},w</em>{p1}),(p<em>{2},w</em>{p2}),…,(p<em>{m},w</em>{pm})}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>Q={(q<em>{1},w</em>{q1}),(q<em>{2},w</em>{q2}),…,(q<em>{n},w</em>{qn})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>\sum_{i=1}^{m}\sum_{j=1}^{n}f<em>{i,j}=\min {\sum\</em>{i=1}^{m}w_{pi},\quad \sum<em>{j=1}^{n}w\</em>{qj}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}d_{i,j}}{\sum<em>{i=1}^{m}\sum\</em>{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>P={(p_{1},w_{p1}),(p_{2},w_{p2}),…,(p_{m},w_{pm})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>Q={(q_{1},w_{q1}),(q_{2},w_{q2}),…,(q_{n},w_{qn})}<br>\end{aligned}</p>
 </li>
-<li><p>reference paper EMD application<br>g(s<em>{i}) from the mean value of image features in category i from source domain<br>g(t</em>{i}) from the mean value of image features in category i from target domain<br>\begin{aligned}<br>\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f<em>{i,j}=\min {\sum</em>{i=1}^{m}w<em>{pi},\quad \sum</em>{j=1}^{n}w_{qj}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f<em>{i,j}d</em>{i,j}}{\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>S={(s<em>{1},w</em>{s1}),(s<em>{2},w</em>{s2}),…,(s<em>{m},w</em>{sm})}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>T={(t<em>{1},w</em>{t1}),(t<em>{2},w</em>{t2}),…,(t<em>{n},w</em>{tn})}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>D=[d<em>{i,j}] = || g(s</em>{i}) − g(t_{j})||<br>\end{aligned}</p>
+<li><p>reference paper EMD application<br>g(s<em>{i}) from the mean value of image features in category i from source domain<br>g(t</em>{i}) from the mean value of image features in category i from target domain<br>\begin{aligned}<br>\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}=\min {\sum_{i=1}^{m}w_{pi},\quad \sum_{j=1}^{n}w_{qj}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}d_{i,j}}{\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>S={(s_{1},w_{s1}),(s_{2},w_{s2}),…,(s_{m},w_{sm})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>T={(t_{1},w_{t1}),(t_{2},w_{t2}),…,(t_{n},w_{tn})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>D=[d_{i,j}] = || g(s_{i}) − g(t_{j})||<br>\end{aligned}</p>
 <p>\begin{aligned}<br>sim(S, T) = e−γd(S,T )<br>\end{aligned}</p>
 </li>
-<li><p>EMD application for pseudo data selection<br>  g(p) = mean value of image features in specific cluster from the same category in source domain<br>  g(g<em>{i}) = mean value of image features in cluster i from the same category in target domain<br>\begin{aligned}<br>\sum</em>{i=1}^{m}\sum<em>{j=1}^{n}f</em>{i,j}=\min {\sum<em>{i=1}^{m}w</em>{pi},\quad \sum<em>{j=1}^{n}w</em>{qj}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f<em>{i,j}d</em>{i,j}}{\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>P={(p<em>{1},w</em>{p1}),(p<em>{2},w</em>{p2}),…,(p<em>{m},w</em>{pm})}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>G={(g<em>{1},w</em>{g1}),(g<em>{2},w</em>{g2}),…,(g<em>{n},w</em>{gn})}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>D=[d<em>{i,j}] = || g(p</em>{i}) − g(g_{j})||<br>\end{aligned}</p>
+<li><p>EMD application for pseudo data selection<br>  g(p) = mean value of image features in specific cluster from the same category in source domain<br>  g(g<em>{i}) = mean value of image features in cluster i from the same category in target domain<br>\begin{aligned}<br>\sum\</em>{i=1}^{m}\sum_{j=1}^{n}f_{i,j}=\min {\sum_{i=1}^{m}w_{pi},\quad \sum_{j=1}^{n}w_{qj}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}d_{i,j}}{\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>P={(p_{1},w_{p1}),(p_{2},w_{p2}),…,(p_{m},w_{pm})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>G={(g_{1},w_{g1}),(g_{2},w_{g2}),…,(g_{n},w_{gn})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>D=[d_{i,j}] = || g(p_{i}) − g(g_{j})||<br>\end{aligned}</p>
 <p>\begin{aligned}<br>sim(S, T) = e−γd(S,T )<br>\end{aligned}</p>
 </li>
 </ul>
 </li>
-<li>implementation: calculating the distance between G(A1_i) and the whole cluster in G(B1). As for distance calculation with EMD method, we obtain P={G(A1_i)_mean,G(A1_i)_probs} and Q={[G(B1_1)_mean, …, G(B1_K)_mean],[G(B1_1)_probs, …, G(B1_K)_probs]}, so we can calculate distance vector D=(emd_1,emd_k), which is used for obtaining distribution weights weights_g.</li>
+<li>implementation: calculating the distance between $G(A1_i)$ and the whole cluster in G(B1). As for distance calculation with EMD method, we obtain $P={G(A1_i)_mean,G(A1_i)_probs}$ and $Q={[G(B1_1)_mean, …, G(B1_K)_mean],[G(B1_1)_probs, …, G(B1_K)_probs]}$, so we can calculate distance vector D=(emd_1,emd_k), which is used for obtaining distribution weights weights_g.</li>
 </ul>
 </li>
 </ol>
@@ -861,7 +861,7 @@
 <li>calculating distance of each image: maximun local distance is regarded as cluster centre, image with smaller distance between its distance and cluster centre represents that its label have high confidence </li>
 </ul>
 <h3 id="Distribution-distance-based-GMM"><a href="#Distribution-distance-based-GMM" class="headerlink" title="Distribution distance based GMM"></a>Distribution distance based GMM</h3><h4 id="Clustring-based-GMM"><a href="#Clustring-based-GMM" class="headerlink" title="Clustring based GMM"></a>Clustring based GMM</h4><h5 id="GMM-with-EM"><a href="#GMM-with-EM" class="headerlink" title="GMM with EM"></a>GMM with EM</h5><ul>
-<li><p>original definition<br>\begin{aligned}<br>p(x) &amp; = \sum<em>{k=1}^K p(k)p(x|k) = \sum</em>{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}<br>\pi_k  represent the possibility of sample belong to kth category</p>
+<li><p>original definition<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}<br>$\pi_k$  represent the possibility of sample belong to kth category</p>
 </li>
 <li><p>new definition for coding<br>\begin{aligned}<br>\sum_{k} z_k = 1<br>\end{aligned}</p>
 </li>
@@ -1069,9 +1069,9 @@
 <li>signature:<br>\begin{aligned}<br>s= (feature,weights)<br>\end{aligned}</li>
 </ol>
 <h2 id="Purity-and-distribution-distance-based-gmm"><a href="#Purity-and-distribution-distance-based-gmm" class="headerlink" title="Purity and distribution distance based gmm"></a>Purity and distribution distance based gmm</h2><h3 id="GMM-with-EM"><a href="#GMM-with-EM" class="headerlink" title="GMM with EM"></a>GMM with EM</h3><ul>
-<li>original definition<br>\begin{aligned}<br>p(x) &amp; = \sum<em>{k=1}^K p(k)p(x|k) = \sum</em>{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</li>
+<li>original definition<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</li>
 </ul>
-<p>\pi_k  represent the possibility of sample belong to kth category</p>
+<p>$\pi_k$  represent the possibility of sample belong to kth category</p>
 <ul>
 <li>new definition for coding<br>\begin{aligned}<br>\sum_{k} z_k = 1<br>\end{aligned}</li>
 </ul>
@@ -1441,7 +1441,7 @@
 <ul>
 <li><p>Differentce between k-means and GMM: k-means notes that each point is assigned to different clusters, while GMM can calculate the probabiliy of each point belong to each clusters.</p>
 </li>
-<li><p>Import parameters of GMM: K Gaussion models, also K clusters, \pi, \mu, \Sigma<br>\begin{aligned}<br>p(x) &amp; = \sum<em>{k=1}^K p(k)p(x|k) = \sum</em>{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</p>
+<li><p>Import parameters of GMM: K Gaussion models, also K clusters, $\pi$, $\mu$, $\Sigma$<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</p>
 </li>
 </ul>
 
@@ -1884,7 +1884,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1895,7 +1895,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
