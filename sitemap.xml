@@ -4,14 +4,14 @@
   <url>
     <loc>https://www.yanhong.me/2019/04/18/meta-learning/</loc>
     
-    <lastmod>2019-04-18T05:47:45.104Z</lastmod>
+    <lastmod>2019-04-18T05:50:06.603Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.yanhong.me/2019/04/09/Overview-of-GAN/</loc>
     
-    <lastmod>2019-04-18T05:43:06.118Z</lastmod>
+    <lastmod>2019-04-18T05:49:43.786Z</lastmod>
     
   </url>
   
@@ -37,13 +37,6 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/about/index.html</loc>
-    
-    <lastmod>2019-03-21T05:35:00.751Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.yanhong.me/tags/index.html</loc>
     
     <lastmod>2019-03-21T05:35:00.751Z</lastmod>
@@ -51,9 +44,9 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/03/18/Manifold-Learning/</loc>
+    <loc>https://www.yanhong.me/about/index.html</loc>
     
-    <lastmod>2019-03-21T05:35:00.750Z</lastmod>
+    <lastmod>2019-03-21T05:35:00.751Z</lastmod>
     
   </url>
   
@@ -65,9 +58,9 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/03/09/Semi-MTL-Related/</loc>
+    <loc>https://www.yanhong.me/2019/03/18/Manifold-Learning/</loc>
     
-    <lastmod>2019-03-21T05:35:00.749Z</lastmod>
+    <lastmod>2019-03-21T05:35:00.750Z</lastmod>
     
   </url>
   
@@ -79,9 +72,9 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/02/26/Heterogeneous-Multitask/</loc>
+    <loc>https://www.yanhong.me/2019/03/09/Semi-MTL-Related/</loc>
     
-    <lastmod>2019-03-21T05:35:00.748Z</lastmod>
+    <lastmod>2019-03-21T05:35:00.749Z</lastmod>
     
   </url>
   
@@ -100,14 +93,21 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/02/21/Density-Distribution/</loc>
+    <loc>https://www.yanhong.me/2019/02/26/Heterogeneous-Multitask/</loc>
+    
+    <lastmod>2019-03-21T05:35:00.748Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yanhong.me/2019/02/27/Parameters-Selection-for-Pseudo/</loc>
     
     <lastmod>2019-03-21T05:35:00.747Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/02/27/Parameters-Selection-for-Pseudo/</loc>
+    <loc>https://www.yanhong.me/2019/02/21/Density-Distribution/</loc>
     
     <lastmod>2019-03-21T05:35:00.747Z</lastmod>
     
@@ -135,14 +135,14 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/01/16/Cross_entropy_loss/</loc>
+    <loc>https://www.yanhong.me/2019/02/28/Research-Point-Multitask/</loc>
     
     <lastmod>2019-03-21T05:35:00.744Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/02/28/Research-Point-Multitask/</loc>
+    <loc>https://www.yanhong.me/2019/01/16/Cross_entropy_loss/</loc>
     
     <lastmod>2019-03-21T05:35:00.744Z</lastmod>
     

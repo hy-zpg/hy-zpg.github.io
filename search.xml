@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[meta learning]]></title>
+    <title><![CDATA[Meta Learning]]></title>
     <url>%2F2019%2F04%2F18%2Fmeta-learning%2F</url>
     <content type="text"></content>
   </entry>
   <entry>
-    <title><![CDATA[Overview of generative models]]></title>
+    <title><![CDATA[Overview of Generative Models]]></title>
     <url>%2F2019%2F04%2F09%2FOverview-of-GAN%2F</url>
     <content type="text"><![CDATA[]]></content>
       <categories>
@@ -172,7 +172,7 @@
   </entry>
   <entry>
     <title><![CDATA[Numpy learning]]></title>
-    <url>%2F2019%2F01%2F14%2Fnumpy-learning%2F</url>
+    <url>%2F2019%2F01%2F14%2FNumpy%20learning%2F</url>
     <content type="text"><![CDATA[One-hot labels preprocessing Weighting samples with confidence score 123index = np.ragmax(predicted_result,axis=1)arg = np_utils.to_categorical(index,classes)weighted_one_hot=predicted_result*arg Selection &amp;&amp; weighting samples with confidence score 1weighted_selected_one_hot=np.where(predicted_result&gt;k,predicted_result,0) Extending vector into matrix 1xx = [np.full(classes,value) for value in x]]]></content>
       <categories>
         <category>Codes</category>
@@ -183,7 +183,7 @@
   </entry>
   <entry>
     <title><![CDATA[Numpy learning]]></title>
-    <url>%2F2019%2F01%2F14%2FNumpy%20learning%2F</url>
+    <url>%2F2019%2F01%2F14%2Fnumpy-learning%2F</url>
     <content type="text"><![CDATA[One-hot labels preprocessing Weighting samples with confidence score 123index = np.ragmax(predicted_result,axis=1)arg = np_utils.to_categorical(index,classes)weighted_one_hot=predicted_result*arg Selection &amp;&amp; weighting samples with confidence score 1weighted_selected_one_hot=np.where(predicted_result&gt;k,predicted_result,0) Extending vector into matrix 1xx = [np.full(classes,value) for value in x]]]></content>
       <categories>
         <category>Codes</category>
