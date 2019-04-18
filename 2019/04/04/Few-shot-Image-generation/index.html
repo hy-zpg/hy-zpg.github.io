@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
 <meta property="og:description" content="Meta learningDefinition “learn to learn”, intends to design models that can learn new skills or adapt to new environment rapidly with a few traing samples, like human learning way. The detail can be p">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-18T13:09:37.396Z">
+<meta property="og:updated_time" content="2019-04-18T13:15:37.649Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Few-shot Image generation">
 <meta name="twitter:description" content="Meta learningDefinition “learn to learn”, intends to design models that can learn new skills or adapt to new environment rapidly with a few traing samples, like human learning way. The detail can be p">
@@ -418,7 +418,7 @@
         <h2 id="Meta-learning"><a href="#Meta-learning" class="headerlink" title="Meta learning"></a>Meta learning</h2><h3 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h3><ul>
 <li><p>“learn to learn”, intends to design models that can learn <em><strong>new</strong></em> skills or adapt to <em><strong>new</strong></em> environment <em><strong>rapidly</strong></em> with <em><strong>a few</strong></em> traing samples, like <em><strong>human learning way</strong></em>. The detail can be posted in <a href="https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html" target="_blank" rel="noopener">Meta-Learning: Learning to Learn Fast</a></p>
 </li>
-<li><p>Optimization aims:<br>\begin{aligned}<br>\theta^{*}=\arg \min _{\theta} \mathbb{E}_{\mathcal{D} \sim p(\mathcal{D})} \left[\mathcal{L}_{\theta}(\mathcal{D})]\right<br>\end{aligned}</p>
+<li><p>Optimization aims:<br>$\theta^{*}=\arg \min _{\theta} \mathbb{E}_{\mathcal{D} \sim p(\mathcal{D})} \left[\mathcal{L}_{\theta}(\mathcal{D})]\right$</p>
 </li>
 <li>Optimization aims:<br>$\theta^* = \arg\min_\theta \mathbb{E}_{\mathcal{D}\sim p(\mathcal{D})} [\mathcal{L}_\theta(\mathcal{D})]$</li>
 </ul>
@@ -488,7 +488,7 @@ P\_\theta(y \vert \mathbf{x}, S) = \sum\_{(\mathbf{x}\_i, y\_i) \in S} k\_\theta
 </ul>
 </li>
 </ul>
-<h4 id="optimization-based"><a href="#optimization-based" class="headerlink" title="optimization-based:"></a>optimization-based:</h4><ul>
+<h4 id="optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x"><a href="#optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x" class="headerlink" title="optimization-based: $P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})$"></a>optimization-based: $P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})$</h4><ul>
 <li>optimize the <em><strong>model parameter</strong></em> explicitly for <em><strong>fast</strong></em> learning.</li>
 <li>modeling <em><strong>optimization algorithm</strong></em> exploitly.</li>
 <li>LSTM meta-learner</li>
@@ -520,7 +520,7 @@ P\_\theta(y \vert \mathbf{x}, S) = \sum\_{(\mathbf{x}\_i, y\_i) \in S} k\_\theta
 </ul>
 </li>
 </ul>
-<h4 id="optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x"><a href="#optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x" class="headerlink" title="optimization-based: $P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})$"></a>optimization-based: $P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})$</h4><ul>
+<h4 id="optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x-1"><a href="#optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x-1" class="headerlink" title="optimization-based: $P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})$"></a>optimization-based: $P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})$</h4><ul>
 <li>optimize the <em><strong>model parameter</strong></em> explicitly for <em><strong>fast</strong></em> learning</li>
 </ul>
 
@@ -720,7 +720,7 @@ P\_\theta(y \vert \mathbf{x}, S) = \sum\_{(\mathbf{x}\_i, y\_i) \in S} k\_\theta
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Meta-learning"><span class="nav-number">1.</span> <span class="nav-text">Meta learning</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Definition"><span class="nav-number">1.1.</span> <span class="nav-text">Definition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-methods"><span class="nav-number">1.2.</span> <span class="nav-text">Common methods</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#model-based-f-theta-mathbf-x-S"><span class="nav-number">1.2.1.</span> <span class="nav-text">model-based: $f_\theta(\mathbf{x}, S)$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#metric-based-sum-mathbf-x-i-y-i-in-S-k-theta-mathbf-x-mathbf-x-i-y-i"><span class="nav-number">1.2.2.</span> <span class="nav-text">metric-based: $\sum_{(\mathbf{x}_i, y_i) \in S} k_\theta(\mathbf{x}, \mathbf{x}_i)y_i$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#optimization-based"><span class="nav-number">1.2.3.</span> <span class="nav-text">optimization-based:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x"><span class="nav-number">1.2.4.</span> <span class="nav-text">optimization-based: $P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})$</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Meta-learning"><span class="nav-number">1.</span> <span class="nav-text">Meta learning</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Definition"><span class="nav-number">1.1.</span> <span class="nav-text">Definition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-methods"><span class="nav-number">1.2.</span> <span class="nav-text">Common methods</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#model-based-f-theta-mathbf-x-S"><span class="nav-number">1.2.1.</span> <span class="nav-text">model-based: $f_\theta(\mathbf{x}, S)$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#metric-based-sum-mathbf-x-i-y-i-in-S-k-theta-mathbf-x-mathbf-x-i-y-i"><span class="nav-number">1.2.2.</span> <span class="nav-text">metric-based: $\sum_{(\mathbf{x}_i, y_i) \in S} k_\theta(\mathbf{x}, \mathbf{x}_i)y_i$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x"><span class="nav-number">1.2.3.</span> <span class="nav-text">optimization-based: $P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#optimization-based-P-g-phi-theta-S-L-y-vert-mathbf-x-1"><span class="nav-number">1.2.4.</span> <span class="nav-text">optimization-based: $P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})$</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
