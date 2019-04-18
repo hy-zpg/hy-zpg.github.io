@@ -7,7 +7,7 @@
 
 <html class="theme-next pisces use-motion" lang="default">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
 <meta property="og:description" content="Cross entropy loss calculation in different circumstances Cross_entropy_loss in tensorflow 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-23T11:56:38.362Z">
+<meta property="og:updated_time" content="2019-03-21T05:35:00.744Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cross_entropy_loss">
 <meta name="twitter:description" content="Cross entropy loss calculation in different circumstances Cross_entropy_loss in tensorflow 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859">
@@ -128,7 +128,7 @@
 
 
 
-  <title>Cross_entropy_loss | Hongyan's Notes</title>
+  <title>Cross_entropy_loss | Hongyan's Notes</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -147,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -432,19 +432,19 @@
 </ul>
 <h2 id="Cross-entropy-loss-with-missing-labels"><a href="#Cross-entropy-loss-with-missing-labels" class="headerlink" title="Cross_entropy_loss with missing labels"></a>Cross_entropy_loss with missing labels</h2><ul>
 <li><p>leveraging fixed zero array or ones array as ground truth and generating mask in loss function</p>
-<pre><code class="bash">def mask_cross_entropy_loss(y_true,y_pred):
+<pre><code class="lang-bash">def mask_cross_entropy_loss(y_true,y_pred):
   mask=K.all(K.equal(y_true,0),axis=-1)
   mask=1-K.cast(mask,K.floatx())
   loss = K.categorical_crossentropy(y_true,y_pred)*mask
-  <span class="built_in">return</span> (K.sum(loss)/K.sum(mask)
+  return (K.sum(loss)/K.sum(mask)
 </code></pre>
 </li>
 <li><p>corresponding accuracy with mask</p>
-<pre><code class="bash">def mask_cross_entropy_acc(y_true,y_pred):
+<pre><code class="lang-bash">def mask_cross_entropy_acc(y_true,y_pred):
   mask=K.all(K.equal(y_true,0),axis=-1)
   mask=1-K.cast(mask,K.floatx())
   acc = K.cast(K.equal(K.argmax(y_true,axis=-1),K.argmax(y_pred,axis=-1)),K.floatx()))*mask
-  <span class="built_in">return</span> (K.sum(acc)/K.sum(mask)
+  return (K.sum(acc)/K.sum(mask)
 </code></pre>
 </li>
 </ul>
@@ -567,7 +567,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -578,7 +578,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -589,7 +589,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1197,7 +1197,7 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 

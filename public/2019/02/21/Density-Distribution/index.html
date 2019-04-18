@@ -7,7 +7,7 @@
 
 <html class="theme-next pisces use-motion" lang="default">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="Purity based density &amp;amp; distribution distance based GMMPurity based density reference：ECCV 2018 CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images   original reference： Science 2">
+<meta name="description" content="Purity based density &amp;amp; distribution distance based GMMPurity based density reference：ECCV 2018 CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images original reference： Science 200">
 <meta name="keywords" content="pesudo labels">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Density &amp; Distribution">
 <meta property="og:url" content="https://www.yanhong.me/2019/02/21/Density-Distribution/index.html">
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
-<meta property="og:description" content="Purity based density &amp;amp; distribution distance based GMMPurity based density reference：ECCV 2018 CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images   original reference： Science 2">
+<meta property="og:description" content="Purity based density &amp;amp; distribution distance based GMMPurity based density reference：ECCV 2018 CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images original reference： Science 200">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-23T11:56:57.345Z">
+<meta property="og:updated_time" content="2019-03-21T05:35:00.747Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Density &amp; Distribution">
-<meta name="twitter:description" content="Purity based density &amp;amp; distribution distance based GMMPurity based density reference：ECCV 2018 CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images   original reference： Science 2">
+<meta name="twitter:description" content="Purity based density &amp;amp; distribution distance based GMMPurity based density reference：ECCV 2018 CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images original reference： Science 200">
 
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <title>Density & Distribution | Hongyan's Notes</title>
+  <title>Density & Distribution | Hongyan's Notes</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -147,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -417,13 +417,11 @@
       
         <h2 id="Purity-based-density-amp-distribution-distance-based-GMM"><a href="#Purity-based-density-amp-distribution-distance-based-GMM" class="headerlink" title="Purity based density &amp; distribution distance based GMM"></a>Purity based density &amp; distribution distance based GMM</h2><h3 id="Purity-based-density"><a href="#Purity-based-density" class="headerlink" title="Purity based density"></a>Purity based density</h3><blockquote>
 <p>reference：ECCV 2018 <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Sheng_Guo_CurriculumNet_Learning_from_ECCV_2018_paper.pdf" target="_blank" rel="noopener">CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images</a></p>
-</blockquote>
-<blockquote>
 <p>original reference： Science 2004 <a href="http://sites.psu.edu/mcnl/files/2017/03/9-2dhti48.pdf" target="_blank" rel="noopener">Clustering by fast search and find of density peaks</a></p>
 </blockquote>
 <h4 id="Creativity"><a href="#Creativity" class="headerlink" title="Creativity"></a>Creativity</h4><ul>
-<li>leveraging data distribution density in feature space to evaluate the complexity of the data<br>ours – evaluating the purity of pseudo label data by data density in feature space</li>
-<li>noisy data can be regared as regularied method to improve the model generalization<br>ours – pesudo labels can improve the model generalization </li>
+<li>leveraging data distribution density in feature space to evaluate the complexity of the data<br>ours — evaluating the purity of pseudo label data by data density in feature space</li>
+<li>noisy data can be regared as regularied method to improve the model generalization<br>ours — pesudo labels can improve the model generalization </li>
 </ul>
 <h4 id="Technical-detail"><a href="#Technical-detail" class="headerlink" title="Technical detail"></a>Technical detail</h4><p>Density based clustering algorithm</p>
 <ul>
@@ -433,7 +431,7 @@
 <li>calculating distance of each image: maximun local distance is regarded as cluster centre, image with smaller distance between its distance and cluster centre represents that its label have high confidence </li>
 </ul>
 <h3 id="Distribution-distance-based-GMM"><a href="#Distribution-distance-based-GMM" class="headerlink" title="Distribution distance based GMM"></a>Distribution distance based GMM</h3><h4 id="Clustring-based-GMM"><a href="#Clustring-based-GMM" class="headerlink" title="Clustring based GMM"></a>Clustring based GMM</h4><h5 id="GMM-with-EM"><a href="#GMM-with-EM" class="headerlink" title="GMM with EM"></a>GMM with EM</h5><ul>
-<li><p>original definition<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}<br>\pi_k  represent the possibility of sample belong to kth category</p>
+<li><p>original definition<br>\begin{aligned}<br>p(x) &amp; = \sum<em>{k=1}^K p(k)p(x|k) = \sum</em>{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}<br>\pi_k  represent the possibility of sample belong to kth category</p>
 </li>
 <li><p>new definition for coding<br>\begin{aligned}<br>\sum_{k} z_k = 1<br>\end{aligned}</p>
 </li>
@@ -574,7 +572,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -585,7 +583,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -596,7 +594,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1204,7 +1202,7 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
