@@ -35,15 +35,16 @@
     <link href="https://www.yanhong.me/2019/04/09/Overview-of-GAN/"/>
     <id>https://www.yanhong.me/2019/04/09/Overview-of-GAN/</id>
     <published>2019-04-09T10:31:46.000Z</published>
-    <updated>2019-04-18T05:49:43.786Z</updated>
+    <updated>2019-04-18T05:59:48.203Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://www.yanhong.me/images/gm.jpg" width="50%" height="50%"></p>]]></content>
+    <content type="html"><![CDATA[<!-- <img src="https://www.yanhong.me/images/gm.jpg" width="50%" height="50%"> --><p><img src="/images/gm.jpg" alt=""></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;img src=&quot;https://www.yanhong.me/images/gm.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt;&lt;/p&gt;
+        &lt;!-- &lt;img src=&quot;https://www.yanhong.me/images/gm.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt; --&gt;
+&lt;p&gt;&lt;img src=&quot;/images/gm.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 
       
     
