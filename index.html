@@ -559,7 +559,56 @@
           
             <!-- <img src="https://www.yanhong.me/images/gm.jpg" width="50%" height="50%"> -->
 <!-- <img src="⁨hy-zpg.github.io⁩/source⁩/imgs⁩/gm.jpg" class="full-image" width="180" height="180" title="hello"> -->
-<p><img src="/imgs/gm.jpg" alt="&#39;taxonomy of generative models&#39;"></p>
+<!-- ![avatar](http://baidu.com/pic/doge.png)-->
+<h2 id="Taxonomy-of-Generative-models"><a href="#Taxonomy-of-Generative-models" class="headerlink" title="Taxonomy of Generative models"></a>Taxonomy of Generative models</h2><p><img src="/imgs/gm.jpg" alt="&#39;taxonomy of generative models&#39;"></p>
+<h3 id="PixelsRNN-and-PixelsCNN"><a href="#PixelsRNN-and-PixelsCNN" class="headerlink" title="PixelsRNN and PixelsCNN"></a>PixelsRNN and PixelsCNN</h3><ul>
+<li><p>this method belongs to <strong><em>explicit density model</em></strong>.</p>
+</li>
+<li><p>Using <strong><em>chain rule</em></strong> to decompose likelihood of an image x into product of 1-d distributions:</p>
+</li>
+</ul>
+<p>\begin{aligned}<br>p<em>{\theta}(x)=\prod</em>{i=1}^{n} p<em>{\theta}\left(x</em>{i} | x<em>{1}, \ldots, x</em>{i-1}\right)<br>\end{aligned}</p>
+<p>where $x_i$ represents pixel, $p(x)$ denoets the likelihood of image $x$</p>
+<ul>
+<li><p>it’s important to define <strong><em>ordering</em></strong> of those pixels</p>
+</li>
+<li><p>complex distribution over pixels can be sloved by neural networks</p>
+</li>
+<li><p>pros: <strong><em>explicitly</em></strong> compute likelihood $p(x)$.</p>
+</li>
+<li><p>cons: sequential generation is slow.</p>
+</li>
+</ul>
+<h4 id="PixelsRNN"><a href="#PixelsRNN" class="headerlink" title="PixelsRNN"></a>PixelsRNN</h4><ul>
+<li><p>generating image pixels from corner, and then using RNN(LSTM) to model dependency on previous pixels.</p>
+</li>
+<li><p>drawback is that the process of sequential generation if slow.</p>
+</li>
+</ul>
+<h4 id="PixelsCNN"><a href="#PixelsCNN" class="headerlink" title="PixelsCNN"></a>PixelsCNN</h4><ul>
+<li><p>generating image pixels from corner, and then using CNN to cover context region.</p>
+</li>
+<li><p>generation proceed sequentially is still slow.</p>
+</li>
+</ul>
+<h3 id="Variational-Autoenconders"><a href="#Variational-Autoenconders" class="headerlink" title="Variational Autoenconders"></a>Variational Autoenconders</h3><ul>
+<li>this method defines <strong><em>intractable density function</em></strong> with latent $z$:</li>
+</ul>
+<p>\begin{aligned}<br>p<em>{\theta}(x)=\int p</em>{\theta}(z) p_{\theta}(x | z) d z<br>\end{aligned}</p>
+<h4 id="Autoencoders"><a href="#Autoencoders" class="headerlink" title="Autoencoders"></a>Autoencoders</h4><ul>
+<li>mapping image $x$ to features $z$ with deep neural networks, $z$ is regarded to capture meaningful factors of variation in data.</li>
+<li>to learn feature $z$ by reconstruction error: $x$ -&gt; $z$ -&gt; $\halt_{x}$ with encoder and decoder.</li>
+</ul>
+<h4 id="Variational-Autoenconders-for-generation-problem"><a href="#Variational-Autoenconders-for-generation-problem" class="headerlink" title="Variational Autoenconders for generation problem"></a>Variational Autoenconders for generation problem</h4><ul>
+<li><p>Assuming training data $x(i)$ representation $z$ is generated from latent representation $z$. Specifically, first sampling $z$ from true prior $p<em>{\theta}(z)$, then sampling $x$ from true conditional $p</em>{\theta}(x|z^(i))$</p>
+</li>
+<li><p>the aim is to estimate the true parameter $\theta$ by maximuming likelihood of training data:<br>\begin{equation}<br>p<em>{\theta}(x)=\int p</em>{\theta}(z) p<em>{\theta}(x | z) d z<br>\end{equation}<br>where $ p</em>{\theta}(z)$ is gaussion prior, and $p_{\theta}(x | z) $ is decoder.</p>
+</li>
+<li><p>intractable optimization problem, because it’s impossible to compute $p(x | z)$ for every $z$ which means the integral operation is fail in this condition. </p>
+</li>
+<li><p>posterior density $p<em>{\theta}(z | x)=p</em>{\theta}(x | z) p<em>{\theta}(z) / p</em>{\theta}(x)$ is also intractable, since $p_{\theta}(x)$ is intractable data likelihood. </p>
+</li>
+</ul>
 
           
         
