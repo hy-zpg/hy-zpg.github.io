@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.yanhong.me/2019/02/22/Why-How-Pseudo/</loc>
+    
+    <lastmod>2019-04-18T13:01:51.784Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.yanhong.me/2019/04/04/Few-shot-Image-generation/</loc>
     
     <lastmod>2019-04-18T12:50:39.254Z</lastmod>
@@ -79,13 +86,6 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/02/22/Why-How-Pseudo/</loc>
-    
-    <lastmod>2019-04-18T12:40:47.066Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.yanhong.me/2019/01/15/GMM/</loc>
     
     <lastmod>2019-04-18T12:33:20.432Z</lastmod>
@@ -121,14 +121,14 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/about/index.html</loc>
+    <loc>https://www.yanhong.me/tags/index.html</loc>
     
     <lastmod>2019-03-21T05:35:00.751Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/tags/index.html</loc>
+    <loc>https://www.yanhong.me/about/index.html</loc>
     
     <lastmod>2019-03-21T05:35:00.751Z</lastmod>
     
