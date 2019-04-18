@@ -776,7 +776,7 @@
             <h2 id="Meta-learning"><a href="#Meta-learning" class="headerlink" title="Meta learning"></a>Meta learning</h2><h3 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h3><ul>
 <li><p>“learn to learn”, intends to design models that can learn <em><strong>new</strong></em> skills or adapt to <em><strong>new</strong></em> environment <em><strong>rapidly</strong></em> with <em><strong>a few</strong></em> traing samples, like <em><strong>human learning way</strong></em>. The detail can be posted in <a href="https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html" target="_blank" rel="noopener">Meta-Learning: Learning to Learn Fast</a></p>
 </li>
-<li><p>Optimization aims:<br>\begin{equation}<br>\theta^{*}=\arg \min _{\theta} \mathbb{E}_{\mathcal{D} \sim p(\mathcal{D})} \left[\mathcal{L}_{\theta}(\mathcal{D})]\right<br>\end{equation}</p>
+<li><p>Optimization aims:<br>\begin{aligned}<br>\theta^{*}=\arg \min _{\theta} \mathbb{E}_{\mathcal{D} \sim p(\mathcal{D})} \left[\mathcal{L}_{\theta}(\mathcal{D})]\right<br>\end{aligned}</p>
 </li>
 <li>Optimization aims:<br>$\theta^* = \arg\min_\theta \mathbb{E}_{\mathcal{D}\sim p(\mathcal{D})} [\mathcal{L}_\theta(\mathcal{D})]$</li>
 </ul>
@@ -792,15 +792,15 @@
 </ol>
 <p>each pair of sampled dataset $(S^L, B^L)$ is regarded as one data point, such that trained models can generalize to other datasets. Symbols in red are added for meta-learning in addition to the general supervised learning objective.<br>\begin{aligned}<br>\theta = \arg\max_\theta \color{red}{E_{L\subset\mathcal{L}}[} E_{\color{red}{S^L \subset\mathcal{D}, }B^L \subset\mathcal{D}} [\sum_{(x, y)\in B^L} P_\theta(x, y\color{red}{, S^L})] \color{red}{]}<br>\end{aligned}</p>
 <ul>
-<li>Traning stages<br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</li>
+<li>Traning stages</li>
 </ul>
-<h1 id="1-meta-learner-a-optimizer-g-phi-learns-how-to-update-the-learner-model’s-parameters-via-the-support-set-S-theta’-g-phi-theta-S"><a href="#1-meta-learner-a-optimizer-g-phi-learns-how-to-update-the-learner-model’s-parameters-via-the-support-set-S-theta’-g-phi-theta-S" class="headerlink" title="1. meta-learner: a optimizer $ g_\phi $ learns how to update the learner model’s parameters via the support set $S$, $\theta’ = g_\phi(\theta, S)$"></a>1. meta-learner: a optimizer $ g_\phi $ learns how to update the learner model’s parameters via the support set $S$, $\theta’ = g_\phi(\theta, S)$</h1><ol>
+<ol>
 <li>meta-learner: a optimizer $g_\phi$ learns how to update the learner model’s parameters via the support set $S$, $\theta’ = g_\phi(\theta, S)$</li>
-<li>learner: A classifier $f_\theta$ is the “learner” model, trained for operating a given task.<!-- final learning objective is $\mathbb{E}_{L\subset\mathcal{L}}[ \mathbb{E}_{S^L \subset\mathcal{D}, B^L \subset\mathcal{D}} [\sum_{(\mathbf{x}, y)\in B^L} P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})]]$ -->
-</li>
+<li>learner: A classifier $f_\theta$ is the “learner” model, trained for operating a given task.</li>
+<li>final learning objective is $\mathbb{E}_{L\subset\mathcal{L}}[ \mathbb{E}_{S^L \subset\mathcal{D}, B^L \subset\mathcal{D}} [\sum_{(\mathbf{x}, y)\in B^L} P_{g_\phi(\theta, S^L)}(y \vert \mathbf{x})]]$</li>
 </ol>
 <h3 id="Common-methods"><a href="#Common-methods" class="headerlink" title="Common methods"></a>Common methods</h3><h4 id="model-based-f-theta-mathbf-x-S"><a href="#model-based-f-theta-mathbf-x-S" class="headerlink" title="model-based: $f_\theta(\mathbf{x}, S)$"></a>model-based: $f_\theta(\mathbf{x}, S)$</h4><ul>
-<li>use <em><strong>recurrent</strong></em> network with <em><strong>internal (or external)</strong></em> memory.<br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</li>
+<li>use <em><strong>recurrent</strong></em> network with <em><strong>internal (or external)</strong></em> memory.</li>
 <li>rapid parameter update achieved by <em><strong>meta-learner model</strong></em> or <em><strong>internal architecture</strong></em>.</li>
 <li>memory-augmented neural network for meta-learning<ul>
 <li>using <em>external memory storage</em> to facilate learning process <em>without forgetting</em> new information in future.</li>
@@ -815,7 +815,6 @@
 </ul>
 </li>
 </ul>
-<h4 id="metric-based"><a href="#metric-based" class="headerlink" title="metric-based:"></a>metric-based:</h4><p>=======</p>
 <h4 id="metric-based-sum-mathbf-x-i-y-i-in-S-k-theta-mathbf-x-mathbf-x-i-y-i"><a href="#metric-based-sum-mathbf-x-i-y-i-in-S-k-theta-mathbf-x-mathbf-x-i-y-i" class="headerlink" title="metric-based: $\sum_{(\mathbf{x}_i, y_i) \in S} k_\theta(\mathbf{x}, \mathbf{x}_i)y_i$"></a>metric-based: $\sum_{(\mathbf{x}_i, y_i) \in S} k_\theta(\mathbf{x}, \mathbf{x}_i)y_i$</h4><ul>
 <li>learn <em><strong>efficient</strong></em> distance metric.</li>
 <li>similar to <em><strong>nearnest neighbors algorithm</strong></em> (KNN,k-means) and <em><strong>kernel density estimation</strong></em>.</li>
@@ -1058,21 +1057,13 @@ P\_\theta(y \vert \mathbf{x}, S) = \sum\_{(\mathbf{x}\_i, y\_i) \in S} k\_\theta
 </ul>
 <h3 id="Semi-supervised-Multi-task-Learning-with-Manifold-Learning"><a href="#Semi-supervised-Multi-task-Learning-with-Manifold-Learning" class="headerlink" title="Semi-supervised Multi-task Learning with Manifold Learning"></a>Semi-supervised Multi-task Learning with Manifold Learning</h3><blockquote>
 <p>reference [Semisupervised feature analysis by mining correlations among multiple tasks]{<a href="https://arxiv.org/pdf/1411.6232.pdf}" target="_blank" rel="noopener">https://arxiv.org/pdf/1411.6232.pdf}</a></p>
-</blockquote>
 <ul>
 <li>aim: feature selection in semi-supervised MTL</li>
-<li><p>method: sparce coefficients learnt </p>
-<pre><code>   \begin{aligned}
-   p(x) &amp; = \min\_{w_t} \sum\_(l=1}^t (loss(w\_l) + \alpha ||w\_l||\_{1,2} + \gamma ||w||\_{\*})
-   \end{aligned}
-
-   including $l_{1,2}$ norm and Laplacian norm:
-
-   \begin{aligned}
-   \gamma ||w|| = \min\_{w,b}\sum_{l=1}{t}Tr(w^Tx\_lL\_lx\_l^Tw)
-   \end{aligned}
-</code></pre></li>
+<li>method: sparce coefficients learnt<br>\begin{aligned}<br>p(x) &amp; = \min_{w<em>t} \sum\</em>(l=1}^t (loss(w_l) + \alpha ||w_l||_{1,2} + \gamma ||w||_{*})<br>\end{aligned}</li>
 </ul>
+</blockquote>
+<p>including $l_{1,2}$ norm and Laplacian norm:</p>
+<p>\begin{aligned}<br>\gamma ||w|| = \min_{w,b}\sum_{l=1}{t}Tr(w^Tx_lL_lx_l^Tw)<br>\end{aligned}</p>
 <blockquote>
 <p>reference [Semi-supervised multitask learning]{<a href="http://papers.nips.cc/paper/3198-semi-supervised-multitask-learning.pdf}" target="_blank" rel="noopener">http://papers.nips.cc/paper/3198-semi-supervised-multitask-learning.pdf}</a></p>
 <p>reference [Semi-supervised multi-task learning with task regularizations]{<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.194.1854&amp;rep=rep1&amp;type=pdf}" target="_blank" rel="noopener">http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.194.1854&amp;rep=rep1&amp;type=pdf}</a></p>
@@ -1528,178 +1519,6 @@ P\_\theta(y \vert \mathbf{x}, S) = \sum\_{(\mathbf{x}\_i, y\_i) \in S} k\_\theta
 <li>hard to understand, pure theories.</li>
 </ul>
 </blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/28/Research-Point-Multitask/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/28/Research-Point-Multitask/" itemprop="url">Research Points of Multitask</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-28T11:25:45+08:00">
-                2019-02-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">Deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Several-tips-for-heterogeneous-multitask-learning"><a href="#Several-tips-for-heterogeneous-multitask-learning" class="headerlink" title="Several tips for heterogeneous multitask learning"></a>Several tips for heterogeneous multitask learning</h2><ul>
-<li>core problem - heterogeneity structrues in tasks[age and gender], source[documents and images], feature[generated from model for classification or regression tasks], samples[one labeled with age while another annotated with gender]</li>
-</ul>
-<ol>
-<li>network with suitabel initialization and learning rate</li>
-<li>construct feature relationship in network, offering trainable parameters, refer to [cross-stitch network]</li>
-<li>feature selection, sparsity and factorization, which means that the specific branch layers to ontain task-specific fearures in a common feature space.</li>
-</ol>
-<h2 id="Research-directions"><a href="#Research-directions" class="headerlink" title="Research directions"></a>Research directions</h2><ul>
-<li>feature relationship from the level of network.</li>
-<li>feature processing from the level fo feature space, such as selection, sparsity and facorization.</li>
-</ul>
 
           
         
@@ -2242,6 +2061,202 @@ P\_\theta(y \vert \mathbf{x}, S) = \sum\_{(\mathbf{x}\_i, y\_i) \in S} k\_\theta
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/26/Heterogeneous-Multitask/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/26/Heterogeneous-Multitask/" itemprop="url">Heterogeneous Multitask</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-26T15:46:30+08:00">
+                2019-02-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Large-scale-Heterogeneous-Learning-in-Big-Data-Analytics"><a href="#Large-scale-Heterogeneous-Learning-in-Big-Data-Analytics" class="headerlink" title="Large-scale Heterogeneous Learning in Big Data Analytics"></a>Large-scale Heterogeneous Learning in Big Data Analytics</h1><blockquote>
+<p>reference slide <a href="http://cci.drexel.edu/bigdata/bigdata2014/MTL_BigData_14.pdf" target="_blank" rel="noopener">Large-scale Heterogeneous Learning in Big Data Analytics</a></p>
+</blockquote>
+<ul>
+<li>multi-task learning<br>‘Multitask learning is an inductive transfer mechanism for improving generalization performance [Caruana, Machine Learning’97]’</li>
+<li>multi-label learning:</li>
+<li>multi-view learning:</li>
+</ul>
+<h2 id="Heterogeneous-outputs-related-to-each-other-with-the-same-set-of-inputs"><a href="#Heterogeneous-outputs-related-to-each-other-with-the-same-set-of-inputs" class="headerlink" title="Heterogeneous outputs related to each other with the same set of inputs"></a>Heterogeneous outputs related to each other with the same set of inputs</h2><blockquote>
+<p>reference-1 <a href="http://www.cs.cmu.edu/~sssykim/papers/yang_kim_xing_nips09.pdf" target="_blank" rel="noopener">Heterogeneous Multitask Learning with Joint Sparsity Constraints</a></p>
+</blockquote>
+<ol>
+<li>probelm: dealing with homogeneous tasks, such as purely regression (continue) or classification (discrete) task, from a common set of high-dimensional feature space. </li>
+<li>method: modeling the joint sparsity as L1/L∞ or L1/L2 norm of the model parameters, achieving joint sparse feature selection.</li>
+<li>datasets: discovering genetic markers that influence multiple correlated traits jointly, datasets with different clinical traits including continuous and discrete labels.</li>
+</ol>
+<h2 id="Heterogeneous-inputs-from-multiple-domains"><a href="#Heterogeneous-inputs-from-multiple-domains" class="headerlink" title="Heterogeneous inputs from multiple domains"></a>Heterogeneous inputs from multiple domains</h2><blockquote>
+<p>reference-2 <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8058002&amp;tag=1" target="_blank" rel="noopener">Heterogeneous Multitask Metric Learning<br>Across Multiple Domains</a> <a href="https://www.semanticscholar.org/paper/Exploiting-High-Order-Information-in-Heterogeneous-Luo-Tao/1bf6d4b31fa26aa9e0c2b759e6bee9ec718dcae7" target="_blank" rel="noopener">Exploiting High-Order Information in Heterogeneous Multi-Task Feature Learning</a></p>
+</blockquote>
+<ul>
+<li>‘Multitask metric learning (MTML), which can be regarded as a special case of transfer metric learning (TML) by performing transfer across all related domains.’</li>
+<li>‘Heterogeneous transfer learning approaches can be adopted to remedy this drawback by deriving a metric from the learned transformation across different domains’<ol>
+<li>probelm: inputs from heterogeneous domain can be solved by deriving a metric from the learned transformation from two domains, but pratical aims is to deal with multiple domain by learning the metric from all domains.</li>
+<li>method: metrics -&gt; transformation -&gt; subspace -&gt; maximize high-order ovariance among the predictive structures of these domains, because high-order statistics (correlation information), which can only be exploited by simultaneously examining all domains, thus obtaining more reliable feature transformations and metrics.</li>
+<li>datasets: Document Categorization, Scene Classification and Image Annotation</li>
+</ol>
+</li>
+</ul>
+<h2 id="Heterogeneous-features-for-different-task"><a href="#Heterogeneous-features-for-different-task" class="headerlink" title="Heterogeneous features for different task"></a>Heterogeneous features for different task</h2><blockquote>
+<p>reference-3 <a href="http://www.intsci.ac.cn/users/fzzhuang/papers/TOC2017.pdf" target="_blank" rel="noopener">Semantic Feature Learning for Heterogeneous<br>Multitask Classification via Non-Negative<br>Matrix Factorization</a></p>
+</blockquote>
+<ol>
+<li>problem: different tasks have heterogenous feature in real world.</li>
+<li>method: leveraging a non-negative matrix factorization-based multitask method (MTNMF) to learn a common semantic feature space underlying different heterogeneous feature spaces of each task. it is similar to reference-1, feature selection vs feature factorization.</li>
+<li>datasets: 20Newsgroups&amp;ImageNet (image and document), Email Spam Detection (15 persons), Sentiment Classification (books;  dvd; electronics; kitchen)</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -2292,7 +2307,7 @@ P\_\theta(y \vert \mathbf{x}, S) = \sum\_{(\mathbf{x}\_i, y\_i) \in S} k\_\theta
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
