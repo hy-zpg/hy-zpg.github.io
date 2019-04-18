@@ -35,17 +35,16 @@
     <link href="https://www.yanhong.me/2019/04/09/Overview-of-GAN/"/>
     <id>https://www.yanhong.me/2019/04/09/Overview-of-GAN/</id>
     <published>2019-04-09T10:31:46.000Z</published>
-    <updated>2019-04-18T06:13:47.079Z</updated>
+    <updated>2019-04-18T06:19:38.478Z</updated>
     
-    <content type="html"><![CDATA[<!-- <img src="https://www.yanhong.me/images/gm.jpg" width="50%" height="50%"> --><p><img src="/imgs/gm.jpg" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<!-- <img src="https://www.yanhong.me/images/gm.jpg" width="50%" height="50%"> --><!-- <img src="⁨hy-zpg.github.io⁩/source⁩/imgs⁩/gm.jpg" class="full-image" width="180" height="180" title="hello"> --><p><img src="/imgs/gm.jpg" alt="&#39;taxonomy of generative models&#39;"></p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;!-- &lt;img src=&quot;https://www.yanhong.me/images/gm.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt; --&gt;
-&lt;p&gt;&lt;img src=&quot;/imgs/gm.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
+&lt;!-- &lt;img src=&quot;⁨hy-zpg.github.io⁩/source⁩/imgs⁩/gm.jpg&quot; c
       
     
     </summary>
@@ -403,10 +402,10 @@
   
   <entry>
     <title>Numpy learning</title>
-    <link href="https://www.yanhong.me/2019/01/14/Numpy%20learning/"/>
-    <id>https://www.yanhong.me/2019/01/14/Numpy learning/</id>
+    <link href="https://www.yanhong.me/2019/01/14/numpy-learning/"/>
+    <id>https://www.yanhong.me/2019/01/14/numpy-learning/</id>
     <published>2019-01-14T14:25:55.000Z</published>
-    <updated>2019-03-21T05:35:00.743Z</updated>
+    <updated>2019-03-21T05:35:00.745Z</updated>
     
     <content type="html"><![CDATA[<p>One-hot labels preprocessing</p><ul><li><p>Weighting samples with confidence score</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">index = np.ragmax(predicted_result,axis=1)</span><br><span class="line">arg = np_utils.to_categorical(index,classes)</span><br><span class="line">weighted_one_hot=predicted_result*arg</span><br></pre></td></tr></table></figure></li><li><p>Selection &amp;&amp; weighting samples with confidence score</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">weighted_selected_one_hot=np.where(predicted_result&gt;k,predicted_result,0)</span><br></pre></td></tr></table></figure></li><li><p>Extending vector into matrix</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xx = [np.full(classes,value) <span class="keyword">for</span> value <span class="keyword">in</span> x]</span><br></pre></td></tr></table></figure></li></ul>]]></content>
     
@@ -431,10 +430,10 @@
   
   <entry>
     <title>Numpy learning</title>
-    <link href="https://www.yanhong.me/2019/01/14/numpy-learning/"/>
-    <id>https://www.yanhong.me/2019/01/14/numpy-learning/</id>
+    <link href="https://www.yanhong.me/2019/01/14/Numpy%20learning/"/>
+    <id>https://www.yanhong.me/2019/01/14/Numpy learning/</id>
     <published>2019-01-14T14:25:55.000Z</published>
-    <updated>2019-03-21T05:35:00.745Z</updated>
+    <updated>2019-03-21T05:35:00.743Z</updated>
     
     <content type="html"><![CDATA[<p>One-hot labels preprocessing</p><ul><li><p>Weighting samples with confidence score</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">index = np.ragmax(predicted_result,axis=1)</span><br><span class="line">arg = np_utils.to_categorical(index,classes)</span><br><span class="line">weighted_one_hot=predicted_result*arg</span><br></pre></td></tr></table></figure></li><li><p>Selection &amp;&amp; weighting samples with confidence score</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">weighted_selected_one_hot=np.where(predicted_result&gt;k,predicted_result,0)</span><br></pre></td></tr></table></figure></li><li><p>Extending vector into matrix</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xx = [np.full(classes,value) <span class="keyword">for</span> value <span class="keyword">in</span> x]</span><br></pre></td></tr></table></figure></li></ul>]]></content>
     
