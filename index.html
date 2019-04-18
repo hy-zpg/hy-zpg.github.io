@@ -567,7 +567,8 @@
 <li><p>Using <strong><em>chain rule</em></strong> to decompose likelihood of an image x into product of 1-d distributions:</p>
 </li>
 </ul>
-<p>\begin{aligned}<br>p<em>{\theta}(x)=\prod</em>{i=1}^{n} p<em>{\theta}\left(x</em>{i} | x<em>{1}, \ldots, x</em>{i-1}\right)<br>\end{aligned}</p>
+<p>\begin{aligned}<br> p<em>{\theta}(x)=\prod</em>{i=1}^{n} p<em>{\theta}\left(x</em>{i} | x<em>{1}, \ldots, x</em>{i-1}\right)<br>\end{aligned}</p>
+<p>\begin{aligned}<br> \sum_{k} z_k = 1<br>\end{aligned}</p>
 <p>where $x_i$ represents pixel, $p(x)$ denoets the likelihood of image $x$</p>
 <ul>
 <li><p>it’s important to define <strong><em>ordering</em></strong> of those pixels</p>
@@ -602,8 +603,12 @@
 <h4 id="Variational-Autoenconders-for-generation-problem"><a href="#Variational-Autoenconders-for-generation-problem" class="headerlink" title="Variational Autoenconders for generation problem"></a>Variational Autoenconders for generation problem</h4><ul>
 <li><p>Assuming training data $x(i)$ representation $z$ is generated from latent representation $z$. Specifically, first sampling $z$ from true prior $p<em>{\theta}(z)$, then sampling $x$ from true conditional $p</em>{\theta}(x|z^(i))$</p>
 </li>
-<li><p>the aim is to estimate the true parameter $\theta$ by maximuming likelihood of training data:<br>\begin{equation}<br>p<em>{\theta}(x)=\int p</em>{\theta}(z) p<em>{\theta}(x | z) d z<br>\end{equation}<br>where $ p</em>{\theta}(z)$ is gaussion prior, and $p_{\theta}(x | z) $ is decoder.</p>
+<li><p>the aim is to estimate the true parameter $\theta$ by maximuming likelihood of training data:</p>
 </li>
+</ul>
+<p>\begin{equation}<br>p<em>{\theta}(x)=\int p</em>{\theta}(z) p_{\theta}(x | z) d z<br>\end{equation}</p>
+<p>where $p<em>{\theta}(z)$ is gaussion prior, and $p</em>{\theta}(x | z) $ is decoder.</p>
+<ul>
 <li><p>intractable optimization problem, because it’s impossible to compute $p(x | z)$ for every $z$ which means the integral operation is fail in this condition. </p>
 </li>
 <li><p>posterior density $p<em>{\theta}(z | x)=p</em>{\theta}(x | z) p<em>{\theta}(z) / p</em>{\theta}(x)$ is also intractable, since $p_{\theta}(x)$ is intractable data likelihood. </p>
