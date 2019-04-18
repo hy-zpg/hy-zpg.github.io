@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yanhong.me/"/>
-  <updated>2019-04-09T10:33:13.711Z</updated>
+  <updated>2019-04-18T05:43:06.118Z</updated>
   <id>https://www.yanhong.me/</id>
   
   <author>
@@ -17,17 +17,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Overview of GAN</title>
+    <title>Overview of generative models</title>
     <link href="https://www.yanhong.me/2019/04/09/Overview-of-GAN/"/>
     <id>https://www.yanhong.me/2019/04/09/Overview-of-GAN/</id>
     <published>2019-04-09T10:31:46.000Z</published>
-    <updated>2019-04-09T10:33:13.711Z</updated>
+    <updated>2019-04-18T05:43:06.118Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://www.yanhong.me/my_imgs/gm.jpg" width="50%" height="50%"></p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://www.yanhong.me/my_imgs/gm.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt;&lt;/p&gt;
+
+      
+    
     </summary>
     
-      <category term="GAN" scheme="https://www.yanhong.me/categories/GAN/"/>
+      <category term="Generative Model" scheme="https://www.yanhong.me/categories/Generative-Model/"/>
     
     
       <category term="overview" scheme="https://www.yanhong.me/tags/overview/"/>

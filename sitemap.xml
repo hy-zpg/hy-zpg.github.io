@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.yanhong.me/2019/04/04/Few-shot-Image-generation/</loc>
+    <loc>https://www.yanhong.me/2019/04/09/Overview-of-GAN/</loc>
     
-    <lastmod>2019-04-14T10:28:59.778Z</lastmod>
+    <lastmod>2019-04-18T05:43:06.118Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/04/09/Overview-of-GAN/</loc>
+    <loc>https://www.yanhong.me/2019/04/04/Few-shot-Image-generation/</loc>
     
-    <lastmod>2019-04-09T10:33:13.711Z</lastmod>
+    <lastmod>2019-04-14T10:28:59.778Z</lastmod>
     
   </url>
   
@@ -30,13 +30,6 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/tags/index.html</loc>
-    
-    <lastmod>2019-03-21T05:35:00.751Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.yanhong.me/about/index.html</loc>
     
     <lastmod>2019-03-21T05:35:00.751Z</lastmod>
@@ -44,9 +37,9 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/01/15/GMM/</loc>
+    <loc>https://www.yanhong.me/tags/index.html</loc>
     
-    <lastmod>2019-03-21T05:35:00.750Z</lastmod>
+    <lastmod>2019-03-21T05:35:00.751Z</lastmod>
     
   </url>
   
@@ -58,14 +51,21 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/02/27/Cross-stitch-network/</loc>
+    <loc>https://www.yanhong.me/2019/01/15/GMM/</loc>
+    
+    <lastmod>2019-03-21T05:35:00.750Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yanhong.me/2019/03/09/Semi-MTL-Related/</loc>
     
     <lastmod>2019-03-21T05:35:00.749Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/03/09/Semi-MTL-Related/</loc>
+    <loc>https://www.yanhong.me/2019/02/27/Cross-stitch-network/</loc>
     
     <lastmod>2019-03-21T05:35:00.749Z</lastmod>
     
@@ -79,14 +79,14 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/02/26/Heterogeneous-Multitask/</loc>
+    <loc>https://www.yanhong.me/2019/02/22/Why-How-Pseudo/</loc>
     
     <lastmod>2019-03-21T05:35:00.748Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/02/22/Why-How-Pseudo/</loc>
+    <loc>https://www.yanhong.me/2019/02/26/Heterogeneous-Multitask/</loc>
     
     <lastmod>2019-03-21T05:35:00.748Z</lastmod>
     
@@ -128,14 +128,14 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/02/28/Research-Point-Multitask/</loc>
+    <loc>https://www.yanhong.me/2019/01/16/Cross_entropy_loss/</loc>
     
     <lastmod>2019-03-21T05:35:00.744Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/01/16/Cross_entropy_loss/</loc>
+    <loc>https://www.yanhong.me/2019/02/28/Research-Point-Multitask/</loc>
     
     <lastmod>2019-03-21T05:35:00.744Z</lastmod>
     
