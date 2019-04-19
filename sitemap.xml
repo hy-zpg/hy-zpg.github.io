@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.yanhong.me/about/index.html</loc>
+    
+    <lastmod>2019-04-19T08:56:43.754Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.yanhong.me/2019/04/04/Few-shot-Image-generation/</loc>
     
     <lastmod>2019-04-18T13:32:08.639Z</lastmod>
@@ -110,13 +117,6 @@
     <loc>https://www.yanhong.me/guestbook/index.html</loc>
     
     <lastmod>2019-03-21T05:35:00.752Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yanhong.me/about/index.html</loc>
-    
-    <lastmod>2019-03-21T05:35:00.751Z</lastmod>
     
   </url>
   
