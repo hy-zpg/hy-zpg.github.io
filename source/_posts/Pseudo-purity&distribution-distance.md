@@ -1,5 +1,5 @@
 ---
-title: Pseudo Purity && Dataset Distribution Distance
+title: Pseudo Purity and Dataset Distribution Distance
 date: 2019-02-17 18:07:47
 tags: pesudo labels
 categories: Theory
@@ -40,14 +40,14 @@ s= (feature,weights)
 ### GMM with EM
 *  original definition
 \begin{aligned}
-p(x) & = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)
+p(x) & = \sum\_{k=1}^K p(k)p(x|k) = \sum\_{k=1}^K \pi\_k \mathcal{N}(x|\mu\_k, \Sigma\_k)
 \end{aligned}
 
-\pi_k  represent the possibility of sample belong to kth category
+$\pi\_k$  represent the possibility of sample belong to kth category
 
 * new definition for coding
 \begin{aligned}
- \sum_{k} z_k = 1
+ \sum\_{k} z_k = 1
 \end{aligned}
 
 

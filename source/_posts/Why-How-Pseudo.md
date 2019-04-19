@@ -1,5 +1,5 @@
 ---
-title: Why-How-Pseudo
+title: Why and How to Use Pseudo
 date: 2019-02-22 10:53:37
 tags: pesudo labels
 categories: Theory
@@ -37,42 +37,42 @@ Because much noisy data can effect the model performance and even disturb the mo
        * original EMD equation
 
 	     \begin{aligned}
-		 \sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}=\min \{\sum_{i=1}^{m}w_{pi},\quad \sum_{j=1}^{n}w_{qj}\}
+		 \sum\_{i=1}^{m}\sum\_{j=1}^{n}f\_{i,j}=\min \{\sum\_{i=1}^{m}w\_{pi},\quad \sum\_{j=1}^{n}w\_{qj}\}
 		 \end{aligned}
 
 		 \begin{aligned}
-		 EMD(P,Q)={\frac {\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}d_{i,j}}{\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}}}
+		 EMD(P,Q)={\frac {\sum\_{i=1}^{m}\sum\_{j=1}^{n}f\_{i,j}d\_{i,j}}{\sum\_{i=1}^{m}\sum\_{j=1}^{n}f\_{i,j}}}
 	     \end{aligned}
 
 		 \begin{aligned}
-		 P=\{(p_{1},w_{p1}),(p_{2},w_{p2}),...,(p_{m},w_{pm})\}
+		 P=\{(p\_{1},w\_{p1}),(p\_{2},w\_{p2}),...,(p\_{m},w\_{pm})\}
 		 \end{aligned}
 
 		 \begin{aligned}
-		 Q=\{(q_{1},w_{q1}),(q_{2},w_{q2}),...,(q_{n},w_{qn})\}
+		 Q=\{(q\_{1},w\_{q1}),(q\_{2},w\_{q2}),...,(q\_{n},w\_{qn})\}
 		 \end{aligned}
 
 	   * reference paper EMD application
 		 g(s_{i}) from the mean value of image features in category i from source domain
 		 g(t_{i}) from the mean value of image features in category i from target domain
 		 \begin{aligned}
-		 \sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}=\min \{\sum_{i=1}^{m}w_{pi},\quad \sum_{j=1}^{n}w_{qj}\}
+		 \sum\_{i=1}^{m}\sum\_{j=1}^{n}f\_{i,j}=\min \{\sum\_{i=1}^{m}w\_{pi},\quad \sum\_{j=1}^{n}w\_{qj}\}
 		 \end{aligned}
 
 		 \begin{aligned}
-		 EMD(P,Q)={\frac {\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}d_{i,j}}{\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}}}
+		 EMD(P,Q)={\frac {\sum\_{i=1}^{m}\sum\_{j=1}^{n}f\_{i,j}d\_{i,j}}{\sum\_{i=1}^{m}\sum\_{j=1}^{n}f\_{i,j}}}
 	     \end{aligned}
 
 		 \begin{aligned}
-		 S=\{(s_{1},w_{s1}),(s_{2},w_{s2}),...,(s_{m},w_{sm})\}
+		 S=\{(s\_{1},w\_{s1}),(s\_{2},w\_{s2}),...,(s\_{m},w\_{sm})\}
 		 \end{aligned}
 
 		 \begin{aligned}
-		 T=\{(t_{1},w_{t1}),(t_{2},w_{t2}),...,(t_{n},w_{tn})\}
+		 T=\{(t\_{1},w\_{t1}),(t\_{2},w\_{t2}),...,(t\_{n},w\_{tn})\}
 		 \end{aligned}
 
 		 \begin{aligned}
-		 D=[d_{i,j}] = || g(s_{i}) − g(t_{j})|| 
+		 D=[d\_{i,j}] = || g(s\_{i}) − g(t\_{j})|| 
 		 \end{aligned}
 
 		 \begin{aligned}
@@ -80,29 +80,29 @@ Because much noisy data can effect the model performance and even disturb the mo
 		 \end{aligned}
 
 	   * EMD application for pseudo data selection
-	   	 g(p) = mean value of image features in specific cluster from the same category in source domain
-	   	 g(g_{i}) = mean value of image features in cluster i from the same category in target domain
+	   	 $g(p)$ represents mean value of image features in specific cluster from the same category in source domain
+	   	 $g(g\_{i})$ is mean value of image features in cluster i from the same category in target domain
 	     \begin{aligned}
-		 \sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}=\min \{\sum_{i=1}^{m}w_{pi},\quad \sum_{j=1}^{n}w_{qj}\}
+		 \sum\_{i=1}^{m}\sum\_{j=1}^{n}f\_{i,j}=\min \{\sum\_{i=1}^{m}w\_{pi},\quad \sum\_{j=1}^{n}w\_{qj}\}
 		 \end{aligned}
 
 		 \begin{aligned}
-		 EMD(P,Q)={\frac {\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}d_{i,j}}{\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}}}
+		 EMD(P,Q)={\frac {\sum\_{i=1}^{m}\sum\_{j=1}^{n}f\_{i,j}d\_{i,j}}{\sum\_{i=1}^{m}\sum\_{j=1}^{n}f\_{i,j}}}
 	     \end{aligned}
 
 		 \begin{aligned}
-		 P=\{(p_{1},w_{p1}),(p_{2},w_{p2}),...,(p_{m},w_{pm})\}
+		 P=\{(p\_{1},w\_{p1}),(p\_{2},w\_{p2}),...,(p\_{m},w\_{pm})\}
 		 \end{aligned}
 
 		 \begin{aligned}
-		 G=\{(g_{1},w_{g1}),(g_{2},w_{g2}),...,(g_{n},w_{gn})\}
+		 G=\{(g\_{1},w\_{g1}),(g\_{2},w\_{g2}),...,(g\_{n},w\_{gn})\}
 		 \end{aligned}
 
 		 \begin{aligned}
-		 D=[d_{i,j}] = || g(p_{i}) − g(g_{j})|| 
+		 D=[d\_{i,j}] = || g(p\_{i}) − g(g\_{j})|| 
 		 \end{aligned}
 
 		 \begin{aligned}
 		 sim(S, T) = e−γd(S,T )
 		 \end{aligned}
-     * implementation: calculating the distance between G(A1_i) and the whole cluster in G(B1). As for distance calculation with EMD method, we obtain P={G(A1_i)_mean,G(A1_i)_probs} and Q={[G(B1_1)_mean, ..., G(B1_K)_mean],[G(B1_1)_probs, ..., G(B1_K)_probs]}, so we can calculate distance vector D=(emd_1,emd_k), which is used for obtaining distribution weights weights_g.
+     * implementation: calculating the distance between $G(A\_1^i)$ and the whole cluster in G(B1). As for distance calculation with EMD method, we obtain $P={G(A\_1^i)\_{mean},G(A\_1^i)\_{probs}}$ and $Q={[G(B\_1^i)\_{mean}, ..., G(B\_1^K)\_{mean}],[G(B\_1^i)\_{probs}, ..., G(B\_1^K)\_{probs}]}$, so we can calculate distance vector $D=(emd\_1,emd\_k)$, which is used for obtaining distribution weights $weights\_g$.

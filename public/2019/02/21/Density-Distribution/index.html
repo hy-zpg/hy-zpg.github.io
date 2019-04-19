@@ -84,14 +84,14 @@
 <meta name="description" content="Purity based density &amp;amp; distribution distance based GMMPurity based density reference：ECCV 2018 CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images original reference： Science 200">
 <meta name="keywords" content="pesudo labels">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Density &amp; Distribution">
+<meta property="og:title" content="Data Density and Distribution">
 <meta property="og:url" content="https://www.yanhong.me/2019/02/21/Density-Distribution/index.html">
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
 <meta property="og:description" content="Purity based density &amp;amp; distribution distance based GMMPurity based density reference：ECCV 2018 CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images original reference： Science 200">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-21T05:35:00.747Z">
+<meta property="og:updated_time" content="2019-04-18T12:42:33.192Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Density &amp; Distribution">
+<meta name="twitter:title" content="Data Density and Distribution">
 <meta name="twitter:description" content="Purity based density &amp;amp; distribution distance based GMMPurity based density reference：ECCV 2018 CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images original reference： Science 200">
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <title>Density & Distribution | Hongyan's Notes</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Data Density and Distribution | Hongyan's Notes</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -324,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Density & Distribution</h1>
+          <h1 class="post-title" itemprop="name headline">Data Density and Distribution</h1>
         
 
         <div class="post-meta">
@@ -431,7 +431,7 @@
 <li>calculating distance of each image: maximun local distance is regarded as cluster centre, image with smaller distance between its distance and cluster centre represents that its label have high confidence </li>
 </ul>
 <h3 id="Distribution-distance-based-GMM"><a href="#Distribution-distance-based-GMM" class="headerlink" title="Distribution distance based GMM"></a>Distribution distance based GMM</h3><h4 id="Clustring-based-GMM"><a href="#Clustring-based-GMM" class="headerlink" title="Clustring based GMM"></a>Clustring based GMM</h4><h5 id="GMM-with-EM"><a href="#GMM-with-EM" class="headerlink" title="GMM with EM"></a>GMM with EM</h5><ul>
-<li><p>original definition<br>\begin{aligned}<br>p(x) &amp; = \sum<em>{k=1}^K p(k)p(x|k) = \sum</em>{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}<br>\pi_k  represent the possibility of sample belong to kth category</p>
+<li><p>original definition<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}<br>$\pi_k$  represent the possibility of sample belong to kth category</p>
 </li>
 <li><p>new definition for coding<br>\begin{aligned}<br>\sum_{k} z_k = 1<br>\end{aligned}</p>
 </li>
@@ -483,8 +483,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/17/Pseudo-purity&distribution-distance/" rel="next" title="Pseudo Purity && Dataset Distribution Distance">
-                <i class="fa fa-chevron-left"></i> Pseudo Purity && Dataset Distribution Distance
+              <a href="/2019/02/17/Pseudo-purity&distribution-distance/" rel="next" title="Pseudo Purity and Dataset Distribution Distance">
+                <i class="fa fa-chevron-left"></i> Pseudo Purity and Dataset Distribution Distance
               </a>
             
           </div>
@@ -493,8 +493,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/02/22/Why-How-Pseudo/" rel="prev" title="Why-How-Pseudo">
-                Why-How-Pseudo <i class="fa fa-chevron-right"></i>
+              <a href="/2019/02/22/Why-How-Pseudo/" rel="prev" title="Why and How to Use Pseudo">
+                Why and How to Use Pseudo <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -572,7 +572,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -594,7 +594,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1202,7 +1202,24 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
   
 
 

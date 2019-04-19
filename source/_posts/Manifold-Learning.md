@@ -21,19 +21,17 @@ categories: Deep learning
 
 
 >reference [Semisupervised feature analysis by mining correlations among multiple tasks]{https://arxiv.org/pdf/1411.6232.pdf}
-  
-  * aim: feature selection in semi-supervised MTL
-  * method: sparce coefficients learnt 
-           \begin{aligned}
-		   p(x) & = \min_{w_t} \sum_(l=1}^t (loss(w_l) + \alpha ||w_l||_{1,2} + \gamma ||w||_{\*})
-		   \end{aligned}
+* aim: feature selection in semi-supervised MTL
+* method: sparce coefficients learnt 
+\begin{aligned}
+p(x) & = \min\_{w_t} \sum\_(l=1}^t (loss(w\_l) + \alpha ||w\_l||\_{1,2} + \gamma ||w||\_{\*})
+\end{aligned}
 
-		   including $l_{1,2}$ norm and Laplacian norm:
+including $l_{1,2}$ norm and Laplacian norm:
 
-		   \begin{aligned}
-		   \gamma ||w|| = \min_{w,b}\sum_{l=1}{t}Tr(w^Tx_lL_lx_l^Tw)
-		   \end{aligned}
-
+\begin{aligned}
+\gamma ||w|| = \min\_{w,b}\sum\_{l=1}{t}Tr(w^Tx\_lL\_lx\_l^Tw)
+\end{aligned}
 
 
 >reference [Semi-supervised multitask learning]{http://papers.nips.cc/paper/3198-semi-supervised-multitask-learning.pdf}

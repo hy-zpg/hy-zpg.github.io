@@ -1,5 +1,5 @@
 ---
-title: Density & Distribution
+title: Data Density and Distribution
 date: 2019-02-21 15:46:01
 tags: pesudo labels
 categories: Theory
@@ -32,9 +32,9 @@ Density based clustering algorithm
 ##### GMM with EM
 *  original definition
 \begin{aligned}
-p(x) & = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)
+p(x) & = \sum\_{k=1}^K p(k)p(x|k) = \sum\_{k=1}^K \pi\_k \mathcal{N}(x|\mu\_k, \Sigma\_k)
 \end{aligned}
-\pi_k  represent the possibility of sample belong to kth category
+$\pi\_k$  represent the possibility of sample belong to kth category
 
 * new definition for coding
 \begin{aligned}

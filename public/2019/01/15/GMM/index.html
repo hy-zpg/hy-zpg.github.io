@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
 <meta property="og:description" content="Relation between MMD and density for pseudo data selectioncombination of MMD and density: my understanding is that we can obtain MMD, density, prior weights from GMM, when GMM can be calculated from g">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-21T05:35:00.750Z">
+<meta property="og:updated_time" content="2019-04-18T12:33:20.432Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MMD and Density">
 <meta name="twitter:description" content="Relation between MMD and density for pseudo data selectioncombination of MMD and density: my understanding is that we can obtain MMD, density, prior weights from GMM, when GMM can be calculated from g">
@@ -428,7 +428,7 @@
 <ul>
 <li><p>Differentce between k-means and GMM: k-means notes that each point is assigned to different clusters, while GMM can calculate the probabiliy of each point belong to each clusters.</p>
 </li>
-<li><p>Import parameters of GMM: K Gaussion models, also K clusters, \pi, \mu, \Sigma<br>\begin{aligned}<br>p(x) &amp; = \sum<em>{k=1}^K p(k)p(x|k) = \sum</em>{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</p>
+<li><p>Import parameters of GMM: K Gaussion models, also K clusters, $\pi$, $\mu$, $\Sigma$<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</p>
 </li>
 </ul>
 
@@ -461,8 +461,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/14/Numpy learning/" rel="next" title="Numpy learning">
-                <i class="fa fa-chevron-left"></i> Numpy learning
+              <a href="/2019/01/14/Numpy learning/" rel="next" title="Numpy Learning">
+                <i class="fa fa-chevron-left"></i> Numpy Learning
               </a>
             
           </div>
@@ -471,8 +471,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/01/16/Cross_entropy_loss/" rel="prev" title="Cross_entropy_loss">
-                Cross_entropy_loss <i class="fa fa-chevron-right"></i>
+              <a href="/2019/01/16/Cross_entropy_loss/" rel="prev" title="Cross Entropy Loss">
+                Cross Entropy Loss <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -550,7 +550,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -572,7 +572,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1180,7 +1180,24 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
   
 
 

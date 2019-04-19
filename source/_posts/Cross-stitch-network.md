@@ -1,5 +1,5 @@
 ---
-title: Cross-stitch-network
+title: Cross Stitch Network
 date: 2019-02-27 14:03:23
 tags: multitask
 categories: Deep learning

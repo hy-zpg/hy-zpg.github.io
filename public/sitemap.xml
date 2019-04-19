@@ -2,9 +2,93 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.yanhong.me/2019/04/04/Few-shot-Image-generation/</loc>
+    
+    <lastmod>2019-04-18T13:32:08.639Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.yanhong.me/2019/04/09/Overview-of-GAN/</loc>
     
-    <lastmod>2019-04-18T05:59:48.203Z</lastmod>
+    <lastmod>2019-04-18T13:20:07.256Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yanhong.me/2019/03/18/Manifold-Learning/</loc>
+    
+    <lastmod>2019-04-18T13:05:41.169Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yanhong.me/2019/02/22/Why-How-Pseudo/</loc>
+    
+    <lastmod>2019-04-18T13:01:51.784Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yanhong.me/2019/02/28/Critical-Points-in-Multitask-0/</loc>
+    
+    <lastmod>2019-04-18T12:43:25.498Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yanhong.me/2019/02/27/Cross-stitch-network/</loc>
+    
+    <lastmod>2019-04-18T12:42:51.710Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yanhong.me/2019/01/16/Cross_entropy_loss/</loc>
+    
+    <lastmod>2019-04-18T12:42:43.625Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yanhong.me/2019/02/21/Density-Distribution/</loc>
+    
+    <lastmod>2019-04-18T12:42:33.192Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yanhong.me/2019/01/14/Numpy%20learning/</loc>
+    
+    <lastmod>2019-04-18T12:42:04.502Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yanhong.me/2019/02/27/Parameters-Selection-for-Pseudo/</loc>
+    
+    <lastmod>2019-04-18T12:41:50.655Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yanhong.me/2019/02/17/Pseudo-purity&distribution-distance/</loc>
+    
+    <lastmod>2019-04-18T12:41:42.176Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yanhong.me/2019/02/28/Semi-Heteroneous-Multitask-Baseline/</loc>
+    
+    <lastmod>2019-04-18T12:41:24.594Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yanhong.me/2019/01/15/GMM/</loc>
+    
+    <lastmod>2019-04-18T12:33:20.432Z</lastmod>
     
   </url>
   
@@ -12,13 +96,6 @@
     <loc>https://www.yanhong.me/2019/04/18/meta-learning/</loc>
     
     <lastmod>2019-04-18T05:50:06.603Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yanhong.me/2019/04/04/Few-shot-Image-generation/</loc>
-    
-    <lastmod>2019-04-14T10:28:59.778Z</lastmod>
     
   </url>
   
@@ -37,13 +114,6 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/tags/index.html</loc>
-    
-    <lastmod>2019-03-21T05:35:00.751Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.yanhong.me/about/index.html</loc>
     
     <lastmod>2019-03-21T05:35:00.751Z</lastmod>
@@ -51,23 +121,9 @@
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/01/15/GMM/</loc>
+    <loc>https://www.yanhong.me/tags/index.html</loc>
     
-    <lastmod>2019-03-21T05:35:00.750Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yanhong.me/2019/03/18/Manifold-Learning/</loc>
-    
-    <lastmod>2019-03-21T05:35:00.750Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yanhong.me/2019/02/27/Cross-stitch-network/</loc>
-    
-    <lastmod>2019-03-21T05:35:00.749Z</lastmod>
+    <lastmod>2019-03-21T05:35:00.751Z</lastmod>
     
   </url>
   
@@ -82,76 +138,6 @@
     <loc>https://www.yanhong.me/2019/02/26/Heterogeneous-Multitask/</loc>
     
     <lastmod>2019-03-21T05:35:00.748Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yanhong.me/2019/02/28/Critical-Points-in-Multitask-0/</loc>
-    
-    <lastmod>2019-03-21T05:35:00.748Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yanhong.me/2019/02/22/Why-How-Pseudo/</loc>
-    
-    <lastmod>2019-03-21T05:35:00.748Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yanhong.me/2019/02/21/Density-Distribution/</loc>
-    
-    <lastmod>2019-03-21T05:35:00.747Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yanhong.me/2019/02/27/Parameters-Selection-for-Pseudo/</loc>
-    
-    <lastmod>2019-03-21T05:35:00.747Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yanhong.me/2019/02/28/Semi-Heteroneous-Multitask-Baseline/</loc>
-    
-    <lastmod>2019-03-21T05:35:00.746Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yanhong.me/2019/02/17/Pseudo-purity&distribution-distance/</loc>
-    
-    <lastmod>2019-03-21T05:35:00.746Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yanhong.me/2019/01/14/numpy-learning/</loc>
-    
-    <lastmod>2019-03-21T05:35:00.745Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yanhong.me/2019/02/28/Research-Point-Multitask/</loc>
-    
-    <lastmod>2019-03-21T05:35:00.744Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yanhong.me/2019/01/16/Cross_entropy_loss/</loc>
-    
-    <lastmod>2019-03-21T05:35:00.744Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yanhong.me/2019/01/14/Numpy%20learning/</loc>
-    
-    <lastmod>2019-03-21T05:35:00.743Z</lastmod>
     
   </url>
   

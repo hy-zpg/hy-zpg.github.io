@@ -1,5 +1,5 @@
 ---
-title: Critical-Points-in-Multitask
+title: Critical Points in Multitask Learning
 date: 2019-02-28 11:16:26
 tags: multitask
 categories: Deep learning

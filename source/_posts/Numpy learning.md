@@ -1,5 +1,5 @@
 ---
-title: Numpy learning
+title: Numpy Learning
 date: 2019-01-14 22:25:55
 tags: numpy
 categories: Codes

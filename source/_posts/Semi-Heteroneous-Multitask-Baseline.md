@@ -1,5 +1,5 @@
 ---
-title: Semi-Heteroneous-Multitask-Baseline
+title: Semi-supervised Heteroneous Multitask Learning Baselines
 date: 2019-02-28 15:23:11
 tags: multitask
 categories: Deep learning

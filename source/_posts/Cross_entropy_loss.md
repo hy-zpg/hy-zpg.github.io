@@ -1,5 +1,5 @@
 ---
-title: Cross_entropy_loss
+title: Cross Entropy Loss
 date: 2019-01-16 10:37:13
 tags: tensorflow
 categories: Deep learning

@@ -307,202 +307,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/26/Heterogeneous-Multitask/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/26/Heterogeneous-Multitask/" itemprop="url">Heterogeneous Multitask</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-26T15:46:30+08:00">
-                2019-02-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">Deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Large-scale-Heterogeneous-Learning-in-Big-Data-Analytics"><a href="#Large-scale-Heterogeneous-Learning-in-Big-Data-Analytics" class="headerlink" title="Large-scale Heterogeneous Learning in Big Data Analytics"></a>Large-scale Heterogeneous Learning in Big Data Analytics</h1><blockquote>
-<p>reference slide <a href="http://cci.drexel.edu/bigdata/bigdata2014/MTL_BigData_14.pdf" target="_blank" rel="noopener">Large-scale Heterogeneous Learning in Big Data Analytics</a></p>
-</blockquote>
-<ul>
-<li>multi-task learning<br>‘Multitask learning is an inductive transfer mechanism for improving generalization performance [Caruana, Machine Learning’97]’</li>
-<li>multi-label learning:</li>
-<li>multi-view learning:</li>
-</ul>
-<h2 id="Heterogeneous-outputs-related-to-each-other-with-the-same-set-of-inputs"><a href="#Heterogeneous-outputs-related-to-each-other-with-the-same-set-of-inputs" class="headerlink" title="Heterogeneous outputs related to each other with the same set of inputs"></a>Heterogeneous outputs related to each other with the same set of inputs</h2><blockquote>
-<p>reference-1 <a href="http://www.cs.cmu.edu/~sssykim/papers/yang_kim_xing_nips09.pdf" target="_blank" rel="noopener">Heterogeneous Multitask Learning with Joint Sparsity Constraints</a></p>
-</blockquote>
-<ol>
-<li>probelm: dealing with homogeneous tasks, such as purely regression (continue) or classification (discrete) task, from a common set of high-dimensional feature space. </li>
-<li>method: modeling the joint sparsity as L1/L∞ or L1/L2 norm of the model parameters, achieving joint sparse feature selection.</li>
-<li>datasets: discovering genetic markers that influence multiple correlated traits jointly, datasets with different clinical traits including continuous and discrete labels.</li>
-</ol>
-<h2 id="Heterogeneous-inputs-from-multiple-domains"><a href="#Heterogeneous-inputs-from-multiple-domains" class="headerlink" title="Heterogeneous inputs from multiple domains"></a>Heterogeneous inputs from multiple domains</h2><blockquote>
-<p>reference-2 <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8058002&amp;tag=1" target="_blank" rel="noopener">Heterogeneous Multitask Metric Learning<br>Across Multiple Domains</a> <a href="https://www.semanticscholar.org/paper/Exploiting-High-Order-Information-in-Heterogeneous-Luo-Tao/1bf6d4b31fa26aa9e0c2b759e6bee9ec718dcae7" target="_blank" rel="noopener">Exploiting High-Order Information in Heterogeneous Multi-Task Feature Learning</a></p>
-</blockquote>
-<ul>
-<li>‘Multitask metric learning (MTML), which can be regarded as a special case of transfer metric learning (TML) by performing transfer across all related domains.’</li>
-<li>‘Heterogeneous transfer learning approaches can be adopted to remedy this drawback by deriving a metric from the learned transformation across different domains’<ol>
-<li>probelm: inputs from heterogeneous domain can be solved by deriving a metric from the learned transformation from two domains, but pratical aims is to deal with multiple domain by learning the metric from all domains.</li>
-<li>method: metrics -&gt; transformation -&gt; subspace -&gt; maximize high-order ovariance among the predictive structures of these domains, because high-order statistics (correlation information), which can only be exploited by simultaneously examining all domains, thus obtaining more reliable feature transformations and metrics.</li>
-<li>datasets: Document Categorization, Scene Classification and Image Annotation</li>
-</ol>
-</li>
-</ul>
-<h2 id="Heterogeneous-features-for-different-task"><a href="#Heterogeneous-features-for-different-task" class="headerlink" title="Heterogeneous features for different task"></a>Heterogeneous features for different task</h2><blockquote>
-<p>reference-3 <a href="http://www.intsci.ac.cn/users/fzzhuang/papers/TOC2017.pdf" target="_blank" rel="noopener">Semantic Feature Learning for Heterogeneous<br>Multitask Classification via Non-Negative<br>Matrix Factorization</a></p>
-</blockquote>
-<ol>
-<li>problem: different tasks have heterogenous feature in real world.</li>
-<li>method: leveraging a non-negative matrix factorization-based multitask method (MTNMF) to learn a common semantic feature space underlying different heterogeneous feature spaces of each task. it is similar to reference-1, feature selection vs feature factorization.</li>
-<li>datasets: 20Newsgroups&amp;ImageNet (image and document), Email Spam Detection (15 persons), Sentiment Classification (books;  dvd; electronics; kitchen)</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/22/Why-How-Pseudo/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -522,7 +326,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/22/Why-How-Pseudo/" itemprop="url">Why-How-Pseudo</a></h1>
+                <a class="post-title-link" href="/2019/02/22/Why-How-Pseudo/" itemprop="url">Why and How to Use Pseudo</a></h1>
         
 
         <div class="post-meta">
@@ -658,28 +462,28 @@
 <li><p>reason: &gt;reference <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cui_Large_Scale_Fine-Grained_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Large Scale Fine-Grained Categorization and Domain-Specific Transfer Learning</a>,  which takes domain scale into account by adding a scale factor. In this paper, transfer learning can be viewed as moving a set of images from the source domain S to the target domain T. The work needed to be done by moving an image to another can be defined as their feature Euaullean distance, so the distance between two domains can be defined as the least amount of total work needed. This definition of domain similarity can be calculated by the Earth Mover’s Distance (EMD). </p>
 <ul>
 <li><p>original EMD equation</p>
-<p>\begin{aligned}<br>\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f<em>{i,j}=\min {\sum</em>{i=1}^{m}w<em>{pi},\quad \sum</em>{j=1}^{n}w_{qj}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f<em>{i,j}d</em>{i,j}}{\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>P={(p<em>{1},w</em>{p1}),(p<em>{2},w</em>{p2}),…,(p<em>{m},w</em>{pm})}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>Q={(q<em>{1},w</em>{q1}),(q<em>{2},w</em>{q2}),…,(q<em>{n},w</em>{qn})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}=\min {\sum_{i=1}^{m}w_{pi},\quad \sum_{j=1}^{n}w_{qj}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}d_{i,j}}{\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>P={(p_{1},w_{p1}),(p_{2},w_{p2}),…,(p_{m},w_{pm})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>Q={(q_{1},w_{q1}),(q_{2},w_{q2}),…,(q_{n},w_{qn})}<br>\end{aligned}</p>
 </li>
-<li><p>reference paper EMD application<br>g(s<em>{i}) from the mean value of image features in category i from source domain<br>g(t</em>{i}) from the mean value of image features in category i from target domain<br>\begin{aligned}<br>\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f<em>{i,j}=\min {\sum</em>{i=1}^{m}w<em>{pi},\quad \sum</em>{j=1}^{n}w_{qj}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f<em>{i,j}d</em>{i,j}}{\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>S={(s<em>{1},w</em>{s1}),(s<em>{2},w</em>{s2}),…,(s<em>{m},w</em>{sm})}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>T={(t<em>{1},w</em>{t1}),(t<em>{2},w</em>{t2}),…,(t<em>{n},w</em>{tn})}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>D=[d<em>{i,j}] = || g(s</em>{i}) − g(t_{j})||<br>\end{aligned}</p>
+<li><p>reference paper EMD application<br>g(s<em>{i}) from the mean value of image features in category i from source domain<br>g(t</em>{i}) from the mean value of image features in category i from target domain<br>\begin{aligned}<br>\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}=\min {\sum_{i=1}^{m}w_{pi},\quad \sum_{j=1}^{n}w_{qj}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}d_{i,j}}{\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>S={(s_{1},w_{s1}),(s_{2},w_{s2}),…,(s_{m},w_{sm})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>T={(t_{1},w_{t1}),(t_{2},w_{t2}),…,(t_{n},w_{tn})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>D=[d_{i,j}] = || g(s_{i}) − g(t_{j})||<br>\end{aligned}</p>
 <p>\begin{aligned}<br>sim(S, T) = e−γd(S,T )<br>\end{aligned}</p>
 </li>
-<li><p>EMD application for pseudo data selection<br>  g(p) = mean value of image features in specific cluster from the same category in source domain<br>  g(g<em>{i}) = mean value of image features in cluster i from the same category in target domain<br>\begin{aligned}<br>\sum</em>{i=1}^{m}\sum<em>{j=1}^{n}f</em>{i,j}=\min {\sum<em>{i=1}^{m}w</em>{pi},\quad \sum<em>{j=1}^{n}w</em>{qj}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f<em>{i,j}d</em>{i,j}}{\sum<em>{i=1}^{m}\sum</em>{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>P={(p<em>{1},w</em>{p1}),(p<em>{2},w</em>{p2}),…,(p<em>{m},w</em>{pm})}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>G={(g<em>{1},w</em>{g1}),(g<em>{2},w</em>{g2}),…,(g<em>{n},w</em>{gn})}<br>\end{aligned}</p>
-<p>\begin{aligned}<br>D=[d<em>{i,j}] = || g(p</em>{i}) − g(g_{j})||<br>\end{aligned}</p>
+<li><p>EMD application for pseudo data selection<br>  $g(p)$ represents mean value of image features in specific cluster from the same category in source domain<br>  $g(g_{i})$ is mean value of image features in cluster i from the same category in target domain<br>\begin{aligned}<br>\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}=\min {\sum_{i=1}^{m}w_{pi},\quad \sum_{j=1}^{n}w_{qj}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}d_{i,j}}{\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>P={(p_{1},w_{p1}),(p_{2},w_{p2}),…,(p_{m},w_{pm})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>G={(g_{1},w_{g1}),(g_{2},w_{g2}),…,(g_{n},w_{gn})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>D=[d_{i,j}] = || g(p_{i}) − g(g_{j})||<br>\end{aligned}</p>
 <p>\begin{aligned}<br>sim(S, T) = e−γd(S,T )<br>\end{aligned}</p>
 </li>
 </ul>
 </li>
-<li>implementation: calculating the distance between G(A1_i) and the whole cluster in G(B1). As for distance calculation with EMD method, we obtain P={G(A1_i)_mean,G(A1_i)_probs} and Q={[G(B1_1)_mean, …, G(B1_K)_mean],[G(B1_1)_probs, …, G(B1_K)_probs]}, so we can calculate distance vector D=(emd_1,emd_k), which is used for obtaining distribution weights weights_g.</li>
+<li>implementation: calculating the distance between $G(A_1^i)$ and the whole cluster in G(B1). As for distance calculation with EMD method, we obtain $P={G(A_1^i)_{mean},G(A_1^i)_{probs}}$ and $Q={[G(B_1^i)_{mean}, …, G(B_1^K)_{mean}],[G(B_1^i)_{probs}, …, G(B_1^K)_{probs}]}$, so we can calculate distance vector $D=(emd_1,emd_k)$, which is used for obtaining distribution weights $weights_g$.</li>
 </ul>
 </li>
 </ol>
@@ -752,7 +556,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/21/Density-Distribution/" itemprop="url">Density & Distribution</a></h1>
+                <a class="post-title-link" href="/2019/02/21/Density-Distribution/" itemprop="url">Data Density and Distribution</a></h1>
         
 
         <div class="post-meta">
@@ -861,7 +665,7 @@
 <li>calculating distance of each image: maximun local distance is regarded as cluster centre, image with smaller distance between its distance and cluster centre represents that its label have high confidence </li>
 </ul>
 <h3 id="Distribution-distance-based-GMM"><a href="#Distribution-distance-based-GMM" class="headerlink" title="Distribution distance based GMM"></a>Distribution distance based GMM</h3><h4 id="Clustring-based-GMM"><a href="#Clustring-based-GMM" class="headerlink" title="Clustring based GMM"></a>Clustring based GMM</h4><h5 id="GMM-with-EM"><a href="#GMM-with-EM" class="headerlink" title="GMM with EM"></a>GMM with EM</h5><ul>
-<li><p>original definition<br>\begin{aligned}<br>p(x) &amp; = \sum<em>{k=1}^K p(k)p(x|k) = \sum</em>{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}<br>\pi_k  represent the possibility of sample belong to kth category</p>
+<li><p>original definition<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}<br>$\pi_k$  represent the possibility of sample belong to kth category</p>
 </li>
 <li><p>new definition for coding<br>\begin{aligned}<br>\sum_{k} z_k = 1<br>\end{aligned}</p>
 </li>
@@ -950,7 +754,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/17/Pseudo-purity&distribution-distance/" itemprop="url">Pseudo Purity && Dataset Distribution Distance</a></h1>
+                <a class="post-title-link" href="/2019/02/17/Pseudo-purity&distribution-distance/" itemprop="url">Pseudo Purity and Dataset Distribution Distance</a></h1>
         
 
         <div class="post-meta">
@@ -1069,9 +873,9 @@
 <li>signature:<br>\begin{aligned}<br>s= (feature,weights)<br>\end{aligned}</li>
 </ol>
 <h2 id="Purity-and-distribution-distance-based-gmm"><a href="#Purity-and-distribution-distance-based-gmm" class="headerlink" title="Purity and distribution distance based gmm"></a>Purity and distribution distance based gmm</h2><h3 id="GMM-with-EM"><a href="#GMM-with-EM" class="headerlink" title="GMM with EM"></a>GMM with EM</h3><ul>
-<li>original definition<br>\begin{aligned}<br>p(x) &amp; = \sum<em>{k=1}^K p(k)p(x|k) = \sum</em>{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</li>
+<li>original definition<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</li>
 </ul>
-<p>\pi_k  represent the possibility of sample belong to kth category</p>
+<p>$\pi_k$  represent the possibility of sample belong to kth category</p>
 <ul>
 <li>new definition for coding<br>\begin{aligned}<br>\sum_{k} z_k = 1<br>\end{aligned}</li>
 </ul>
@@ -1142,7 +946,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/01/16/Cross_entropy_loss/" itemprop="url">Cross_entropy_loss</a></h1>
+                <a class="post-title-link" href="/2019/01/16/Cross_entropy_loss/" itemprop="url">Cross Entropy Loss</a></h1>
         
 
         <div class="post-meta">
@@ -1441,7 +1245,7 @@
 <ul>
 <li><p>Differentce between k-means and GMM: k-means notes that each point is assigned to different clusters, while GMM can calculate the probabiliy of each point belong to each clusters.</p>
 </li>
-<li><p>Import parameters of GMM: K Gaussion models, also K clusters, \pi, \mu, \Sigma<br>\begin{aligned}<br>p(x) &amp; = \sum<em>{k=1}^K p(k)p(x|k) = \sum</em>{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</p>
+<li><p>Import parameters of GMM: K Gaussion models, also K clusters, $\pi$, $\mu$, $\Sigma$<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</p>
 </li>
 </ul>
 
@@ -1511,179 +1315,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/01/14/Numpy learning/" itemprop="url">Numpy learning</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-14T22:25:55+08:00">
-                2019-01-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Codes/" itemprop="url" rel="index">
-                    <span itemprop="name">Codes</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>One-hot labels preprocessing</p>
-<ul>
-<li><p>Weighting samples with confidence score</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">index = np.ragmax(predicted_result,axis=1)</span><br><span class="line">arg = np_utils.to_categorical(index,classes)</span><br><span class="line">weighted_one_hot=predicted_result*arg</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Selection &amp;&amp; weighting samples with confidence score</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">weighted_selected_one_hot=np.where(predicted_result&gt;k,predicted_result,0)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Extending vector into matrix</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xx = [np.full(classes,value) <span class="keyword">for</span> value <span class="keyword">in</span> x]</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/01/14/numpy-learning/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/14/numpy-learning/" itemprop="url">Numpy learning</a></h1>
+                <a class="post-title-link" href="/2019/01/14/Numpy learning/" itemprop="url">Numpy Learning</a></h1>
         
 
         <div class="post-meta">
@@ -1873,7 +1505,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1895,7 +1527,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -2483,7 +2115,24 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
   
 
 

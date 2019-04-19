@@ -1,5 +1,5 @@
 ---
-title: Parameters-Selection-for-Pseudo
+title: Parameters Selection for Pseudo
 date: 2019-02-27 15:52:24
 tags: pesudo labels
 categories: Deep learning
@@ -14,7 +14,7 @@ temperature: the higher the temperature T, the softer the probability distributi
 > reference-2 from reference-1 [Learning without Forgetting](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8107520)
 
 aim: useing only new task data to train the network while preserving the original capabilities
-temperature: T=2, grid search method
+temperature: $T=2$, grid search method
 
 ## density threshold in local feature density
 ## distribution distance is transfered into weights
