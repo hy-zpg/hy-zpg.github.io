@@ -419,7 +419,23 @@
       
         
           
-            
+            <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><h4 id="links-of-this-paper-in-here-FAST-ADAPTATION-IN-GENERATIVE-MODELS-WITH-GENERATIVE-MATCHING-NETWORKS-another-version-is-here-Few-shot-Generative-Modelling-with-Generative-Matching-Networks"><a href="#links-of-this-paper-in-here-FAST-ADAPTATION-IN-GENERATIVE-MODELS-WITH-GENERATIVE-MATCHING-NETWORKS-another-version-is-here-Few-shot-Generative-Modelling-with-Generative-Matching-Networks" class="headerlink" title="links of this paper in here FAST ADAPTATION IN GENERATIVE MODELS WITH GENERATIVE MATCHING NETWORKS, another version is here Few-shot Generative Modelling with Generative Matching Networks."></a>links of this paper in here <a href="https://openreview.net/pdf?id=HyCRyS9gx" target="_blank" rel="noopener">FAST ADAPTATION IN GENERATIVE MODELS WITH GENERATIVE MATCHING NETWORKS</a>, another version is here <a href="http://proceedings.mlr.press/v84/bartunov18a/bartunov18a.pdf" target="_blank" rel="noopener">Few-shot Generative Modelling with Generative Matching Networks</a>.</h4><h4 id="Remaining-bottlenecks-in-deep-generative-models"><a href="#Remaining-bottlenecks-in-deep-generative-models" class="headerlink" title="Remaining bottlenecks in deep generative models"></a>Remaining bottlenecks in deep generative models</h4><ul>
+<li>extensive training leading to slow training (currently experience in DCGAN, FIGR).</li>
+<li>difficulities with generalization from small number of training examples.</li>
+</ul>
+<h4 id="Solution-to-those-bottlenecks"><a href="#Solution-to-those-bottlenecks" class="headerlink" title="Solution to those bottlenecks"></a>Solution to those bottlenecks</h4><ul>
+<li>conditional generative models: adapting generative distribution to additional inputs.</li>
+<li>the restriction of previous research: the input data to be a single object or multiple objects represents the same concepts.</li>
+</ul>
+<h4 id="Novelty-of-generative-matching-networks"><a href="#Novelty-of-generative-matching-networks" class="headerlink" title="Novelty of generative matching networks"></a>Novelty of generative matching networks</h4><ul>
+<li>without explicit limitations on the numbles of additional inputs objects or the number of concepts.</li>
+<li>learn new concepts.</li>
+</ul>
+<h3 id="Implementing"><a href="#Implementing" class="headerlink" title="Implementing"></a>Implementing</h3><h4 id="Specific-problem"><a href="#Specific-problem" class="headerlink" title="Specific problem"></a>Specific problem</h4><ul>
+<li>VAE has been transfered intractable optimization into tractable optmization problem, refer to <a href="https://www.yanhong.me/2019/04/09/Overview-of-GAN/">Overview of Generative Models</a>. However, update of parameters computed from a small portion of training data have a immediate effect for the whole dataset.</li>
+<li>cann’t quickly adaption because of not incremental learning.</li>
+</ul>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4>
           
         
       
@@ -781,11 +797,10 @@
 </li>
 <li><p>lower bound: <font color="red">transfering intractable problem into tractale problem with lower bounds</font>, introducing encoder $_{\phi}$ to transfer two KL divergence, in which one is tractable while another one is untractabel. Thus, lower bound aims at optimizing the tractable KL divergence.<br><img src="/imgs/lower_bound.jpg" alt="&#39;lower bound&#39;"></p>
 </li>
+<li><p>the detail of optimization procedure as follows:<br><img src="/imgs/procedure.jpg" alt="&#39;procedure of optimization&#39;"></p>
+</li>
 </ul>
-<ul>
-<li>the detail of optimization procedure as follows:<br><img src="/imgs/procedure.jpg" alt="&#39;procedure of optimization&#39;"></li>
-</ul>
-
+<h3 id="GAN"><a href="#GAN" class="headerlink" title="GAN"></a>GAN</h3>
           
         
       

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.yanhong.me/2019/04/09/Overview-of-GAN/</loc>
+    <loc>https://www.yanhong.me/2019/04/22/Generative-Matching-Networks/</loc>
     <lastmod>2019-04-22</lastmod>
   </url>  <url>
-    <loc>https://www.yanhong.me/2019/04/22/Generative-Matching-Networks/</loc>
+    <loc>https://www.yanhong.me/2019/04/09/Overview-of-GAN/</loc>
     <lastmod>2019-04-22</lastmod>
   </url>  <url>
     <loc>https://www.yanhong.me/2019/04/04/Few-shot-Image-generation/</loc>
