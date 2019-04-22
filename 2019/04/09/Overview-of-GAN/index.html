@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="Taxonomy of Generative models PixelsRNN and PixelsCNN this method belongs to explicit density model.  Using chain rule to decompose likelihood of an image x into product of 1-d distributions:   \be">
+<meta name="description" content="The detail of generative model can refer to generative modelsDefinition of generative modelsgiven training data, generate new samples from same distribution\begin{algined}\mathrm{p}_{\text { model">
 <meta name="keywords" content="overview">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Overview of Generative Models">
 <meta property="og:url" content="https://www.yanhong.me/2019/04/09/Overview-of-GAN/index.html">
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
-<meta property="og:description" content="Taxonomy of Generative models PixelsRNN and PixelsCNN this method belongs to explicit density model.  Using chain rule to decompose likelihood of an image x into product of 1-d distributions:   \be">
+<meta property="og:description" content="The detail of generative model can refer to generative modelsDefinition of generative modelsgiven training data, generate new samples from same distribution\begin{algined}\mathrm{p}_{\text { model">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://www.yanhong.me/imgs/gm.jpg">
-<meta property="og:updated_time" content="2019-04-18T13:20:07.256Z">
+<meta property="og:updated_time" content="2019-04-22T01:03:53.273Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Overview of Generative Models">
-<meta name="twitter:description" content="Taxonomy of Generative models PixelsRNN and PixelsCNN this method belongs to explicit density model.  Using chain rule to decompose likelihood of an image x into product of 1-d distributions:   \be">
+<meta name="twitter:description" content="The detail of generative model can refer to generative modelsDefinition of generative modelsgiven training data, generate new samples from same distribution\begin{algined}\mathrm{p}_{\text { model">
 <meta name="twitter:image" content="https://www.yanhong.me/imgs/gm.jpg">
 
 
@@ -420,6 +420,7 @@
         <!-- <img src="https://www.yanhong.me/images/gm.jpg" width="50%" height="50%"> -->
 <!-- <img src="⁨hy-zpg.github.io⁩/source⁩/imgs⁩/gm.jpg" class="full-image" width="180" height="180" title="hello"> -->
 <!-- ![avatar](http://baidu.com/pic/doge.png)-->
+<h2 id="The-detail-of-generative-model-can-refer-to-generative-models"><a href="#The-detail-of-generative-model-can-refer-to-generative-models" class="headerlink" title="The detail of generative model can refer to generative models"></a>The detail of generative model can refer to <a href="https://github.com/w-ww/cs231n/blob/master/slides/cs231n_2018_lecture12.pdf" target="_blank" rel="noopener">generative models</a></h2><h2 id="Definition-of-generative-models"><a href="#Definition-of-generative-models" class="headerlink" title="Definition of generative models"></a>Definition of generative models</h2><p>given training data, generate new samples from same distribution<br>\begin{algined}<br>\mathrm{p}_{\text { model }}(\mathrm{x}) \text { similar to } \mathrm{p}_{\text { data }}(\mathrm{x})<br>\end{aligned}</p>
 <h2 id="Taxonomy-of-Generative-models"><a href="#Taxonomy-of-Generative-models" class="headerlink" title="Taxonomy of Generative models"></a>Taxonomy of Generative models</h2><p><img src="/imgs/gm.jpg" alt="&#39;taxonomy of generative models&#39;"></p>
 <h3 id="PixelsRNN-and-PixelsCNN"><a href="#PixelsRNN-and-PixelsCNN" class="headerlink" title="PixelsRNN and PixelsCNN"></a>PixelsRNN and PixelsCNN</h3><ul>
 <li><p>this method belongs to <strong><em>explicit density model</em></strong>.</p>
@@ -462,7 +463,7 @@
 <h4 id="Variational-Autoenconders-for-generation-problem"><a href="#Variational-Autoenconders-for-generation-problem" class="headerlink" title="Variational Autoenconders for generation problem"></a>Variational Autoenconders for generation problem</h4><ul>
 <li><p>Assuming training data $x(i)$ representation $z$ is generated from latent representation $z$. Specifically, first sampling $z$ from true prior $p_{\theta}(z)$, then sampling $x$ from true conditional $p_{\theta}(x|z^(i))$</p>
 </li>
-<li><p>the aim is to estimate the true parameter $\theta$ by maximuming likelihood of training data:</p>
+<li><p>the <strong><em>aim</em></strong> is to estimate the true parameter $\theta$ by \color{red}{maximuming likelihood of training data}:</p>
 </li>
 </ul>
 <p>\begin{equation}<br>p_{\theta}(x)=\int p_{\theta}(z) p_{\theta}(x | z) d z<br>\end{equation}</p>
@@ -472,6 +473,11 @@
 </li>
 <li><p>posterior density $p_{\theta}(z | x)=p_{\theta}(x | z) p_{\theta}(z) / p_{\theta}(x)$ is also intractable, since $p_{\theta}(x)$ is intractable data likelihood. </p>
 </li>
+</ul>
+<h4 id="lower-bound-of-VAE"><a href="#lower-bound-of-VAE" class="headerlink" title="lower bound of VAE"></a>lower bound of VAE</h4><ul>
+<li>why: intractable, transfer optimization </li>
+<li>how: In addition to decoder network modeling $p_\theta(x|z)$, define additional encoder network $qɸ(z|x)$ that approximates pθ(z|x)</li>
+<li>final optimization objective:<br>\begin{aligned}<br>\log p_{\theta}\left(x^{(i)}\right)=\mathbf{E}_{z \sim q_{\phi}\left(z | x^{(i)}\right)}\left[\log p_{\theta}\left(x^{(i)}\right)\right]<br>=\mathbf{E}_{z}\left[\log \frac{p_{\theta}\left(x^{(i)} | z\right) p_{\theta}(z)}{p_{\theta}\left(z | x^{(i)}\right)}\right]<br>=\mathbf{E}_{z}\left[\log \frac{p_{\theta}\left(x^{(i)} | z\right) p_{\theta}(z)}{p_{\theta}\left(z | x^{(i)}\right)} \frac{q_{\phi}\left(z | x^{(i)}\right)}{q_{\phi}\left(z | x^{(i)}\right)}\right]<br>=\mathbf{E}_{z}\left[\log p_{\theta}\left(x^{(i)} | z\right)\right]-\mathbf{E}_{z}\left[\log \frac{q_{\phi}\left(z | x^{(i)}\right)}{p_{\theta}(z)}\right]+\mathbf{E}_{z}\left[\log \frac{q_{\phi}\left(z | x^{(i)}\right)}{p_{\theta}\left(z | x^{(i)}\right)}\right]<br>=\mathbf{E}_{z}\left[\log p_{\theta}\left(x^{(i)} | z\right)\right]-D_{K L}\left(q_{\phi}\left(z | x^{(i)}\right) | p_{\theta}(z)\right)+D_{K L}\left(q_{\phi}\left(z | x^{(i)}\right) | p_{\theta}\left(z | x^{(i)}\right)\right)<br>\end{aligned}</li>
 </ul>
 
       
@@ -670,7 +676,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Taxonomy-of-Generative-models"><span class="nav-number">1.</span> <span class="nav-text">Taxonomy of Generative models</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PixelsRNN-and-PixelsCNN"><span class="nav-number">1.1.</span> <span class="nav-text">PixelsRNN and PixelsCNN</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#PixelsRNN"><span class="nav-number">1.1.1.</span> <span class="nav-text">PixelsRNN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PixelsCNN"><span class="nav-number">1.1.2.</span> <span class="nav-text">PixelsCNN</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Variational-Autoenconders"><span class="nav-number">1.2.</span> <span class="nav-text">Variational Autoenconders</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Autoencoders"><span class="nav-number">1.2.1.</span> <span class="nav-text">Autoencoders</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Variational-Autoenconders-for-generation-problem"><span class="nav-number">1.2.2.</span> <span class="nav-text">Variational Autoenconders for generation problem</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#The-detail-of-generative-model-can-refer-to-generative-models"><span class="nav-number">1.</span> <span class="nav-text">The detail of generative model can refer to generative models</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Definition-of-generative-models"><span class="nav-number">2.</span> <span class="nav-text">Definition of generative models</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Taxonomy-of-Generative-models"><span class="nav-number">3.</span> <span class="nav-text">Taxonomy of Generative models</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PixelsRNN-and-PixelsCNN"><span class="nav-number">3.1.</span> <span class="nav-text">PixelsRNN and PixelsCNN</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#PixelsRNN"><span class="nav-number">3.1.1.</span> <span class="nav-text">PixelsRNN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PixelsCNN"><span class="nav-number">3.1.2.</span> <span class="nav-text">PixelsCNN</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Variational-Autoenconders"><span class="nav-number">3.2.</span> <span class="nav-text">Variational Autoenconders</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Autoencoders"><span class="nav-number">3.2.1.</span> <span class="nav-text">Autoencoders</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Variational-Autoenconders-for-generation-problem"><span class="nav-number">3.2.2.</span> <span class="nav-text">Variational Autoenconders for generation problem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lower-bound-of-VAE"><span class="nav-number">3.2.3.</span> <span class="nav-text">lower bound of VAE</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

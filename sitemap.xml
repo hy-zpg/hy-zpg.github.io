@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.yanhong.me/2019/04/09/Overview-of-GAN/</loc>
+    
+    <lastmod>2019-04-22T01:03:53.273Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.yanhong.me/about/index.html</loc>
     
     <lastmod>2019-04-20T08:39:10.035Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://www.yanhong.me/2019/04/04/Few-shot-Image-generation/</loc>
     
     <lastmod>2019-04-18T13:32:08.639Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yanhong.me/2019/04/09/Overview-of-GAN/</loc>
-    
-    <lastmod>2019-04-18T13:20:07.256Z</lastmod>
     
   </url>
   
