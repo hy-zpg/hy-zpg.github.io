@@ -433,15 +433,37 @@
 <li>the restriction of previous research: the input data to be a single object or multiple objects represents the same concepts.</li>
 </ul>
 <h4 id="Novelty-of-generative-matching-networks"><a href="#Novelty-of-generative-matching-networks" class="headerlink" title="Novelty of generative matching networks"></a>Novelty of generative matching networks</h4><ul>
-<li>without explicit limitations on the numbles of additional inputs objects or the number of concepts.</li>
+<li>without explicit limitations on the numbles of additional inputs objects or the number of concepts.(experiment not demonstrate this, conditional GAN may achieve it.)</li>
 <li>learn new concepts.</li>
 </ul>
 <h3 id="Implementing"><a href="#Implementing" class="headerlink" title="Implementing"></a>Implementing</h3><h4 id="Specific-problem"><a href="#Specific-problem" class="headerlink" title="Specific problem"></a>Specific problem</h4><ul>
 <li>VAE has been transfered intractable optimization into tractable optmization problem, refer to <a href="https://www.yanhong.me/2019/04/09/Overview-of-GAN/">Overview of Generative Models</a>. However, update of parameters computed from a small portion of training data have a immediate effect for the whole dataset.</li>
 <li>cann’t quickly adaption because of not incremental learning.</li>
+<li>original optimization objective<br>\begin{aligned}<br>\log p(\mathbf{x} | \boldsymbol{\theta}) \geq \mathcal{L}(\boldsymbol{\theta}, \boldsymbol{\phi})=\mathbb{E}_{q}[\log p(\mathbf{x}, \mathbf{z} | \boldsymbol{\theta})-\log q(\mathbf{z} | \mathbf{x}, \boldsymbol{\phi})]=\log p(\mathbf{x} | \boldsymbol{\theta})-\operatorname{KL}(q | p(\cdot | \mathbf{x}, \boldsymbol{\theta}))<br>\end{aligned}</li>
 </ul>
 <h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><ul>
-<li></li>
+<li><p>incorporating knowledge from newly available data is conditioning, so design model as $p(\mathbf{x} | \mathbf{X}, \boldsymbol{\theta})$ conditioning on additional input data $\mathbf{X}$.<br>\begin{aligned}<br>p(\mathbf{x}, \mathbf{z} | \mathbf{X}, \boldsymbol{\theta})=p(\mathbf{z} | \mathbf{X}, \boldsymbol{\theta}) p(\mathbf{x} | \mathbf{z}, \mathbf{X}, \boldsymbol{\theta})<br>\end{aligned}</p>
+</li>
+<li><p>followed VAE, maintaining a recognition model approximating the posterior over latent variable $z$ to achieve lower bound optimization objective, so,<br>\begin{equation}<br>q(\mathbf{z} | \mathbf{x}, \mathbf{X}, \boldsymbol{\phi}) \approx p(\mathbf{z} | \mathbf{x}, \mathbf{X}, \boldsymbol{\theta})<br>\end{equation}</p>
+</li>
+</ul>
+<h5 id="Basic-model"><a href="#Basic-model" class="headerlink" title="Basic model"></a>Basic model</h5><ul>
+<li><p>flow chat of generative matching networks<br><img src="/imgs/matching_networks.jpg" alt="&#39;flow chart of generative matching networks&#39;"><br>the objective is:<br>\begin{equation}<br>p(\mathbf{x}, \mathbf{z} | \mathbf{X}, \boldsymbol{\theta})=p(\mathbf{z} | \mathbf{X}, \boldsymbol{\theta}) p(\mathbf{x} | \mathbf{z}, \mathbf{X}, \boldsymbol{\theta})<br>\end{equation}<br>In conditional likelihood (decoder) $p(\mathbf{x} | \mathbf{z}, \mathbf{X}, \boldsymbol{\theta})$:</p>
+<ul>
+<li>$\mathbf{x}$ is additional input data which is conditional objects.</li>
+<li>$\mathbf{z}$ is the prior.</li>
+<li>$f_L$ and $g_L$ are used to map latent variabels and conditioning objects into feature space $\phi$. $f_L$ is simple affine transformation while $g_L$ is a convolutional network.</li>
+<li>$\phi_L$ is feature extractor different from $g_L$ but sharing some parameters between them.</li>
+<li>mapping $r_L$ to $x$ by a deconvulutional network.<br>In recognition model (encoder) $q(\mathbf{z} | \mathbf{X}, \mathbf{x})$:</li>
+<li>$g_R = f_R = g_L$</li>
+<li>$\phi_L$ = $\phi_R$</li>
+<li>$r_R$ is used to compute parameters of approximate posterior which is a normal distribution.</li>
+</ul>
+</li>
+<li><p>conditioning on additional inputs $\mathbf{X}$ by matching networks,<br>\begin{equation}<br>a\left(\mathbf{z}, \mathbf{x}_{t}\right)=\frac{\exp \left(\operatorname{sim}\left(f_{L}(\mathbf{z}), g_{L}\left(\mathbf{x}<em>{t}\right)\right)\right)}{\sum\</em>{t^{\prime}=1}^{T} \exp \left(\operatorname{sim}\left(f_{L}(\mathbf{z}), g_{L}\left(\mathbf{x}_{t^{\prime}}\right)\right)\right)}<br>\end{equation}<br>where $$</p>
+</li>
+<li><p>aggretating additional inputs for test input,<br>\begin{equation}<br>\mathbf{r}=\sum_{t=1}^{T} a\left(\mathbf{z}, \mathbf{x}_{t}\right) \psi_{L}\left(\mathbf{x}_{t}\right)<br>\end{equation}<br>where $\mathbf{r}$ is input of decoder which is denconvolutional network.</p>
+</li>
 </ul>
 
           
@@ -777,7 +799,10 @@
 </li>
 </ul>
 <h3 id="Variational-Autoenconders"><a href="#Variational-Autoenconders" class="headerlink" title="Variational Autoenconders"></a>Variational Autoenconders</h3><ul>
-<li>this method defines <strong><em>intractable density function</em></strong> with latent $z$:</li>
+<li><p>general explanation is here <a href="https://zhuanlan.zhihu.com/p/27549418" target="_blank" rel="noopener">VAE</a></p>
+</li>
+<li><p>this method defines <strong><em>intractable density function</em></strong> with latent $z$:</p>
+</li>
 </ul>
 <p>\begin{aligned}<br>p_{\theta}(x)=\int p_{\theta}(z) p_{\theta}(x | z) d z<br>\end{aligned}</p>
 <h4 id="Autoencoders"><a href="#Autoencoders" class="headerlink" title="Autoencoders"></a>Autoencoders</h4><ul>
