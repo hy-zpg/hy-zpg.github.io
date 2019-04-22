@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="pseudo labels,">
+  <meta name="keywords" content="few-shot generation,">
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="Relation between MMD and density for pseudo data selectioncombination of MMD and density: my understanding is that we can obtain MMD, density, prior weights from GMM, when GMM can be calculated from g">
-<meta name="keywords" content="pseudo labels">
+<meta name="description" content="New Rhythm">
+<meta name="keywords" content="few-shot generation">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MMD and Density">
-<meta property="og:url" content="https://www.yanhong.me/2019/01/15/GMM/index.html">
+<meta property="og:title" content="Generative Matching Networks">
+<meta property="og:url" content="https://www.yanhong.me/2019/04/22/Generative-Matching-Networks/index.html">
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
-<meta property="og:description" content="Relation between MMD and density for pseudo data selectioncombination of MMD and density: my understanding is that we can obtain MMD, density, prior weights from GMM, when GMM can be calculated from g">
+<meta property="og:description" content="New Rhythm">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-18T12:33:20.432Z">
+<meta property="og:updated_time" content="2019-04-22T02:04:11.974Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MMD and Density">
-<meta name="twitter:description" content="Relation between MMD and density for pseudo data selectioncombination of MMD and density: my understanding is that we can obtain MMD, density, prior weights from GMM, when GMM can be calculated from g">
+<meta name="twitter:title" content="Generative Matching Networks">
+<meta name="twitter:description" content="New Rhythm">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://www.yanhong.me/2019/01/15/GMM/">
+  <link rel="canonical" href="https://www.yanhong.me/2019/04/22/Generative-Matching-Networks/">
 
 
 
 
 
-  <title>MMD and Density | Hongyan's Notes</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Generative Matching Networks | Hongyan's Notes</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -307,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/01/15/GMM/">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/04/22/Generative-Matching-Networks/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hongyan">
@@ -324,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">MMD and Density</h1>
+          <h1 class="post-title" itemprop="name headline">Generative Matching Networks</h1>
         
 
         <div class="post-meta">
@@ -336,8 +336,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-15T10:31:01+08:00">
-                2019-01-15
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-22T10:02:57+08:00">
+                2019-04-22
               </time>
             
 
@@ -359,8 +359,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Theory/" itemprop="url" rel="index">
-                    <span itemprop="name">Theory</span>
+                  <a href="/categories/Generative-Model/" itemprop="url" rel="index">
+                    <span itemprop="name">Generative Model</span>
                   </a>
                 </span>
 
@@ -415,23 +415,7 @@
       
 
       
-        <h2 id="Relation-between-MMD-and-density-for-pseudo-data-selection"><a href="#Relation-between-MMD-and-density-for-pseudo-data-selection" class="headerlink" title="Relation between MMD and density for pseudo data selection"></a>Relation between MMD and density for pseudo data selection</h2><p>combination of MMD and density: my understanding is that we can obtain MMD, density, prior weights from GMM, when GMM can be calculated from ground-trurh label of </p>
-<ul>
-<li><p>MMD: first-order information</p>
-</li>
-<li><p>Density: second-order information, the larger variance, the sparser, the small variance, the denser </p>
-</li>
-</ul>
-<h3 id="GMM"><a href="#GMM" class="headerlink" title="GMM"></a>GMM</h3><ul>
-<li>Gaussian Mixed Model: A Gaussian mixture model is a probabilistic model that assumes all the data points are generated from a mixture of a finite number of Gaussian distributions with unknown parameters. One can think of mixture models as generalizing k-means clustering to incorporate information about the covariance structure of the data as well as the centers of the latent Gaussians.</li>
-</ul>
-<ul>
-<li><p>Differentce between k-means and GMM: k-means notes that each point is assigned to different clusters, while GMM can calculate the probabiliy of each point belong to each clusters.</p>
-</li>
-<li><p>Import parameters of GMM: K Gaussion models, also K clusters, $\pi$, $\mu$, $\Sigma$<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</p>
-</li>
-</ul>
-
+        
       
     </div>
     
@@ -448,7 +432,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/pseudo-labels/" rel="tag"># pseudo labels</a>
+            <a href="/tags/few-shot-generation/" rel="tag"># few-shot generation</a>
           
         </div>
       
@@ -461,8 +445,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/14/Numpy learning/" rel="next" title="Numpy Learning">
-                <i class="fa fa-chevron-left"></i> Numpy Learning
+              <a href="/2019/04/18/meta-learning/" rel="next" title="Meta Learning">
+                <i class="fa fa-chevron-left"></i> Meta Learning
               </a>
             
           </div>
@@ -470,10 +454,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/16/Cross_entropy_loss/" rel="prev" title="Cross Entropy Loss">
-                Cross Entropy Loss <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -525,17 +505,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -618,22 +589,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Relation-between-MMD-and-density-for-pseudo-data-selection"><span class="nav-number">1.</span> <span class="nav-text">Relation between MMD and density for pseudo data selection</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GMM"><span class="nav-number">1.1.</span> <span class="nav-text">GMM</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
