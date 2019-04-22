@@ -90,7 +90,7 @@
 <meta property="og:description" content="OverviewRelated links This paper in here FAST ADAPTATION IN GENERATIVE MODELS WITH GENERATIVE MATCHING NETWORKS Another version is here Few-shot Generative Modelling with Generative Matching Networks.">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://www.yanhong.me/imgs/matching_networks.jpg">
-<meta property="og:updated_time" content="2019-04-22T04:17:59.894Z">
+<meta property="og:updated_time" content="2019-04-22T04:24:12.365Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Generative Matching Networks">
 <meta name="twitter:description" content="OverviewRelated links This paper in here FAST ADAPTATION IN GENERATIVE MODELS WITH GENERATIVE MATCHING NETWORKS Another version is here Few-shot Generative Modelling with Generative Matching Networks.">
@@ -446,9 +446,9 @@
 </li>
 </ul>
 <h5 id="Basic-model"><a href="#Basic-model" class="headerlink" title="Basic model"></a>Basic model</h5><ul>
-<li>flow chat of generative matching networks<br><img src="/imgs/matching_networks.jpg" alt="&#39;flow chart of generative matching networks&#39;"><br>the objective is:<br>\begin{equation}<br>p(\mathbf{x}, \mathbf{z} | \mathbf{X}, \boldsymbol{\theta})=p(\mathbf{z} | \mathbf{X}, \boldsymbol{\theta}) p(\mathbf{x} | \mathbf{z}, \mathbf{X}, \boldsymbol{\theta})<br>\end{equation}</li>
+<li>flow chat of generative matching networks<br><img src="/imgs/matching_networks.jpg" alt="&#39;flow chart of generative matching networks&#39;"><br>the <font color="red">objective</font> is:<br>\begin{equation}<br>p(\mathbf{x}, \mathbf{z} | \mathbf{X}, \boldsymbol{\theta})=p(\mathbf{z} | \mathbf{X}, \boldsymbol{\theta}) p(\mathbf{x} | \mathbf{z}, \mathbf{X}, \boldsymbol{\theta})<br>\end{equation}</li>
 </ul>
-<p>In conditional likelihood (decoder) $p(\mathbf{x} | \mathbf{z}, \mathbf{X}, \boldsymbol{\theta})$:</p>
+<p>In <font color="red">conditional likelihood</font> (decoder) $p(\mathbf{x} | \mathbf{z}, \mathbf{X}, \boldsymbol{\theta})$:</p>
 <ul>
 <li>$\mathbf{x}$ is additional input data which is conditional objects.</li>
 <li>$\mathbf{z}$ is the prior.</li>
@@ -456,18 +456,18 @@
 <li>$\phi_L$ is feature extractor different from $g_L$ but sharing some parameters between them.</li>
 <li>mapping $r_L$ to $x$ by a deconvulutional network.</li>
 </ul>
-<p>In recognition model (encoder) $q(\mathbf{z} | \mathbf{X}, \mathbf{x})$:</p>
+<p>In <font color="red">recognition model</font> (encoder) $q(\mathbf{z} | \mathbf{X}, \mathbf{x})$:</p>
 <ul>
 <li>$g_R = f_R = g_L$</li>
 <li>$\phi_L$ = $\phi_R$</li>
 <li>$r_R$ is used to compute parameters of approximate posterior which is a normal distribution.</li>
 </ul>
 <ul>
-<li>conditioning on additional inputs $\mathbf{X}$ by matching networks,</li>
+<li>conditioning on additional inputs $\mathbf{X}$ by matching networks, <font color="red">attention kernel</font> can be calculated as,</li>
 </ul>
 <p>\begin{equation}<br>a\left(\mathbf{z}, \mathbf{x}_{t}\right)=\frac{\exp \left(\operatorname{sim}\left(f_{L}(\mathbf{z}), g_{L}\left(\mathbf{x}_{t}\right)\right)\right)}{\sum_{t^{\prime}=1}^{T} \exp \left(\operatorname{sim}\left(f_{L}(\mathbf{z}), g_{L}\left(\mathbf{x}_{t^{\prime}}\right)\right)\right)}<br>\end{equation}<br>where $$</p>
 <ul>
-<li>aggretating additional inputs for test input,<br>\begin{equation}<br>\mathbf{r}=\sum_{t=1}^{T} a\left(\mathbf{z}, \mathbf{x}_{t}\right) \psi_{L}\left(\mathbf{x}_{t}\right)<br>\end{equation}<br>where $\mathbf{r}$ is input of decoder which is denconvolutional network.</li>
+<li><font color="red">aggregating additional inputs</font> for test input,<br>\begin{equation}<br>\mathbf{r}=\sum_{t=1}^{T} a\left(\mathbf{z}, \mathbf{x}_{t}\right) \psi_{L}\left(\mathbf{x}_{t}\right)<br>\end{equation}<br>where $\mathbf{r}$ is input of decoder which is denconvolutional network.</li>
 </ul>
 
       
