@@ -479,12 +479,14 @@
 <h5 id="FCE"><a href="#FCE" class="headerlink" title="FCE"></a>FCE</h5><p>Obtaining a joint embedding of conditional input dataset with LSTM.<br>\begin{equation}<br>a\left(\mathbf{z}, \mathbf{x}_{t}\right)=\frac{\exp \left(\operatorname{sim}\left(f\left(\mathbf{z}, \mathbf{h}_{k}\right), g\left(\mathbf{x}_{t}, \mathbf{h}_{k}\right)\right)\right)}{\sum_{t^{\prime}=1}^{T} \exp \left(\operatorname{sim}\left(f\left(\mathbf{z}, \mathbf{h}_{k}\right), g\left(\mathbf{x}_{t^{\prime}}, \mathbf{h}_{k}\right)\right)\right)}<br>\end{equation}</p>
 <p>\begin{equation}<br>\mathbf{r}_{k}=\sum_{t=1}^{T} a\left(\mathbf{z}, \mathbf{x}_{t}\right) \psi\left(\mathbf{x}_{t}\right)<br>\end{equation}</p>
 <p>\begin{equation}<br>\mathbf{h}_{k+1}=R\left(\mathbf{h}_{k}, \mathbf{r}_{k}\right)<br>\end{equation}</p>
-<h4 id="Training-detail"><a href="#Training-detail" class="headerlink" title="Training detail"></a>Training detail</h4><p>The final objective with lower bound can be respresented as,<br>\begin{equation}<br>\mathcal{L}(\mathbf{X}, \boldsymbol{\theta}, \boldsymbol{\phi})=\sum<em>{t=1}^{T} \mathbb{E}\</em>{q\left(\mathbf{z}_{t} | \mathbf{x}_{t}, \mathbf{X}<br><em>{&lt;t}, \boldsymbol{\phi}\right)}\left[\log p\left(\mathbf{x}\</em>{t}, \mathbf{z}_{t} | \mathbf{X}_{&lt;t}, \boldsymbol{\theta}\right)- log q\left(\mathbf{z}_{t} | \mathbf{x}_{t}, \mathbf{X}_{&lt;t}, \boldsymbol{\phi}\right)\right]<br>\end{equation}</p>
+<h4 id="Training-detail"><a href="#Training-detail" class="headerlink" title="Training detail"></a>Training detail</h4><p>The final objective with lower bound can be respresented as,</p>
+<p>\begin{equation}<br>\mathcal{L}(\mathbf{X}, \boldsymbol{\theta}, \boldsymbol{\phi})=\sum<em>{t=1}^{T} \mathbb{E}\</em>{q\left(\mathbf{z}_{t} | \mathbf{x}_{t}, \mathbf{X}<br><em>{&lt; t}, \boldsymbol{\phi}\right)}\left[\log p\left(\mathbf{x}\</em>{t}, \mathbf{z}_{t} | \mathbf{X}_{&lt; t}, \boldsymbol{\theta}\right)- log q\left(\mathbf{z}_{t} | \mathbf{x}_{t}, \mathbf{X}_{&lt; t}, \boldsymbol{\phi}\right)\right]<br>\end{equation}</p>
 <ul>
-<li><p>$\mathbb{E}_{q\left(\mathbf{z}_{t} | \mathbf{x}_{t}, \mathbf{X}<br><em>{&lt;t}, \boldsymbol{\phi}\right)}\left[\log p\left(\mathbf{x}</em>{t}, \mathbf{z}_{t} | \mathbf{X}_{&lt;t}, \boldsymbol{\theta}\right)$ is used to for reconstruction loss</p>
-</li>
-<li><p>$log q\left(\mathbf{z}_{t} | \mathbf{x}_{t}, \mathbf{X}_{&lt;t}, \boldsymbol{\phi}\right)\right$ is used to calculate KL divergence which can measure the distribution difference between latent variables and normal distribution.</p>
-</li>
+<li>$\mathbb{E}_{q\left(\mathbf{z}_{t} | \mathbf{x}_{t}, \mathbf{X}<br><em>{&lt; t}, \boldsymbol{\phi}\right)}\left[\log p\left(\mathbf{x}\</em>{t}, \mathbf{z}_{t} | \mathbf{X}_{&lt; t}, \boldsymbol{\theta}\right)$ is used to for reconstruction loss</li>
+<li>$log q\left(\mathbf{z}_{t} | \mathbf{x}_{t}, \mathbf{X}_{ &lt;  }, \boldsymbol{\phi}\right)\right$ is used to calculate KL divergence which can measure the distribution difference between latent variables and normal distribution.</li>
+</ul>
+<h3 id="Possible-ideas"><a href="#Possible-ideas" class="headerlink" title="Possible ideas"></a>Possible ideas</h3><ul>
+<li>VAE generated images is vague, may it can be combined with GAN <a href="https://arxiv.org/pdf/1512.09300.pdf" target="_blank" rel="noopener">Autoencoding beyond pixels using a learned similarity metric</a></li>
 </ul>
 
           
