@@ -441,14 +441,17 @@
 <li>cann’t quickly adaption because of not incremental learning.</li>
 <li>original optimization objective<br>\begin{aligned}<br>\log p(\mathbf{x} | \boldsymbol{\theta}) \geq \mathcal{L}(\boldsymbol{\theta}, \boldsymbol{\phi})=\mathbb{E}_{q}[\log p(\mathbf{x}, \mathbf{z} | \boldsymbol{\theta})-\log q(\mathbf{z} | \mathbf{x}, \boldsymbol{\phi})]=\log p(\mathbf{x} | \boldsymbol{\theta})-\operatorname{KL}(q | p(\cdot | \mathbf{x}, \boldsymbol{\theta}))<br>\end{aligned}</li>
 </ul>
-<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><ul>
+<h4 id="Generative-matching-networks"><a href="#Generative-matching-networks" class="headerlink" title="Generative matching networks"></a>Generative matching networks</h4><ul>
 <li><p>incorporating knowledge from newly available data is conditioning, so design model as $p(\mathbf{x} | \mathbf{X}, \boldsymbol{\theta})$ conditioning on additional input data $\mathbf{X}$.<br>\begin{aligned}<br>p(\mathbf{x}, \mathbf{z} | \mathbf{X}, \boldsymbol{\theta})=p(\mathbf{z} | \mathbf{X}, \boldsymbol{\theta}) p(\mathbf{x} | \mathbf{z}, \mathbf{X}, \boldsymbol{\theta})<br>\end{aligned}</p>
 </li>
 <li><p>followed VAE, maintaining a recognition model approximating the posterior over latent variable $z$ to achieve lower bound optimization objective, so,<br>\begin{equation}<br>q(\mathbf{z} | \mathbf{x}, \mathbf{X}, \boldsymbol{\phi}) \approx p(\mathbf{z} | \mathbf{x}, \mathbf{X}, \boldsymbol{\theta})<br>\end{equation}</p>
 </li>
 </ul>
-<h5 id="Basic-model"><a href="#Basic-model" class="headerlink" title="Basic model"></a>Basic model</h5><h6 id="Flow-chat-of-generative-matching-networks"><a href="#Flow-chat-of-generative-matching-networks" class="headerlink" title="Flow chat of generative matching networks"></a>Flow chat of generative matching networks</h6><p><img src="/imgs/matching_networks.jpg" alt="&#39;flow chart of generative matching networks&#39;"><br>the <font color="red">objective</font> is:<br>\begin{equation}<br>p(\mathbf{x}, \mathbf{z} | \mathbf{X}, \boldsymbol{\theta})=p(\mathbf{z} | \mathbf{X}, \boldsymbol{\theta}) p(\mathbf{x} | \mathbf{z}, \mathbf{X}, \boldsymbol{\theta})<br>\end{equation}</p>
-<p>In <font color="red">conditional likelihood</font> (decoder) $p(\mathbf{x} | \mathbf{z}, \mathbf{X}, \boldsymbol{\theta})$:</p>
+<h5 id="Basic-model"><a href="#Basic-model" class="headerlink" title="Basic model"></a>Basic model</h5><h6 id="Flow-chat-of-generative-matching-networks"><a href="#Flow-chat-of-generative-matching-networks" class="headerlink" title="Flow chat of generative matching networks"></a>Flow chat of generative matching networks</h6><p><img src="/imgs/matching_networks.jpg" alt="&#39;flow chart of generative matching networks&#39;"></p>
+<ol>
+<li><p>the <font color="red">objective</font> is:<br>\begin{equation}<br>p(\mathbf{x}, \mathbf{z} | \mathbf{X}, \boldsymbol{\theta})=p(\mathbf{z} | \mathbf{X}, \boldsymbol{\theta}) p(\mathbf{x} | \mathbf{z}, \mathbf{X}, \boldsymbol{\theta})<br>\end{equation}</p>
+</li>
+<li><p>In <font color="red">conditional likelihood</font> (decoder) $p(\mathbf{x} | \mathbf{z}, \mathbf{X}, \boldsymbol{\theta})$:</p>
 <ul>
 <li>$\mathbf{x}$ is additional input data which is conditional objects.</li>
 <li>$\mathbf{z}$ is the prior.</li>
@@ -456,12 +459,15 @@
 <li>$\phi_L$ is feature extractor different from $g_L$ but sharing some parameters between them.</li>
 <li>mapping $r_L$ to $x$ by a deconvulutional network.</li>
 </ul>
-<p>In <font color="red">recognition model</font> (encoder) $q(\mathbf{z} | \mathbf{X}, \mathbf{x})$:</p>
+</li>
+<li><p>In <font color="red">recognition model</font> (encoder) $q(\mathbf{z} | \mathbf{X}, \mathbf{x})$:</p>
 <ul>
 <li>$g_R = f_R = g_L$</li>
 <li>$\phi_L$ = $\phi_R$</li>
 <li>$r_R$ is used to compute parameters of approximate posterior which is a normal distribution.</li>
 </ul>
+</li>
+</ol>
 <h6 id="Core-for-conditional-generative-matching-network"><a href="#Core-for-conditional-generative-matching-network" class="headerlink" title="Core for conditional generative matching network"></a>Core for conditional generative matching network</h6><ul>
 <li>Conditioning on additional inputs $\mathbf{X}$ by matching networks, <font color="red">attention kernel</font> can be calculated as,</li>
 </ul>
@@ -469,7 +475,7 @@
 <ul>
 <li><font color="red">Aggregating additional inputs</font> for test input,<br>\begin{equation}<br>\mathbf{r}=\sum_{t=1}^{T} a\left(\mathbf{z}, \mathbf{x}_{t}\right) \psi_{L}\left(\mathbf{x}_{t}\right)<br>\end{equation}<br>where $\mathbf{r}$ is input of decoder which is denconvolutional network.</li>
 </ul>
-
+<h5 id="Recognition-model"><a href="#Recognition-model" class="headerlink" title="Recognition model"></a>Recognition model</h5><h5 id="Pseudo-inputs"><a href="#Pseudo-inputs" class="headerlink" title="Pseudo-inputs"></a>Pseudo-inputs</h5><h5 id="FCE"><a href="#FCE" class="headerlink" title="FCE"></a>FCE</h5><h5 id="Date-dependent-prior"><a href="#Date-dependent-prior" class="headerlink" title="Date-dependent prior"></a>Date-dependent prior</h5><h4 id="Training-detail"><a href="#Training-detail" class="headerlink" title="Training detail"></a>Training detail</h4>
           
         
       
