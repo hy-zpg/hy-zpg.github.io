@@ -433,6 +433,7 @@
 <li>the restriction of previous research: the input data to be a single object or multiple objects represents the same concepts.</li>
 </ul>
 <h4 id="Novelty-of-generative-matching-networks"><a href="#Novelty-of-generative-matching-networks" class="headerlink" title="Novelty of generative matching networks"></a>Novelty of generative matching networks</h4><ul>
+<li>VAE + matching network</li>
 <li>without explicit limitations on the numbles of additional inputs objects or the number of concepts.(experiment not demonstrate this, conditional GAN may achieve it.)</li>
 <li>learn new concepts.</li>
 </ul>
@@ -442,6 +443,7 @@
 <li>original optimization objective<br>\begin{aligned}<br>\log p(\mathbf{x} | \boldsymbol{\theta}) \geq \mathcal{L}(\boldsymbol{\theta}, \boldsymbol{\phi})=\mathbb{E}_{q}[\log p(\mathbf{x}, \mathbf{z} | \boldsymbol{\theta})-\log q(\mathbf{z} | \mathbf{x}, \boldsymbol{\phi})]=\log p(\mathbf{x} | \boldsymbol{\theta})-\operatorname{KL}(q | p(\cdot | \mathbf{x}, \boldsymbol{\theta}))<br>\end{aligned}</li>
 </ul>
 <h4 id="Generative-matching-networks"><a href="#Generative-matching-networks" class="headerlink" title="Generative matching networks"></a>Generative matching networks</h4><ul>
+<li>different VAE which is x -&gt; z -&gt; x, the framework of this model is from z -&gt;x -&gt; z.</li>
 <li><p>incorporating knowledge from newly available data is conditioning, so design model as $p(\mathbf{x} | \mathbf{X}, \boldsymbol{\theta})$ conditioning on additional input data $\mathbf{X}$.<br>\begin{aligned}<br>p(\mathbf{x}, \mathbf{z} | \mathbf{X}, \boldsymbol{\theta})=p(\mathbf{z} | \mathbf{X}, \boldsymbol{\theta}) p(\mathbf{x} | \mathbf{z}, \mathbf{X}, \boldsymbol{\theta})<br>\end{aligned}</p>
 </li>
 <li><p>followed VAE, maintaining a recognition model approximating the posterior over latent variable $z$ to achieve lower bound optimization objective, so,<br>\begin{equation}<br>q(\mathbf{z} | \mathbf{x}, \mathbf{X}, \boldsymbol{\phi}) \approx p(\mathbf{z} | \mathbf{x}, \mathbf{X}, \boldsymbol{\theta})<br>\end{equation}</p>
