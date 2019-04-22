@@ -90,7 +90,7 @@
 <meta property="og:description" content="OverviewRelated links This paper in here FAST ADAPTATION IN GENERATIVE MODELS WITH GENERATIVE MATCHING NETWORKS Another version is here Few-shot Generative Modelling with Generative Matching Networks.">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://www.yanhong.me/imgs/matching_networks.jpg">
-<meta property="og:updated_time" content="2019-04-22T09:17:08.152Z">
+<meta property="og:updated_time" content="2019-04-22T09:19:20.615Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Generative Matching Networks">
 <meta name="twitter:description" content="OverviewRelated links This paper in here FAST ADAPTATION IN GENERATIVE MODELS WITH GENERATIVE MATCHING NETWORKS Another version is here Few-shot Generative Modelling with Generative Matching Networks.">
@@ -480,10 +480,10 @@
 <p>\begin{equation}<br>\mathbf{r}_{k}=\sum_{t=1}^{T} a\left(\mathbf{z}, \mathbf{x}_{t}\right) \psi\left(\mathbf{x}_{t}\right)<br>\end{equation}</p>
 <p>\begin{equation}<br>\mathbf{h}_{k+1}=R\left(\mathbf{h}_{k}, \mathbf{r}_{k}\right)<br>\end{equation}</p>
 <h4 id="Training-detail"><a href="#Training-detail" class="headerlink" title="Training detail"></a>Training detail</h4><p>The final objective with lower bound can be respresented as,</p>
-<p>\begin{equation}<br>\mathcal{L}(\mathbf{X}, \boldsymbol{\theta}, \boldsymbol{\phi})=\sum<em>{t=1}^{T} \mathbb{E}\</em>{q\left(\mathbf{z}_{t} | \mathbf{x}_{t}, \mathbf{X}<br>_{&lt; t}, \boldsymbol{\phi}\right)}\left[\log p\left(\mathbf{x}_{t}, \mathbf{z}_{t} | \mathbf{X}_{&lt; t}, \boldsymbol{\theta}\right)- log q\left(\mathbf{z}_{t} | \mathbf{x}_{t}, \mathbf{X}_{&lt; t}, \boldsymbol{\phi}\right)\right]<br>\end{equation}</p>
+<p>\begin{equation}<br>\mathcal{L}(\mathbf{X}, \boldsymbol{\theta}, \boldsymbol{\phi})=\sum<em>{t=1}^{T} \mathbb{E}\</em>{q\left(\mathbf{z}_{t} | \mathbf{x}_{t}, \mathbf{X}<br>_{t}, \boldsymbol{\phi}\right)}\left[\log p\left(\mathbf{x}_{t}, \mathbf{z}_{t} | \mathbf{X}_{t}, \boldsymbol{\theta}\right)- log q\left(\mathbf{z}_{t} | \mathbf{x}_{t}, \mathbf{X}_{t}, \boldsymbol{\phi}\right)\right]<br>\end{equation}</p>
 <ul>
-<li>$\mathbb{E}_{q\left(\mathbf{z}_{t} | \mathbf{x}_{t}, \mathbf{X}<br>{&lt; t}, \boldsymbol{\phi}\right)}\left[\log p\left(\mathbf{x}_{t}, \mathbf{z}_{t} | \mathbf{X}_{&amp;textgreater t}, \boldsymbol{\theta}\right)$ is used to for reconstruction loss</li>
-<li>$log q\left(\mathbf{z}_{t} | \mathbf{x}_{t}, \mathbf{X}_{&lt; t}, \boldsymbol{\phi}\right)\right$ is used to calculate KL divergence which can measure the distribution difference between latent variables and normal distribution.</li>
+<li>$\mathbb{E}_{q\left(\mathbf{z}_{t} | \mathbf{x}_{t}, \mathbf{X}<br>{t}, \boldsymbol{\phi}\right)}\left[\log p\left(\mathbf{x}_{t}, \mathbf{z}_{t} | \mathbf{X}_{&amp;textgreater t}, \boldsymbol{\theta}\right)$ is used to for reconstruction loss</li>
+<li>$log q\left(\mathbf{z}_{t} | \mathbf{x}_{t}, \mathbf{X}_{t}, \boldsymbol{\phi}\right)\right$ is used to calculate KL divergence which can measure the distribution difference between latent variables and normal distribution.</li>
 </ul>
 <h4 id="Evaluation"><a href="#Evaluation" class="headerlink" title="Evaluation"></a>Evaluation</h4><ul>
 <li>visualization of generated images.</li>
