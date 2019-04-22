@@ -462,7 +462,7 @@
 <li>$\phi_L$ = $\phi_R$</li>
 <li>$r_R$ is used to compute parameters of approximate posterior which is a normal distribution.</li>
 </ul>
-<h6 id="Core-for-conditional-generative-matching-network"><a href="#Core-for-conditional-generative-matching-network" class="headerlink" title="# Core for conditional generative matching network"></a># Core for conditional generative matching network</h6><ul>
+<h6 id="Core-for-conditional-generative-matching-network"><a href="#Core-for-conditional-generative-matching-network" class="headerlink" title="Core for conditional generative matching network"></a>Core for conditional generative matching network</h6><ul>
 <li>Conditioning on additional inputs $\mathbf{X}$ by matching networks, <font color="red">attention kernel</font> can be calculated as,</li>
 </ul>
 <p>\begin{equation}<br>a\left(\mathbf{z}, \mathbf{x}_{t}\right)=\frac{\exp \left(\operatorname{sim}\left(f_{L}(\mathbf{z}), g_{L}\left(\mathbf{x}_{t}\right)\right)\right)}{\sum_{t^{\prime}=1}^{T} \exp \left(\operatorname{sim}\left(f_{L}(\mathbf{z}), g_{L}\left(\mathbf{x}_{t^{\prime}}\right)\right)\right)}<br>\end{equation}</p>
