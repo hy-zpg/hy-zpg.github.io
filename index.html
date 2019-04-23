@@ -429,10 +429,41 @@
 <li>$KL$ divergence only be applied to calculte distribution differene on the condition that complete distribution expressions are provided, so it is unapplicable in this scenario.</li>
 </ul>
 <h3 id="Difference"><a href="#Difference" class="headerlink" title="Difference"></a>Difference</h3><ul>
+<li><p><font color="red">Measurement method</font>: manmade measurement rule for VAE while this measurement rule of GAN is trained by neural network.</p>
+</li>
 <li><p>GAN: proposed to leverage deep neural networks to measure distribution difference because there isn’t suitable measurement method.</p>
 </li>
 <li><p>VAE: adopt a roundabout skill to leverage $KL$ divergence.</p>
 </li>
+</ul>
+<h3 id="VAE"><a href="#VAE" class="headerlink" title="VAE"></a>VAE</h3><h4 id="Important-points"><a href="#Important-points" class="headerlink" title="Important points"></a>Important points</h4><ul>
+<li>The detail is here <a href="https://zhuanlan.zhihu.com/p/34998569" target="_blank" rel="noopener">VAE’s blog</a> </li>
+</ul>
+<p><img src="/imgs/vae.jpg" alt="&#39;VAE&#39;"></p>
+<ul>
+<li><p><font color="red">Notes</font>: each sample has a gaussian distribution constructed by multivariate Gaussion and then obtain $z$ by sampling it from this distribution:<br>\begin{equation}<br>\log q_{\phi}\left(\mathbf{z} | \mathbf{x}^{(i)}\right)=\log \mathcal{N}\left(\mathbf{z} ; \boldsymbol{\mu}^{(i)}, \boldsymbol{\sigma}^{2(i)} \mathbf{I}\right)<br>\end{equation}</p>
+</li>
+<li><p><font color="red">Notes</font>: $log \boldsymbol{\mu_k} = f_1(x_k), \boldsymbol{\sigma}^{2(k)} = f_2(x_k)$ which are both fitted by neural network.</p>
+</li>
+<li><p><font color="red">Noise</font> from constructed $z$ can be calculated from $\sigma$ which can be controlled to zero, so noise takes no effect.</p>
+</li>
+<li><p><font color="red">Generative ability</font> is based on the condition that all $p(Z\X)$ close to gaussion distribution.<br>\begin{equation}<br>p(Z)=\sum_{X} p(Z | X) p(X)=\sum<em>{X} \mathcal{N}(0, I) p(X)=\mathcal{N}(0, I) \sum\</em>{X} p(X)=\mathcal{N}(0, I)<br>\end{equation}<br>so $p(Z)$ subjects to normal distribution, which satisfy the prior.</p>
+<ul>
+<li><p>how: intruducing reconstruction loss:<br>direct method:<br>\begin{equation}<br>\mathcal{L}_{\mu}=\left|f_{1}\left(X_{k}\right)\right|^{2}<br>\end{equation}</p>
+<p>\begin{equation}<br>\mathcal{L}_{\sigma^{2}}=\left|f_{2}\left(X_{k}\right)\right|^{2}<br>\end{equation}</p>
+<p>it’s difficult to measure those loss, so it’s reasonable to introduce $KL$ divegence between standard gaussion distribution and independent gaussion distribution $K L\left(N\left(\mu, \sigma^{\wedge}\right) | N(0, l)\right)$:<br>\begin{equation}<br>\mathcal{L}_{\mu, \sigma^{2}}=\frac{1}{2} \sum_{i=1}^{d}\left(\mu_{(i)}^{2}+\sigma_{(i)}^{2}-\log \sigma_{(i)}^{2}-1\right)<br>\end{equation}<br>where $d$ is the dimension of $z$ </p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Essence-of-VAE"><a href="#Essence-of-VAE" class="headerlink" title="Essence of VAE"></a>Essence of VAE</h4><ul>
+<li><p>Two encoder: $f_1$ for $\mu$ while $f_2$ for $\sigma$</p>
+</li>
+<li><p>Reconstruction process: the loss of decoder assume that there is no noise; Sample $z$ process: the loss of encoder assume that there is gaussion noise.</p>
+</li>
+</ul>
+<h3 id="GAN"><a href="#GAN" class="headerlink" title="GAN"></a>GAN</h3><h4 id="Important-points-1"><a href="#Important-points-1" class="headerlink" title="Important points"></a>Important points</h4><ul>
+<li>GAN is used to map normal distribution $p(z)$ into specfic distribution $p(x)$.</li>
 </ul>
 
           
