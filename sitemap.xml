@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.yanhong.me/2019/04/22/Generative-Matching-Networks/</loc>
+    <loc>https://www.yanhong.me/2019/04/09/Overview-of-GAN/</loc>
     
-    <lastmod>2019-04-23T01:06:07.222Z</lastmod>
+    <lastmod>2019-04-23T03:25:23.862Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.yanhong.me/2019/04/09/Overview-of-GAN/</loc>
+    <loc>https://www.yanhong.me/2019/04/23/Comparion-between-VAE-and-GAN/</loc>
     
-    <lastmod>2019-04-22T03:58:18.015Z</lastmod>
+    <lastmod>2019-04-23T03:17:19.075Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yanhong.me/2019/04/22/Generative-Matching-Networks/</loc>
+    
+    <lastmod>2019-04-23T01:06:07.222Z</lastmod>
     
   </url>
   
