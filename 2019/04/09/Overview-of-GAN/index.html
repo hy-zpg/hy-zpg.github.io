@@ -81,21 +81,21 @@
 
 
 
-<meta name="description" content="The detail of generative model can refer to generative modelsDefinition of generative modelsgiven training data, generate new samples from same distribution\begin{algined}\mathrm{p}_{model}(\mathrm">
+<meta name="description" content="The detail of generative model can refer to generative modelsDefinition of generative modelsgiven training data, generate new samples from same distribution\begin{aligned}\mathrm{p}_{model}(\mathrm">
 <meta name="keywords" content="overview">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Overview of Generative Models">
 <meta property="og:url" content="https://www.yanhong.me/2019/04/09/Overview-of-GAN/index.html">
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
-<meta property="og:description" content="The detail of generative model can refer to generative modelsDefinition of generative modelsgiven training data, generate new samples from same distribution\begin{algined}\mathrm{p}_{model}(\mathrm">
+<meta property="og:description" content="The detail of generative model can refer to generative modelsDefinition of generative modelsgiven training data, generate new samples from same distribution\begin{aligned}\mathrm{p}_{model}(\mathrm">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://www.yanhong.me/imgs/gm.jpg">
 <meta property="og:image" content="https://www.yanhong.me/imgs/lower_bound.jpg">
 <meta property="og:image" content="https://www.yanhong.me/imgs/procedure.jpg">
-<meta property="og:updated_time" content="2019-04-23T03:25:23.862Z">
+<meta property="og:updated_time" content="2019-04-25T01:33:36.228Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Overview of Generative Models">
-<meta name="twitter:description" content="The detail of generative model can refer to generative modelsDefinition of generative modelsgiven training data, generate new samples from same distribution\begin{algined}\mathrm{p}_{model}(\mathrm">
+<meta name="twitter:description" content="The detail of generative model can refer to generative modelsDefinition of generative modelsgiven training data, generate new samples from same distribution\begin{aligned}\mathrm{p}_{model}(\mathrm">
 <meta name="twitter:image" content="https://www.yanhong.me/imgs/gm.jpg">
 
 
@@ -422,7 +422,7 @@
         <!-- <img src="https://www.yanhong.me/images/gm.jpg" width="50%" height="50%"> -->
 <!-- <img src="⁨hy-zpg.github.io⁩/source⁩/imgs⁩/gm.jpg" class="full-image" width="180" height="180" title="hello"> -->
 <!-- ![avatar](http://baidu.com/pic/doge.png)-->
-<h2 id="The-detail-of-generative-model-can-refer-to-generative-models"><a href="#The-detail-of-generative-model-can-refer-to-generative-models" class="headerlink" title="The detail of generative model can refer to generative models"></a>The detail of generative model can refer to <a href="https://github.com/w-ww/cs231n/blob/master/slides/cs231n_2018_lecture12.pdf" target="_blank" rel="noopener">generative models</a></h2><h2 id="Definition-of-generative-models"><a href="#Definition-of-generative-models" class="headerlink" title="Definition of generative models"></a>Definition of generative models</h2><p>given training data, generate new samples from same distribution<br>\begin{algined}<br>\mathrm{p}_{model}(\mathrm{x}) { similar to } \mathrm{p}_(\mathrm{x})<br>\end{aligned}</p>
+<h2 id="The-detail-of-generative-model-can-refer-to-generative-models"><a href="#The-detail-of-generative-model-can-refer-to-generative-models" class="headerlink" title="The detail of generative model can refer to generative models"></a>The detail of generative model can refer to <a href="https://github.com/w-ww/cs231n/blob/master/slides/cs231n_2018_lecture12.pdf" target="_blank" rel="noopener">generative models</a></h2><h2 id="Definition-of-generative-models"><a href="#Definition-of-generative-models" class="headerlink" title="Definition of generative models"></a>Definition of generative models</h2><p>given training data, generate new samples from same distribution<br>\begin{aligned}<br>\mathrm{p}_{model}(\mathrm{x}) { similar to } \mathrm{p}_(\mathrm{x})<br>\end{aligned}</p>
 <h2 id="Taxonomy-of-Generative-models"><a href="#Taxonomy-of-Generative-models" class="headerlink" title="Taxonomy of Generative models"></a>Taxonomy of Generative models</h2><p><img src="/imgs/gm.jpg" alt="&#39;taxonomy of generative models&#39;"></p>
 <h3 id="PixelsRNN-and-PixelsCNN"><a href="#PixelsRNN-and-PixelsCNN" class="headerlink" title="PixelsRNN and PixelsCNN"></a>PixelsRNN and PixelsCNN</h3><ul>
 <li><p>this method belongs to <strong><em>explicit density model</em></strong>.</p>
@@ -489,7 +489,8 @@
 <li><p>the detail of optimization procedure as follows:<br><img src="/imgs/procedure.jpg" alt="&#39;procedure of optimization&#39;"></p>
 </li>
 </ul>
-<h3 id="GAN"><a href="#GAN" class="headerlink" title="GAN"></a>GAN</h3>
+<h3 id="GAN"><a href="#GAN" class="headerlink" title="GAN"></a>GAN</h3><p>\begin{equation}<br>{\min <em>{G} \max </em>{D} V(D, G)=}<br>{\mathbb{E}<em>{\boldsymbol{x} \sim p</em>{\text {data}}(\boldsymbol{x})}[\log D(\boldsymbol{x})]+\mathbb{E}<em>{\boldsymbol{z} \sim p</em>{\boldsymbol{z}}(\boldsymbol{z})}[\log (1-D(G(\boldsymbol{z}))]}<br>\end{equation}</p>
+
       
     </div>
     
@@ -608,7 +609,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
