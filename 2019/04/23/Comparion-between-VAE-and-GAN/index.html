@@ -90,7 +90,7 @@
 <meta property="og:description" content="Similarity Both aim at constructing a model that can map latent variabels $z$ to object data $p_{data}$. specifically, the trained model $\mathbf{X} = g(\mathbf{Z})$ where $Z$ is general distribution">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://www.yanhong.me/imgs/vae.jpg">
-<meta property="og:updated_time" content="2019-04-23T06:28:10.246Z">
+<meta property="og:updated_time" content="2019-04-25T01:41:16.447Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Comparion between VAE and GAN">
 <meta name="twitter:description" content="Similarity Both aim at constructing a model that can map latent variabels $z$ to object data $p_{data}$. specifically, the trained model $\mathbf{X} = g(\mathbf{Z})$ where $Z$ is general distribution">
@@ -445,13 +445,15 @@
 </li>
 <li><p><font color="red">Noise</font> from constructed $z$ can be calculated from $\sigma$ which can be controlled to zero, so noise takes no effect.</p>
 </li>
-<li><p><font color="red">Generative ability</font> is based on the condition that all $p(Z\X)$ close to gaussion distribution.<br>\begin{equation}<br>p(Z)=\sum_{X} p(Z | X) p(X)=\sum<em>{X} \mathcal{N}(0, I) p(X)=\mathcal{N}(0, I) \sum\</em>{X} p(X)=\mathcal{N}(0, I)<br>\end{equation}<br>so $p(Z)$ subjects to normal distribution, which satisfy the prior.</p>
+<li><p><font color="red">Generative ability</font> is based on the condition that all $p(Z\X)$ close to gaussion distribution.</p>
+</li>
+</ul>
+<p>\begin{equation}<br>p(Z)=\sum_{X} p(Z | X) p(X)=\sum_{X} \mathcal{N}(0, I) p(X)=\mathcal{N}(0, I) \sum_{X} p(X)=\mathcal{N}(0, I)<br>\end{equation}</p>
+<p>so $p(Z)$ subjects to normal distribution, which satisfy the prior.</p>
 <ul>
 <li><p>how: intruducing reconstruction loss:<br>direct method:<br>\begin{equation}<br>\mathcal{L}_{\mu}=\left|f_{1}\left(X_{k}\right)\right|^{2}<br>\end{equation}</p>
 <p>\begin{equation}<br>\mathcal{L}_{\sigma^{2}}=\left|f_{2}\left(X_{k}\right)\right|^{2}<br>\end{equation}</p>
 <p>it’s difficult to measure those loss, so it’s reasonable to introduce $KL$ divegence between standard gaussion distribution and independent gaussion distribution $K L\left(N\left(\mu, \sigma^{\wedge}\right) | N(0, l)\right)$:<br>\begin{equation}<br>\mathcal{L}_{\mu, \sigma^{2}}=\frac{1}{2} \sum_{i=1}^{d}\left(\mu_{(i)}^{2}+\sigma_{(i)}^{2}-\log \sigma_{(i)}^{2}-1\right)<br>\end{equation}<br>where $d$ is the dimension of $z$ </p>
-</li>
-</ul>
 </li>
 </ul>
 <h4 id="Essence-of-VAE"><a href="#Essence-of-VAE" class="headerlink" title="Essence of VAE"></a>Essence of VAE</h4><ul>

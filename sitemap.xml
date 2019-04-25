@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.yanhong.me/2019/04/23/Comparion-between-VAE-and-GAN/</loc>
+    
+    <lastmod>2019-04-25T01:41:16.447Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.yanhong.me/2019/04/09/Overview-of-GAN/</loc>
     
     <lastmod>2019-04-25T01:36:33.309Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://www.yanhong.me/2019/04/24/VAE-GAN/</loc>
     
     <lastmod>2019-04-24T02:44:42.968Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yanhong.me/2019/04/23/Comparion-between-VAE-and-GAN/</loc>
-    
-    <lastmod>2019-04-23T06:28:10.246Z</lastmod>
     
   </url>
   
