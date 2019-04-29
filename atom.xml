@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yanhong.me/"/>
-  <updated>2019-04-24T02:44:42.968Z</updated>
+  <updated>2019-04-28T16:10:56.543Z</updated>
   <id>https://www.yanhong.me/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Few-shot Datasets</title>
+    <link href="https://www.yanhong.me/2019/04/28/Few-shot-Datasets/"/>
+    <id>https://www.yanhong.me/2019/04/28/Few-shot-Datasets/</id>
+    <published>2019-04-28T15:32:34.000Z</published>
+    <updated>2019-04-28T16:10:56.543Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets"></a>Datasets</h2><h3 id="FIGR-8"><a href="#FIGR-8" class="headerlink" title="FIGR-8"></a>FIGR-8</h3><ul><li>grey</li><li>18,409 classes</li><li>total 1,548,944 images</li><li>each class contains at least 8 images</li><li>unbalance</li></ul><h3 id="Omniglot"><a href="#Omniglot" class="headerlink" title="Omniglot"></a>Omniglot</h3><ul><li>binary</li><li>50 alphabets</li><li>1623 unique type of characters</li><li>20 samples of each characters</li></ul><p>It contains 1623 unique type of characters originating from 50 alphabets, each of which has been handwritten 1 time by 20 different individuals</p><h2 id="Datasets-setting-in-different-paper"><a href="#Datasets-setting-in-different-paper" class="headerlink" title="Datasets setting in different paper"></a>Datasets setting in different paper</h2><h3 id="Classification"><a href="#Classification" class="headerlink" title="Classification"></a>Classification</h3><p><a href="http://papers.nips.cc/paper/6385-matching-networks-for-one-shot-learning.pdf" target="_blank" rel="noopener">Matching networks for one shot learning</a></p><ul><li>5-way-5-shot </li><li>support images (batchsize, 5 way * 5 shot, 1, 32, 32) + target images(batchsize, 5 shot from different 5 ways)</li></ul><h3 id="Generation"><a href="#Generation" class="headerlink" title="Generation"></a>Generation</h3><p><a href="https://arxiv.org/pdf/1901.02199.pdf" target="_blank" rel="noopener">FIGR: Few-shot Image Generation with Reptile</a></p><ul><li><p>FIGR-8: The training classes where all 18, 409 classes minus 50 ran- domly sampled classes for the test set; (batchsize=4,1,32,32) from same class.</p></li><li><p>Omniglot: The training classes where all 1623 characters in the dataset minus 20 randomly sampled character classes for the test set; (batchsize=4,1,32,32) from same class.</p></li></ul><p><a href="https://openreview.net/pdf?id=HyCRyS9gx" target="_blank" rel="noopener">FAST ADAPTATION IN GENERATIVE MODELS WITH GENERATIVE MATCHING NETWORKS</a></p><ul><li>Omniglot: (batchsize, 20 samples from up to 2 classes, 28, 28)</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Datasets&quot;&gt;&lt;a href=&quot;#Datasets&quot; class=&quot;headerlink&quot; title=&quot;Datasets&quot;&gt;&lt;/a&gt;Datasets&lt;/h2&gt;&lt;h3 id=&quot;FIGR-8&quot;&gt;&lt;a href=&quot;#FIGR-8&quot; class=&quot;headerli
+      
+    
+    </summary>
+    
+      <category term="Datasets" scheme="https://www.yanhong.me/categories/Datasets/"/>
+    
+    
+      <category term="few-shot learning" scheme="https://www.yanhong.me/tags/few-shot-learning/"/>
+    
+  </entry>
   
   <entry>
     <title>VAE-GAN</title>
