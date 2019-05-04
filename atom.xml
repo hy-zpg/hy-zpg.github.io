@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yanhong.me/"/>
-  <updated>2019-04-28T16:10:56.543Z</updated>
+  <updated>2019-05-04T01:56:37.113Z</updated>
   <id>https://www.yanhong.me/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Paper Writting</title>
+    <link href="https://www.yanhong.me/2019/05/04/Paper-Writting/"/>
+    <id>https://www.yanhong.me/2019/05/04/Paper-Writting/</id>
+    <published>2019-05-04T01:14:19.000Z</published>
+    <updated>2019-05-04T01:56:37.113Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Rules"><a href="#Rules" class="headerlink" title="Rules"></a>Rules</h3><p>well-organized: storyline -&gt; abstract and introduction -&gt; methods -&gt; related work -&gt; experiment</p><pre><code>* storyline: make sure that the storyline is reasonable and fluent before your writting.* abstract &amp; introduction: based on the refined storyline, to form abstract and introduction, a extension of abstract.* methods: to fully understand the proposed method, generally the method is inspired by other papers or books. it&#39;s important to know about what the method is and how it can deal with your problem. More importantly, forming core combined method based on those refered algorithm can help us to explain our story line in therotical analysis.* related work: it related to our selected baselines, so I think it belong to the survey work before this research project, and to update it when you read related papers. Another important point is to divide the sub-fields of your current research topic, you can find related works accurately and comprehensively.* experiment: comparion is important and classify those baselines into serveral group based on its relateness. To ablate the role of parameters in experiments and introduce &#39;special case&#39; to outline the effect of the proposed method.</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Rules&quot;&gt;&lt;a href=&quot;#Rules&quot; class=&quot;headerlink&quot; title=&quot;Rules&quot;&gt;&lt;/a&gt;Rules&lt;/h3&gt;&lt;p&gt;well-organized: storyline -&amp;gt; abstract and introduction 
+      
+    
+    </summary>
+    
+      <category term="Writting" scheme="https://www.yanhong.me/categories/Writting/"/>
+    
+    
+      <category term="experience" scheme="https://www.yanhong.me/tags/experience/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Few-shot Settings</title>
+    <link href="https://www.yanhong.me/2019/04/29/Few-shot-Setings/"/>
+    <id>https://www.yanhong.me/2019/04/29/Few-shot-Setings/</id>
+    <published>2019-04-29T05:42:29.000Z</published>
+    <updated>2019-04-29T09:00:49.838Z</updated>
+    
+    <content type="html"><![CDATA[<p>Taking Omniglot dataset as an example.</p><h2 id="Classification"><a href="#Classification" class="headerlink" title="Classification"></a>Classification</h2><p><a href="http://papers.nips.cc/paper/6385-matching-networks-for-one-shot-learning.pdf" target="_blank" rel="noopener">Matching networks for one shot learning</a></p><ul><li><p>datasets split </p><ol><li>classes split: total 1623 classes, 1200 classes in training set, 300 classes in validation set, the remaining classes in testing set.</li><li>episode: support images[batch_size, 5way * 5shot, image_size, image_size,1], target images[batch_size, 5shot, image_size, image_size,1]), batch_size is adjustable.</li></ol></li><li><p>training:</p><ol><li>considering matching between support images and target images</li><li>training and validation</li><li>training set for parameter update</li><li>validation set is used for evaluation the trained model, if accuracy<br>parameter update: parameters update based on matching classification accuracy</li></ol></li><li><p>testing:</p><ol><li>without parameter update</li><li>evaluating the classification of target images in testing set.</li></ol></li></ul><h2 id="Generation"><a href="#Generation" class="headerlink" title="Generation"></a>Generation</h2><p><a href="https://arxiv.org/pdf/1901.02199.pdf" target="_blank" rel="noopener">FIGR: Few-shot Image Generation with Reptile</a></p><ul><li><p>datasets split</p><ol><li>classes split: total 1623 classes, 20 classes in testing set and the remaining classes in training set.</li><li>episode: 1way * 4shot [4,image_size, image_size,1], batch_size(default=1) is unadjustable</li></ol></li><li><p>training:</p><ol><li>considering the optimization procedure from meta training to inner training</li><li>training and validation</li><li>training procedure: optimization</li></ol></li><li><p>testing:</p><ol><li>without parameter update</li><li>evaliating generator loss, discriminator loss, generated images in testing set.</li></ol></li></ul><p><a href="https://openreview.net/pdf?id=HyCRyS9gx" target="_blank" rel="noopener">FAST ADAPTATION IN GENERATIVE MODELS WITH GENERATIVE MATCHING NETWORKS</a></p><ul><li><p>dataset split:</p><ol><li>total 50 alphabets, 30 alphabets for training and the remaining for testing.</li><li>episode: up to 2way * sampled instance (10), batch size is adjustable.</li></ol></li><li><p>training:</p><ol><li></li></ol></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Taking Omniglot dataset as an example.&lt;/p&gt;
+&lt;h2 id=&quot;Classification&quot;&gt;&lt;a href=&quot;#Classification&quot; class=&quot;headerlink&quot; title=&quot;Classification&quot;&gt;&lt;/
+      
+    
+    </summary>
+    
+      <category term="Setting" scheme="https://www.yanhong.me/categories/Setting/"/>
+    
+    
+      <category term="few-shot generation" scheme="https://www.yanhong.me/tags/few-shot-generation/"/>
+    
+  </entry>
   
   <entry>
     <title>Few-shot Datasets</title>
