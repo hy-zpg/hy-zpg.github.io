@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
 <meta property="og:description" content="Taking Omniglot dataset as an example. ClassificationMatching networks for one shot learning  datasets split   classes split: total 1623 classes, 1200 classes in training set, 300 classes in validatio">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-29T09:00:49.838Z">
+<meta property="og:updated_time" content="2019-05-06T13:22:57.155Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Few-shot Settings">
 <meta name="twitter:description" content="Taking Omniglot dataset as an example. ClassificationMatching networks for one shot learning  datasets split   classes split: total 1623 classes, 1200 classes in training set, 300 classes in validatio">
@@ -471,7 +471,17 @@
 </li>
 <li><p>training:</p>
 <ol>
-<li></li>
+<li>considering the total loss from generation model (likelihood of the prior and generated images) and recognition model (likelihood of the generated prior).</li>
+<li>training and testing</li>
+<li>minimizing the loss (ll_gen_prior+ll_gen_img-ll_rec_prior), the total loss of testing is regarded as evaluation measurement.</li>
+</ol>
+</li>
+<li><p>testing:</p>
+<ol>
+<li>testing set: calculating the total loss (different calculation method)</li>
+<li>recondtruction: recontructed images based on trained samples (evaluaing the training intermediate results)</li>
+<li>generation: fedding test set, generated new image without training</li>
+<li>classification: two different methods. </li>
 </ol>
 </li>
 </ul>

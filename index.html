@@ -725,7 +725,17 @@
 </li>
 <li><p>training:</p>
 <ol>
-<li></li>
+<li>considering the total loss from generation model (likelihood of the prior and generated images) and recognition model (likelihood of the generated prior).</li>
+<li>training and testing</li>
+<li>minimizing the loss (ll_gen_prior+ll_gen_img-ll_rec_prior), the total loss of testing is regarded as evaluation measurement.</li>
+</ol>
+</li>
+<li><p>testing:</p>
+<ol>
+<li>testing set: calculating the total loss (different calculation method)</li>
+<li>recondtruction: recontructed images based on trained samples (evaluaing the training intermediate results)</li>
+<li>generation: fedding test set, generated new image without training</li>
+<li>classification: two different methods. </li>
 </ol>
 </li>
 </ul>
