@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yanhong.me/"/>
-  <updated>2019-05-04T02:51:06.550Z</updated>
+  <updated>2019-05-07T07:00:00.367Z</updated>
   <id>https://www.yanhong.me/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GAN Metrics</title>
+    <link href="https://www.yanhong.me/2019/05/07/GAN-Metrics/"/>
+    <id>https://www.yanhong.me/2019/05/07/GAN-Metrics/</id>
+    <published>2019-05-07T06:23:24.000Z</published>
+    <updated>2019-05-07T07:00:00.367Z</updated>
+    
+    <content type="html"><![CDATA[<p>Paper <a href="https://arxiv.org/pdf/1806.07755.pdf" target="_blank" rel="noopener">An empirical study on evaluation metrics of generative adversarial networks</a><br>Notes<a href="https://www.jianshu.com/p/fc5526b1fe3b" target="_blank" rel="noopener">gan metrics notes</a></p><p>There are two categories evaluation metric:</p><ol><li>sample-based</li><li>other</li></ol><h3 id="Sample-based-metrics"><a href="#Sample-based-metrics" class="headerlink" title="Sample-based metrics"></a>Sample-based metrics</h3><h4 id="The-Inception-Score"><a href="#The-Inception-Score" class="headerlink" title="The Inception Score"></a>The Inception Score</h4><ul><li>how: inception-v3 trained on Imagenet, the output of softmax, the input is the generated images.</li><li>evaluation:<ul><li>quality: the conditional possibility distriution $p(y | \mathbf{x})$, which is the probability of the vector of softmax layer (1000) and explicitly belong to which category.</li><li>diversity: the marginal possibility distriution $p(y)$, close to uniform distribution, which represents that the number of generated samples in each categoty is comparable.</li></ul></li><li>calculation:<br>\begin{equation}<br>\mathbf{I S}(G)=\exp \left(\mathbb{E}_{\mathbf{x} \sim p_{g}} D_{K L}(p(y | \mathbf{x}) | p(y))\right)<br>\end{equation}</li></ul><h4 id="The-Mode-Score"><a href="#The-Mode-Score" class="headerlink" title="The Mode Score"></a>The Mode Score</h4><ul><li>how: improvement of The Inception Score, considering the distribution of real images</li><li>evaluation:<ul><li>quality:</li><li>diversity:</li><li>dissimilarity between the real distriution and fake distribution</li></ul></li><li>calcualtion</li></ul><h4 id="Kernel-MMD"><a href="#Kernel-MMD" class="headerlink" title="Kernel MMD"></a>Kernel MMD</h4><ul><li>how: improved measurement to dissimilarity between the real distriution and fake distribution for some fixed kernel function.</li><li>evaluation: real samples and fake samples, lower MMD means close</li></ul><h4 id="The-Wasserstein-distance"><a href="#The-Wasserstein-distance" class="headerlink" title="The Wasserstein distance"></a>The Wasserstein distance</h4><ul><li>how: further improved measurement to dissimilarity between the real distriution and fake distribution</li><li>evaluation: real samples and fake samples, lower Wasserstein distance means close</li></ul><h4 id="The-Fréchet-Inception-Distance-FID"><a href="#The-Fréchet-Inception-Distance-FID" class="headerlink" title="The Fréchet Inception Distance (FID)"></a>The Fréchet Inception Distance (FID)</h4><ul><li>how: convulutional network is used to extract feature, modeling the Gaussian random variables with mean value and covariance from real and fake feature space.</li><li>evaluation: measuring the two Gaussian distribution</li></ul><h4 id="The-1-Nearest-Neighbor-classifier"><a href="#The-1-Nearest-Neighbor-classifier" class="headerlink" title="The 1-Nearest Neighbor classifier"></a>The 1-Nearest Neighbor classifier</h4><p>how: assessing the two distriution are identical.<br>evaluation: about 50% leave-one-out, the accuracy of generated images</p><h3 id="other-metrics"><a href="#other-metrics" class="headerlink" title="other metrics"></a>other metrics</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Paper &lt;a href=&quot;https://arxiv.org/pdf/1806.07755.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;An empirical study on evaluation metrics of generativ
+      
+    
+    </summary>
+    
+      <category term="Generative Model" scheme="https://www.yanhong.me/categories/Generative-Model/"/>
+    
+    
+      <category term="evaluation" scheme="https://www.yanhong.me/tags/evaluation/"/>
+    
+  </entry>
   
   <entry>
     <title>Paper Writting</title>
@@ -46,7 +71,7 @@
     <link href="https://www.yanhong.me/2019/04/29/Few-shot-Setings/"/>
     <id>https://www.yanhong.me/2019/04/29/Few-shot-Setings/</id>
     <published>2019-04-29T05:42:29.000Z</published>
-    <updated>2019-05-06T13:22:57.155Z</updated>
+    <updated>2019-05-07T06:22:49.817Z</updated>
     
     <content type="html"><![CDATA[<p>Taking Omniglot dataset as an example.</p><h2 id="Classification"><a href="#Classification" class="headerlink" title="Classification"></a>Classification</h2><p><a href="http://papers.nips.cc/paper/6385-matching-networks-for-one-shot-learning.pdf" target="_blank" rel="noopener">Matching networks for one shot learning</a></p><ul><li><p>datasets split </p><ol><li>classes split: total 1623 classes, 1200 classes in training set, 300 classes in validation set, the remaining classes in testing set.</li><li>episode: support images[batch_size, 5way * 5shot, image_size, image_size,1], target images[batch_size, 5shot, image_size, image_size,1]), batch_size is adjustable.</li></ol></li><li><p>training:</p><ol><li>considering matching between support images and target images</li><li>training and validation</li><li>training set for parameter update</li><li>validation set is used for evaluation the trained model, if accuracy<br>parameter update: parameters update based on matching classification accuracy</li></ol></li><li><p>testing:</p><ol><li>without parameter update</li><li>evaluating the classification of target images in testing set.</li></ol></li></ul><h2 id="Generation"><a href="#Generation" class="headerlink" title="Generation"></a>Generation</h2><p><a href="https://arxiv.org/pdf/1901.02199.pdf" target="_blank" rel="noopener">FIGR: Few-shot Image Generation with Reptile</a></p><ul><li><p>datasets split</p><ol><li>classes split: total 1623 classes, 20 classes in testing set and the remaining classes in training set.</li><li>episode: 1way * 4shot [4,image_size, image_size,1], batch_size(default=1) is unadjustable</li></ol></li><li><p>training:</p><ol><li>considering the optimization procedure from meta training to inner training</li><li>training and validation</li><li>training procedure: optimization</li></ol></li><li><p>testing:</p><ol><li>without parameter update</li><li>evaliating generator loss, discriminator loss, generated images in testing set.</li></ol></li></ul><p><a href="https://openreview.net/pdf?id=HyCRyS9gx" target="_blank" rel="noopener">FAST ADAPTATION IN GENERATIVE MODELS WITH GENERATIVE MATCHING NETWORKS</a></p><ul><li><p>dataset split:</p><ol><li>total 50 alphabets, 30 alphabets for training and the remaining for testing.</li><li>episode: up to 2way * sampled instance (10), batch size is adjustable.</li></ol></li><li><p>training:</p><ol><li>considering the total loss from generation model (likelihood of the prior and generated images) and recognition model (likelihood of the generated prior).</li><li>training and testing</li><li>minimizing the loss (ll_gen_prior+ll_gen_img-ll_rec_prior), the total loss of testing is regarded as evaluation measurement.</li></ol></li><li><p>testing:</p><ol><li>testing set: calculating the total loss (different calculation method)</li><li>recondtruction: recontructed images based on trained samples (evaluaing the training intermediate results)</li><li>generation: fedding test set, generated new image without training</li><li>classification: two different methods. </li></ol></li></ul>]]></content>
     
