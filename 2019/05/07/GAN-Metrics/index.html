@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
 <meta property="og:description" content="Paper An empirical study on evaluation metrics of generative adversarial networksNotesgan metrics notes There are two categories evaluation metric:  sample-based other  Sample-based metricsThe Incepti">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-07T07:00:00.367Z">
+<meta property="og:updated_time" content="2019-05-07T08:26:11.802Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GAN Metrics">
 <meta name="twitter:description" content="Paper An empirical study on evaluation metrics of generative adversarial networksNotesgan metrics notes There are two categories evaluation metric:  sample-based other  Sample-based metricsThe Incepti">
@@ -429,6 +429,7 @@
 </ul>
 </li>
 <li>calculation:<br>\begin{equation}<br>\mathbf{I S}(G)=\exp \left(\mathbb{E}_{\mathbf{x} \sim p_{g}} D_{K L}(p(y | \mathbf{x}) | p(y))\right)<br>\end{equation}</li>
+<li>the larger, the better. quality and diversity.</li>
 </ul>
 <h4 id="The-Mode-Score"><a href="#The-Mode-Score" class="headerlink" title="The Mode Score"></a>The Mode Score</h4><ul>
 <li>how: improvement of The Inception Score, considering the distribution of real images</li>
@@ -439,20 +440,28 @@
 </ul>
 </li>
 <li>calcualtion</li>
+<li>the larger, the better. quality and diversity.</li>
 </ul>
 <h4 id="Kernel-MMD"><a href="#Kernel-MMD" class="headerlink" title="Kernel MMD"></a>Kernel MMD</h4><ul>
 <li>how: improved measurement to dissimilarity between the real distriution and fake distribution for some fixed kernel function.</li>
 <li>evaluation: real samples and fake samples, lower MMD means close</li>
+<li>the smaller, the better. quality.</li>
 </ul>
 <h4 id="The-Wasserstein-distance"><a href="#The-Wasserstein-distance" class="headerlink" title="The Wasserstein distance"></a>The Wasserstein distance</h4><ul>
 <li>how: further improved measurement to dissimilarity between the real distriution and fake distribution</li>
 <li>evaluation: real samples and fake samples, lower Wasserstein distance means close</li>
+<li>the smaller, the better. depending on the selection of feature space.</li>
 </ul>
 <h4 id="The-Fréchet-Inception-Distance-FID"><a href="#The-Fréchet-Inception-Distance-FID" class="headerlink" title="The Fréchet Inception Distance (FID)"></a>The Fréchet Inception Distance (FID)</h4><ul>
 <li>how: convulutional network is used to extract feature, modeling the Gaussian random variables with mean value and covariance from real and fake feature space.</li>
 <li>evaluation: measuring the two Gaussian distribution</li>
+<li>the smaller, the better. efficiency.</li>
 </ul>
-<h4 id="The-1-Nearest-Neighbor-classifier"><a href="#The-1-Nearest-Neighbor-classifier" class="headerlink" title="The 1-Nearest Neighbor classifier"></a>The 1-Nearest Neighbor classifier</h4><p>how: assessing the two distriution are identical.<br>evaluation: about 50% leave-one-out, the accuracy of generated images</p>
+<h4 id="The-1-Nearest-Neighbor-classifier"><a href="#The-1-Nearest-Neighbor-classifier" class="headerlink" title="The 1-Nearest Neighbor classifier"></a>The 1-Nearest Neighbor classifier</h4><ul>
+<li>how: assessing the two distriution are identical.</li>
+<li>evaluation: about 50% leave-one-out, the accuracy of generated images</li>
+<li>several measurement index: accuracy, recall ….. ideal evaluation metric</li>
+</ul>
 <h3 id="other-metrics"><a href="#other-metrics" class="headerlink" title="other metrics"></a>other metrics</h3>
       
     </div>
