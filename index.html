@@ -1719,6 +1719,12 @@
 <h3 id="Possible-ideas"><a href="#Possible-ideas" class="headerlink" title="Possible ideas"></a>Possible ideas</h3><ul>
 <li>VAE generated images is vague, may it can be combined with GAN <a href="https://arxiv.org/pdf/1512.09300.pdf" target="_blank" rel="noopener">Autoencoding beyond pixels using a learned similarity metric</a></li>
 </ul>
+<h3 id="My-high-level-understanding-of-GMN"><a href="#My-high-level-understanding-of-GMN" class="headerlink" title="My high-level understanding of GMN"></a>My high-level understanding of GMN</h3><ul>
+<li><p>VAE: reconstruction (likelihood) + KL divergence(the distribution of latent varables[z_posterior] and normal distribution[z_prior])</p>
+</li>
+<li><p>GMN: reconstruction (likelihood) + KL divergence(the distribution of latent varables[z_posterior] and modified distribution with mean, variance values from observations[z_prior])<br><img src="/imgs/GMN_VAE.jpg" alt="&#39;comparison between VAE and GMN&#39;"></p>
+</li>
+</ul>
 
           
         
