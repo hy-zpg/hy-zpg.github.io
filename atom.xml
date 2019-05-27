@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yanhong.me/"/>
-  <updated>2019-05-07T08:26:11.802Z</updated>
+  <updated>2019-05-27T08:15:19.690Z</updated>
   <id>https://www.yanhong.me/</id>
   
   <author>
@@ -15,6 +15,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Normalization_for_Input_of_GAN</title>
+    <link href="https://www.yanhong.me/2019/05/27/Normalization-for-Input-of-GAN/"/>
+    <id>https://www.yanhong.me/2019/05/27/Normalization-for-Input-of-GAN/</id>
+    <published>2019-05-27T08:05:16.000Z</published>
+    <updated>2019-05-27T08:15:19.690Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Normalization-methods-for-the-input-of-GAN-and-visualization"><a href="#Normalization-methods-for-the-input-of-GAN-and-visualization" class="headerlink" title="Normalization methods for the input of GAN and visualization"></a>Normalization methods for the input of GAN and visualization</h3><h4 id="simple"><a href="#simple" class="headerlink" title="simple"></a>simple</h4><p>input<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def normalization(data):</span><br><span class="line">    data = data - 127.5</span><br><span class="line">    data = data / 127.5</span><br><span class="line">    <span class="built_in">return</span> data</span><br></pre></td></tr></table></figure></p><p>visualization<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fake = G(z)</span><br><span class="line">def unnormalization(data):</span><br><span class="line">    data = data * 127.5</span><br><span class="line">    data = data + 127.5</span><br><span class="line">    <span class="built_in">return</span> data</span><br><span class="line">visual_image = unnormalization(fake)</span><br></pre></td></tr></table></figure></p><h4 id="mean-and-std"><a href="#mean-and-std" class="headerlink" title="mean and std"></a>mean and std</h4><p>input (using the mean and std of training set)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def normalization(self):</span><br><span class="line">        <span class="string">""</span><span class="string">"</span></span><br><span class="line"><span class="string">        Normalizes our data, to have a mean of 0 and sdt of 1</span></span><br><span class="line"><span class="string">        "</span><span class="string">""</span></span><br><span class="line">        self.mean = np.mean(self.x_train)</span><br><span class="line">        self.std = np.std(self.x_train)</span><br><span class="line">        self.x_train = (self.x_train - self.mean) / self.std</span><br><span class="line">        self.x_val = (self.x_val - self.mean) / self.std</span><br><span class="line">        self.x_test = (self.x_test - self.mean) / self.std</span><br></pre></td></tr></table></figure></p><p>visualization(using the mean and std of training set)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def unnormalization(self,fake):</span><br><span class="line">        <span class="string">""</span><span class="string">"</span></span><br><span class="line"><span class="string">        Normalizes our data, to have a mean of 0 and sdt of 1</span></span><br><span class="line"><span class="string">        "</span><span class="string">""</span></span><br><span class="line">        self.mean = np.mean(self.x_train)</span><br><span class="line">        self.std = np.std(self.x_train)</span><br><span class="line">        visual_image = fake*self.std + self.mean</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Normalization-methods-for-the-input-of-GAN-and-visualization&quot;&gt;&lt;a href=&quot;#Normalization-methods-for-the-input-of-GAN-and-visualization
+      
+    
+    </summary>
+    
+      <category term="GAN" scheme="https://www.yanhong.me/categories/GAN/"/>
+    
+    
+      <category term="data preprocess" scheme="https://www.yanhong.me/tags/data-preprocess/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Related Work about Few-shot Image Generation</title>
+    <link href="https://www.yanhong.me/2019/05/21/Related-Work-about-Few-shot-Image-Generation/"/>
+    <id>https://www.yanhong.me/2019/05/21/Related-Work-about-Few-shot-Image-Generation/</id>
+    <published>2019-05-21T00:58:12.000Z</published>
+    <updated>2019-05-21T00:58:12.605Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>GAN Metrics</title>

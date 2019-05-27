@@ -1,5 +1,5 @@
+https://www.yanhong.me/2019/05/27/Normalization-for-Input-of-GAN/
+https://www.yanhong.me/2019/05/21/Related-Work-about-Few-shot-Image-Generation/
 https://www.yanhong.me/2019/05/07/GAN-Metrics/
 https://www.yanhong.me/2019/05/04/Paper-Writting/
 https://www.yanhong.me/2019/04/29/Few-shot-Setings/
-https://www.yanhong.me/2019/04/28/Few-shot-Datasets/
-https://www.yanhong.me/2019/04/24/VAE-GAN/
