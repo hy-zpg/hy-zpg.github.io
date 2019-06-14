@@ -4,6 +4,69 @@
   
     
     <entry>
+      <title>Pedestrain Datasets</title>
+      <link href="/2019/06/14/Pedestrain-Datasets/"/>
+      <url>/2019/06/14/Pedestrain-Datasets/</url>
+      
+        <content type="html"><![CDATA[<h4 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h4><p><a href="https://craigie1996.github.io/2018/05/11/Pedestrian-Attribute-Recognition-调研笔记/" target="_blank" rel="noopener">RAP, PETA, PA-100K</a></p><p><a href="https://www.cnblogs.com/wangxiaocvpr/p/10162679.html" target="_blank" rel="noopener">Most dataset and papers links</a></p><p><a href="https://blog.csdn.net/Code_Mart/article/details/87721803" target="_blank" rel="noopener">Most dataset</a></p><h4 id="Simple-introduction"><a href="#Simple-introduction" class="headerlink" title="Simple introduction"></a>Simple introduction</h4><ul><li><p><a href="https://exhibits.stanford.edu/data/catalog/tb980qz1002" target="_blank" rel="noopener">Clothing Attributes Dataset</a>: cloth style(8 categories), ensurely used.</p></li><li><p><a href="http://mmlab.ie.cuhk.edu.hk/projects/PETA.html" target="_blank" rel="noopener">PETA Dataset</a>: low-resolution, multi-class(age 4 categories), download</p></li><li><p><a href="https://jurie.users.greyc.fr/datasets/hat.html" target="_blank" rel="noopener">Database of Human Attributes (HAT)</a>: high-resolution, age(multi-classes), having sent email</p></li><li><p><a href="https://arxiv.org/pdf/1603.07054.pdf" target="_blank" rel="noopener">RAP Dataset</a>: not high-resolution, 3-multi-classes(age 3 categories), waiting to send email.</p></li><li><p>PA-100K Dataset: binary</p></li><li><p>WIDER Attribute Dataset: multi-people</p></li><li><p>Parse27k Dataset: squence, oritation(multi-class), not so much related</p></li><li><p>CRP Dataset: squence, not human centre</p></li><li><p>Berkeley-Attributes of People: binary</p></li><li><p>Deepfashion dataset: cloth related</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Human Attributes </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> datasets </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>U-Net</title>
+      <link href="/2019/06/10/U-Net/"/>
+      <url>/2019/06/10/U-Net/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Interpolation in Latent Space</title>
+      <link href="/2019/06/05/Interpolation-in-Latent-Space/"/>
+      <url>/2019/06/05/Interpolation-in-Latent-Space/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Paper-Reading"><a href="#Paper-Reading" class="headerlink" title="Paper Reading"></a>Paper Reading</h3><p><a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Hsin-Ying_Lee_Diverse_Image-to-Image_Translation_ECCV_2018_paper.pdf" target="_blank" rel="noopener">Diverse Image-to-Image Translation via Disentangled Representations</a></p><ul><li>novalty</li></ul><p>diverse translation between two collections of images without aligned training pairs</p><p><a href="https://arxiv.org/pdf/1511.06434.pdf" target="_blank" rel="noopener">UNSUPERVISED REPRESENTATION LEARNING WITH DEEP CONVOLUTIONAL<br>GENERATIVE ADVERSARIAL NETWORKS</a></p><p><a href="https://arxiv.org/pdf/1711.05415.pdf" target="_blank" rel="noopener">DNA-GAN: LEARNING DISENTANGLED REPRESEN- TATIONS FROM MULTI-ATTRIBUTE IMAGES</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Generative Model </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> interpolation </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Normalization_for_Input_of_GAN</title>
       <link href="/2019/05/27/Normalization-for-Input-of-GAN/"/>
       <url>/2019/05/27/Normalization-for-Input-of-GAN/</url>

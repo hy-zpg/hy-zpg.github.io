@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.yanhong.me/2019/06/14/Pedestrain-Datasets/</loc>
+    
+    <lastmod>2019-06-14T02:01:07.270Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yanhong.me/2019/06/10/U-Net/</loc>
+    
+    <lastmod>2019-06-10T06:56:57.983Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yanhong.me/2019/06/05/Interpolation-in-Latent-Space/</loc>
+    
+    <lastmod>2019-06-05T06:17:38.919Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.yanhong.me/2019/05/27/Normalization-for-Input-of-GAN/</loc>
     
     <lastmod>2019-05-27T08:15:19.690Z</lastmod>

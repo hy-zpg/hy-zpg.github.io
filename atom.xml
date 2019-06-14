@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yanhong.me/"/>
-  <updated>2019-05-27T08:15:19.690Z</updated>
+  <updated>2019-06-14T02:01:07.270Z</updated>
   <id>https://www.yanhong.me/</id>
   
   <author>
@@ -15,6 +15,70 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Pedestrain Datasets</title>
+    <link href="https://www.yanhong.me/2019/06/14/Pedestrain-Datasets/"/>
+    <id>https://www.yanhong.me/2019/06/14/Pedestrain-Datasets/</id>
+    <published>2019-06-14T01:38:51.000Z</published>
+    <updated>2019-06-14T02:01:07.270Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h4><p><a href="https://craigie1996.github.io/2018/05/11/Pedestrian-Attribute-Recognition-调研笔记/" target="_blank" rel="noopener">RAP, PETA, PA-100K</a></p><p><a href="https://www.cnblogs.com/wangxiaocvpr/p/10162679.html" target="_blank" rel="noopener">Most dataset and papers links</a></p><p><a href="https://blog.csdn.net/Code_Mart/article/details/87721803" target="_blank" rel="noopener">Most dataset</a></p><h4 id="Simple-introduction"><a href="#Simple-introduction" class="headerlink" title="Simple introduction"></a>Simple introduction</h4><ul><li><p><a href="https://exhibits.stanford.edu/data/catalog/tb980qz1002" target="_blank" rel="noopener">Clothing Attributes Dataset</a>: cloth style(8 categories), ensurely used.</p></li><li><p><a href="http://mmlab.ie.cuhk.edu.hk/projects/PETA.html" target="_blank" rel="noopener">PETA Dataset</a>: low-resolution, multi-class(age 4 categories), download</p></li><li><p><a href="https://jurie.users.greyc.fr/datasets/hat.html" target="_blank" rel="noopener">Database of Human Attributes (HAT)</a>: high-resolution, age(multi-classes), having sent email</p></li><li><p><a href="https://arxiv.org/pdf/1603.07054.pdf" target="_blank" rel="noopener">RAP Dataset</a>: not high-resolution, 3-multi-classes(age 3 categories), waiting to send email.</p></li><li><p>PA-100K Dataset: binary</p></li><li><p>WIDER Attribute Dataset: multi-people</p></li><li><p>Parse27k Dataset: squence, oritation(multi-class), not so much related</p></li><li><p>CRP Dataset: squence, not human centre</p></li><li><p>Berkeley-Attributes of People: binary</p></li><li><p>Deepfashion dataset: cloth related</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;Links&quot;&gt;&lt;a href=&quot;#Links&quot; class=&quot;headerlink&quot; title=&quot;Links&quot;&gt;&lt;/a&gt;Links&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://craigie1996.github.io/2018/05/11/Pedestri
+      
+    
+    </summary>
+    
+      <category term="Human Attributes" scheme="https://www.yanhong.me/categories/Human-Attributes/"/>
+    
+    
+      <category term="datasets" scheme="https://www.yanhong.me/tags/datasets/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>U-Net</title>
+    <link href="https://www.yanhong.me/2019/06/10/U-Net/"/>
+    <id>https://www.yanhong.me/2019/06/10/U-Net/</id>
+    <published>2019-06-10T06:56:57.000Z</published>
+    <updated>2019-06-10T06:56:57.983Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Interpolation in Latent Space</title>
+    <link href="https://www.yanhong.me/2019/06/05/Interpolation-in-Latent-Space/"/>
+    <id>https://www.yanhong.me/2019/06/05/Interpolation-in-Latent-Space/</id>
+    <published>2019-06-05T06:13:03.000Z</published>
+    <updated>2019-06-05T06:17:38.919Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Paper-Reading"><a href="#Paper-Reading" class="headerlink" title="Paper Reading"></a>Paper Reading</h3><p><a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Hsin-Ying_Lee_Diverse_Image-to-Image_Translation_ECCV_2018_paper.pdf" target="_blank" rel="noopener">Diverse Image-to-Image Translation via Disentangled Representations</a></p><ul><li>novalty</li></ul><p>diverse translation between two collections of images without aligned training pairs</p><p><a href="https://arxiv.org/pdf/1511.06434.pdf" target="_blank" rel="noopener">UNSUPERVISED REPRESENTATION LEARNING WITH DEEP CONVOLUTIONAL<br>GENERATIVE ADVERSARIAL NETWORKS</a></p><p><a href="https://arxiv.org/pdf/1711.05415.pdf" target="_blank" rel="noopener">DNA-GAN: LEARNING DISENTANGLED REPRESEN- TATIONS FROM MULTI-ATTRIBUTE IMAGES</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Paper-Reading&quot;&gt;&lt;a href=&quot;#Paper-Reading&quot; class=&quot;headerlink&quot; title=&quot;Paper Reading&quot;&gt;&lt;/a&gt;Paper Reading&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://openaccess
+      
+    
+    </summary>
+    
+      <category term="Generative Model" scheme="https://www.yanhong.me/categories/Generative-Model/"/>
+    
+    
+      <category term="interpolation" scheme="https://www.yanhong.me/tags/interpolation/"/>
+    
+  </entry>
   
   <entry>
     <title>Normalization_for_Input_of_GAN</title>

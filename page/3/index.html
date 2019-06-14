@@ -307,6 +307,599 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/27/Cross-stitch-network/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/27/Cross-stitch-network/" itemprop="url">Cross Stitch Network</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-27T14:03:23+08:00">
+                2019-02-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="cross-stitch-network"><a href="#cross-stitch-network" class="headerlink" title="cross-stitch-network"></a>cross-stitch-network</h2><blockquote>
+<p>reference CVPR 2016<a href="https://arxiv.org/pdf/1604.03539.pdf" target="_blank" rel="noopener">Cross-stitch Networks for Multi-task Learning</a> <a href="https://github.com/helloyide/Cross-stitch-Networks-for-Multi-task-Learning/blob/master/gender_age_multi_task_learning.py" target="_blank" rel="noopener">tensorflow-code</a></p>
+</blockquote>
+<ul>
+<li>problem: existing multi-task approaches rely on enumerating multiple net- work architectures specific to the tasks at hand, that do not generalize.</li>
+<li>method: proposing a new sharing unit: “cross-stitch” unit. These units combine the activations from multiple networks.</li>
+</ul>
+<h2 id="self-defined-cross-stitch-layer-in-keras-with-tensorflow-as-backbone"><a href="#self-defined-cross-stitch-layer-in-keras-with-tensorflow-as-backbone" class="headerlink" title="self-defined cross-stitch layer in keras with tensorflow as backbone"></a>self-defined cross-stitch layer in keras with tensorflow as backbone</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class Cross_stitch(Layer):</span><br><span class="line">	<span class="comment"># basic parameter setting</span></span><br><span class="line">    def __init__(self,input_shape_1,input_shape_2, **kwargs):</span><br><span class="line">        super(Cross_stitch, self).__init__(**kwargs)</span><br><span class="line">        self.input_shape_1 = input_shape_1</span><br><span class="line">        self.input_shape_2 = input_shape_2</span><br><span class="line">    <span class="comment"># apply trainable parameters in network, similar to convolutional layer </span></span><br><span class="line">    <span class="comment"># shape is important, you must to calculate specific size based on the shape of input and output</span></span><br><span class="line">    <span class="comment"># in cross-stitch network: [xa,xb]*[papameter]=[xa',xb'], the detail refer to the paper</span></span><br><span class="line">    def build(self, input_shape):</span><br><span class="line">        shape = self.input_shape_1 + self.input_shape_2</span><br><span class="line">        self.cross_stitch = self.add_weight(</span><br><span class="line">            shape=(shape,shape),</span><br><span class="line">            initializer=tf.initializers.identity(),</span><br><span class="line">            name=<span class="string">'cross_stitch'</span>)</span><br><span class="line">        self.built = True</span><br><span class="line">    <span class="comment"># conduct implement of the detailed algorithm calculation</span></span><br><span class="line">    <span class="comment"># inputs represent the output of upper layer, such as x=Dense(parameter)(inputs)</span></span><br><span class="line">    def call(self,inputs):</span><br><span class="line">        inputss = tf.concat((inputs[0], inputs[1]), axis=1)</span><br><span class="line">        output = tf.matmul(inputss, self.cross_stitch)</span><br><span class="line">        output1 = tf.reshape(output[:,:self.input_shape_1],shape=[-1,self.input_shape_1])</span><br><span class="line">        output2 = tf.reshape(output[:,self.input_shape_2:],shape=[-1,self.input_shape_2])</span><br><span class="line">        <span class="built_in">return</span> [output1, output2]</span><br><span class="line">    def get_config(self):</span><br><span class="line">        config = &#123;<span class="string">'input_shape_1'</span>: self.input_shape_1,<span class="string">'input_shape_2'</span>: self.input_shape_2&#125;</span><br><span class="line">        base_config = super(Cross_stitch, self).get_config()</span><br><span class="line">        <span class="built_in">return</span> dict(list(base_config.items()) + list(config.items()))</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/26/Heterogeneous-Multitask/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/26/Heterogeneous-Multitask/" itemprop="url">Heterogeneous Multitask</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-26T15:46:30+08:00">
+                2019-02-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Large-scale-Heterogeneous-Learning-in-Big-Data-Analytics"><a href="#Large-scale-Heterogeneous-Learning-in-Big-Data-Analytics" class="headerlink" title="Large-scale Heterogeneous Learning in Big Data Analytics"></a>Large-scale Heterogeneous Learning in Big Data Analytics</h1><blockquote>
+<p>reference slide <a href="http://cci.drexel.edu/bigdata/bigdata2014/MTL_BigData_14.pdf" target="_blank" rel="noopener">Large-scale Heterogeneous Learning in Big Data Analytics</a></p>
+</blockquote>
+<ul>
+<li>multi-task learning<br>‘Multitask learning is an inductive transfer mechanism for improving generalization performance [Caruana, Machine Learning’97]’</li>
+<li>multi-label learning:</li>
+<li>multi-view learning:</li>
+</ul>
+<h2 id="Heterogeneous-outputs-related-to-each-other-with-the-same-set-of-inputs"><a href="#Heterogeneous-outputs-related-to-each-other-with-the-same-set-of-inputs" class="headerlink" title="Heterogeneous outputs related to each other with the same set of inputs"></a>Heterogeneous outputs related to each other with the same set of inputs</h2><blockquote>
+<p>reference-1 <a href="http://www.cs.cmu.edu/~sssykim/papers/yang_kim_xing_nips09.pdf" target="_blank" rel="noopener">Heterogeneous Multitask Learning with Joint Sparsity Constraints</a></p>
+</blockquote>
+<ol>
+<li>probelm: dealing with homogeneous tasks, such as purely regression (continue) or classification (discrete) task, from a common set of high-dimensional feature space. </li>
+<li>method: modeling the joint sparsity as L1/L∞ or L1/L2 norm of the model parameters, achieving joint sparse feature selection.</li>
+<li>datasets: discovering genetic markers that influence multiple correlated traits jointly, datasets with different clinical traits including continuous and discrete labels.</li>
+</ol>
+<h2 id="Heterogeneous-inputs-from-multiple-domains"><a href="#Heterogeneous-inputs-from-multiple-domains" class="headerlink" title="Heterogeneous inputs from multiple domains"></a>Heterogeneous inputs from multiple domains</h2><blockquote>
+<p>reference-2 <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8058002&amp;tag=1" target="_blank" rel="noopener">Heterogeneous Multitask Metric Learning<br>Across Multiple Domains</a> <a href="https://www.semanticscholar.org/paper/Exploiting-High-Order-Information-in-Heterogeneous-Luo-Tao/1bf6d4b31fa26aa9e0c2b759e6bee9ec718dcae7" target="_blank" rel="noopener">Exploiting High-Order Information in Heterogeneous Multi-Task Feature Learning</a></p>
+</blockquote>
+<ul>
+<li>‘Multitask metric learning (MTML), which can be regarded as a special case of transfer metric learning (TML) by performing transfer across all related domains.’</li>
+<li>‘Heterogeneous transfer learning approaches can be adopted to remedy this drawback by deriving a metric from the learned transformation across different domains’<ol>
+<li>probelm: inputs from heterogeneous domain can be solved by deriving a metric from the learned transformation from two domains, but pratical aims is to deal with multiple domain by learning the metric from all domains.</li>
+<li>method: metrics -&gt; transformation -&gt; subspace -&gt; maximize high-order ovariance among the predictive structures of these domains, because high-order statistics (correlation information), which can only be exploited by simultaneously examining all domains, thus obtaining more reliable feature transformations and metrics.</li>
+<li>datasets: Document Categorization, Scene Classification and Image Annotation</li>
+</ol>
+</li>
+</ul>
+<h2 id="Heterogeneous-features-for-different-task"><a href="#Heterogeneous-features-for-different-task" class="headerlink" title="Heterogeneous features for different task"></a>Heterogeneous features for different task</h2><blockquote>
+<p>reference-3 <a href="http://www.intsci.ac.cn/users/fzzhuang/papers/TOC2017.pdf" target="_blank" rel="noopener">Semantic Feature Learning for Heterogeneous<br>Multitask Classification via Non-Negative<br>Matrix Factorization</a></p>
+</blockquote>
+<ol>
+<li>problem: different tasks have heterogenous feature in real world.</li>
+<li>method: leveraging a non-negative matrix factorization-based multitask method (MTNMF) to learn a common semantic feature space underlying different heterogeneous feature spaces of each task. it is similar to reference-1, feature selection vs feature factorization.</li>
+<li>datasets: 20Newsgroups&amp;ImageNet (image and document), Email Spam Detection (15 persons), Sentiment Classification (books;  dvd; electronics; kitchen)</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/22/Why-How-Pseudo/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/22/Why-How-Pseudo/" itemprop="url">Why and How to Use Pseudo</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-22T10:53:37+08:00">
+                2019-02-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Theory/" itemprop="url" rel="index">
+                    <span itemprop="name">Theory</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>Pseudo labels in multi-task learning</li>
+<li>Pseudo data selection with density and distribution distance</li>
+</ul>
+<h2 id="Pseudo-labels"><a href="#Pseudo-labels" class="headerlink" title="Pseudo labels"></a>Pseudo labels</h2><p>The reason why need to apply pseudo data into model training </p>
+<ul>
+<li><blockquote>
+<p>reference <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Sheng_Guo_CurriculumNet_Learning_from_ECCV_2018_paper.pdf" target="_blank" rel="noopener">CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images</a>, demonstrating that training a CNN from scratch using both clean and noisy data is better than just using the clean one, on the condition that the amount of pseudo data is limited.</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>reference <a href="https://arxiv.org/pdf/1609.06426.pdf" target="_blank" rel="noopener">From Facial Expression Recognition to Interpersonal Relation Prediction Zhanpeng</a>, stating explaination that pseudo data can bridge the gap between heterogeneous data.</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>reference <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Misra_Seeing_Through_the_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Seeing through the Human Reporting Bias: Visual Classifiers from Noisy Human-Centric Labels</a>, ‘what’s the all attributs of images’ versus ‘what’s the labeled attributes’, labeling missing attributes. The novalty may be regarded as a baseline (waiting to understand the detail).</p>
+</blockquote>
+</li>
+<li>data imbalance in joint training strategy, such as 20k~ pose dataset AFLW and 90k~ emotion dataset ExpW.</li>
+</ul>
+<h2 id="Pseudo-data-selection"><a href="#Pseudo-data-selection" class="headerlink" title="Pseudo data selection"></a>Pseudo data selection</h2><p>Because much noisy data can effect the model performance and even disturb the model training process, leading to poor model performance, pseudo data selection can control the ratio of pseudo data in the whole datasets.</p>
+<h3 id="Density"><a href="#Density" class="headerlink" title="Density"></a>Density</h3><ul>
+<li>reason: because clusters are easily detected by the local density of data points, in the pseudo data belong to same categoty have similar feature. Appling a density based clustering algorithm that measures the complexity of psuedo data using data distribution density in. each category.</li>
+<li>implementation detail: measuring the purity of data with pseudo label based on its distribution density in a feature space, and rank the purity to generate pseudo weights, pseudo data with higher density is assigned larger weights, while smaller weights are assigned to low-density pseudo data.</li>
+</ul>
+<h3 id="Distribution-distance"><a href="#Distribution-distance" class="headerlink" title="Distribution distance"></a>Distribution distance</h3><ul>
+<li>reason: <ul>
+<li>‘transfer learning is one important method in machine learning, it can relax the condition of the independent identical distribution in train dataset and test dataset, so that knowledge can be transfered from source domain to target domain’,’its main application includes domain adaptation and multi-domain tranferation’.</li>
+<li>instance-based domain adaption: calculating the distance between source domain data and target domain data, then adjusting the weights of target domain instance so that the target data can be matched with source domain data. In detail, the smaller distance, the higher similarity.</li>
+</ul>
+</li>
+<li><p>implementation detail: </p>
+<ol>
+<li>GMM<ul>
+<li>reason:</li>
+<li>implementation: generating Gaussian Mixture models (GMM) based on A1 (data with pseuodo label) and B (data with ground truth) in each categoty. Assuming GMM has K Gaussian models, we obtain G(A1_1), …, G(A1_K), G(B1_1), …, G(B1_K); </li>
+</ul>
+</li>
+<li><p>EMD</p>
+<ul>
+<li><p>reason: &gt;reference <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cui_Large_Scale_Fine-Grained_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Large Scale Fine-Grained Categorization and Domain-Specific Transfer Learning</a>,  which takes domain scale into account by adding a scale factor. In this paper, transfer learning can be viewed as moving a set of images from the source domain S to the target domain T. The work needed to be done by moving an image to another can be defined as their feature Euaullean distance, so the distance between two domains can be defined as the least amount of total work needed. This definition of domain similarity can be calculated by the Earth Mover’s Distance (EMD). </p>
+<ul>
+<li><p>original EMD equation</p>
+<p>\begin{aligned}<br>\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}=\min {\sum_{i=1}^{m}w_{pi},\quad \sum_{j=1}^{n}w_{qj}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}d_{i,j}}{\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>P={(p_{1},w_{p1}),(p_{2},w_{p2}),…,(p_{m},w_{pm})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>Q={(q_{1},w_{q1}),(q_{2},w_{q2}),…,(q_{n},w_{qn})}<br>\end{aligned}</p>
+</li>
+<li><p>reference paper EMD application<br>g(s<em>{i}) from the mean value of image features in category i from source domain<br>g(t</em>{i}) from the mean value of image features in category i from target domain<br>\begin{aligned}<br>\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}=\min {\sum_{i=1}^{m}w_{pi},\quad \sum_{j=1}^{n}w_{qj}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}d_{i,j}}{\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>S={(s_{1},w_{s1}),(s_{2},w_{s2}),…,(s_{m},w_{sm})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>T={(t_{1},w_{t1}),(t_{2},w_{t2}),…,(t_{n},w_{tn})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>D=[d_{i,j}] = || g(s_{i}) − g(t_{j})||<br>\end{aligned}</p>
+<p>\begin{aligned}<br>sim(S, T) = e−γd(S,T )<br>\end{aligned}</p>
+</li>
+<li><p>EMD application for pseudo data selection<br>  $g(p)$ represents mean value of image features in specific cluster from the same category in source domain<br>  $g(g_{i})$ is mean value of image features in cluster i from the same category in target domain<br>\begin{aligned}<br>\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}=\min {\sum_{i=1}^{m}w_{pi},\quad \sum_{j=1}^{n}w_{qj}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>EMD(P,Q)={\frac {\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}d_{i,j}}{\sum_{i=1}^{m}\sum_{j=1}^{n}f_{i,j}}}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>P={(p_{1},w_{p1}),(p_{2},w_{p2}),…,(p_{m},w_{pm})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>G={(g_{1},w_{g1}),(g_{2},w_{g2}),…,(g_{n},w_{gn})}<br>\end{aligned}</p>
+<p>\begin{aligned}<br>D=[d_{i,j}] = || g(p_{i}) − g(g_{j})||<br>\end{aligned}</p>
+<p>\begin{aligned}<br>sim(S, T) = e−γd(S,T )<br>\end{aligned}</p>
+</li>
+</ul>
+</li>
+<li>implementation: calculating the distance between $G(A_1^i)$ and the whole cluster in G(B1). As for distance calculation with EMD method, we obtain $P={G(A_1^i)_{mean},G(A_1^i)_{probs}}$ and $Q={[G(B_1^i)_{mean}, …, G(B_1^K)_{mean}],[G(B_1^i)_{probs}, …, G(B_1^K)_{probs}]}$, so we can calculate distance vector $D=(emd_1,emd_k)$, which is used for obtaining distribution weights $weights_g$.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/21/Density-Distribution/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1275,7 +1868,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1286,7 +1879,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1297,7 +1890,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
