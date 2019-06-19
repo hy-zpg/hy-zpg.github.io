@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Simialr to DAGAN]]></title>
+    <url>%2F2019%2F06%2F19%2FSimialr-to-DAGAN%2F</url>
+    <content type="text"><![CDATA[DAGANdetailed understanding ppt Class-Distinct and Class-Mutual Image Generation with GANs problem definition: typically in class-conditional image generation, it is assume that there are no intersections between classes, gan model are optimized to fit discrete class labels. Actually, there are data with ambiguous bundaries in real world in class-overlapping settings. aims: class-distinct and class-mutual image generation is desigend to selectively generate class-distinct and class-mutual images in a controllable manner. effects: propose novel families of GANs called class-mixture GAN and class-posterior GAN, mainly redisgining the generator prior and the objective function with auxiliary classifier. destail: weak supervision(binary class labels), focusing on class specificity, different from typical class-wise interpolation. based on AC-GAN(class-conditional GAN): loss_gan + loss_classification class label $y_g = r_0y_0 + r_1y_1 + … + r_iy_i$, interpolation in label space ($r_i$ is from Dirichlet distribution) posterior: r_i = C(y|x_r) visualization: vary y continuously between classes to generate images conclusion: latent space is effective, simple version in y space, we selected in image space]]></content>
+      <categories>
+        <category>Generative Model</category>
+      </categories>
+      <tags>
+        <tag>GAN</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Pedestrain Datasets]]></title>
     <url>%2F2019%2F06%2F14%2FPedestrain-Datasets%2F</url>
     <content type="text"><![CDATA[LinksRAP, PETA, PA-100K Most dataset and papers links Most dataset Simple introduction Clothing Attributes Dataset: cloth style(7 categories), ensurely used. accuracy (about 55%) PETA Dataset: low-resolution, multi-class(age 4 categories), download. accuracy(16,31,46,&gt;61: 83.8, 78.8,76.4,89.0),19,000 images, about 0.82 Database of Human Attributes (HAT): high-resolution, age(multi-classes), having sent email RAP Dataset: not high-resolution, 3-multi-classes(age 3 categories), waiting to send email. PA-100K Dataset: binary WIDER Attribute Dataset: multi-people Parse27k Dataset: squence, oritation(multi-class), not so much related CRP Dataset: squence, not human centre Berkeley-Attributes of People: binary Deepfashion dataset: cloth related, 289,222 - 50 classes cloth categories: 82%]]></content>
