@@ -451,7 +451,25 @@
 </li>
 </ul>
 <h3 id="GAN-applied-in-other-leanring-tasks"><a href="#GAN-applied-in-other-leanring-tasks" class="headerlink" title="GAN applied in other leanring tasks"></a>GAN applied in other leanring tasks</h3><h4 id="Progressive-Pose-Attention-Transfer-for-Person-Image-Generation"><a href="#Progressive-Pose-Attention-Transfer-for-Person-Image-Generation" class="headerlink" title="Progressive Pose Attention Transfer for Person Image Generation"></a><a href="https://arxiv.org/pdf/1904.03349.pdf" target="_blank" rel="noopener">Progressive Pose Attention Transfer for Person Image Generation</a></h4><h4 id="Attention-based-Fusion-for-Multi-source-Human-Image-Generation-1"><a href="#Attention-based-Fusion-for-Multi-source-Human-Image-Generation-1" class="headerlink" title="[Attention-based Fusion for Multi-source Human Image Generation"></a>[Attention-based Fusion for Multi-source Human Image Generation</h4><p>](<a href="https://arxiv.org/pdf/1905.02655v1.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1905.02655v1.pdf</a>)</p>
-<h4 id="Joint-Discriminative-and-Generative-Learning-for-Person-Re-identification"><a href="#Joint-Discriminative-and-Generative-Learning-for-Person-Re-identification" class="headerlink" title="Joint Discriminative and Generative Learning for Person Re-identification"></a><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zheng_Joint_Discriminative_and_Generative_Learning_for_Person_Re-Identification_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Joint Discriminative and Generative Learning for Person Re-identification</a></h4>
+<h4 id="Joint-Discriminative-and-Generative-Learning-for-Person-Re-identification"><a href="#Joint-Discriminative-and-Generative-Learning-for-Person-Re-identification" class="headerlink" title="Joint Discriminative and Generative Learning for Person Re-identification"></a><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zheng_Joint_Discriminative_and_Generative_Learning_for_Person_Re-Identification_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Joint Discriminative and Generative Learning for Person Re-identification</a></h4><ul>
+<li><p>problem: significant intra-class variations across different cameras.</p>
+</li>
+<li><p>motivation: augamenting data to enhance the invariance to input changes, improving learned re-id embeddings by better leveraging the generated data, which achieved by jointly coupling re-id learning and data augmentation end-to-end.</p>
+</li>
+<li><p>important methods: generative module including appearance code and structure code + discriminative module sharing appearance encoder with generative module. switching the appearance codes or appearance codes to generate high-quality cross-id images which are on line fed back to the appeance encoder and used to improve the discriminative module.</p>
+</li>
+</ul>
+<p>— my understanding: analyzing the essence of problem (for example, intra-class invariance in reid, maybe intra-class invariance is important for all classification tasks), generating corresponding images to improve the performance (generate cross-id images by appearance code and structure code, maybe using two code focused on different content(appeance and structure two codes for reid problem),also it can be beneficial to generate cross-class images).</p>
+<ul>
+<li>method: </li>
+</ul>
+<p>for generative module: leveraging latent code (appeance and structure)</p>
+<p> $ self-identity: encouraging the appeance encoder to pull appeance code by generating images with seeing cross-images in the same identity, so that intra-class feature variance are reduced, similar to 1-way-1-shot</p>
+<p> $ cross-identity: reconstruct appeance and structure codes, soft label, adversarial training, similar to 2-way-1-shot</p>
+<p> for discriminative module: (images and generated images are fed into discriminative part)</p>
+<p> $ primary feature learning: teacher-student type supervision based on soft label</p>
+<p> $ fine-grained feature mining: multi-task learning style</p>
+
           
         
       
