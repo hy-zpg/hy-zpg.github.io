@@ -307,6 +307,198 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/07/09/Combination-between-GAN-and-VAE/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/09/Combination-between-GAN-and-VAE/" itemprop="url">Combination between GAN and VAE</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-09T10:34:44+08:00">
+                2019-07-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Generative-Model/" itemprop="url" rel="index">
+                    <span itemprop="name">Generative Model</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Reference-paper"><a href="#Reference-paper" class="headerlink" title="Reference paper"></a>Reference paper</h3><ul>
+<li><p><a href="https://arxiv.org/abs/1703.10155" target="_blank" rel="noopener">CVAE-GAN: Fine-Grained Image Generation through Asymmetric Training</a></p>
+</li>
+<li><p><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zheng_Joint_Discriminative_and_Generative_Learning_for_Person_Re-Identification_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Joint Discriminative and Generative Learning for Person Re-identification</a></p>
+</li>
+</ul>
+<h4 id="the-detail-of-CVAE-GAN"><a href="#the-detail-of-CVAE-GAN" class="headerlink" title="the detail of CVAE-GAN"></a>the detail of CVAE-GAN</h4><ul>
+<li><p>solved problem: synthesizing images in fine-grained categories(??)</p>
+</li>
+<li><p>method: modeling an image as a composition of label and latent attributesin a probabilistic model(??)</p>
+</li>
+<li><p>novalty: loss design for the discriminator and the generator, the classifier. an encoder network is used to learn the relationship between the latent space and image space.</p>
+</li>
+<li><p>new objective loss: minimizing the l2 distance of the mean feature and the real data, especially, for multi-class image generation, the generated image need to match the mean feature of real data of that category (<font color="red">similar to our recognition mudule</font>, which can reduce mode collapse??).</p>
+</li>
+<li><p>to keep the diversity of generated samples, combining the vae and gan, introducing encoder network to map real image to the latent vector. in this way, we explicitly set up the relationship between latent space and image sapce.</p>
+</li>
+<li><p>CVAE-GAN: the encoder network E(x-&gt;z), the generative network G(z-&gt;\tilt{x}), the discriminatove network D(distinguish x from \tilt{x}), the classifier network C(measure the class probability of the data), cascaded together and trained end-to-end.  </p>
+</li>
+<li><p>application: generation, inpainting, attribute morphing.</p>
+</li>
+<li><p>l2 loss and pari-wise feature matching enable the G to generate structure-preserving samples.</p>
+</li>
+</ul>
+<h6 id="formulation"><a href="#formulation" class="headerlink" title="formulation"></a>formulation</h6><ul>
+<li><p>mean feature matching in basic GAN (G+D): extracting feature from the discriminator to form mean feature matching to optimize the generator loss(L_GD). also can combining the feature form multi-layer.(<font color="red">can be applied in our dagan</font>)</p>
+</li>
+<li><p>mean feature mathcing in classifier(G+C): in the classifier, extracting feature from the classifier to form mean feature matching to optimize the generator loss(L_GC),also can combining the feature form multi-layer.(<font color="red">can be applied in our dagan</font>)</p>
+</li>
+<li><p>pair-wise feature matching:</p>
+</li>
+</ul>
+<h4 id="the-detail-of-Joint-Discriminative-and-Generative-Learning-for-Person-Re-identification"><a href="#the-detail-of-Joint-Discriminative-and-Generative-Learning-for-Person-Re-identification" class="headerlink" title="the detail of Joint Discriminative and Generative Learning for Person Re-identification"></a>the detail of Joint Discriminative and Generative Learning for Person Re-identification</h4>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/07/01/CVAE-GAN/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1934,241 +2126,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/04/29/Few-shot-Setings/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/29/Few-shot-Setings/" itemprop="url">Few-shot Settings</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-29T13:42:29+08:00">
-                2019-04-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Setting/" itemprop="url" rel="index">
-                    <span itemprop="name">Setting</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Taking Omniglot dataset as an example.</p>
-<h2 id="Classification"><a href="#Classification" class="headerlink" title="Classification"></a>Classification</h2><p><a href="http://papers.nips.cc/paper/6385-matching-networks-for-one-shot-learning.pdf" target="_blank" rel="noopener">Matching networks for one shot learning</a></p>
-<ul>
-<li><p>datasets split </p>
-<ol>
-<li>classes split: total 1623 classes, 1200 classes in training set, 300 classes in validation set, the remaining classes in testing set.</li>
-<li>episode: support images[batch_size, 5way * 5shot, image_size, image_size,1], target images[batch_size, 5shot, image_size, image_size,1]), batch_size is adjustable.</li>
-</ol>
-</li>
-<li><p>training:</p>
-<ol>
-<li>considering matching between support images and target images</li>
-<li>training and validation</li>
-<li>training set for parameter update</li>
-<li>validation set is used for evaluation the trained model, if accuracy<br>parameter update: parameters update based on matching classification accuracy</li>
-</ol>
-</li>
-<li><p>testing:</p>
-<ol>
-<li>without parameter update</li>
-<li>evaluating the classification of target images in testing set.</li>
-</ol>
-</li>
-</ul>
-<h2 id="Generation"><a href="#Generation" class="headerlink" title="Generation"></a>Generation</h2><p><a href="https://arxiv.org/pdf/1901.02199.pdf" target="_blank" rel="noopener">FIGR: Few-shot Image Generation with Reptile</a></p>
-<ul>
-<li><p>datasets split</p>
-<ol>
-<li>classes split: total 1623 classes, 20 classes in testing set and the remaining classes in training set.</li>
-<li>episode: 1way * 4shot [4,image_size, image_size,1], batch_size(default=1) is unadjustable</li>
-</ol>
-</li>
-<li><p>training:</p>
-<ol>
-<li>considering the optimization procedure from meta training to inner training</li>
-<li>training and validation</li>
-<li>training procedure: optimization</li>
-</ol>
-</li>
-<li><p>testing:</p>
-<ol>
-<li>without parameter update</li>
-<li>evaliating generator loss, discriminator loss, generated images in testing set.</li>
-</ol>
-</li>
-</ul>
-<p><a href="https://openreview.net/pdf?id=HyCRyS9gx" target="_blank" rel="noopener">FAST ADAPTATION IN GENERATIVE MODELS WITH GENERATIVE MATCHING NETWORKS</a></p>
-<ul>
-<li><p>dataset split:</p>
-<ol>
-<li>total 50 alphabets, 30 alphabets for training and the remaining for testing.</li>
-<li>episode: up to 2way * sampled instance (10), batch size is adjustable.</li>
-</ol>
-</li>
-<li><p>training:</p>
-<ol>
-<li>considering the total loss from generation model (likelihood of the prior and generated images) and recognition model (likelihood of the generated prior).</li>
-<li>training and testing</li>
-<li>minimizing the loss (ll_gen_prior+ll_gen_img-ll_rec_prior), the total loss of testing is regarded as evaluation measurement.</li>
-</ol>
-</li>
-<li><p>testing:</p>
-<ol>
-<li>testing set: calculating the total loss (different calculation method)</li>
-<li>recondtruction: recontructed images based on trained samples (evaluaing the training intermediate results)</li>
-<li>generation: fedding test set, generated new image without training</li>
-<li>classification: two different methods. </li>
-</ol>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2214,7 +2176,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2236,7 +2198,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
