@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
 <meta property="og:description" content="Reference paper CVAE-GAN: Fine-Grained Image Generation through Asymmetric Training  Joint Discriminative and Generative Learning for Person Re-identification   the detail of CVAE-GAN solved problem:">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-10T03:48:29.511Z">
+<meta property="og:updated_time" content="2019-07-10T09:16:49.032Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Combination between GAN and VAE">
 <meta name="twitter:description" content="Reference paper CVAE-GAN: Fine-Grained Image Generation through Asymmetric Training  Joint Discriminative and Generative Learning for Person Re-identification   the detail of CVAE-GAN solved problem:">
@@ -452,12 +452,20 @@
 </li>
 <li><p>method: improve learned reid embedding by better using agmented images with a joint framwork that couple the data generation and reid learning end-to-end. the generative module (appearance code and structure code) and the discrinative (sharing appearance code with the generative module). so appearance code plays a role of category-related embedding.</p>
 </li>
+<li><p>coupling the generative module for image generation and the discriminative module for reid learning.</p>
+</li>
 </ul>
 <ul>
-<li>reason: let the classification module can ‘see’ these variations (intr-class variations and inter-class variations) during training process.</li>
+<li><p>reason: let the classification module can ‘see’ these variations (intr-class variations and inter-class variations) during training process.</p>
+</li>
+<li><p>generate images by swith the appearance code and structure code given the same identities or the different identities.</p>
+</li>
 </ul>
-<ul>
-<li>generate images by swith the appearance code and structure code given the same identities or the different identities.</li>
+<h6 id="formulation-1"><a href="#formulation-1" class="headerlink" title="formulation"></a>formulation</h6><ul>
+<li><p>generative module: self-identity generation, cross-identity generation.</p>
+</li>
+<li><p>discriminative module: primary feature learning, fine-grained feature mining, which is codesigned with the generative module.</p>
+</li>
 </ul>
 <h5 id="my-thinking"><a href="#my-thinking" class="headerlink" title="my thinking"></a>my thinking</h5><ul>
 <li><p>the generative module is resposible to generate images that contain significant intra-class variations (imagenet dataset including different background, FIGR-8 dataset including different style, omniglot dataset including different style, vggFace including different ages, skin colors). the generative module can be designed as two part including category-related code and category-unrelated code. the generative module is responsible to generate high-quality cross-category images. the category-related module can encode category related semantics, while the category-unrelated module can enclose geometry and posion related structure information</p>
@@ -510,6 +518,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/15/Paper-related-Image-Generation/" rel="prev" title="Paper related Image Generation">
+                Paper related Image Generation <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -586,7 +598,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">32</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -597,7 +609,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -608,7 +620,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -664,7 +676,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference-paper"><span class="nav-number">1.</span> <span class="nav-text">Reference paper</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#the-detail-of-CVAE-GAN"><span class="nav-number">1.1.</span> <span class="nav-text">the detail of CVAE-GAN</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#formulation"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">formulation</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#the-detail-of-Joint-Discriminative-and-Generative-Learning-for-Person-Re-identification"><span class="nav-number">1.2.</span> <span class="nav-text">the detail of Joint Discriminative and Generative Learning for Person Re-identification</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#my-thinking"><span class="nav-number">1.2.1.</span> <span class="nav-text">my thinking</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference-paper"><span class="nav-number">1.</span> <span class="nav-text">Reference paper</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#the-detail-of-CVAE-GAN"><span class="nav-number">1.1.</span> <span class="nav-text">the detail of CVAE-GAN</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#formulation"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">formulation</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#the-detail-of-Joint-Discriminative-and-Generative-Learning-for-Person-Re-identification"><span class="nav-number">1.2.</span> <span class="nav-text">the detail of Joint Discriminative and Generative Learning for Person Re-identification</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#formulation-1"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">formulation</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#my-thinking"><span class="nav-number">1.2.1.</span> <span class="nav-text">my thinking</span></a></li></ol></div>
             
 
           </div>

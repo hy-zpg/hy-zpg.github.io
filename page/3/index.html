@@ -307,6 +307,232 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/03/09/Semi-MTL-Related/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/09/Semi-MTL-Related/" itemprop="url">Semi-MTL Related</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-09T14:59:07+08:00">
+                2019-03-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="MTL"><a href="#MTL" class="headerlink" title="MTL"></a>MTL</h2><h3 id="Learning-Methods"><a href="#Learning-Methods" class="headerlink" title="Learning Methods"></a>Learning Methods</h3><ul>
+<li>Supervised</li>
+<li>Semi-supervised</li>
+</ul>
+<h3 id="Scenarios"><a href="#Scenarios" class="headerlink" title="Scenarios"></a>Scenarios</h3><ul>
+<li>Homogeneous</li>
+<li>Heterogeneous<ul>
+<li>Heterogeneous Tasks (Document &amp; Images &amp; Audio)</li>
+<li>Hterogeneous Datsets (Each dataset with a set of labels)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Improvement-Ideas"><a href="#Improvement-Ideas" class="headerlink" title="Improvement Ideas"></a>Improvement Ideas</h3><ul>
+<li>Network Structure</li>
+<li>Feature Selection</li>
+</ul>
+<h3 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h3><ul>
+<li>CV</li>
+<li>NLP</li>
+</ul>
+<p>ALL MTL is the combination of above mentioned.<br>Our method is semi-supervised MTL with heterogeneous datasets, comparison including supervised or semi-supervised MTL with heterogeneous dataset.</p>
+<blockquote>
+<p>reference <a href="https://arxiv.org/pdf/1411.6232.pdf" target="_blank" rel="noopener">Semi-supervised Feature Analysis by Mining Correlations among Multiple Tasks</a></p>
+</blockquote>
+<ul>
+<li>semi-supervised, heterogeneou datasets, feature selection.</li>
+<li>scenario: CV, dataset A for tasks A[labeled and unlabeled], dataset B for tasks B[labeled and unlabeled]</li>
+<li>method: manifold learning, mining feature correlation by sparse coefficients.</li>
+<li>No</li>
+</ul>
+<blockquote>
+<p>reference <a href="https://arxiv.org/pdf/1604.01335.pdf" target="_blank" rel="noopener">Deep Cross Residual Learning for Multitask Visual Recognition</a></p>
+</blockquote>
+<ul>
+<li>supervised, heterogeneou datasets, network structure.</li>
+<li>scenario: CV, dataset A for tasks A[labeled], dataset B for tasks B[labeled]</li>
+<li>method: enables intuitive learning across multiple related tasks using cross-connections called cross-residuals</li>
+<li>Yes? Netowrk realization?</li>
+</ul>
+<blockquote>
+<p>reference <a href="http://www.jmlr.org/papers/volume6/ando05a/ando05a.pdf" target="_blank" rel="noopener">A Framework for Learning Predictive Structures from Multiple Tasks and Unlabeled Data</a></p>
+</blockquote>
+<ul>
+<li>semi-supervised, heterogeneou datasets, network structure.</li>
+<li>scenario: </li>
+<li>method: </li>
+<li>No</li>
+</ul>
+<blockquote>
+<p>reference <a href="https://arxiv.org/pdf/1802.09913.pdf" target="_blank" rel="noopener">Multi-task Learning of Pairwise Sequence Classification Tasks Over Disparate Label Spaces</a></p>
+</blockquote>
+<ul>
+<li>supervised, heterogeneou datasets, network structure.</li>
+<li>scenario: text classification, dataset A for tasks A[labeled], dataset B for tasks B[labeled]</li>
+<li>method: combining multi-task learning and semi- supervised learning by inducing a joint embed- ding space between disparate label spaces and learning transfer functions between label embeddings. LTN can be used to label unlabelled and auxiliary task data by utilising the ‘distilling knowledge’ contained in auxiliary model predictions. not only model their relationship, but also to directly estimate the cor- responding label of the target task based on auxil- iary predictions</li>
+<li>Yes: embedding, prediction, output, temperature=1, embedding can be realized with cross-stich network</li>
+</ul>
+<blockquote>
+<p>reference <a href="http://www.aclweb.org/anthology/D16-1070" target="_blank" rel="noopener">Neural Network for Heterogeneous Annotations</a></p>
+</blockquote>
+<ul>
+<li>supervised, heterogeneou datasets, multi-view &amp; stacking setting</li>
+<li>scenario: NLP, dataset A for tasks A[labeled], dataset B for tasks B[labeled]</li>
+<li>method: multi-view, stacking, neurual network</li>
+<li>Yes: not understand</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/28/Semi-Heteroneous-Multitask-Baseline/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -2034,182 +2260,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/01/15/GMM/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/15/GMM/" itemprop="url">MMD and Density</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-15T10:31:01+08:00">
-                2019-01-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Theory/" itemprop="url" rel="index">
-                    <span itemprop="name">Theory</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Relation-between-MMD-and-density-for-pseudo-data-selection"><a href="#Relation-between-MMD-and-density-for-pseudo-data-selection" class="headerlink" title="Relation between MMD and density for pseudo data selection"></a>Relation between MMD and density for pseudo data selection</h2><p>combination of MMD and density: my understanding is that we can obtain MMD, density, prior weights from GMM, when GMM can be calculated from ground-trurh label of </p>
-<ul>
-<li><p>MMD: first-order information</p>
-</li>
-<li><p>Density: second-order information, the larger variance, the sparser, the small variance, the denser </p>
-</li>
-</ul>
-<h3 id="GMM"><a href="#GMM" class="headerlink" title="GMM"></a>GMM</h3><ul>
-<li>Gaussian Mixed Model: A Gaussian mixture model is a probabilistic model that assumes all the data points are generated from a mixture of a finite number of Gaussian distributions with unknown parameters. One can think of mixture models as generalizing k-means clustering to incorporate information about the covariance structure of the data as well as the centers of the latent Gaussians.</li>
-</ul>
-<ul>
-<li><p>Differentce between k-means and GMM: k-means notes that each point is assigned to different clusters, while GMM can calculate the probabiliy of each point belong to each clusters.</p>
-</li>
-<li><p>Import parameters of GMM: K Gaussion models, also K clusters, $\pi$, $\mu$, $\Sigma$<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2260,7 +2310,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">32</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2271,7 +2321,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2282,7 +2332,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

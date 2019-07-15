@@ -1,5 +1,5 @@
+https://www.yanhong.me/2019/07/15/Paper-related-Image-Generation/
 https://www.yanhong.me/2019/07/09/Combination-between-GAN-and-VAE/
 https://www.yanhong.me/2019/07/01/CVAE-GAN/
 https://www.yanhong.me/2019/06/19/Simialr-to-DAGAN/
 https://www.yanhong.me/2019/06/14/Pedestrain-Datasets/
-https://www.yanhong.me/2019/06/10/U-Net/
