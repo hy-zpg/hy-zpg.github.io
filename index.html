@@ -430,22 +430,30 @@
 </li>
 </ul>
 <h4 id="DADA-Deep-Adversarial-Data-Augmentation-for-Extremely-Low-Data-Regime-Classification"><a href="#DADA-Deep-Adversarial-Data-Augmentation-for-Extremely-Low-Data-Regime-Classification" class="headerlink" title="DADA: Deep Adversarial Data Augmentation for Extremely Low Data Regime Classification"></a><a href="https://arxiv.org/pdf/1809.00981.pdf" target="_blank" rel="noopener">DADA: Deep Adversarial Data Augmentation for Extremely Low Data Regime Classification</a></h4><ul>
-<li><p>how to generate images: </p>
+<li><p>how to generate images: using a class-conditional GAN with a novel loss to generate diverse and category-specific images.</p>
 </li>
-<li><p>how to aid classification task: coupling the generation process and classification process which is not conducted in few-shot setting</p>
+<li><p>how to aid classification task: coupling the generation process and classification process.  Using 2k loss to distinguish fake data from real data, also to predict the category of fake data and real data. </p>
 </li>
-<li><p>how to evaluate the effectiveness of generated images:</p>
+<li><p>how to evaluate the effectiveness of generated images: experiments are not conducted in few-shot setting, instead sampling 50-1000 samples of each category to simulate extremely low data regime. comparing the results with other GAN methods, such as Improved-GAN.</p>
 </li>
 </ul>
 <h4 id="FEW-SHOT-AUTOREGRESSIVE-DENSITY-ESTIMATION-TOWARDS-LEARNING-TO-LEARN-DISTRIBUTIONS"><a href="#FEW-SHOT-AUTOREGRESSIVE-DENSITY-ESTIMATION-TOWARDS-LEARNING-TO-LEARN-DISTRIBUTIONS" class="headerlink" title="FEW-SHOT AUTOREGRESSIVE DENSITY ESTIMATION: TOWARDS LEARNING TO LEARN DISTRIBUTIONS"></a><a href="https://arxiv.org/pdf/1710.10304.pdf" target="_blank" rel="noopener">FEW-SHOT AUTOREGRESSIVE DENSITY ESTIMATION: TOWARDS LEARNING TO LEARN DISTRIBUTIONS</a></h4><ul>
-<li><p>how to generate images:</p>
+<li><p>how to generate images: modified pixelCNN to achieve few-shot density estimation and extend the model to generate natural images.</p>
 </li>
-<li><p>how to aid classification task:</p>
+<li><p>how to aid classification task: None, only density extimation NLL</p>
 </li>
-<li><p>how to evaluate the effectiveness of generated images:</p>
+<li><p>how to evaluate the effectiveness of generated images: visualization of the generated images, comparing the results with the NLL of other pixelCNN methods.</p>
 </li>
 </ul>
 <h4 id="The-Variational-Homoencoder"><a href="#The-Variational-Homoencoder" class="headerlink" title="[The Variational Homoencoder:"></a>[The Variational Homoencoder:</h4><p>Learning to learn high capacity generative models from few examples](<a href="https://arxiv.org/pdf/1807.08919.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1807.08919.pdf</a>)</p>
+<ul>
+<li><p>how to generate images: modified VAE to produces a hierarchical latent variable model which better utilises latent variables.</p>
+</li>
+<li><p>how to aid classification task: classifying an example x the estimation of the expected conditional likelihood under the variational posterior.</p>
+</li>
+<li><p>how to evaluate the effectiveness of generated images: one-shot generation, one-shot classification and the value of likelihood.</p>
+</li>
+</ul>
 <h4 id="Distribution-Matching-in-Variational-Inference"><a href="#Distribution-Matching-in-Variational-Inference" class="headerlink" title="Distribution Matching in Variational Inference"></a><a href="https://arxiv.org/pdf/1802.06847" target="_blank" rel="noopener">Distribution Matching in Variational Inference</a></h4>
           
         
