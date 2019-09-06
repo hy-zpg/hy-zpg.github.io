@@ -307,6 +307,517 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/09/05/Loss-for-VAE-GAN/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/05/Loss-for-VAE-GAN/" itemprop="url">Loss for VAE-GAN</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-05T15:17:15+08:00">
+                2019-09-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Generative-Model/" itemprop="url" rel="index">
+                    <span itemprop="name">Generative Model</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="L1-loss-for-image-translation"><a href="#L1-loss-for-image-translation" class="headerlink" title="L1 loss for image translation"></a>L1 loss for image translation</h4><p>(Image-to-Image Translation with Conditional Adversarial Networks)[<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf" target="_blank" rel="noopener">http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf</a>]</p>
+<pre><code>\begin{aligned}
+\mathcal{L}_{L 1}(G)=\mathbb{E}_{x, y, z}\left[\|y-G(x, z)\|_{1}\right]
+\end{aligned}
+</code></pre><p>L1 term to force low-frequency correctness, L1 alone leads to reason- able but blurry results ($\lamda = 100$) </p>
+<h4 id="Mean-feature-matching-for-image-generation-in-general-setting"><a href="#Mean-feature-matching-for-image-generation-in-general-setting" class="headerlink" title="Mean feature matching for image generation in general setting"></a>Mean feature matching for image generation in general setting</h4><p>(CVAE-GAN: Fine-Grained Image Generation through Asymmetric Training<br>)[<a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Bao_CVAE-GAN_Fine-Grained_Image_ICCV_2017_paper.pdf" target="_blank" rel="noopener">http://openaccess.thecvf.com/content_ICCV_2017/papers/Bao_CVAE-GAN_Fine-Grained_Image_ICCV_2017_paper.pdf</a>]</p>
+<pre><code>\begin{aligned}
+\mathcal{L}_{G D}=\frac{1}{2}\left\|\mathbb{E}_{\boldsymbol{x} \sim P_{r}} f_{D}(\boldsymbol{x})-\mathbb{E}_{\boldsymbol{z} \sim P_{\boldsymbol{z}}} f_{D}(G(\boldsymbol{z}))\right\|_{2}^{2}
+\end{aligned}
+</code></pre><p>to deal with the unstable gradient of G</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/08/16/Learning-without-Forgetting/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/16/Learning-without-Forgetting/" itemprop="url">Learning without Forgetting</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-16T15:17:39+08:00">
+                2019-08-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="problem-definition"><a href="#problem-definition" class="headerlink" title="problem definition"></a>problem definition</h4><p>how to uing new data to train network while preserving the original capabilities</p>
+<h4 id="comparable-methods"><a href="#comparable-methods" class="headerlink" title="comparable methods"></a>comparable methods</h4><ul>
+<li><p>feature extraction: extracting feature from unchanged parameters trained on old tasks in training new branches for new tasks. however, the shared parameters fail to represent discriminative feature for new task.</p>
+</li>
+<li><p>fine-tuning FC: shared layers are fixed and finetuning the fc layers. however, the finetuned shared parameters degrade performance on previous tasks because there is not new guidance for original datasets.</p>
+</li>
+<li><p>joint training: upper bound of the lwf, need original datasets and new datasets.</p>
+</li>
+</ul>
+<h4 id="learning-without-forgetting"><a href="#learning-without-forgetting" class="headerlink" title="learning without forgetting"></a>learning without forgetting</h4><ul>
+<li>similar to joint training, don’t need original images and labels</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/07/23/MTL-related-Papers/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/23/MTL-related-Papers/" itemprop="url">MTL related Papers</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-23T19:28:03+08:00">
+                2019-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="Learning-a-Deep-ConvNet-for-Multi-label-Classification-with-Partial-Labels"><a href="#Learning-a-Deep-ConvNet-for-Multi-label-Classification-with-Partial-Labels" class="headerlink" title="Learning a Deep ConvNet for Multi-label Classification with Partial Labels"></a><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Durand_Learning_a_Deep_ConvNet_for_Multi-Label_Classification_With_Partial_Labels_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Learning a Deep ConvNet for Multi-label Classification with Partial Labels</a></h5><ul>
+<li><p>novel: labeling strategies+ new classification loss for leanring from partial labels + curriculum-based missing labels prediction methods</p>
+</li>
+<li><p>overview of method: from learning label correlations between observed and unobserved partial labels to learn a accurate model used to predict missing labels with a curriculum-based approch.</p>
+</li>
+<li><p>detail: using fully-connected graph to model correlations between all categories. GNN (message update function[MLP] + hidden state update function[GRU]) + MTL framework, alternative minimized</p>
+<p>GNN: nodes represent categoriesthe input is feature extracted from the CNN, output is the predicted labels </p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/07/15/Paper-related-Image-Generation/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1593,515 +2104,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/05/27/Normalization-for-Input-of-GAN/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/27/Normalization-for-Input-of-GAN/" itemprop="url">Normalization_for_Input_of_GAN</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-27T16:05:16+08:00">
-                2019-05-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/GAN/" itemprop="url" rel="index">
-                    <span itemprop="name">GAN</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Normalization-methods-for-the-input-of-GAN-and-visualization"><a href="#Normalization-methods-for-the-input-of-GAN-and-visualization" class="headerlink" title="Normalization methods for the input of GAN and visualization"></a>Normalization methods for the input of GAN and visualization</h3><h4 id="simple"><a href="#simple" class="headerlink" title="simple"></a>simple</h4><p>input<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def normalization(data):</span><br><span class="line">    data = data - 127.5</span><br><span class="line">    data = data / 127.5</span><br><span class="line">    <span class="built_in">return</span> data</span><br></pre></td></tr></table></figure></p>
-<p>visualization<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fake = G(z)</span><br><span class="line">def unnormalization(data):</span><br><span class="line">    data = data * 127.5</span><br><span class="line">    data = data + 127.5</span><br><span class="line">    <span class="built_in">return</span> data</span><br><span class="line">visual_image = unnormalization(fake)</span><br></pre></td></tr></table></figure></p>
-<h4 id="mean-and-std"><a href="#mean-and-std" class="headerlink" title="mean and std"></a>mean and std</h4><p>input (using the mean and std of training set)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def normalization(self):</span><br><span class="line">        <span class="string">""</span><span class="string">"</span></span><br><span class="line"><span class="string">        Normalizes our data, to have a mean of 0 and sdt of 1</span></span><br><span class="line"><span class="string">        "</span><span class="string">""</span></span><br><span class="line">        self.mean = np.mean(self.x_train)</span><br><span class="line">        self.std = np.std(self.x_train)</span><br><span class="line">        self.x_train = (self.x_train - self.mean) / self.std</span><br><span class="line">        self.x_val = (self.x_val - self.mean) / self.std</span><br><span class="line">        self.x_test = (self.x_test - self.mean) / self.std</span><br></pre></td></tr></table></figure></p>
-<p>visualization(using the mean and std of training set)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def unnormalization(self,fake):</span><br><span class="line">        <span class="string">""</span><span class="string">"</span></span><br><span class="line"><span class="string">        Normalizes our data, to have a mean of 0 and sdt of 1</span></span><br><span class="line"><span class="string">        "</span><span class="string">""</span></span><br><span class="line">        self.mean = np.mean(self.x_train)</span><br><span class="line">        self.std = np.std(self.x_train)</span><br><span class="line">        visual_image = fake*self.std + self.mean</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/05/21/Related-Work-about-Few-shot-Image-Generation/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/21/Related-Work-about-Few-shot-Image-Generation/" itemprop="url">Related Work about Few-shot Image Generation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-21T08:58:12+08:00">
-                2019-05-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/05/07/GAN-Metrics/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/07/GAN-Metrics/" itemprop="url">GAN Metrics</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-07T14:23:24+08:00">
-                2019-05-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Generative-Model/" itemprop="url" rel="index">
-                    <span itemprop="name">Generative Model</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Paper <a href="https://arxiv.org/pdf/1806.07755.pdf" target="_blank" rel="noopener">An empirical study on evaluation metrics of generative adversarial networks</a><br>Notes<a href="https://www.jianshu.com/p/fc5526b1fe3b" target="_blank" rel="noopener">gan metrics notes</a></p>
-<p>There are two categories evaluation metric:</p>
-<ol>
-<li>sample-based</li>
-<li>other</li>
-</ol>
-<h3 id="Sample-based-metrics"><a href="#Sample-based-metrics" class="headerlink" title="Sample-based metrics"></a>Sample-based metrics</h3><h4 id="The-Inception-Score"><a href="#The-Inception-Score" class="headerlink" title="The Inception Score"></a>The Inception Score</h4><ul>
-<li>how: inception-v3 trained on Imagenet, the output of softmax, the input is the generated images.</li>
-<li>evaluation:<ul>
-<li>quality: the conditional possibility distriution $p(y | \mathbf{x})$, which is the probability of the vector of softmax layer (1000) and explicitly belong to which category.</li>
-<li>diversity: the marginal possibility distriution $p(y)$, close to uniform distribution, which represents that the number of generated samples in each categoty is comparable.</li>
-</ul>
-</li>
-<li>calculation:<br>\begin{equation}<br>\mathbf{I S}(G)=\exp \left(\mathbb{E}_{\mathbf{x} \sim p_{g}} D_{K L}(p(y | \mathbf{x}) | p(y))\right)<br>\end{equation}</li>
-<li>the larger, the better. quality and diversity.</li>
-</ul>
-<h4 id="The-Mode-Score"><a href="#The-Mode-Score" class="headerlink" title="The Mode Score"></a>The Mode Score</h4><ul>
-<li>how: improvement of The Inception Score, considering the distribution of real images</li>
-<li>evaluation:<ul>
-<li>quality:</li>
-<li>diversity:</li>
-<li>dissimilarity between the real distriution and fake distribution</li>
-</ul>
-</li>
-<li>calcualtion</li>
-<li>the larger, the better. quality and diversity.</li>
-</ul>
-<h4 id="Kernel-MMD"><a href="#Kernel-MMD" class="headerlink" title="Kernel MMD"></a>Kernel MMD</h4><ul>
-<li>how: improved measurement to dissimilarity between the real distriution and fake distribution for some fixed kernel function.</li>
-<li>evaluation: real samples and fake samples, lower MMD means close</li>
-<li>the smaller, the better. quality.</li>
-</ul>
-<h4 id="The-Wasserstein-distance"><a href="#The-Wasserstein-distance" class="headerlink" title="The Wasserstein distance"></a>The Wasserstein distance</h4><ul>
-<li>how: further improved measurement to dissimilarity between the real distriution and fake distribution</li>
-<li>evaluation: real samples and fake samples, lower Wasserstein distance means close</li>
-<li>the smaller, the better. depending on the selection of feature space.</li>
-</ul>
-<h4 id="The-Fréchet-Inception-Distance-FID"><a href="#The-Fréchet-Inception-Distance-FID" class="headerlink" title="The Fréchet Inception Distance (FID)"></a>The Fréchet Inception Distance (FID)</h4><ul>
-<li>how: convulutional network is used to extract feature, modeling the Gaussian random variables with mean value and covariance from real and fake feature space.</li>
-<li>evaluation: measuring the two Gaussian distribution</li>
-<li>the smaller, the better. efficiency.</li>
-</ul>
-<h4 id="The-1-Nearest-Neighbor-classifier"><a href="#The-1-Nearest-Neighbor-classifier" class="headerlink" title="The 1-Nearest Neighbor classifier"></a>The 1-Nearest Neighbor classifier</h4><ul>
-<li>how: assessing the two distriution are identical.</li>
-<li>evaluation: about 50% leave-one-out, the accuracy of generated images</li>
-<li>several measurement index: accuracy, recall ….. ideal evaluation metric</li>
-</ul>
-<h3 id="other-metrics"><a href="#other-metrics" class="headerlink" title="other metrics"></a>other metrics</h3>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2152,7 +2154,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">35</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2174,7 +2176,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

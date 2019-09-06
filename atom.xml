@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yanhong.me/"/>
-  <updated>2019-07-16T01:05:03.560Z</updated>
+  <updated>2019-09-06T08:51:00.566Z</updated>
   <id>https://www.yanhong.me/</id>
   
   <author>
@@ -15,6 +15,81 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Loss for VAE-GAN</title>
+    <link href="https://www.yanhong.me/2019/09/05/Loss-for-VAE-GAN/"/>
+    <id>https://www.yanhong.me/2019/09/05/Loss-for-VAE-GAN/</id>
+    <published>2019-09-05T07:17:15.000Z</published>
+    <updated>2019-09-06T08:51:00.566Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="L1-loss-for-image-translation"><a href="#L1-loss-for-image-translation" class="headerlink" title="L1 loss for image translation"></a>L1 loss for image translation</h4><p>(Image-to-Image Translation with Conditional Adversarial Networks)[<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf" target="_blank" rel="noopener">http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf</a>]</p><pre><code>\begin{aligned}\mathcal{L}_{L 1}(G)=\mathbb{E}_{x, y, z}\left[\|y-G(x, z)\|_{1}\right]\end{aligned}</code></pre><p>L1 term to force low-frequency correctness, L1 alone leads to reason- able but blurry results ($\lamda = 100$) </p><h4 id="Mean-feature-matching-for-image-generation-in-general-setting"><a href="#Mean-feature-matching-for-image-generation-in-general-setting" class="headerlink" title="Mean feature matching for image generation in general setting"></a>Mean feature matching for image generation in general setting</h4><p>(CVAE-GAN: Fine-Grained Image Generation through Asymmetric Training<br>)[<a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Bao_CVAE-GAN_Fine-Grained_Image_ICCV_2017_paper.pdf" target="_blank" rel="noopener">http://openaccess.thecvf.com/content_ICCV_2017/papers/Bao_CVAE-GAN_Fine-Grained_Image_ICCV_2017_paper.pdf</a>]</p><pre><code>\begin{aligned}\mathcal{L}_{G D}=\frac{1}{2}\left\|\mathbb{E}_{\boldsymbol{x} \sim P_{r}} f_{D}(\boldsymbol{x})-\mathbb{E}_{\boldsymbol{z} \sim P_{\boldsymbol{z}}} f_{D}(G(\boldsymbol{z}))\right\|_{2}^{2}\end{aligned}</code></pre><p>to deal with the unstable gradient of G</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;L1-loss-for-image-translation&quot;&gt;&lt;a href=&quot;#L1-loss-for-image-translation&quot; class=&quot;headerlink&quot; title=&quot;L1 loss for image translation&quot;&gt;&lt;/a
+      
+    
+    </summary>
+    
+      <category term="Generative Model" scheme="https://www.yanhong.me/categories/Generative-Model/"/>
+    
+    
+      <category term="design of loss" scheme="https://www.yanhong.me/tags/design-of-loss/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Learning without Forgetting</title>
+    <link href="https://www.yanhong.me/2019/08/16/Learning-without-Forgetting/"/>
+    <id>https://www.yanhong.me/2019/08/16/Learning-without-Forgetting/</id>
+    <published>2019-08-16T07:17:39.000Z</published>
+    <updated>2019-08-19T01:06:22.494Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="problem-definition"><a href="#problem-definition" class="headerlink" title="problem definition"></a>problem definition</h4><p>how to uing new data to train network while preserving the original capabilities</p><h4 id="comparable-methods"><a href="#comparable-methods" class="headerlink" title="comparable methods"></a>comparable methods</h4><ul><li><p>feature extraction: extracting feature from unchanged parameters trained on old tasks in training new branches for new tasks. however, the shared parameters fail to represent discriminative feature for new task.</p></li><li><p>fine-tuning FC: shared layers are fixed and finetuning the fc layers. however, the finetuned shared parameters degrade performance on previous tasks because there is not new guidance for original datasets.</p></li><li><p>joint training: upper bound of the lwf, need original datasets and new datasets.</p></li></ul><h4 id="learning-without-forgetting"><a href="#learning-without-forgetting" class="headerlink" title="learning without forgetting"></a>learning without forgetting</h4><ul><li>similar to joint training, don’t need original images and labels</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;problem-definition&quot;&gt;&lt;a href=&quot;#problem-definition&quot; class=&quot;headerlink&quot; title=&quot;problem definition&quot;&gt;&lt;/a&gt;problem definition&lt;/h4&gt;&lt;p&gt;how to
+      
+    
+    </summary>
+    
+      <category term="Deep learning" scheme="https://www.yanhong.me/categories/Deep-learning/"/>
+    
+    
+      <category term="multitask" scheme="https://www.yanhong.me/tags/multitask/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MTL related Papers</title>
+    <link href="https://www.yanhong.me/2019/07/23/MTL-related-Papers/"/>
+    <id>https://www.yanhong.me/2019/07/23/MTL-related-Papers/</id>
+    <published>2019-07-23T11:28:03.000Z</published>
+    <updated>2019-07-23T14:07:13.920Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="Learning-a-Deep-ConvNet-for-Multi-label-Classification-with-Partial-Labels"><a href="#Learning-a-Deep-ConvNet-for-Multi-label-Classification-with-Partial-Labels" class="headerlink" title="Learning a Deep ConvNet for Multi-label Classification with Partial Labels"></a><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Durand_Learning_a_Deep_ConvNet_for_Multi-Label_Classification_With_Partial_Labels_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Learning a Deep ConvNet for Multi-label Classification with Partial Labels</a></h5><ul><li><p>novel: labeling strategies+ new classification loss for leanring from partial labels + curriculum-based missing labels prediction methods</p></li><li><p>overview of method: from learning label correlations between observed and unobserved partial labels to learn a accurate model used to predict missing labels with a curriculum-based approch.</p></li><li><p>detail: using fully-connected graph to model correlations between all categories. GNN (message update function[MLP] + hidden state update function[GRU]) + MTL framework, alternative minimized</p><p>GNN: nodes represent categoriesthe input is feature extracted from the CNN, output is the predicted labels </p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h5 id=&quot;Learning-a-Deep-ConvNet-for-Multi-label-Classification-with-Partial-Labels&quot;&gt;&lt;a href=&quot;#Learning-a-Deep-ConvNet-for-Multi-label-Classi
+      
+    
+    </summary>
+    
+      <category term="Deep learning" scheme="https://www.yanhong.me/categories/Deep-learning/"/>
+    
+    
+      <category term="multitask" scheme="https://www.yanhong.me/tags/multitask/"/>
+    
+  </entry>
   
   <entry>
     <title>Papers related Few-shot Image Generation</title>

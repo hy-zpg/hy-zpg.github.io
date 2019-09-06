@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.yanhong.me/2019/09/05/Loss-for-VAE-GAN/</loc>
+    
+    <lastmod>2019-09-06T08:51:00.566Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yanhong.me/2019/08/16/Learning-without-Forgetting/</loc>
+    
+    <lastmod>2019-08-19T01:06:22.494Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yanhong.me/2019/07/23/MTL-related-Papers/</loc>
+    
+    <lastmod>2019-07-23T14:07:13.920Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.yanhong.me/2019/07/15/Paper-related-Image-Generation/</loc>
     
     <lastmod>2019-07-16T01:05:03.560Z</lastmod>
