@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
 <meta property="og:description" content="L1 loss for image translation(Image-to-Image Translation with Conditional Adversarial Networks)[http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_pa">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-06T08:51:00.566Z">
+<meta property="og:updated_time" content="2019-09-07T01:06:59.833Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Loss for VAE-GAN">
 <meta name="twitter:description" content="L1 loss for image translation(Image-to-Image Translation with Conditional Adversarial Networks)[http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_pa">
@@ -416,15 +416,10 @@
 
       
         <h4 id="L1-loss-for-image-translation"><a href="#L1-loss-for-image-translation" class="headerlink" title="L1 loss for image translation"></a>L1 loss for image translation</h4><p>(Image-to-Image Translation with Conditional Adversarial Networks)[<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf" target="_blank" rel="noopener">http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf</a>]</p>
-<pre><code>\begin{aligned}
-\mathcal{L}_{L 1}(G)=\mathbb{E}_{x, y, z}\left[\|y-G(x, z)\|_{1}\right]
-\end{aligned}
-</code></pre><p>L1 term to force low-frequency correctness, L1 alone leads to reason- able but blurry results ($\lamda = 100$) </p>
+<p>\begin{aligned}<br>\mathcal{L}_{L<em>1}(G)=\mathbb{E}\</em>{x, y, z}\left[|y-G(x, z)|_{1}\right]<br>\end{aligned}<br>L1 term to force low-frequency correctness, L1 alone leads to reason- able but blurry results ($\lamda = 100$) </p>
 <h4 id="Mean-feature-matching-for-image-generation-in-general-setting"><a href="#Mean-feature-matching-for-image-generation-in-general-setting" class="headerlink" title="Mean feature matching for image generation in general setting"></a>Mean feature matching for image generation in general setting</h4><p>(CVAE-GAN: Fine-Grained Image Generation through Asymmetric Training<br>)[<a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Bao_CVAE-GAN_Fine-Grained_Image_ICCV_2017_paper.pdf" target="_blank" rel="noopener">http://openaccess.thecvf.com/content_ICCV_2017/papers/Bao_CVAE-GAN_Fine-Grained_Image_ICCV_2017_paper.pdf</a>]</p>
-<pre><code>\begin{aligned}
-\mathcal{L}_{G D}=\frac{1}{2}\left\|\mathbb{E}_{\boldsymbol{x} \sim P_{r}} f_{D}(\boldsymbol{x})-\mathbb{E}_{\boldsymbol{z} \sim P_{\boldsymbol{z}}} f_{D}(G(\boldsymbol{z}))\right\|_{2}^{2}
-\end{aligned}
-</code></pre><p>to deal with the unstable gradient of G</p>
+<p>\begin{aligned}<br>\mathcal{L}_{G D}=\frac{1}{2}\left|\mathbb{E}_{\boldsymbol{x} \sim P<em>{r}} f</em>{D}(\boldsymbol{x})-\mathbb{E}_{\boldsymbol{z} \sim P<em>{\boldsymbol{z}}} f</em>{D}(G(\boldsymbol{z}))\right|_{2}^{2}<br>\end{aligned}</p>
+<p>to deal with the unstable gradient of G</p>
 
       
     </div>
