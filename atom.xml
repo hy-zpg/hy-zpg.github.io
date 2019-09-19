@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yanhong.me/"/>
-  <updated>2019-09-07T01:40:42.857Z</updated>
+  <updated>2019-09-19T03:03:24.388Z</updated>
   <id>https://www.yanhong.me/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Variations of GAN</title>
+    <link href="https://www.yanhong.me/2019/09/19/Variations-of-GAN/"/>
+    <id>https://www.yanhong.me/2019/09/19/Variations-of-GAN/</id>
+    <published>2019-09-19T02:47:18.000Z</published>
+    <updated>2019-09-19T03:03:24.388Z</updated>
+    
+    <content type="html"><![CDATA[<p>refer to <a href="https://blog.csdn.net/qq_25737169/article/details/84864808" target="_blank" rel="noopener">blogs</a></p><h4 id="Optimization-of-GAN-loss"><a href="#Optimization-of-GAN-loss" class="headerlink" title="Optimization of GAN loss"></a>Optimization of GAN loss</h4><h5 id="Improved-Training-of-Wasserstein-GANs"><a href="#Improved-Training-of-Wasserstein-GANs" class="headerlink" title="Improved Training of Wasserstein GANs"></a><a href="https://arxiv.org/pdf/1704.00028.pdf" target="_blank" rel="noopener">Improved Training of Wasserstein GANs</a></h5><ul><li><p>problem</p></li><li><p>method</p></li><li><p>effect</p></li></ul><h4 id="Image-Translation"><a href="#Image-Translation" class="headerlink" title="Image Translation"></a>Image Translation</h4><h4 id="Optimization-of-GAN-network"><a href="#Optimization-of-GAN-network" class="headerlink" title="Optimization of GAN network"></a>Optimization of GAN network</h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;refer to &lt;a href=&quot;https://blog.csdn.net/qq_25737169/article/details/84864808&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;blogs&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;Optimi
+      
+    
+    </summary>
+    
+      <category term="Generative Model" scheme="https://www.yanhong.me/categories/Generative-Model/"/>
+    
+    
+      <category term="variation" scheme="https://www.yanhong.me/tags/variation/"/>
+    
+  </entry>
   
   <entry>
     <title>Loss for VAE-GAN</title>
@@ -219,16 +245,28 @@
   </entry>
   
   <entry>
-    <title>U-Net</title>
+    <title>Variations of U-Net</title>
     <link href="https://www.yanhong.me/2019/06/10/U-Net/"/>
     <id>https://www.yanhong.me/2019/06/10/U-Net/</id>
     <published>2019-06-10T06:56:57.000Z</published>
-    <updated>2019-06-10T06:56:57.983Z</updated>
+    <updated>2019-09-19T03:04:45.283Z</updated>
+    
+    <content type="html"><![CDATA[<p>refer to <a href="https://zhuanlan.zhihu.com/p/57530767" target="_blank" rel="noopener">Unet blog</a></p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;p&gt;refer to &lt;a href=&quot;https://zhuanlan.zhihu.com/p/57530767&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Unet blog&lt;/a&gt;&lt;/p&gt;
+
+      
+    
     </summary>
     
+      <category term="Generative Network" scheme="https://www.yanhong.me/categories/Generative-Network/"/>
+    
+    
+      <category term="variation" scheme="https://www.yanhong.me/tags/variation/"/>
     
   </entry>
   

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.yanhong.me/2019/06/10/U-Net/</loc>
+    <lastmod>2019-09-19</lastmod>
+  </url>  <url>
+    <loc>https://www.yanhong.me/2019/09/19/Variations-of-GAN/</loc>
+    <lastmod>2019-09-19</lastmod>
+  </url>  <url>
     <loc>https://www.yanhong.me/2019/09/05/Loss-for-VAE-GAN/</loc>
     <lastmod>2019-09-07</lastmod>
   </url>  <url>
@@ -27,9 +33,6 @@
   </url>  <url>
     <loc>https://www.yanhong.me/2019/06/14/Pedestrain-Datasets/</loc>
     <lastmod>2019-06-16</lastmod>
-  </url>  <url>
-    <loc>https://www.yanhong.me/2019/06/10/U-Net/</loc>
-    <lastmod>2019-06-10</lastmod>
   </url>  <url>
     <loc>https://www.yanhong.me/2019/06/05/Interpolation-in-Latent-Space/</loc>
     <lastmod>2019-06-05</lastmod>
