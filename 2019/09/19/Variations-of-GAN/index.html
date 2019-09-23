@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
 <meta property="og:description" content="refer to blogs1, blogs2, blogs3 DCGANpaper link  network design latent interpolation using feature from discriminator to train classifier  conditional GANpaper link  using label information to stabliz">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-22T07:25:54.501Z">
+<meta property="og:updated_time" content="2019-09-23T02:06:17.870Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Variations of GAN">
 <meta name="twitter:description" content="refer to blogs1, blogs2, blogs3 DCGANpaper link  network design latent interpolation using feature from discriminator to train classifier  conditional GANpaper link  using label information to stabliz">
@@ -454,6 +454,34 @@
 <li>text-to-image</li>
 <li>multi-stage (from small to large)</li>
 </ul>
+<h5 id="WGAN"><a href="#WGAN" class="headerlink" title="WGAN"></a>WGAN</h5><p><a href="https://arxiv.org/pdf/1701.07875.pdf" target="_blank" rel="noopener">paper link</a></p>
+<ul>
+<li><p>aim: minimize the distribution distance between real data and generated data.<br>\begin{equation}<br>\delta\left(\mathbb{P}_{r}, \mathbb{P}_{g}\right)=\sup _{A \in \Sigma}\left|\mathbb{P}_{r}(A)-\mathbb{P}_{g}(A)\right|<br>\end{equation}</p>
+</li>
+<li><p>problem: superior discriminator lead to the gradient vanish of the generator, while the gradient of the generator is unaccuracy with inferior discriminator. the ability of discriminator need to be controlled. </p>
+</li>
+</ul>
+<h6 id="different-distance"><a href="#different-distance" class="headerlink" title="different distance"></a>different distance</h6><ul>
+<li>KL: assymetric and possibly infinite</li>
+<li>JS: symmetrical and always defined</li>
+<li>EM(earch mover): the “cost” of the optimal transport plan.<br>\begin{equation}<br>W\left(\mathbb{P}_{r}, \mathbb{P}_{g}\right)=\inf _{\gamma \in \Pi\left(\mathbb{P}_{r}, \mathbb{P}_{g}\right)} \mathbb{E}_{(x, y) \sim \gamma}[|x-y|]<br>\end{equation}</li>
+</ul>
+<h6 id="WGAN-1"><a href="#WGAN-1" class="headerlink" title="WGAN"></a>WGAN</h6><ul>
+<li>using EM to evaluate the distribution distance</li>
+<li>remove sigmoid from the last layer of discriminator</li>
+<li>without log operation for discriminator loss</li>
+<li>restrict the parameter of discriminator to fixted value after each update</li>
+<li>using RMSProp or SGD</li>
+</ul>
+<p>\begin{equation}<br>\max _{|f|_{L} \leq 1} \mathbb{E}_{x \sim \mathbb{P}_{r}}[f(x)]-\mathbb{E}_{x \sim \mathbb{P}_{\theta}}[f(x)]<br>\end{equation}</p>
+<p>where Lipschitz:</p>
+<p>\begin{equation}<br>\left|f\left(x<em>{1}\right)-f\left(x</em>{2}\right)\right| \leq K\left|x<em>{1}-x</em>{2}\right|<br>\end{equation}<br>means that the absolute value of Derivative function lower than fixted K.</p>
+<p>in the restriction, the total loss of WGAN:<br>\begin{equation}<br>L=\mathbb{E}_{x \sim P_{r}}\left[f_{w}(x)\right]-\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]<br>\end{equation} </p>
+<p>for generator:<br>\begin{equation}<br>-\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]<br>\end{equation}</p>
+<p>for discriminator:<br>\begin{equation}<br>\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]-\mathbb{E}_{x \sim P<em>{r}}\left[f</em>{w}(x)\right]<br>\end{equation}</p>
+<h5 id="WGAN-GP"><a href="#WGAN-GP" class="headerlink" title="WGAN-GP"></a>WGAN-GP</h5><p>\begin{equation}<br>L=\underset{\tilde{\boldsymbol{x}} \sim \mathbb{P}_{g}}{\mathbb{E}}[D(\tilde{\boldsymbol{x}})]-\underset{\boldsymbol{x} \sim \mathbb{P}_{r}}{\mathbb{E}}[D(\boldsymbol{x})]+\lambda \underset{\hat{\boldsymbol{x}} \sim \mathbb{P}_{\hat{\boldsymbol{x}}}}{\mathbb{E}}\left[\left(\left|\nabla<em>{\hat{\boldsymbol{x}}} D(\hat{\boldsymbol{x}})\right|\</em>{2}-1\right)^{2}\right]<br>\end{equation}</p>
+<p>for generator:<br>\begin{equation}<br>-\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]<br>\end{equation}</p>
+<p>for discriminator:<br>\begin{equation}<br>\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]-\mathbb{E}_{x \sim P<em>{r}}\left[f</em>{w}(x)\right]<br>\end{equation} + </p>
 
       
     </div>
@@ -647,7 +675,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#DCGAN"><span class="nav-number">1.</span> <span class="nav-text">DCGAN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#conditional-GAN"><span class="nav-number">2.</span> <span class="nav-text">conditional GAN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#bigGAN"><span class="nav-number">3.</span> <span class="nav-text">bigGAN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#styleGAN"><span class="nav-number">4.</span> <span class="nav-text">styleGAN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#cycleGAN"><span class="nav-number">5.</span> <span class="nav-text">cycleGAN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Pix2Pix"><span class="nav-number">6.</span> <span class="nav-text">Pix2Pix</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#stackGAN"><span class="nav-number">7.</span> <span class="nav-text">stackGAN</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#DCGAN"><span class="nav-number">1.</span> <span class="nav-text">DCGAN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#conditional-GAN"><span class="nav-number">2.</span> <span class="nav-text">conditional GAN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#bigGAN"><span class="nav-number">3.</span> <span class="nav-text">bigGAN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#styleGAN"><span class="nav-number">4.</span> <span class="nav-text">styleGAN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#cycleGAN"><span class="nav-number">5.</span> <span class="nav-text">cycleGAN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Pix2Pix"><span class="nav-number">6.</span> <span class="nav-text">Pix2Pix</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#stackGAN"><span class="nav-number">7.</span> <span class="nav-text">stackGAN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#WGAN"><span class="nav-number">8.</span> <span class="nav-text">WGAN</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#different-distance"><span class="nav-number">8.1.</span> <span class="nav-text">different distance</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#WGAN-1"><span class="nav-number">8.2.</span> <span class="nav-text">WGAN</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#WGAN-GP"><span class="nav-number">9.</span> <span class="nav-text">WGAN-GP</span></a></li></ol></div>
             
 
           </div>
