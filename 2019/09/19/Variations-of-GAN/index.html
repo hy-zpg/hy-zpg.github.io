@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
 <meta property="og:description" content="refer to blogs1, blogs2, blogs3 DCGANpaper link  network design latent interpolation using feature from discriminator to train classifier  conditional GANpaper link  using label information to stabliz">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-23T02:06:17.870Z">
+<meta property="og:updated_time" content="2019-09-23T02:23:21.344Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Variations of GAN">
 <meta name="twitter:description" content="refer to blogs1, blogs2, blogs3 DCGANpaper link  network design latent interpolation using feature from discriminator to train classifier  conditional GANpaper link  using label information to stabliz">
@@ -475,13 +475,14 @@
 </ul>
 <p>\begin{equation}<br>\max _{|f|_{L} \leq 1} \mathbb{E}_{x \sim \mathbb{P}_{r}}[f(x)]-\mathbb{E}_{x \sim \mathbb{P}_{\theta}}[f(x)]<br>\end{equation}</p>
 <p>where Lipschitz:</p>
-<p>\begin{equation}<br>\left|f\left(x<em>{1}\right)-f\left(x</em>{2}\right)\right| \leq K\left|x<em>{1}-x</em>{2}\right|<br>\end{equation}<br>means that the absolute value of Derivative function lower than fixted K.</p>
+<p>\begin{equation}<br>\left|f\left(x_{1}\right)-f\left(x_{2}\right)\right| \leq K\left|x_{1}-x_{2}\right|<br>\end{equation}</p>
+<p>means that the absolute value of Derivative function lower than fixted K.</p>
 <p>in the restriction, the total loss of WGAN:<br>\begin{equation}<br>L=\mathbb{E}_{x \sim P_{r}}\left[f_{w}(x)\right]-\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]<br>\end{equation} </p>
 <p>for generator:<br>\begin{equation}<br>-\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]<br>\end{equation}</p>
-<p>for discriminator:<br>\begin{equation}<br>\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]-\mathbb{E}_{x \sim P<em>{r}}\left[f</em>{w}(x)\right]<br>\end{equation}</p>
-<h5 id="WGAN-GP"><a href="#WGAN-GP" class="headerlink" title="WGAN-GP"></a>WGAN-GP</h5><p>\begin{equation}<br>L=\underset{\tilde{\boldsymbol{x}} \sim \mathbb{P}_{g}}{\mathbb{E}}[D(\tilde{\boldsymbol{x}})]-\underset{\boldsymbol{x} \sim \mathbb{P}_{r}}{\mathbb{E}}[D(\boldsymbol{x})]+\lambda \underset{\hat{\boldsymbol{x}} \sim \mathbb{P}_{\hat{\boldsymbol{x}}}}{\mathbb{E}}\left[\left(\left|\nabla<em>{\hat{\boldsymbol{x}}} D(\hat{\boldsymbol{x}})\right|\</em>{2}-1\right)^{2}\right]<br>\end{equation}</p>
+<p>for discriminator:<br>\begin{equation}<br>\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]-\mathbb{E}_{x \sim P_{r}}\left[f_{w}(x)\right]<br>\end{equation}</p>
+<h5 id="WGAN-GP"><a href="#WGAN-GP" class="headerlink" title="WGAN-GP"></a>WGAN-GP</h5><p>\begin{equation}<br>L=\underset{\tilde{\boldsymbol{x}} \sim \mathbb{P}_{g}}{\mathbb{E}}[D(\tilde{\boldsymbol{x}})]-\underset{\boldsymbol{x} \sim \mathbb{P}_{r}}{\mathbb{E}}[D(\boldsymbol{x})]+\lambda \underset{\hat{\boldsymbol{x}} \sim \mathbb{P}_{\boldsymbol{x}}}{\mathbb{E}}\left[\left(\left|\nabla_{\hat{\boldsymbol{x}}} D(\hat{\boldsymbol{x}})\right|_{2}-1\right)^{2}\right]<br>\end{equation}</p>
 <p>for generator:<br>\begin{equation}<br>-\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]<br>\end{equation}</p>
-<p>for discriminator:<br>\begin{equation}<br>\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]-\mathbb{E}_{x \sim P<em>{r}}\left[f</em>{w}(x)\right]<br>\end{equation} + </p>
+<p>for discriminator:<br>\begin{equation}<br>\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]-\mathbb{E}_{x \sim P_{r}}\left[f_{w}(x)\right]<br>\end{equation} + \lambda \underset{\hat{\boldsymbol{x}} \sim \mathbb{P}_{\boldsymbol{x}}}{\mathbb{E}}\left[\left(\left|\nabla_{\hat{\boldsymbol{x}}} D(\hat{\boldsymbol{x}})\right|_{2}-1\right)^{2}\right]</p>
 
       
     </div>
