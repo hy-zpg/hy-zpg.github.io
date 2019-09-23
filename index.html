@@ -484,9 +484,9 @@
 <p>in the restriction, the total loss of WGAN:<br>\begin{equation}<br>L=\mathbb{E}_{x \sim P_{r}}\left[f_{w}(x)\right]-\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]<br>\end{equation} </p>
 <p>for generator:<br>\begin{equation}<br>-\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]<br>\end{equation}</p>
 <p>for discriminator:<br>\begin{equation}<br>\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]-\mathbb{E}_{x \sim P_{r}}\left[f_{w}(x)\right]<br>\end{equation}</p>
-<h5 id="WGAN-GP"><a href="#WGAN-GP" class="headerlink" title="WGAN-GP"></a>WGAN-GP</h5><p>\begin{equation}<br>L=\underset{\tilde{\boldsymbol{x}} \sim \mathbb{P}_{g}}{\mathbb{E}}[D(\tilde{\boldsymbol{x}})]-\underset{\boldsymbol{x} \sim \mathbb{P}_{r}}{\mathbb{E}}[D(\boldsymbol{x})]+\lambda \underset{\hat{\boldsymbol{x}} \sim \mathbb{P}_{\boldsymbol{x}}}{\mathbb{E}}\left[\left(\left|\nabla_{\hat{\boldsymbol{x}}} D(\hat{\boldsymbol{x}})\right|_{2}-1\right)^{2}\right]<br>\end{equation}</p>
+<h5 id="WGAN-GP"><a href="#WGAN-GP" class="headerlink" title="WGAN-GP"></a>WGAN-GP</h5><p>\begin{equation}<br>L=\underset{\tilde{\boldsymbol{x}} \sim \mathbb{P}_{g}}{\mathbb{E}}[D(\tilde{\boldsymbol{x}})]-\underset{\boldsymbol{x} \sim \mathbb{P}_{r}}{\mathbb{E}}[D(\boldsymbol{x})]+ \lambda \underset{\hat{\boldsymbol{x}} \sim \mathbb{P}_{\boldsymbol{x}}}{\mathbb{E}}\left[\left(\left|\nabla_{\hat{\boldsymbol{x}}} D(\hat{\boldsymbol{x}})\right|_{2}-1\right)^{2}\right]<br>\end{equation}</p>
 <p>for generator:<br>\begin{equation}<br>-\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]<br>\end{equation}</p>
-<p>for discriminator:<br>\begin{equation}<br>\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]-\mathbb{E}_{x \sim P_{r}}\left[f_{w}(x)\right]+ \lambda \underset{\hat{\boldsymbol{x}} \sim \mathbb{P}_{\boldsymbol{x}}}{\mathbb{E}}\left[\left(\left|\nabla_{\hat{\boldsymbol{x}}} D(\hat{\boldsymbol{x}})\right|_{2}-1\right)^{2}\right]\end{equation} </p>
+<p>for discriminator:<br>\begin{equation}<br>\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]-\mathbb{E}_{x \sim P_{r}}\left[f_{w}(x)\right] + \lambda \underset{\hat{\boldsymbol{x}} \sim \mathbb{P}_{\boldsymbol{x}}}{\mathbb{E}}\left[\left(\left|\nabla_{\hat{\boldsymbol{x}}} D(\hat{\boldsymbol{x}})\right|_{2}-1\right)^{2}\right]<br>\end{equation}</p>
 
           
         
