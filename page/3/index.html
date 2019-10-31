@@ -307,6 +307,252 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/04/22/Generative-Matching-Networks/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/22/Generative-Matching-Networks/" itemprop="url">Generative Matching Networks</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-22T10:02:57+08:00">
+                2019-04-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Generative-Model/" itemprop="url" rel="index">
+                    <span itemprop="name">Generative Model</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><h4 id="Related-links"><a href="#Related-links" class="headerlink" title="Related links"></a>Related links</h4><ul>
+<li>This paper in here <a href="https://openreview.net/pdf?id=HyCRyS9gx" target="_blank" rel="noopener">FAST ADAPTATION IN GENERATIVE MODELS WITH GENERATIVE MATCHING NETWORKS</a></li>
+<li>Another version is here <a href="http://proceedings.mlr.press/v84/bartunov18a/bartunov18a.pdf" target="_blank" rel="noopener">Few-shot Generative Modelling with Generative Matching Networks</a>.</li>
+<li>Both of them inspired from <a href="http://papers.nips.cc/paper/6385-matching-networks-for-one-shot-learning.pdf" target="_blank" rel="noopener">Matching networks for one shot learning</a></li>
+</ul>
+<h4 id="Remaining-bottlenecks-in-deep-generative-models"><a href="#Remaining-bottlenecks-in-deep-generative-models" class="headerlink" title="Remaining bottlenecks in deep generative models"></a>Remaining bottlenecks in deep generative models</h4><ul>
+<li>extensive training leading to slow training (currently experience in DCGAN, FIGR).</li>
+<li>difficulities with generalization from small number of training examples.</li>
+</ul>
+<h4 id="Solution-to-those-bottlenecks"><a href="#Solution-to-those-bottlenecks" class="headerlink" title="Solution to those bottlenecks"></a>Solution to those bottlenecks</h4><ul>
+<li>conditional generative models: adapting generative distribution to additional inputs.</li>
+<li>the restriction of previous research: the input data to be a single object or multiple objects represents the same concepts.</li>
+</ul>
+<h4 id="Novelty-of-generative-matching-networks"><a href="#Novelty-of-generative-matching-networks" class="headerlink" title="Novelty of generative matching networks"></a>Novelty of generative matching networks</h4><ul>
+<li>VAE + matching network</li>
+<li>without explicit limitations on the numbles of additional inputs objects or the number of concepts.(experiment not demonstrate this, conditional GAN may achieve it.)</li>
+<li>learn new concepts.</li>
+</ul>
+<h3 id="Implementing"><a href="#Implementing" class="headerlink" title="Implementing"></a>Implementing</h3><h4 id="Specific-problem"><a href="#Specific-problem" class="headerlink" title="Specific problem"></a>Specific problem</h4><ul>
+<li>VAE has been transfered intractable optimization into tractable optmization problem, refer to <a href="https://www.yanhong.me/2019/04/09/Overview-of-GAN/">Overview of Generative Models</a>. However, update of parameters computed from a small portion of training data have a immediate effect for the whole dataset.</li>
+<li>cann’t quickly adaption because of not incremental learning.</li>
+<li>original optimization objective<br>\begin{aligned}<br>\log p(\mathbf{x} | \boldsymbol{\theta}) \geq \mathcal{L}(\boldsymbol{\theta}, \boldsymbol{\phi})=\mathbb{E}_{q}[\log p(\mathbf{x}, \mathbf{z} | \boldsymbol{\theta})-\log q(\mathbf{z} | \mathbf{x}, \boldsymbol{\phi})]=\log p(\mathbf{x} | \boldsymbol{\theta})-\operatorname{KL}(q | p(\cdot | \mathbf{x}, \boldsymbol{\theta}))<br>\end{aligned}</li>
+</ul>
+<h4 id="Generative-matching-networks"><a href="#Generative-matching-networks" class="headerlink" title="Generative matching networks"></a>Generative matching networks</h4><ul>
+<li>different VAE which is x -&gt; z -&gt; x, the framework of this model is from z -&gt;x -&gt; z.</li>
+<li><p>incorporating knowledge from newly available data is conditioning, so design model as $p(\mathbf{x} | \mathbf{X}, \boldsymbol{\theta})$ conditioning on additional input data $\mathbf{X}$.<br>\begin{aligned}<br>p(\mathbf{x}, \mathbf{z} | \mathbf{X}, \boldsymbol{\theta})=p(\mathbf{z} | \mathbf{X}, \boldsymbol{\theta}) p(\mathbf{x} | \mathbf{z}, \mathbf{X}, \boldsymbol{\theta})<br>\end{aligned}</p>
+</li>
+<li><p>followed VAE, maintaining a recognition model approximating the posterior over latent variable $z$ to achieve lower bound optimization objective, so,<br>\begin{equation}<br>q(\mathbf{z} | \mathbf{x}, \mathbf{X}, \boldsymbol{\phi}) \approx p(\mathbf{z} | \mathbf{x}, \mathbf{X}, \boldsymbol{\theta})<br>\end{equation}</p>
+</li>
+</ul>
+<h5 id="Basic-model"><a href="#Basic-model" class="headerlink" title="Basic model"></a>Basic model</h5><h6 id="Flow-chat-of-generative-matching-networks"><a href="#Flow-chat-of-generative-matching-networks" class="headerlink" title="Flow chat of generative matching networks"></a>Flow chat of generative matching networks</h6><p><img src="/imgs/matching_networks.jpg" alt="&#39;flow chart of generative matching networks&#39;"></p>
+<ol>
+<li><p>the <font color="red">objective</font> is:<br>\begin{equation}<br>p(\mathbf{x}, \mathbf{z} | \mathbf{X}, \boldsymbol{\theta})=p(\mathbf{z} | \mathbf{X}, \boldsymbol{\theta}) p(\mathbf{x} | \mathbf{z}, \mathbf{X}, \boldsymbol{\theta})<br>\end{equation}</p>
+</li>
+<li><p>In <font color="red">conditional likelihood</font> (decoder) $p(\mathbf{x} | \mathbf{z}, \mathbf{X}, \boldsymbol{\theta})$:</p>
+<ul>
+<li>$\mathbf{x}$ is additional input data which is conditional objects.</li>
+<li>$\mathbf{z}$ is the prior.</li>
+<li>$f_L$ and $g_L$ are used to map latent variabels and conditioning objects into feature space $\phi$. $f_L$ is simple affine transformation while $g_L$ is a convolutional network.</li>
+<li>$\phi_L$ is feature extractor different from $g_L$ but sharing some parameters between them.</li>
+<li>mapping $r_L$ to $x$ by a deconvulutional network.</li>
+</ul>
+</li>
+<li><p>In <font color="red">recognition model</font> (encoder) $q(\mathbf{z} | \mathbf{X}, \mathbf{x})$:</p>
+<ul>
+<li>$g_R = f_R = g_L$</li>
+<li>$\phi_L$ = $\phi_R$</li>
+<li>$r_R$ is used to compute parameters of approximate posterior which is a normal distribution.</li>
+</ul>
+</li>
+</ol>
+<h6 id="Core-for-conditional-generative-matching-network"><a href="#Core-for-conditional-generative-matching-network" class="headerlink" title="Core for conditional generative matching network"></a>Core for conditional generative matching network</h6><ul>
+<li>Conditioning on additional inputs $\mathbf{X}$ by matching networks, <font color="red">attention kernel</font> can be calculated as,</li>
+</ul>
+<p>\begin{equation}<br>a\left(\mathbf{z}, \mathbf{x}_{t}\right)=\frac{\exp \left(\operatorname{sim}\left(f_{L}(\mathbf{z}), g_{L}\left(\mathbf{x}_{t}\right)\right)\right)}{\sum_{t^{\prime}=1}^{T} \exp \left(\operatorname{sim}\left(f_{L}(\mathbf{z}), g_{L}\left(\mathbf{x}_{t^{\prime}}\right)\right)\right)}<br>\end{equation}</p>
+<ul>
+<li><font color="red">Aggregating additional inputs</font> for test input,<br>\begin{equation}<br>\mathbf{r}=\sum_{t=1}^{T} a\left(\mathbf{z}, \mathbf{x}_{t}\right) \psi_{L}\left(\mathbf{x}_{t}\right)<br>\end{equation}<br>where $\mathbf{r}$ is input of decoder which is denconvolutional network.</li>
+</ul>
+<!-- ##### Recognition model -->
+<h5 id="FCE"><a href="#FCE" class="headerlink" title="FCE"></a>FCE</h5><p>Obtaining a joint embedding of conditional input dataset with LSTM.<br>\begin{equation}<br>a\left(\mathbf{z}, \mathbf{x}_{t}\right)=\frac{\exp \left(\operatorname{sim}\left(f\left(\mathbf{z}, \mathbf{h}_{k}\right), g\left(\mathbf{x}_{t}, \mathbf{h}_{k}\right)\right)\right)}{\sum_{t^{\prime}=1}^{T} \exp \left(\operatorname{sim}\left(f\left(\mathbf{z}, \mathbf{h}_{k}\right), g\left(\mathbf{x}_{t^{\prime}}, \mathbf{h}_{k}\right)\right)\right)}<br>\end{equation}</p>
+<p>\begin{equation}<br>\mathbf{r}_{k}=\sum_{t=1}^{T} a\left(\mathbf{z}, \mathbf{x}_{t}\right) \psi\left(\mathbf{x}_{t}\right)<br>\end{equation}</p>
+<p>\begin{equation}<br>\mathbf{h}_{k+1}=R\left(\mathbf{h}_{k}, \mathbf{r}_{k}\right)<br>\end{equation}</p>
+<h4 id="Training-detail"><a href="#Training-detail" class="headerlink" title="Training detail"></a>Training detail</h4><p>The final objective with lower bound can be respresented as,</p>
+<p>\begin{equation}<br>\mathcal{L}(\mathbf{X}, \boldsymbol{\theta}, \boldsymbol{\phi})=\sum_{t=1}^{T} \mathbb{E}_{q\left(\mathbf{z}_{t} | \mathbf{x}_{t}, \mathbf{X}<br>_{&lt; t}, \boldsymbol{\phi}\right)}\left[\log p\left(\mathbf{x}_{t}, \mathbf{z}_{t} | \mathbf{X}_{&lt; t}, \boldsymbol{\theta}\right)- log q\left(\mathbf{z}_{t} | \mathbf{x}_{t}, \mathbf{X}_{&lt; t}, \boldsymbol{\phi}\right)\right]<br>\end{equation}</p>
+<ul>
+<li><p>the first item is used to for reconstruction loss.<br><!-- $\mathbb{E}\_{q\left(\mathbf{z}\_{t} | \mathbf{x}\_{t}, \mathbf{X}
+\_{< t}, \boldsymbol{\phi}\right)}\left[\log p\left(\mathbf{x}\_{t}, \mathbf{z}\_{t} | \mathbf{X}\_{<  -->t}, \boldsymbol{\theta}\right)$ </p>
+</li>
+<li><p>the second item is used to calculate KL divergence which can measure the distribution difference between latent variables and normal distribution.</p>
+<!-- $log q\left(\mathbf{z}\_{t} | \mathbf{x}\_{t}, \mathbf{X}\_{< t}, \boldsymbol{\phi}\right)\right$
+-->
+<h4 id="Evaluation"><a href="#Evaluation" class="headerlink" title="Evaluation"></a>Evaluation</h4></li>
+<li>visualization of generated images.</li>
+<li>conditional negative log-likelihoods for the test.</li>
+</ul>
+<h3 id="Possible-ideas"><a href="#Possible-ideas" class="headerlink" title="Possible ideas"></a>Possible ideas</h3><ul>
+<li>VAE generated images is vague, may it can be combined with GAN <a href="https://arxiv.org/pdf/1512.09300.pdf" target="_blank" rel="noopener">Autoencoding beyond pixels using a learned similarity metric</a></li>
+</ul>
+<h3 id="My-high-level-understanding-of-GMN"><a href="#My-high-level-understanding-of-GMN" class="headerlink" title="My high-level understanding of GMN"></a>My high-level understanding of GMN</h3><ul>
+<li><p>VAE: reconstruction (likelihood) + KL divergence(the distribution of latent varables[z_posterior] and normal distribution[z_prior])</p>
+</li>
+<li><p>GMN: reconstruction (likelihood) + KL divergence(the distribution of latent varables[z_posterior] and modified distribution with mean, variance values from observations[z_prior])<br><img src="/imgs/vae_gmn.jpg" alt="&#39;comparison between VAE and GMN&#39;"><br><img src="/imgs/GMN_VAE.jpg" alt="&#39;comparison between VAE and GMN&#39;"></p>
+</li>
+<li><p>GMN: flowchart<br><img src="/imgs/gmn_flowchat.jpg" alt="&#39;comparison between VAE and GMN&#39;"></p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/04/18/meta-learning/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -2075,202 +2321,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/26/Heterogeneous-Multitask/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/26/Heterogeneous-Multitask/" itemprop="url">Heterogeneous Multitask</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-26T15:46:30+08:00">
-                2019-02-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">Deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Large-scale-Heterogeneous-Learning-in-Big-Data-Analytics"><a href="#Large-scale-Heterogeneous-Learning-in-Big-Data-Analytics" class="headerlink" title="Large-scale Heterogeneous Learning in Big Data Analytics"></a>Large-scale Heterogeneous Learning in Big Data Analytics</h1><blockquote>
-<p>reference slide <a href="http://cci.drexel.edu/bigdata/bigdata2014/MTL_BigData_14.pdf" target="_blank" rel="noopener">Large-scale Heterogeneous Learning in Big Data Analytics</a></p>
-</blockquote>
-<ul>
-<li>multi-task learning<br>‘Multitask learning is an inductive transfer mechanism for improving generalization performance [Caruana, Machine Learning’97]’</li>
-<li>multi-label learning:</li>
-<li>multi-view learning:</li>
-</ul>
-<h2 id="Heterogeneous-outputs-related-to-each-other-with-the-same-set-of-inputs"><a href="#Heterogeneous-outputs-related-to-each-other-with-the-same-set-of-inputs" class="headerlink" title="Heterogeneous outputs related to each other with the same set of inputs"></a>Heterogeneous outputs related to each other with the same set of inputs</h2><blockquote>
-<p>reference-1 <a href="http://www.cs.cmu.edu/~sssykim/papers/yang_kim_xing_nips09.pdf" target="_blank" rel="noopener">Heterogeneous Multitask Learning with Joint Sparsity Constraints</a></p>
-</blockquote>
-<ol>
-<li>probelm: dealing with homogeneous tasks, such as purely regression (continue) or classification (discrete) task, from a common set of high-dimensional feature space. </li>
-<li>method: modeling the joint sparsity as L1/L∞ or L1/L2 norm of the model parameters, achieving joint sparse feature selection.</li>
-<li>datasets: discovering genetic markers that influence multiple correlated traits jointly, datasets with different clinical traits including continuous and discrete labels.</li>
-</ol>
-<h2 id="Heterogeneous-inputs-from-multiple-domains"><a href="#Heterogeneous-inputs-from-multiple-domains" class="headerlink" title="Heterogeneous inputs from multiple domains"></a>Heterogeneous inputs from multiple domains</h2><blockquote>
-<p>reference-2 <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8058002&amp;tag=1" target="_blank" rel="noopener">Heterogeneous Multitask Metric Learning<br>Across Multiple Domains</a> <a href="https://www.semanticscholar.org/paper/Exploiting-High-Order-Information-in-Heterogeneous-Luo-Tao/1bf6d4b31fa26aa9e0c2b759e6bee9ec718dcae7" target="_blank" rel="noopener">Exploiting High-Order Information in Heterogeneous Multi-Task Feature Learning</a></p>
-</blockquote>
-<ul>
-<li>‘Multitask metric learning (MTML), which can be regarded as a special case of transfer metric learning (TML) by performing transfer across all related domains.’</li>
-<li>‘Heterogeneous transfer learning approaches can be adopted to remedy this drawback by deriving a metric from the learned transformation across different domains’<ol>
-<li>probelm: inputs from heterogeneous domain can be solved by deriving a metric from the learned transformation from two domains, but pratical aims is to deal with multiple domain by learning the metric from all domains.</li>
-<li>method: metrics -&gt; transformation -&gt; subspace -&gt; maximize high-order ovariance among the predictive structures of these domains, because high-order statistics (correlation information), which can only be exploited by simultaneously examining all domains, thus obtaining more reliable feature transformations and metrics.</li>
-<li>datasets: Document Categorization, Scene Classification and Image Annotation</li>
-</ol>
-</li>
-</ul>
-<h2 id="Heterogeneous-features-for-different-task"><a href="#Heterogeneous-features-for-different-task" class="headerlink" title="Heterogeneous features for different task"></a>Heterogeneous features for different task</h2><blockquote>
-<p>reference-3 <a href="http://www.intsci.ac.cn/users/fzzhuang/papers/TOC2017.pdf" target="_blank" rel="noopener">Semantic Feature Learning for Heterogeneous<br>Multitask Classification via Non-Negative<br>Matrix Factorization</a></p>
-</blockquote>
-<ol>
-<li>problem: different tasks have heterogenous feature in real world.</li>
-<li>method: leveraging a non-negative matrix factorization-based multitask method (MTNMF) to learn a common semantic feature space underlying different heterogeneous feature spaces of each task. it is similar to reference-1, feature selection vs feature factorization.</li>
-<li>datasets: 20Newsgroups&amp;ImageNet (image and document), Email Spam Detection (15 persons), Sentiment Classification (books;  dvd; electronics; kitchen)</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2321,7 +2371,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2332,7 +2382,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2343,7 +2393,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

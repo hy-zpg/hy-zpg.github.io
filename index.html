@@ -307,6 +307,187 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/10/31/ICCV-Paper-Reading/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/31/ICCV-Paper-Reading/" itemprop="url">ICCV-Paper-Reading</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-31T14:03:49+08:00">
+                2019-10-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Generative/" itemprop="url" rel="index">
+                    <span itemprop="name">Generative</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="sinGAN"><a href="#sinGAN" class="headerlink" title="sinGAN"></a><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Shaham_SinGAN_Learning_a_Generative_Model_From_a_Single_Natural_Image_ICCV_2019_paper.pdf" target="_blank" rel="noopener">sinGAN</a></h4><h5 id="abstract"><a href="#abstract" class="headerlink" title="abstract"></a>abstract</h5><ul>
+<li>unconditional generative model</li>
+<li>capture internal distribution of patches within the image</li>
+<li>generate diverse and high-quality samples that carry the same visual content as the image</li>
+<li>containing a pyramid of fully convolutional GANs, learning the patch distribution at a different scale of image, which can ensure significant variability but remain the global structure.</li>
+<li>generating images from noisy</li>
+</ul>
+<h5 id="method"><a href="#method" class="headerlink" title="method"></a>method</h5><h6 id="training-strategy"><a href="#training-strategy" class="headerlink" title="training strategy"></a>training strategy</h6><ul>
+<li>coarse-to-fine fashion</li>
+<li>multi-scale</li>
+</ul>
+<h6 id="mult-scale-patch-generator"><a href="#mult-scale-patch-generator" class="headerlink" title="mult-scale patch generator"></a>mult-scale patch generator</h6><h6 id="mult-scale-patch-discriminator"><a href="#mult-scale-patch-discriminator" class="headerlink" title="mult-scale patch discriminator"></a>mult-scale patch discriminator</h6><h5 id="RELATED"><a href="#RELATED" class="headerlink" title="RELATED"></a>RELATED</h5><ul>
+<li>patch discriminator </li>
+<li>the standard deviation of noise Z, can be propotional to the root RMSE between reconstructed image and real image.</li>
+</ul>
+<h4 id="inGAN"><a href="#inGAN" class="headerlink" title="inGAN"></a><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Shocher_InGAN_Capturing_and_Retargeting_the_DNA_of_a_Natural_Image_ICCV_2019_paper.pdf" target="_blank" rel="noopener">inGAN</a></h4><h5 id="abstract-1"><a href="#abstract-1" class="headerlink" title="abstract"></a>abstract</h5><ul>
+<li>each image hase its internal statistics captured by its unique distribution of patches.</li>
+<li>image-specific gan, patch-distribution</li>
+<li>generating diverse images that can maintain internal patch distribution</li>
+<li><h5 id="method-1"><a href="#method-1" class="headerlink" title="method"></a>method</h5><h5 id="RELATED-1"><a href="#RELATED-1" class="headerlink" title="RELATED"></a>RELATED</h5></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/09/19/Variations-of-GAN/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -420,7 +601,7 @@
         
           
             <p>refer to <a href="https://blog.csdn.net/qq_25737169/article/details/84864808" target="_blank" rel="noopener">blogs1</a>, <a href="http://www.sohu.com/a/302267498_473283" target="_blank" rel="noopener">blogs2</a>, <a href="https://juejin.im/post/5d234eb16fb9a07f0870b9be" target="_blank" rel="noopener">blogs3</a></p>
-<h5 id="DCGAN"><a href="#DCGAN" class="headerlink" title="DCGAN"></a>DCGAN</h5><p><a href="https://arxiv.org/abs/1511.06434" target="_blank" rel="noopener">paper link</a></p>
+<h5 id="DCGAN"><a href="#DCGAN" class="headerlink" title="DCGAN"></a>DCGAN</h5><p><a href="https://arxiv.org/pdf/1511.06434.pdf" target="_blank" rel="noopener">paper link</a></p>
 <ul>
 <li>network design</li>
 <li>latent interpolation</li>
@@ -2026,167 +2207,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/06/10/U-Net/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/06/10/U-Net/" itemprop="url">Variations of U-Net</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-10T14:56:57+08:00">
-                2019-06-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Generative-Network/" itemprop="url" rel="index">
-                    <span itemprop="name">Generative Network</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>refer to <a href="https://zhuanlan.zhihu.com/p/57530767" target="_blank" rel="noopener">Unet blog</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2237,7 +2257,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2248,7 +2268,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2259,7 +2279,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
