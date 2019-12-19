@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yanhong.me/"/>
-  <updated>2019-10-31T07:09:21.498Z</updated>
+  <updated>2019-12-19T06:31:31.323Z</updated>
   <id>https://www.yanhong.me/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Attention-Related</title>
+    <link href="https://www.yanhong.me/2019/12/19/Attention-Related/"/>
+    <id>https://www.yanhong.me/2019/12/19/Attention-Related/</id>
+    <published>2019-12-19T05:51:53.000Z</published>
+    <updated>2019-12-19T06:31:31.323Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Setting"><a href="#Setting" class="headerlink" title="Setting"></a>Setting</h2><ul><li>given feature map $f(w,h,c1)$</li><li>given feature map $g(w,h,c2)$</li><li>assume learned attention map for g</li></ul><h3 id="Separation-between-channel-and-spatial-Attention-based-Fusion-for-Multi-source-Human-Image-Generation"><a href="#Separation-between-channel-and-spatial-Attention-based-Fusion-for-Multi-source-Human-Image-Generation" class="headerlink" title="Separation between channel and spatial Attention-based Fusion for Multi-source Human Image Generation"></a>Separation between channel and spatial <a href="https://arxiv.org/pdf/1905.02655v1.pdf" target="_blank" rel="noopener">Attention-based Fusion for Multi-source Human Image Generation</a></h3><ul><li>spatial attention s[w,h,1]: concat[f,g] -&gt; feature [w,h,c1+c2] -&gt; convolutional layer [1,1,1] -&gt;sigmoid -&gt; [w,h,1]</li><li>channel attention c[1,1,c1/c2]: concat[f,g] -&gt; feature [w,h,c1+c2] -&gt; avgpool layer -&gt; FC layer[c2] -&gt; sigmoid -&gt; [c2]</li><li>attention map a[w,h,c2]: s[w,h,1] * c[1,1,c2]</li><li>attention feature[w,h,c2]: f/g * a</li></ul><h3 id="Global-attention"><a href="#Global-attention" class="headerlink" title="Global attention"></a>Global attention</h3><ul><li>global attention map a[w,h,c2]: concat[f,g]-&gt; feature [w,h,c1+c2] -&gt; convolutional layer[1,1,c2] -&gt; [w,h,c2]</li><li>attention feature[w,h,c2]: f/g * a</li></ul><h3 id="Self-AttentionSelf-Attention-Generative-Adversarial-Networks"><a href="#Self-AttentionSelf-Attention-Generative-Adversarial-Networks" class="headerlink" title="Self AttentionSelf-Attention Generative Adversarial Networks"></a>Self Attention<a href="https://arxiv.org/pdf/1805.08318.pdf" target="_blank" rel="noopener">Self-Attention Generative Adversarial Networks</a></h3><ul><li>specified channels: channels</li><li>f[w,h,c1] -&gt; convolutional layer[1,1,channels/8] -&gt; ff[w,h,channels/8]</li><li>g[w,h,c2] -&gt; convolutional layer[1,1,channels/8] -&gt; gg[w,h,channels/8]</li><li>attention map: resized ff[w<em>h,channels/8] matmul gg[w</em>h,channels/8] (matrix) -&gt; softmax -&gt; attention map[w<em>h,w</em>h]</li><li>g[w,h,c2] -&gt; convolutional layer[1,1,channels] -&gt; hh[w,h,channels]</li><li>attention feature: resized hh[w<em>h,channels] matmul attention map[w</em>h,w<em>h] -&gt; [w</em>h,channels] -&gt; reshape [w,h,channels]</li></ul><h3 id="Non-local-attention-Non-local-Neural-Networks"><a href="#Non-local-attention-Non-local-Neural-Networks" class="headerlink" title="Non local attention Non-local Neural Networks"></a>Non local attention <a href="https://www.zpascal.net/cvpr2018/Wang_Non-Local_Neural_Networks_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Non-local Neural Networks</a></h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Setting&quot;&gt;&lt;a href=&quot;#Setting&quot; class=&quot;headerlink&quot; title=&quot;Setting&quot;&gt;&lt;/a&gt;Setting&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;given feature map $f(w,h,c1)$&lt;/li&gt;
+&lt;li&gt;given
+      
+    
+    </summary>
+    
+      <category term="Attention" scheme="https://www.yanhong.me/categories/Attention/"/>
+    
+    
+      <category term="attention" scheme="https://www.yanhong.me/tags/attention/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ICCV-Paper-Reading</title>
     <link href="https://www.yanhong.me/2019/10/31/ICCV-Paper-Reading/"/>
     <id>https://www.yanhong.me/2019/10/31/ICCV-Paper-Reading/</id>
     <published>2019-10-31T06:03:49.000Z</published>
-    <updated>2019-10-31T07:09:21.498Z</updated>
+    <updated>2019-11-16T13:55:29.524Z</updated>
     
     <content type="html"><![CDATA[<h4 id="sinGAN"><a href="#sinGAN" class="headerlink" title="sinGAN"></a><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Shaham_SinGAN_Learning_a_Generative_Model_From_a_Single_Natural_Image_ICCV_2019_paper.pdf" target="_blank" rel="noopener">sinGAN</a></h4><h5 id="abstract"><a href="#abstract" class="headerlink" title="abstract"></a>abstract</h5><ul><li>unconditional generative model</li><li>capture internal distribution of patches within the image</li><li>generate diverse and high-quality samples that carry the same visual content as the image</li><li>containing a pyramid of fully convolutional GANs, learning the patch distribution at a different scale of image, which can ensure significant variability but remain the global structure.</li><li>generating images from noisy</li></ul><h5 id="method"><a href="#method" class="headerlink" title="method"></a>method</h5><h6 id="training-strategy"><a href="#training-strategy" class="headerlink" title="training strategy"></a>training strategy</h6><ul><li>coarse-to-fine fashion</li><li>multi-scale</li></ul><h6 id="mult-scale-patch-generator"><a href="#mult-scale-patch-generator" class="headerlink" title="mult-scale patch generator"></a>mult-scale patch generator</h6><h6 id="mult-scale-patch-discriminator"><a href="#mult-scale-patch-discriminator" class="headerlink" title="mult-scale patch discriminator"></a>mult-scale patch discriminator</h6><h5 id="RELATED"><a href="#RELATED" class="headerlink" title="RELATED"></a>RELATED</h5><ul><li>patch discriminator </li><li>the standard deviation of noise Z, can be propotional to the root RMSE between reconstructed image and real image.</li></ul><h4 id="inGAN"><a href="#inGAN" class="headerlink" title="inGAN"></a><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Shocher_InGAN_Capturing_and_Retargeting_the_DNA_of_a_Natural_Image_ICCV_2019_paper.pdf" target="_blank" rel="noopener">inGAN</a></h4><h5 id="abstract-1"><a href="#abstract-1" class="headerlink" title="abstract"></a>abstract</h5><ul><li>each image hase its internal statistics captured by its unique distribution of patches.</li><li>image-specific gan, patch-distribution</li><li>generating diverse images that can maintain internal patch distribution</li><li><h5 id="method-1"><a href="#method-1" class="headerlink" title="method"></a>method</h5><h5 id="RELATED-1"><a href="#RELATED-1" class="headerlink" title="RELATED"></a>RELATED</h5></li></ul>]]></content>
     
