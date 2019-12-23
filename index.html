@@ -623,11 +623,7 @@
 <li>generating diverse images that can maintain internal patch distribution</li>
 <li><h5 id="method-1"><a href="#method-1" class="headerlink" title="method"></a>method</h5><h5 id="RELATED-1"><a href="#RELATED-1" class="headerlink" title="RELATED"></a>RELATED</h5></li>
 </ul>
-<h5 id="RelGAN-Multi-Domain-Image-to-Image-Translation-via-Relative-Attributes"><a href="#RelGAN-Multi-Domain-Image-to-Image-Translation-via-Relative-Attributes" class="headerlink" title="RelGAN: Multi-Domain Image-to-Image Translation via Relative Attributes"></a><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Wu_RelGAN_Multi-Domain_Image-to-Image_Translation_via_Relative_Attributes_ICCV_2019_paper.pdf" target="_blank" rel="noopener">RelGAN: Multi-Domain Image-to-Image Translation via Relative Attributes</a></h5><ul>
-<li>matching: discriminator</li>
-<li>interpolation: discriminator</li>
-</ul>
-<h5 id=""><a href="#" class="headerlink" title=""></a><a href=""></a></h5>
+
           
         
       
@@ -2174,6 +2170,22 @@
 <p> for discriminative module: (images and generated images are fed into discriminative part)</p>
 <p> $ primary feature learning: teacher-student type supervision based on soft label</p>
 <p> $ fine-grained feature mining: multi-task learning style</p>
+<h4 id="RelGAN-Multi-Domain-Image-to-Image-Translation-via-Relative-Attributes"><a href="#RelGAN-Multi-Domain-Image-to-Image-Translation-via-Relative-Attributes" class="headerlink" title="RelGAN: Multi-Domain Image-to-Image Translation via Relative Attributes"></a><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Wu_RelGAN_Multi-Domain_Image-to-Image_Translation_via_Relative_Attributes_ICCV_2019_paper.pdf" target="_blank" rel="noopener">RelGAN: Multi-Domain Image-to-Image Translation via Relative Attributes</a></h4><ul>
+<li>matching: discriminator</li>
+<li>interpolation: discriminator</li>
+</ul>
+<h4 id="Guided-Image-to-Image-Translation-with-Bi-Directional-Feature-Transformation"><a href="#Guided-Image-to-Image-Translation-with-Bi-Directional-Feature-Transformation" class="headerlink" title="[Guided Image-to-Image Translation with Bi-Directional Feature Transformation"></a>[Guided Image-to-Image Translation with Bi-Directional Feature Transformation</h4><p>](<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/AlBahar_Guided_Image-to-Image_Translation_With_Bi-Directional_Feature_Transformation_ICCV_2019_paper.pdf" target="_blank" rel="noopener">http://openaccess.thecvf.com/content_ICCV_2019/papers/AlBahar_Guided_Image-to-Image_Translation_With_Bi-Directional_Feature_Transformation_ICCV_2019_paper.pdf</a>)</p>
+<ul>
+<li>bidirectional feature extraction</li>
+<li>pixel-to-pixel adain</li>
+</ul>
+<h4 id="AttentionGAN-Unpaired-Image-to-Image-Translation-using-Attention-Guided-Generative-Adversarial-Networks"><a href="#AttentionGAN-Unpaired-Image-to-Image-Translation-using-Attention-Guided-Generative-Adversarial-Networks" class="headerlink" title="[AttentionGAN: Unpaired Image-to-Image Translation using Attention-Guided Generative Adversarial Networks"></a>[AttentionGAN: Unpaired Image-to-Image Translation using Attention-Guided Generative Adversarial Networks</h4><p>](<a href="https://arxiv.org/pdf/1911.11897.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1911.11897.pdf</a>)</p>
+<ul>
+<li><p>abstract: problem(limited in transforming high-level semantics of input images) -&gt; reson(perceive the most discriminative semantic parts between the source and target domains) -&gt; method(identify the most discriminative semantic objects and minimize changes of unwanted parts for semantic manipulation problems without using extra data and models)</p>
+</li>
+<li><p>introduction: problem(change unwanted parts in the translation, and can also be easily affected by background changes) -&gt; other solutions(ContrastGAN uses object-mask annotations, mask-guided generation train an extra model to detect the object masks and then employ them for image generation) -&gt; Attention GAN (only focus on the foreground of the target do- main and preserve the background of the source domain effectively. the proposed generator learns both foreground and background attentions. It uses the foreground attention to select from the generated out- put for the foreground regions, while uses the back- ground attention to maintain the background informa- tion from the input image)</p>
+</li>
+</ul>
 
           
         
