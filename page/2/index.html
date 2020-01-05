@@ -307,6 +307,243 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/06/19/Simialr-to-DAGAN/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/19/Simialr-to-DAGAN/" itemprop="url">Paper Reading Related GAN</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-19T09:03:25+08:00">
+                2019-06-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Generative-Model/" itemprop="url" rel="index">
+                    <span itemprop="name">Generative Model</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Similar-to-DAGAN"><a href="#Similar-to-DAGAN" class="headerlink" title="Similar to DAGAN"></a>Similar to DAGAN</h3><h4 id="DAGAN"><a href="#DAGAN" class="headerlink" title="DAGAN"></a><a href="https://arxiv.org/pdf/1711.04340.pdf" target="_blank" rel="noopener">DAGAN</a></h4><p>detailed understanding <a href="https://pan.baidu.com/s/1jwQoUsxwjv6Mv7axS5bRRw" target="_blank" rel="noopener">ppt</a></p>
+<h4 id="Class-Distinct-and-Class-Mutual-Image-Generation-with-GANs"><a href="#Class-Distinct-and-Class-Mutual-Image-Generation-with-GANs" class="headerlink" title="Class-Distinct and Class-Mutual Image Generation with GANs"></a><a href="https://arxiv.org/pdf/1811.11163.pdf" target="_blank" rel="noopener">Class-Distinct and Class-Mutual Image Generation with GANs</a></h4><ul>
+<li><p>problem definition: typically in class-conditional image generation, it is assume that there are no intersections between classes, gan model are optimized to fit discrete class labels. Actually, there are data with ambiguous bundaries in real world in class-overlapping settings.</p>
+</li>
+<li><p>aims: class-distinct and class-mutual image generation is desigend to selectively generate class-distinct and class-mutual images in a controllable manner.</p>
+</li>
+<li><p>effects: propose novel families of GANs called class-mixture GAN and class-posterior GAN, mainly redisgining the generator prior and the objective function with auxiliary classifier.</p>
+</li>
+<li><p>destail: weak supervision(binary class labels), focusing on class specificity, different from typical class-wise interpolation.</p>
+<ol>
+<li>based on AC-GAN(class-conditional GAN): loss_gan + loss_classification</li>
+<li>class label $y_g = r_0y_0 + r_1y_1 + … + r_iy_i$, interpolation in label space ($r_i$ is from Dirichlet distribution)</li>
+<li>posterior: r_i = C(y|x_r)</li>
+<li>visualization: vary y continuously between classes to generate images</li>
+</ol>
+</li>
+<li><p>conclusion: latent space is effective, simple version in y space, we selected in image space</p>
+</li>
+</ul>
+<h4 id="Attention-based-Fusion-for-Multi-source-Human-Image-Generation"><a href="#Attention-based-Fusion-for-Multi-source-Human-Image-Generation" class="headerlink" title="Attention-based Fusion for Multi-source Human Image Generation"></a><a href="https://arxiv.org/pdf/1905.02655v1.pdf" target="_blank" rel="noopener">Attention-based Fusion for Multi-source Human Image Generation</a></h4><ul>
+<li><p>problem: conditioned on a target pose and a set X of source appearance images</p>
+</li>
+<li><p>effect: complementary images of the same person which usually available at training and at testing time. (similar idea)</p>
+</li>
+<li><p>novelty: attention-mechanism which selects relevant information from different source image regions. (similar)</p>
+</li>
+<li><p>U-Net: attention are integrated into U-Net, attention module which is spatial-attention nodule(channel independent), using Enconder-Decoder construction.</p>
+</li>
+<li><p>dataset: market1501(source appearance) + DeepFashion(pose)</p>
+</li>
+</ul>
+<h3 id="GAN-applied-in-other-leanring-tasks"><a href="#GAN-applied-in-other-leanring-tasks" class="headerlink" title="GAN applied in other leanring tasks"></a>GAN applied in other leanring tasks</h3><h4 id="Progressive-Pose-Attention-Transfer-for-Person-Image-Generation"><a href="#Progressive-Pose-Attention-Transfer-for-Person-Image-Generation" class="headerlink" title="Progressive Pose Attention Transfer for Person Image Generation"></a><a href="https://arxiv.org/pdf/1904.03349.pdf" target="_blank" rel="noopener">Progressive Pose Attention Transfer for Person Image Generation</a></h4><h4 id="Attention-based-Fusion-for-Multi-source-Human-Image-Generation-1"><a href="#Attention-based-Fusion-for-Multi-source-Human-Image-Generation-1" class="headerlink" title="[Attention-based Fusion for Multi-source Human Image Generation"></a>[Attention-based Fusion for Multi-source Human Image Generation</h4><p>](<a href="https://arxiv.org/pdf/1905.02655v1.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1905.02655v1.pdf</a>)</p>
+<h4 id="Joint-Discriminative-and-Generative-Learning-for-Person-Re-identification"><a href="#Joint-Discriminative-and-Generative-Learning-for-Person-Re-identification" class="headerlink" title="Joint Discriminative and Generative Learning for Person Re-identification"></a><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zheng_Joint_Discriminative_and_Generative_Learning_for_Person_Re-Identification_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Joint Discriminative and Generative Learning for Person Re-identification</a></h4><ul>
+<li><p>problem: significant intra-class variations across different cameras.</p>
+</li>
+<li><p>motivation: augamenting data to enhance the invariance to input changes, improving learned re-id embeddings by better leveraging the generated data, which achieved by jointly coupling re-id learning and data augmentation end-to-end.</p>
+</li>
+<li><p>important methods: generative module including appearance code and structure code + discriminative module sharing appearance encoder with generative module. switching the appearance codes or appearance codes to generate high-quality cross-id images which are on line fed back to the appeance encoder and used to improve the discriminative module.</p>
+</li>
+</ul>
+<p>— my understanding: analyzing the essence of problem (for example, intra-class invariance in reid, maybe intra-class invariance is important for all classification tasks), generating corresponding images to improve the performance (generate cross-id images by appearance code and structure code, maybe using two code focused on different content(appeance and structure two codes for reid problem),also it can be beneficial to generate cross-class images).</p>
+<ul>
+<li>method: </li>
+</ul>
+<p>for generative module: leveraging latent code (appeance and structure)</p>
+<p> $ self-identity: encouraging the appeance encoder to pull appeance code by generating images with seeing cross-images in the same identity, so that intra-class feature variance are reduced, similar to 1-way-1-shot</p>
+<p> $ cross-identity: reconstruct appeance and structure codes, soft label, adversarial training, similar to 2-way-1-shot</p>
+<p> for discriminative module: (images and generated images are fed into discriminative part)</p>
+<p> $ primary feature learning: teacher-student type supervision based on soft label</p>
+<p> $ fine-grained feature mining: multi-task learning style</p>
+<h4 id="RelGAN-Multi-Domain-Image-to-Image-Translation-via-Relative-Attributes"><a href="#RelGAN-Multi-Domain-Image-to-Image-Translation-via-Relative-Attributes" class="headerlink" title="RelGAN: Multi-Domain Image-to-Image Translation via Relative Attributes"></a><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Wu_RelGAN_Multi-Domain_Image-to-Image_Translation_via_Relative_Attributes_ICCV_2019_paper.pdf" target="_blank" rel="noopener">RelGAN: Multi-Domain Image-to-Image Translation via Relative Attributes</a></h4><ul>
+<li>matching: discriminator</li>
+<li>interpolation: discriminator</li>
+</ul>
+<h4 id="Guided-Image-to-Image-Translation-with-Bi-Directional-Feature-Transformation"><a href="#Guided-Image-to-Image-Translation-with-Bi-Directional-Feature-Transformation" class="headerlink" title="[Guided Image-to-Image Translation with Bi-Directional Feature Transformation"></a>[Guided Image-to-Image Translation with Bi-Directional Feature Transformation</h4><p>](<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/AlBahar_Guided_Image-to-Image_Translation_With_Bi-Directional_Feature_Transformation_ICCV_2019_paper.pdf" target="_blank" rel="noopener">http://openaccess.thecvf.com/content_ICCV_2019/papers/AlBahar_Guided_Image-to-Image_Translation_With_Bi-Directional_Feature_Transformation_ICCV_2019_paper.pdf</a>)</p>
+<ul>
+<li>bidirectional feature extraction</li>
+<li>pixel-to-pixel adain</li>
+</ul>
+<h4 id="AttentionGAN-Unpaired-Image-to-Image-Translation-using-Attention-Guided-Generative-Adversarial-Networks"><a href="#AttentionGAN-Unpaired-Image-to-Image-Translation-using-Attention-Guided-Generative-Adversarial-Networks" class="headerlink" title="[AttentionGAN: Unpaired Image-to-Image Translation using Attention-Guided Generative Adversarial Networks"></a>[AttentionGAN: Unpaired Image-to-Image Translation using Attention-Guided Generative Adversarial Networks</h4><p>](<a href="https://arxiv.org/pdf/1911.11897.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1911.11897.pdf</a>)</p>
+<ul>
+<li><p>abstract: problem(limited in transforming high-level semantics of input images) -&gt; reson(perceive the most discriminative semantic parts between the source and target domains) -&gt; method(identify the most discriminative semantic objects and minimize changes of unwanted parts for semantic manipulation problems without using extra data and models)</p>
+</li>
+<li><p>introduction: problem(change unwanted parts in the translation, and can also be easily affected by background changes) -&gt; other solutions(ContrastGAN uses object-mask annotations, mask-guided generation train an extra model to detect the object masks and then employ them for image generation) -&gt; Attention GAN (only focus on the foreground of the target do- main and preserve the background of the source domain effectively. the proposed generator learns both foreground and background attentions. It uses the foreground attention to select from the generated out- put for the foreground regions, while uses the background attention to maintain the background informa- tion from the input image)</p>
+</li>
+<li><p>attention: detail</p>
+</li>
+</ul>
+<h4 id="ELEGANT-Exchanging-Latent-Encodings-with-GAN-for-Transferring-Multiple-Face-Attributes"><a href="#ELEGANT-Exchanging-Latent-Encodings-with-GAN-for-Transferring-Multiple-Face-Attributes" class="headerlink" title="ELEGANT: Exchanging Latent Encodings with GAN for Transferring Multiple Face Attributes"></a><a href="https://arxiv.org/pdf/1803.10562.pdf" target="_blank" rel="noopener">ELEGANT: Exchanging Latent Encodings with GAN for Transferring Multiple Face Attributes</a></h4><ul>
+<li>abstract: problem(transfer multiple face attributes simultaneously, low quality of generated images) -&gt; method(receives two images of opposite attributes as inputs, All the attributes are encoded in a disentangled manner in the latent space, which enables us to manipulate several attributes simultaneously, multi-scale discrimina- tors for adversarial training, it can even generate high-quality images with finer details and less artifacts)</li>
+</ul>
+<h4 id="StarGAN-Unified-Generative-Adversarial-Networks-for-Multi-Domain-Image-to-Image-Translation"><a href="#StarGAN-Unified-Generative-Adversarial-Networks-for-Multi-Domain-Image-to-Image-Translation" class="headerlink" title="StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation"></a><a href="https://arxiv.org/pdf/1711.09020.pdf" target="_blank" rel="noopener">StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation</a></h4><ul>
+<li>abstract: problem(limited scalability and robustness in handling more than two domains) -&gt; reson -&gt; method(simultaneous training of multiple datasets with different domains within a single network)</li>
+</ul>
+<h4 id="StarGAN-v2-Diverse-Image-Synthesis-for-Multiple-Domains"><a href="#StarGAN-v2-Diverse-Image-Synthesis-for-Multiple-Domains" class="headerlink" title="StarGAN v2: Diverse Image Synthesis for Multiple Domains"></a><a href="https://arxiv.org/pdf/1912.01865.pdf" target="_blank" rel="noopener">StarGAN v2: Diverse Image Synthesis for Multiple Domains</a></h4><ul>
+<li>abstract: problem(diversity of generated images, scalability over multiple domains) -&gt; method(we start from StarGAN and replace its domain label with our proposed domain- specific style code that can represent diverse styles of a specific domain. we introduce two mod- ules, a mapping network and a style encoder. The mapping network learns to transform random Gaussian noise into a style code, while the encoder learns to extract the style code from a given reference image. Considering multiple domains, both modules have multiple output branches, each of which provides style codes for a specific domain.)</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/06/14/Pedestrain-Datasets/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1986,144 +2223,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/04/24/VAE-GAN/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/24/VAE-GAN/" itemprop="url">VAE-GAN</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-24T10:44:42+08:00">
-                2019-04-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2174,7 +2273,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-count">39</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2196,7 +2295,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -2256,7 +2355,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

@@ -1,5 +1,5 @@
+https://www.yanhong.me/2020/01/05/Diversity-tricks/
 https://www.yanhong.me/2019/12/19/Attention-Related/
 https://www.yanhong.me/2019/10/31/ICCV-Paper-Reading/
 https://www.yanhong.me/2019/09/19/Variations-of-GAN/
 https://www.yanhong.me/2019/09/05/Loss-for-VAE-GAN/
-https://www.yanhong.me/2019/08/16/Learning-without-Forgetting/

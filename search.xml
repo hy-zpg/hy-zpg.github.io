@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Diversity tricks]]></title>
+    <url>%2F2020%2F01%2F05%2FDiversity-tricks%2F</url>
+    <content type="text"><![CDATA[increase the diversity of generated imagesmode seeking lossstyle diversityinterpolation regression]]></content>
+      <categories>
+        <category>Generative Model</category>
+      </categories>
+      <tags>
+        <tag>generation diversity</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Attention-Related]]></title>
     <url>%2F2019%2F12%2F19%2FAttention-Related%2F</url>
     <content type="text"><![CDATA[Setting given feature map $f(w,h,c1)$ given feature map $g(w,h,c2)$ assume learned attention map for g Separation between channel and spatial Attention-based Fusion for Multi-source Human Image Generation spatial attention s[w,h,1]: concat[f,g] -&gt; feature [w,h,c1+c2] -&gt; convolutional layer [1,1,1] -&gt;sigmoid -&gt; [w,h,1] channel attention c[1,1,c1/c2]: concat[f,g] -&gt; feature [w,h,c1+c2] -&gt; avgpool layer -&gt; FC layer[c2] -&gt; sigmoid -&gt; [c2] attention map a[w,h,c2]: s[w,h,1] * c[1,1,c2] attention feature[w,h,c2]: f/g * a Global attention global attention map a[w,h,c2]: concat[f,g]-&gt; feature [w,h,c1+c2] -&gt; convolutional layer[1,1,c2] -&gt; [w,h,c2] attention feature[w,h,c2]: f/g * a Self AttentionSelf-Attention Generative Adversarial Networks specified channels: channels f[w,h,c1] -&gt; convolutional layer[1,1,channels/8] -&gt; ff[w,h,channels/8] g[w,h,c2] -&gt; convolutional layer[1,1,channels/8] -&gt; gg[w,h,channels/8] attention map: resized ff[wh,channels/8] matmul gg[wh,channels/8] (matrix) -&gt; softmax -&gt; attention map[wh,wh] g[w,h,c2] -&gt; convolutional layer[1,1,channels] -&gt; hh[w,h,channels] attention feature: resized hh[wh,channels] matmul attention map[wh,wh] -&gt; [wh,channels] -&gt; reshape [w,h,channels] Non local attention Non-local Neural Networks]]></content>

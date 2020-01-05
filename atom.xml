@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yanhong.me/"/>
-  <updated>2019-12-19T06:31:31.323Z</updated>
+  <updated>2020-01-05T01:50:18.387Z</updated>
   <id>https://www.yanhong.me/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Diversity tricks</title>
+    <link href="https://www.yanhong.me/2020/01/05/Diversity-tricks/"/>
+    <id>https://www.yanhong.me/2020/01/05/Diversity-tricks/</id>
+    <published>2020-01-05T01:47:16.000Z</published>
+    <updated>2020-01-05T01:50:18.387Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="increase-the-diversity-of-generated-images"><a href="#increase-the-diversity-of-generated-images" class="headerlink" title="increase the diversity of generated images"></a>increase the diversity of generated images</h4><h6 id="mode-seeking-loss"><a href="#mode-seeking-loss" class="headerlink" title="mode seeking loss"></a><a href="https://arxiv.org/pdf/1903.05628.pdf" target="_blank" rel="noopener">mode seeking loss</a></h6><h6 id="style-diversity"><a href="#style-diversity" class="headerlink" title="style diversity"></a><a href="https://arxiv.org/pdf/1912.01865.pdf" target="_blank" rel="noopener">style diversity</a></h6><h6 id="interpolation-regression"><a href="#interpolation-regression" class="headerlink" title="interpolation regression"></a><a href="https://arxiv.org/pdf/1908.07269.pdf" target="_blank" rel="noopener">interpolation regression</a></h6>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;increase-the-diversity-of-generated-images&quot;&gt;&lt;a href=&quot;#increase-the-diversity-of-generated-images&quot; class=&quot;headerlink&quot; title=&quot;increase
+      
+    
+    </summary>
+    
+      <category term="Generative Model" scheme="https://www.yanhong.me/categories/Generative-Model/"/>
+    
+    
+      <category term="generation diversity" scheme="https://www.yanhong.me/tags/generation-diversity/"/>
+    
+  </entry>
   
   <entry>
     <title>Attention-Related</title>
