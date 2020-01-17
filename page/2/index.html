@@ -307,6 +307,187 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/07/01/CVAE-GAN/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/01/CVAE-GAN/" itemprop="url">CVAE-GAN</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-01T11:30:07+08:00">
+                2019-07-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Generative-Model/" itemprop="url" rel="index">
+                    <span itemprop="name">Generative Model</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="Paper-Understanding"><a href="#Paper-Understanding" class="headerlink" title="Paper Understanding"></a>Paper Understanding</h4><ul>
+<li><a href="https://arxiv.org/abs/1703.10155" target="_blank" rel="noopener">paper links</a></li>
+</ul>
+<h5 id="problem-method-effect"><a href="#problem-method-effect" class="headerlink" title="problem,method,effect"></a>problem,method,effect</h5><ul>
+<li><p>problem: synthesizing images in fine-grained categories.</p>
+</li>
+<li><p>method: gan+vae<br>gan: asymmetric loss(G_loss[mean discrepancy] + D_loss[cross entropy])<br>vae: encoder(relatio between latent space and real images) -&gt; pairwise feature matching -&gt; keep structure of real images</p>
+</li>
+<li><p>effect: generating realistic and diverse samples with fine-grained category labels.</p>
+</li>
+</ul>
+<h5 id="detail-explanation"><a href="#detail-explanation" class="headerlink" title="detail explanation"></a>detail explanation</h5><ul>
+<li><p>the loss of generator (mean feature matching): minimizing the distance of mean feature to the real images, reduce mode collapse. using an intermediate layer of the discriminator to extract feature for real images and generated fake images. before the last fc layer of the discriminator.</p>
+</li>
+<li><p>conditional image generation: using mean feature matching.</p>
+</li>
+<li><p>pairwise feature matching</p>
+</li>
+</ul>
+<h6 id="network-design"><a href="#network-design" class="headerlink" title="network design"></a>network design</h6><p>classification both used in the generator and the discriminator</p>
+<p>KL loss is used in the generator</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/06/19/Simialr-to-DAGAN/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -2033,196 +2214,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/04/28/Few-shot-Datasets/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/28/Few-shot-Datasets/" itemprop="url">Few-shot Datasets</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-28T23:32:34+08:00">
-                2019-04-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Datasets/" itemprop="url" rel="index">
-                    <span itemprop="name">Datasets</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets"></a>Datasets</h2><h3 id="FIGR-8"><a href="#FIGR-8" class="headerlink" title="FIGR-8"></a>FIGR-8</h3><ul>
-<li>grey</li>
-<li>18,409 classes</li>
-<li>total 1,548,944 images</li>
-<li>each class contains at least 8 images</li>
-<li>unbalance</li>
-</ul>
-<h3 id="Omniglot"><a href="#Omniglot" class="headerlink" title="Omniglot"></a>Omniglot</h3><ul>
-<li>binary</li>
-<li>50 alphabets</li>
-<li>1623 unique type of characters</li>
-<li>20 samples of each characters</li>
-</ul>
-<p>It contains 1623 unique type of characters originating from 50 alphabets, each of which has been handwritten 1 time by 20 different individuals</p>
-<h2 id="Datasets-setting-in-different-paper"><a href="#Datasets-setting-in-different-paper" class="headerlink" title="Datasets setting in different paper"></a>Datasets setting in different paper</h2><h3 id="Classification"><a href="#Classification" class="headerlink" title="Classification"></a>Classification</h3><p><a href="http://papers.nips.cc/paper/6385-matching-networks-for-one-shot-learning.pdf" target="_blank" rel="noopener">Matching networks for one shot learning</a></p>
-<ul>
-<li>5-way-5-shot </li>
-<li>support images (batchsize, 5 way * 5 shot, 1, 32, 32) + target images(batchsize, 5 shot from different 5 ways)</li>
-</ul>
-<h3 id="Generation"><a href="#Generation" class="headerlink" title="Generation"></a>Generation</h3><p><a href="https://arxiv.org/pdf/1901.02199.pdf" target="_blank" rel="noopener">FIGR: Few-shot Image Generation with Reptile</a></p>
-<ul>
-<li><p>FIGR-8: The training classes where all 18, 409 classes minus 50 ran- domly sampled classes for the test set; (batchsize=4,1,32,32) from same class.</p>
-</li>
-<li><p>Omniglot: The training classes where all 1623 characters in the dataset minus 20 randomly sampled character classes for the test set; (batchsize=4,1,32,32) from same class.</p>
-</li>
-</ul>
-<p><a href="https://openreview.net/pdf?id=HyCRyS9gx" target="_blank" rel="noopener">FAST ADAPTATION IN GENERATIVE MODELS WITH GENERATIVE MATCHING NETWORKS</a></p>
-<ul>
-<li>Omniglot: (batchsize, 20 samples from up to 2 classes, 28, 28)</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2273,7 +2264,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-count">40</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2284,7 +2275,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2295,7 +2286,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

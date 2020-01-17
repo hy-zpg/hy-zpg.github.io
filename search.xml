@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[fewshot-classifier-baselines]]></title>
+    <url>%2F2020%2F01%2F17%2Ffewshot-classifier-baselines%2F</url>
+    <content type="text"><![CDATA[Meta-transfer learning for few-shot learningRevisiting Local Descriptor based Image-to-Class Measure for Few-shot LearningLearning to Compare: Relation Network for Few-Shot Learning]]></content>
+      <categories>
+        <category>Baselines</category>
+      </categories>
+      <tags>
+        <tag>few-shot classification</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Diversity tricks]]></title>
     <url>%2F2020%2F01%2F05%2FDiversity-tricks%2F</url>
     <content type="text"><![CDATA[increase the diversity of generated imagesmode seeking lossstyle diversityinterpolation regression]]></content>
