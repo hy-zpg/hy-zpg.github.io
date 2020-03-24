@@ -307,6 +307,230 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/28/Semi-Heteroneous-Multitask-Baseline/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/28/Semi-Heteroneous-Multitask-Baseline/" itemprop="url">Semi-supervised Heteroneous Multitask Learning Baselines</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-28T15:23:11+08:00">
+                2019-02-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="high-related"><a href="#high-related" class="headerlink" title="high-related"></a>high-related</h2><blockquote>
+<p>reference <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8107520" target="_blank" rel="noopener">Learning without Forgetting</a></p>
+<ul>
+<li>distilled knowledge</li>
+</ul>
+<p>reference <a href="https://arxiv.org/pdf/1611.00851.pdf" target="_blank" rel="noopener">An All-In-One Convolutional Neural Network for Face Analysis</a></p>
+<ul>
+<li>naive joint</li>
+</ul>
+<p>reference <a href="https://arxiv.org/pdf/1609.06426.pdf" target="_blank" rel="noopener">From Facial Expression Recognition to Interpersonal Relation Prediction<br>Zhanpeng</a></p>
+<ul>
+<li>pseudo label</li>
+</ul>
+<p>reference NLP <a href="https://arxiv.org/pdf/1802.09913.pdf" target="_blank" rel="noopener">Multi-task Learning of Pairwise Sequence Classification Tasks Over Disparate Label Spaces</a><br>‘we should be able to not only model their relationship, but also to directly estimate the corresponding label of the target task based on auxiliary predictions.’</p>
+<ul>
+<li>probelm: jointly using unlabelled data and auxiliary, annotated datasets; domain gap; missing labels</li>
+<li>method: training the Label Transfer Network, minimise the squared error between the model predictions and the pseudo label</li>
+<li>baseline: yes (how to calculate loss funtion [squared error] based on pseudo label)</li>
+</ul>
+<p>reference <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Misra_Seeing_Through_the_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Seeing through the Human Reporting Bias: Visual Classifiers from Noisy Human-Centric Labels Ishan</a></p>
+<ul>
+<li>confidence score</li>
+<li>same apply scene</li>
+<li>refer to paper writting</li>
+</ul>
+<p>reference non-DL <a href="http://de.arxiv.org/pdf/1411.6232" target="_blank" rel="noopener">Semi-supervised Feature Analysis by Mining Correlations among Multiple Tasks</a></p>
+<ul>
+<li>problem: ‘Since the objective function is non-smooth and difficult to solve, we propose an iterative algorithm with fast convergence.’ ‘These previous works, however, independently select features for each task, which fails to consider correlations among multiple related tasks.’ ‘Despite of their good performances, these classical algorithms are all implemented only with labeled training data.’</li>
+<li>method: ‘ignoring the correlations among different features -&gt;apply the sparse coefficients to the feature vectors -&gt; proposing multiple feature selection’</li>
+<li>baseline: undetermined (hard to complete)</li>
+</ul>
+<p><a href="https://arxiv.org/pdf/1803.04062.pdf" target="_blank" rel="noopener">Pseudo-task Augmentation: From Deep Multitask Learning to Intratask Sharing—and Back</a></p>
+<ul>
+<li>related work conclude papers of joint training of models for multiple tasks.<ul>
+<li>‘how learned structure is shared across tasks’:<ol>
+<li>supervise different tasks at different depths of the shared structure <a href=""></a></li>
+<li>duplicate the shared structure into columns and define mechanisms for sharing information across columns <a href="https://arxiv.org/pdf/1704.01631.pdf" target="_blank" rel="noopener">Multitask Learning with Low-Level Auxiliary Tasks for Encoder-Decoder Based Speech Recognition
+</a>, using intermediate representations as auxiliary supervision for low-level task recognition to improve final task performance.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>baseline: no( pose-emotion both are high-level task, not similar to keypoint detection)</li>
+</ul>
+</blockquote>
+<h2 id="pseudo-method-related"><a href="#pseudo-method-related" class="headerlink" title="pseudo method related"></a>pseudo method related</h2><blockquote>
+<p>reference CVPR 2018<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhao_Pseudo_Mask_Augmented_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Pseudo Mask Augmented Object Detection</a><br> ‘proposing an effective learning approach that progressively improves the quality pseudo from a coarse initialization,the detection network parameters Θ and pseudo masks Mpseudo are alternatively optimized following a EM-like way’</p>
+<ul>
+<li>probelm: object detection without mask annotation</li>
+<li>method: pseudo mask (alternatively,initialization,pseudo mask with refinement algorithm[graphical model, because the pixel charaterization])</li>
+<li>baseline: yes(uing graphical model with learned information as input to refine pseudo label)</li>
+</ul>
+<p>reference <a href="https://arxiv.org/pdf/1703.02391.pdf" target="_blank" rel="noopener">Learning from Noisy Labels with Distillation</a></p>
+<ul>
+<li>interpolation between noisy label and distilled knowledge</li>
+<li>baseline: yes</li>
+</ul>
+<p>reference <a href="http://papers.nips.cc/paper/4292-clustered-multi-task-learning-via-alternating-structure-optimization.pdf" target="_blank" rel="noopener">Clustered Multi-Task Learning Via Alternating Structure Optimization
+</a></p>
+<ul>
+<li>‘ASO which aims to identify a shared low-dimensional predictive structure for all tasks’,’based on the standard assump- tion that each task can learn equally well from any other task’,’the clustering view of ASO has not been explored before’</li>
+<li>hard to understand, pure theories.</li>
+</ul>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/28/Critical-Points-in-Multitask-0/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1986,183 +2210,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/01/14/Numpy learning/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/14/Numpy learning/" itemprop="url">Numpy Learning</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-14T22:25:55+08:00">
-                2019-01-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Codes/" itemprop="url" rel="index">
-                    <span itemprop="name">Codes</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>One-hot labels preprocessing</p>
-<ul>
-<li><p>Weighting samples with confidence score</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">index = np.ragmax(predicted_result,axis=1)</span><br><span class="line">arg = np_utils.to_categorical(index,classes)</span><br><span class="line">weighted_one_hot=predicted_result*arg</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Selection &amp;&amp; weighting samples with confidence score</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">weighted_selected_one_hot=np.where(predicted_result&gt;k,predicted_result,0)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Extending vector into matrix</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xx = [np.full(classes,value) <span class="keyword">for</span> value <span class="keyword">in</span> x]</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2208,7 +2260,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2219,7 +2271,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2230,7 +2282,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

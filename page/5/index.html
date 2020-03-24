@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="design of loss,">
+  <meta name="keywords" content="Hongyan's Notes, NexT">
 
 
 
@@ -81,18 +81,17 @@
 
 
 
-<meta name="description" content="L1 loss for image translation(Image-to-Image Translation with Conditional Adversarial Networks)[http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_pa">
-<meta name="keywords" content="design of loss">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Loss for VAE-GAN">
-<meta property="og:url" content="https://www.yanhong.me/2019/09/05/Loss-for-VAE-GAN/index.html">
+<meta name="description" content="New Rhythm">
+<meta name="keywords" content="Coding &amp;&amp; Learning">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hongyan&#39;s Notes">
+<meta property="og:url" content="https://www.yanhong.me/page/5/index.html">
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
-<meta property="og:description" content="L1 loss for image translation(Image-to-Image Translation with Conditional Adversarial Networks)[http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_pa">
+<meta property="og:description" content="New Rhythm">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-07T01:40:42.857Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Loss for VAE-GAN">
-<meta name="twitter:description" content="L1 loss for image translation(Image-to-Image Translation with Conditional Adversarial Networks)[http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_pa">
+<meta name="twitter:title" content="Hongyan&#39;s Notes">
+<meta name="twitter:description" content="New Rhythm">
 
 
 
@@ -122,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://www.yanhong.me/2019/09/05/Loss-for-VAE-GAN/">
+  <link rel="canonical" href="https://www.yanhong.me/page/5/">
 
 
 
 
 
-  <title>Loss for VAE-GAN | Hongyan's Notes</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Hongyan's Notes</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -147,7 +146,8 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -292,9 +292,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -307,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/09/05/Loss-for-VAE-GAN/">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/01/14/Numpy learning/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hongyan">
@@ -324,7 +324,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Loss for VAE-GAN</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/14/Numpy learning/" itemprop="url">Numpy Learning</a></h1>
         
 
         <div class="post-meta">
@@ -336,8 +338,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-05T15:17:15+08:00">
-                2019-09-05
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-14T22:25:55+08:00">
+                2019-01-14
               </time>
             
 
@@ -359,8 +361,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Generative-Model/" itemprop="url" rel="index">
-                    <span itemprop="name">Generative Model</span>
+                  <a href="/categories/Codes/" itemprop="url" rel="index">
+                    <span itemprop="name">Codes</span>
                   </a>
                 </span>
 
@@ -415,16 +417,23 @@
       
 
       
-        <h4 id="L1-loss-for-image-translation"><a href="#L1-loss-for-image-translation" class="headerlink" title="L1 loss for image translation"></a>L1 loss for image translation</h4><p>(Image-to-Image Translation with Conditional Adversarial Networks)[<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf" target="_blank" rel="noopener">http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf</a>]</p>
-<p>\begin{aligned}<br>\mathcal{L}_{L<em>1}(G)=\mathbb{E}\</em>{x, y, z}\left[|y-G(x, z)|_{1}\right]<br>\end{aligned}</p>
-<p>L1 term to force low-frequency correctness, L1 alone leads to reason- able but blurry results ($\lamda = 100$) </p>
-<h4 id="Mean-feature-matching-for-image-generation-in-general-setting"><a href="#Mean-feature-matching-for-image-generation-in-general-setting" class="headerlink" title="Mean feature matching for image generation in general setting"></a>Mean feature matching for image generation in general setting</h4><p>(CVAE-GAN: Fine-Grained Image Generation through Asymmetric Training<br>)[<a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Bao_CVAE-GAN_Fine-Grained_Image_ICCV_2017_paper.pdf" target="_blank" rel="noopener">http://openaccess.thecvf.com/content_ICCV_2017/papers/Bao_CVAE-GAN_Fine-Grained_Image_ICCV_2017_paper.pdf</a>]</p>
-<!-- \begin{aligned}
-\mathcal{L}\_{G D}=\frac{1}{2}\left\|\mathbb{E}\_{\boldsymbol{x} \sim P_{r}} f_{D}(\boldsymbol{x})-\mathbb{E}\_{\boldsymbol{z} \sim P_{\boldsymbol{z}}} f_{D}(G(\boldsymbol{z}))\right\|\_{2}^{2}
-\end{aligned} -->
-<p>\begin{equation}<br>\mathcal{L}_{G D}=\frac{1}{2}\left|\mathbb{E}_{\boldsymbol{x} \sim P_{r}} f<em>{D}(\boldsymbol{x})-\mathbb{E}\</em>{\boldsymbol{z} \sim P_{\boldsymbol{z}}} f_{D}(G(\boldsymbol{z}))\right|_{2}^{2}<br>\end{equation}</p>
-<p>to deal with the unstable gradient of G</p>
+        
+          
+            <p>One-hot labels preprocessing</p>
+<ul>
+<li><p>Weighting samples with confidence score</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">index = np.ragmax(predicted_result,axis=1)</span><br><span class="line">arg = np_utils.to_categorical(index,classes)</span><br><span class="line">weighted_one_hot=predicted_result*arg</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Selection &amp;&amp; weighting samples with confidence score</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">weighted_selected_one_hot=np.where(predicted_result&gt;k,predicted_result,0)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Extending vector into matrix</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xx = [np.full(classes,value) <span class="keyword">for</span> value <span class="keyword">in</span> x]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
+          
+        
       
     </div>
     
@@ -439,40 +448,14 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/design-of-loss/" rel="tag"># design of loss</a>
-          
-        </div>
+
+      
+
       
 
       
       
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/08/16/Learning-without-Forgetting/" rel="next" title="Learning without Forgetting">
-                <i class="fa fa-chevron-left"></i> Learning without Forgetting
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/09/19/Variations-of-GAN/" rel="prev" title="Variations of GAN">
-                Variations of GAN <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -482,11 +465,14 @@
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
+  </nav>
+
 
 
           </div>
@@ -494,10 +480,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -518,17 +500,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -611,22 +584,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#L1-loss-for-image-translation"><span class="nav-number">1.</span> <span class="nav-text">L1 loss for image translation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mean-feature-matching-for-image-generation-in-general-setting"><span class="nav-number">2.</span> <span class="nav-text">Mean feature matching for image generation in general setting</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -761,10 +718,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 

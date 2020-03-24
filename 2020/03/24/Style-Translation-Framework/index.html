@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="design of loss,">
+  <meta name="keywords" content="style translation,">
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="L1 loss for image translation(Image-to-Image Translation with Conditional Adversarial Networks)[http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_pa">
-<meta name="keywords" content="design of loss">
+<meta name="description" content="CycleGANcycleGAN paper Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks main idea: F(G(X)) ≈ X for unpaired images translation from two domain. optimization: two pairs o">
+<meta name="keywords" content="style translation">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Loss for VAE-GAN">
-<meta property="og:url" content="https://www.yanhong.me/2019/09/05/Loss-for-VAE-GAN/index.html">
+<meta property="og:title" content="Style Translation Framework">
+<meta property="og:url" content="https://www.yanhong.me/2020/03/24/Style-Translation-Framework/index.html">
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
-<meta property="og:description" content="L1 loss for image translation(Image-to-Image Translation with Conditional Adversarial Networks)[http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_pa">
+<meta property="og:description" content="CycleGANcycleGAN paper Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks main idea: F(G(X)) ≈ X for unpaired images translation from two domain. optimization: two pairs o">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-07T01:40:42.857Z">
+<meta property="og:updated_time" content="2020-03-24T07:39:29.441Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Loss for VAE-GAN">
-<meta name="twitter:description" content="L1 loss for image translation(Image-to-Image Translation with Conditional Adversarial Networks)[http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_pa">
+<meta name="twitter:title" content="Style Translation Framework">
+<meta name="twitter:description" content="CycleGANcycleGAN paper Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks main idea: F(G(X)) ≈ X for unpaired images translation from two domain. optimization: two pairs o">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://www.yanhong.me/2019/09/05/Loss-for-VAE-GAN/">
+  <link rel="canonical" href="https://www.yanhong.me/2020/03/24/Style-Translation-Framework/">
 
 
 
 
 
-  <title>Loss for VAE-GAN | Hongyan's Notes</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Style Translation Framework | Hongyan's Notes</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -307,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/09/05/Loss-for-VAE-GAN/">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2020/03/24/Style-Translation-Framework/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hongyan">
@@ -324,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Loss for VAE-GAN</h1>
+          <h1 class="post-title" itemprop="name headline">Style Translation Framework</h1>
         
 
         <div class="post-meta">
@@ -336,8 +336,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-05T15:17:15+08:00">
-                2019-09-05
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-24T10:53:06+08:00">
+                2020-03-24
               </time>
             
 
@@ -359,8 +359,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Generative-Model/" itemprop="url" rel="index">
-                    <span itemprop="name">Generative Model</span>
+                  <a href="/categories/Translation/" itemprop="url" rel="index">
+                    <span itemprop="name">Translation</span>
                   </a>
                 </span>
 
@@ -415,15 +415,40 @@
       
 
       
-        <h4 id="L1-loss-for-image-translation"><a href="#L1-loss-for-image-translation" class="headerlink" title="L1 loss for image translation"></a>L1 loss for image translation</h4><p>(Image-to-Image Translation with Conditional Adversarial Networks)[<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf" target="_blank" rel="noopener">http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf</a>]</p>
-<p>\begin{aligned}<br>\mathcal{L}_{L<em>1}(G)=\mathbb{E}\</em>{x, y, z}\left[|y-G(x, z)|_{1}\right]<br>\end{aligned}</p>
-<p>L1 term to force low-frequency correctness, L1 alone leads to reason- able but blurry results ($\lamda = 100$) </p>
-<h4 id="Mean-feature-matching-for-image-generation-in-general-setting"><a href="#Mean-feature-matching-for-image-generation-in-general-setting" class="headerlink" title="Mean feature matching for image generation in general setting"></a>Mean feature matching for image generation in general setting</h4><p>(CVAE-GAN: Fine-Grained Image Generation through Asymmetric Training<br>)[<a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Bao_CVAE-GAN_Fine-Grained_Image_ICCV_2017_paper.pdf" target="_blank" rel="noopener">http://openaccess.thecvf.com/content_ICCV_2017/papers/Bao_CVAE-GAN_Fine-Grained_Image_ICCV_2017_paper.pdf</a>]</p>
-<!-- \begin{aligned}
-\mathcal{L}\_{G D}=\frac{1}{2}\left\|\mathbb{E}\_{\boldsymbol{x} \sim P_{r}} f_{D}(\boldsymbol{x})-\mathbb{E}\_{\boldsymbol{z} \sim P_{\boldsymbol{z}}} f_{D}(G(\boldsymbol{z}))\right\|\_{2}^{2}
-\end{aligned} -->
-<p>\begin{equation}<br>\mathcal{L}_{G D}=\frac{1}{2}\left|\mathbb{E}_{\boldsymbol{x} \sim P_{r}} f<em>{D}(\boldsymbol{x})-\mathbb{E}\</em>{\boldsymbol{z} \sim P_{\boldsymbol{z}}} f_{D}(G(\boldsymbol{z}))\right|_{2}^{2}<br>\end{equation}</p>
-<p>to deal with the unstable gradient of G</p>
+        <h2 id="CycleGAN"><a href="#CycleGAN" class="headerlink" title="CycleGAN"></a>CycleGAN</h2><h3 id="cycleGAN-paper-Unpaired-Image-to-Image-Translation-using-Cycle-Consistent-Adversarial-Networks"><a href="#cycleGAN-paper-Unpaired-Image-to-Image-Translation-using-Cycle-Consistent-Adversarial-Networks" class="headerlink" title="cycleGAN paper Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks"></a>cycleGAN paper <a href="https://arxiv.org/pdf/1703.10593.pdf" target="_blank" rel="noopener">Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks</a></h3><ul>
+<li>main idea: F(G(X)) ≈ X for unpaired images translation from two domain.</li>
+<li>optimization: two pairs of GAN LOSS and a cycle loss.</li>
+<li>resluts: the structure of translated images is don’t change.</li>
+<li>image size: 128, 256,…</li>
+<li>networks: residual networks (increasing blocks for those images with higher resolution)</li>
+<li>applicable points for ours: cycle reconstruction</li>
+<li>not applicable points for ours: image-to-image translation, not change image structure.</li>
+</ul>
+<h2 id="From-StyleGAN1-0-to-StyleGAN2-0"><a href="#From-StyleGAN1-0-to-StyleGAN2-0" class="headerlink" title="From StyleGAN1.0 to StyleGAN2.0"></a>From StyleGAN1.0 to StyleGAN2.0</h2><h3 id="styleGAN1-0-A-Style-Based-Generator-Architecture-for-Generative-Adversarial-Networks"><a href="#styleGAN1-0-A-Style-Based-Generator-Architecture-for-Generative-Adversarial-Networks" class="headerlink" title="styleGAN1.0 A Style-Based Generator Architecture for Generative Adversarial Networks"></a>styleGAN1.0 <a href="https://arxiv.org/pdf/1812.04948.pdf" target="_blank" rel="noopener">A Style-Based Generator Architecture for Generative Adversarial Networks</a></h3><ul>
+<li>main idea: designing alternative generator to learn unsupervised separation of high-level attributes. scale-specific modifications to the styles.</li>
+<li>diversity: global noise -&gt; {w,A} for all feature map, local noise -&gt; {noise, B}noise broadcast for each layer feature map, adding style mixing (global adain,prevents the network from assuming that adjacent styles are correlated.)  Stochastic variation(add local noise).</li>
+<li>Disentanglement</li>
+<li>optimization: gan</li>
+<li>network: A -&gt; affine transformation, scale all feature map, global attributs(hairs, stubble, freckles, or skin pores). B -&gt; noise added to each layer, local attributes(pose, lighting, or background style), leaving the overall composition and high-level aspects such as identity intact.</li>
+<li>image size: &gt;=256.</li>
+<li>results: achieve better interpolation and better disentanglement.</li>
+<li>applicable points for ours: {noise, B} module, to change local style maintain global style like identity (fine-grained category), intra-class translation like our deltgan.</li>
+<li>problem: how to design as conditional generator</li>
+</ul>
+<h3 id="styleGAN2-0-Analyzing-and-Improving-the-Image-Quality-of-StyleGAN"><a href="#styleGAN2-0-Analyzing-and-Improving-the-Image-Quality-of-StyleGAN" class="headerlink" title="styleGAN2.0 Analyzing and Improving the Image Quality of StyleGAN"></a>styleGAN2.0 <a href="https://arxiv.org/pdf/1912.04958.pdf" target="_blank" rel="noopener">Analyzing and Improving the Image Quality of StyleGAN</a></h3><ul>
+<li>main idea: based on styleganv1, characteristic artifacts -&gt; change architecture and training methods. modified adain module.</li>
+<li>network: a skip generator and a residual discriminator.</li>
+<li>results: improve gan metrics, modify artifacts.</li>
+<li>applicable points for ours: combining a skip generator and a residual discriminator. modifying adain?</li>
+</ul>
+<h2 id="From-StarGAN1-0-to-StarGAN2-0"><a href="#From-StarGAN1-0-to-StarGAN2-0" class="headerlink" title="From StarGAN1.0 to StarGAN2.0"></a>From StarGAN1.0 to StarGAN2.0</h2><h3 id="starGAN1-0-StarGAN-Unified-Generative-Adversarial-Networks-for-Multi-Domain-Image-to-Image-Translation"><a href="#starGAN1-0-StarGAN-Unified-Generative-Adversarial-Networks-for-Multi-Domain-Image-to-Image-Translation" class="headerlink" title="starGAN1.0 StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation"></a>starGAN1.0 <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Choi_StarGAN_Unified_Generative_CVPR_2018_paper.pdf" target="_blank" rel="noopener">StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation</a></h3><ul>
+<li>main idea: scalability, more domains, using a single model</li>
+<li>method: multiple domain, discirminator distinguish, generator regard domain as conditional information.</li>
+<li>applicable points for ours: domain has statistical information? can learn a distribution? category-to-category, difficult to learn statistical information? domain information has specific definition, however, our targan conditional information is the feature of target image and no specific meaning?</li>
+</ul>
+<h3 id="starGAN2-0-StarGAN-v2-Diverse-Image-Synthesis-for-Multiple-Domains"><a href="#starGAN2-0-StarGAN-v2-Diverse-Image-Synthesis-for-Multiple-Domains" class="headerlink" title="starGAN2.0 StarGAN v2: Diverse Image Synthesis for Multiple Domains"></a>starGAN2.0 <a href="https://arxiv.org/pdf/1912.01865.pdf" target="_blank" rel="noopener">StarGAN v2: Diverse Image Synthesis for Multiple Domains</a></h3><ul>
+<li>main idea: diversity, translation can be achieved among same domain also can be among dofferent domain.</li>
+</ul>
 
       
     </div>
@@ -441,7 +466,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/design-of-loss/" rel="tag"># design of loss</a>
+            <a href="/tags/style-translation/" rel="tag"># style translation</a>
           
         </div>
       
@@ -454,8 +479,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/16/Learning-without-Forgetting/" rel="next" title="Learning without Forgetting">
-                <i class="fa fa-chevron-left"></i> Learning without Forgetting
+              <a href="/2020/01/17/fewshot-classifier-baselines/" rel="next" title="fewshot-classifier-baselines">
+                <i class="fa fa-chevron-left"></i> fewshot-classifier-baselines
               </a>
             
           </div>
@@ -463,10 +488,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/09/19/Variations-of-GAN/" rel="prev" title="Variations of GAN">
-                Variations of GAN <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -621,7 +642,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#L1-loss-for-image-translation"><span class="nav-number">1.</span> <span class="nav-text">L1 loss for image translation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mean-feature-matching-for-image-generation-in-general-setting"><span class="nav-number">2.</span> <span class="nav-text">Mean feature matching for image generation in general setting</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CycleGAN"><span class="nav-number">1.</span> <span class="nav-text">CycleGAN</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cycleGAN-paper-Unpaired-Image-to-Image-Translation-using-Cycle-Consistent-Adversarial-Networks"><span class="nav-number">1.1.</span> <span class="nav-text">cycleGAN paper Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#From-StyleGAN1-0-to-StyleGAN2-0"><span class="nav-number">2.</span> <span class="nav-text">From StyleGAN1.0 to StyleGAN2.0</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#styleGAN1-0-A-Style-Based-Generator-Architecture-for-Generative-Adversarial-Networks"><span class="nav-number">2.1.</span> <span class="nav-text">styleGAN1.0 A Style-Based Generator Architecture for Generative Adversarial Networks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#styleGAN2-0-Analyzing-and-Improving-the-Image-Quality-of-StyleGAN"><span class="nav-number">2.2.</span> <span class="nav-text">styleGAN2.0 Analyzing and Improving the Image Quality of StyleGAN</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#From-StarGAN1-0-to-StarGAN2-0"><span class="nav-number">3.</span> <span class="nav-text">From StarGAN1.0 to StarGAN2.0</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#starGAN1-0-StarGAN-Unified-Generative-Adversarial-Networks-for-Multi-Domain-Image-to-Image-Translation"><span class="nav-number">3.1.</span> <span class="nav-text">starGAN1.0 StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#starGAN2-0-StarGAN-v2-Diverse-Image-Synthesis-for-Multiple-Domains"><span class="nav-number">3.2.</span> <span class="nav-text">starGAN2.0 StarGAN v2: Diverse Image Synthesis for Multiple Domains</span></a></li></ol></li></ol></div>
             
 
           </div>
