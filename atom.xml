@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yanhong.me/"/>
-  <updated>2020-03-24T07:46:48.800Z</updated>
+  <updated>2020-06-08T07:40:28.011Z</updated>
   <id>https://www.yanhong.me/</id>
   
   <author>
@@ -15,6 +15,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Generation</title>
+    <link href="https://www.yanhong.me/2020/06/08/Generation/"/>
+    <id>https://www.yanhong.me/2020/06/08/Generation/</id>
+    <published>2020-06-08T07:40:27.000Z</published>
+    <updated>2020-06-08T07:40:28.011Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>From-Generation-to-Fewshot-Generation</title>
+    <link href="https://www.yanhong.me/2020/06/08/From-Generation-to-Fewshot-Generation/"/>
+    <id>https://www.yanhong.me/2020/06/08/From-Generation-to-Fewshot-Generation/</id>
+    <published>2020-06-08T02:27:58.000Z</published>
+    <updated>2020-06-08T07:52:27.118Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="pix2pix"><a href="#pix2pix" class="headerlink" title="pix2pix"></a><a href="https://arxiv.org/pdf/1611.07004.pdf" target="_blank" rel="noopener">pix2pix</a></h4><ul><li>conditional discrimiantor (channel-wise concat)</li><li>unet generator with skip connections</li><li>patch discriminator</li></ul><h4 id="pix2pixHD"><a href="#pix2pixHD" class="headerlink" title="pix2pixHD"></a><a href="https://research.nvidia.com/sites/default/files/pubs/2017-12_High-Resolution-Image-Synthesis/1711.11585.pdf" target="_blank" rel="noopener">pix2pixHD</a></h4><ul><li>generating high-resolution images.</li><li>a coarse-to-fine generator: a globale generator and a local enhancer networks (G1-G2)</li><li>a multi-scale discriminator architecture: multiple discriminators are used to deal with different scale images.</li><li>a robust adversarial learning objective function: feature matching between discrinative features from real samples and fake samples.</li></ul><h4 id="SPADE"><a href="#SPADE" class="headerlink" title="SPADE"></a><a href="https://arxiv.org/pdf/1903.07291.pdf" target="_blank" rel="noopener">SPADE</a></h4><ul><li>SPADE is a generalization of several existing normalization layers, the proposed SPADE is better suited for semantic image synthesis.</li><li>SPADE can be added into generator and discriminator.</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;pix2pix&quot;&gt;&lt;a href=&quot;#pix2pix&quot; class=&quot;headerlink&quot; title=&quot;pix2pix&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://arxiv.org/pdf/1611.07004.pdf&quot; target=&quot;_blank&quot; re
+      
+    
+    </summary>
+    
+      <category term="Survey" scheme="https://www.yanhong.me/categories/Survey/"/>
+    
+    
+      <category term="image generation" scheme="https://www.yanhong.me/tags/image-generation/"/>
+    
+  </entry>
   
   <entry>
     <title>Style Translation Framework</title>
