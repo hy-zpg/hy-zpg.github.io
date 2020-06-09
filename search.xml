@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Geometry-aware-Generation]]></title>
+    <title><![CDATA[Geometry-aware Generation]]></title>
     <url>%2F2020%2F06%2F08%2FGeometry-aware-Generation%2F</url>
     <content type="text"><![CDATA[TransGaGa: Geometry-Aware Unsupervised Image-to-Image Translation paper problem: large geometry variations in image-to-image translation. idea: disentangle image space into a Cartesian product of the appearance and the geometry latent spaces. method: a geometry prior loss and a conditional VAE loss. possible problems: two different domain. Conditional Image Generation for Learning the Structure of Visual Objects paper-Geometry transfermer used in Transgaga code Unsupervised Discovery of Object Landmarks as Structural Representations paper code Unsupervised learning of object landmarks by factorized spatial embeddings paper code]]></content>
       <categories>
@@ -12,7 +12,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[From-Generation-to-Fewshot-Generation]]></title>
+    <title><![CDATA[From Image Generation to Fewshot Image Generation]]></title>
     <url>%2F2020%2F06%2F08%2FFrom-Generation-to-Fewshot-Generation%2F</url>
     <content type="text"><![CDATA[pix2pix conditional discrimiantor (channel-wise concat) unet generator with skip connections patch discriminator pix2pixHD generating high-resolution images. a coarse-to-fine generator: a globale generator and a local enhancer networks (G1-G2) a multi-scale discriminator architecture: multiple discriminators are used to deal with different scale images. a robust adversarial learning objective function: feature matching between discrinative features from real samples and fake samples. SPADE SPADE is a generalization of several existing normalization layers, the proposed SPADE is better suited for semantic image synthesis. SPADE can be added into generator and discriminator.]]></content>
       <categories>

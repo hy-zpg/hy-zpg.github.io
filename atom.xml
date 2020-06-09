@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yanhong.me/"/>
-  <updated>2020-06-09T08:04:55.632Z</updated>
+  <updated>2020-06-09T11:06:50.667Z</updated>
   <id>https://www.yanhong.me/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Geometry-aware-Generation</title>
+    <title>Geometry-aware Generation</title>
     <link href="https://www.yanhong.me/2020/06/08/Geometry-aware-Generation/"/>
     <id>https://www.yanhong.me/2020/06/08/Geometry-aware-Generation/</id>
     <published>2020-06-08T11:44:22.000Z</published>
-    <updated>2020-06-09T08:04:55.632Z</updated>
+    <updated>2020-06-09T11:06:50.667Z</updated>
     
     <content type="html"><![CDATA[<h4 id="TransGaGa-Geometry-Aware-Unsupervised-Image-to-Image-Translation"><a href="#TransGaGa-Geometry-Aware-Unsupervised-Image-to-Image-Translation" class="headerlink" title="TransGaGa: Geometry-Aware Unsupervised Image-to-Image Translation"></a>TransGaGa: Geometry-Aware Unsupervised Image-to-Image Translation</h4><ul><li><a href="https://arxiv.org/pdf/1904.09571.pdf" target="_blank" rel="noopener">paper</a></li><li>problem: large geometry variations in image-to-image translation.</li><li>idea: disentangle image space into a Cartesian product of the appearance and the geometry latent spaces.</li><li>method: a geometry prior loss and a conditional VAE loss.</li><li>possible problems: two different domain.</li></ul><h4 id="Conditional-Image-Generation-for-Learning-the-Structure-of-Visual-Objects"><a href="#Conditional-Image-Generation-for-Learning-the-Structure-of-Visual-Objects" class="headerlink" title="Conditional Image Generation for Learning the Structure of Visual Objects"></a>Conditional Image Generation for Learning the Structure of Visual Objects</h4><ul><li><a href="https://128.84.21.199/pdf/1806.07823v1.pdf" target="_blank" rel="noopener">paper-Geometry transfermer used in Transgaga</a></li><li><a href="https://github.com/tomasjakab/imm" target="_blank" rel="noopener">code</a></li></ul><h4 id="Unsupervised-Discovery-of-Object-Landmarks-as-Structural-Representations"><a href="#Unsupervised-Discovery-of-Object-Landmarks-as-Structural-Representations" class="headerlink" title="Unsupervised Discovery of Object Landmarks as Structural Representations"></a>Unsupervised Discovery of Object Landmarks as Structural Representations</h4><ul><li><a href="http://www.ytzhang.net/projects/lmdis-rep/" target="_blank" rel="noopener">paper</a></li><li><a href="https://github.com/YutingZhang/lmdis-rep" target="_blank" rel="noopener">code</a></li></ul><h4 id="Unsupervised-learning-of-object-landmarks-by-factorized-spatial-embeddings"><a href="#Unsupervised-learning-of-object-landmarks-by-factorized-spatial-embeddings" class="headerlink" title="Unsupervised learning of object landmarks by factorized spatial embeddings"></a>Unsupervised learning of object landmarks by factorized spatial embeddings</h4><ul><li><a href="http://www.robots.ox.ac.uk/~vedaldi//assets/pubs/thewlis17unsupervised.pdf" target="_blank" rel="noopener">paper</a></li><li><a href="https://github.com/alldbi/Factorized-Spatial-Embeddings" target="_blank" rel="noopener">code</a></li></ul>]]></content>
     
@@ -42,11 +42,11 @@
   </entry>
   
   <entry>
-    <title>From-Generation-to-Fewshot-Generation</title>
+    <title>From Image Generation to Fewshot Image Generation</title>
     <link href="https://www.yanhong.me/2020/06/08/From-Generation-to-Fewshot-Generation/"/>
     <id>https://www.yanhong.me/2020/06/08/From-Generation-to-Fewshot-Generation/</id>
     <published>2020-06-08T02:27:58.000Z</published>
-    <updated>2020-06-08T11:45:10.867Z</updated>
+    <updated>2020-06-09T11:07:24.213Z</updated>
     
     <content type="html"><![CDATA[<h4 id="pix2pix"><a href="#pix2pix" class="headerlink" title="pix2pix"></a><a href="https://arxiv.org/pdf/1611.07004.pdf" target="_blank" rel="noopener">pix2pix</a></h4><ul><li>conditional discrimiantor (channel-wise concat)</li><li>unet generator with skip connections</li><li>patch discriminator</li></ul><h4 id="pix2pixHD"><a href="#pix2pixHD" class="headerlink" title="pix2pixHD"></a><a href="https://research.nvidia.com/sites/default/files/pubs/2017-12_High-Resolution-Image-Synthesis/1711.11585.pdf" target="_blank" rel="noopener">pix2pixHD</a></h4><ul><li>generating high-resolution images.</li><li>a coarse-to-fine generator: a globale generator and a local enhancer networks (G1-G2)</li><li>a multi-scale discriminator architecture: multiple discriminators are used to deal with different scale images.</li><li>a robust adversarial learning objective function: feature matching between discrinative features from real samples and fake samples.</li></ul><h4 id="SPADE"><a href="#SPADE" class="headerlink" title="SPADE"></a><a href="https://arxiv.org/pdf/1903.07291.pdf" target="_blank" rel="noopener">SPADE</a></h4><ul><li>SPADE is a generalization of several existing normalization layers, the proposed SPADE is better suited for semantic image synthesis.</li><li>SPADE can be added into generator and discriminator.</li></ul>]]></content>
     
