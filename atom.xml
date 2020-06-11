@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yanhong.me/"/>
-  <updated>2020-06-09T11:06:50.667Z</updated>
+  <updated>2020-06-11T09:01:38.672Z</updated>
   <id>https://www.yanhong.me/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2020CVPR Paper Reading</title>
+    <link href="https://www.yanhong.me/2020/06/11/2020CVPR-Paper-Reading/"/>
+    <id>https://www.yanhong.me/2020/06/11/2020CVPR-Paper-Reading/</id>
+    <published>2020-06-11T08:41:06.000Z</published>
+    <updated>2020-06-11T09:01:38.672Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Normalization"><a href="#Normalization" class="headerlink" title="Normalization"></a>Normalization</h2><ul><li><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Zhu_SEAN_Image_Synthesis_With_Semantic_Region-Adaptive_Normalization_CVPR_2020_paper.pdf" target="_blank" rel="noopener">SEAN: Image Synthesis with Semantic Region-Adaptive Normalization</a></li><li><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_Attentive_Normalization_for_Conditional_Image_Generation_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Attentive Normalization for Conditional Image Generation</a></li></ul><h2 id="Diversity"><a href="#Diversity" class="headerlink" title="Diversity"></a>Diversity</h2><ul><li><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Liu_Diverse_Image_Generation_via_Self-Conditioned_GANs_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Diverse Image Generation via Self-Conditioned GANs</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Normalization&quot;&gt;&lt;a href=&quot;#Normalization&quot; class=&quot;headerlink&quot; title=&quot;Normalization&quot;&gt;&lt;/a&gt;Normalization&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://open
+      
+    
+    </summary>
+    
+      <category term="Generation" scheme="https://www.yanhong.me/categories/Generation/"/>
+    
+    
+      <category term="survey" scheme="https://www.yanhong.me/tags/survey/"/>
+    
+  </entry>
   
   <entry>
     <title>Geometry-aware Generation</title>
@@ -46,7 +72,7 @@
     <link href="https://www.yanhong.me/2020/06/08/From-Generation-to-Fewshot-Generation/"/>
     <id>https://www.yanhong.me/2020/06/08/From-Generation-to-Fewshot-Generation/</id>
     <published>2020-06-08T02:27:58.000Z</published>
-    <updated>2020-06-09T11:07:24.213Z</updated>
+    <updated>2020-06-10T01:31:26.823Z</updated>
     
     <content type="html"><![CDATA[<h4 id="pix2pix"><a href="#pix2pix" class="headerlink" title="pix2pix"></a><a href="https://arxiv.org/pdf/1611.07004.pdf" target="_blank" rel="noopener">pix2pix</a></h4><ul><li>conditional discrimiantor (channel-wise concat)</li><li>unet generator with skip connections</li><li>patch discriminator</li></ul><h4 id="pix2pixHD"><a href="#pix2pixHD" class="headerlink" title="pix2pixHD"></a><a href="https://research.nvidia.com/sites/default/files/pubs/2017-12_High-Resolution-Image-Synthesis/1711.11585.pdf" target="_blank" rel="noopener">pix2pixHD</a></h4><ul><li>generating high-resolution images.</li><li>a coarse-to-fine generator: a globale generator and a local enhancer networks (G1-G2)</li><li>a multi-scale discriminator architecture: multiple discriminators are used to deal with different scale images.</li><li>a robust adversarial learning objective function: feature matching between discrinative features from real samples and fake samples.</li></ul><h4 id="SPADE"><a href="#SPADE" class="headerlink" title="SPADE"></a><a href="https://arxiv.org/pdf/1903.07291.pdf" target="_blank" rel="noopener">SPADE</a></h4><ul><li>SPADE is a generalization of several existing normalization layers, the proposed SPADE is better suited for semantic image synthesis.</li><li>SPADE can be added into generator and discriminator.</li></ul>]]></content>
     
