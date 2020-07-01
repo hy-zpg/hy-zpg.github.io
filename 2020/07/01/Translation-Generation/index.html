@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="variation,">
+  <meta name="keywords" content="image generation/translation,">
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="refer to blogs1, blogs2, blogs3 DCGANpaper link  network design latent interpolation using feature from discriminator to train classifier  conditional GANpaper link  using label information to stabliz">
-<meta name="keywords" content="variation">
+<meta name="description" content="few-shot translationFUNIT Few-Shot Unsupervised Image-to-Image Translation  Main ideaDatsetsMetrcisAblation StudySEMIT Semi-supervised Learning for Few-shot Image-to-Image Translation  Main ideaDatset">
+<meta name="keywords" content="image generation&#x2F;translation">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Variations of GAN">
-<meta property="og:url" content="https://www.yanhong.me/2019/09/19/Variations-of-GAN/index.html">
+<meta property="og:title" content="Few-shot Image Translation&#x2F;Generation Baselines">
+<meta property="og:url" content="https://www.yanhong.me/2020/07/01/Translation-Generation/index.html">
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
-<meta property="og:description" content="refer to blogs1, blogs2, blogs3 DCGANpaper link  network design latent interpolation using feature from discriminator to train classifier  conditional GANpaper link  using label information to stabliz">
+<meta property="og:description" content="few-shot translationFUNIT Few-Shot Unsupervised Image-to-Image Translation  Main ideaDatsetsMetrcisAblation StudySEMIT Semi-supervised Learning for Few-shot Image-to-Image Translation  Main ideaDatset">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-18T03:12:27.810Z">
+<meta property="og:updated_time" content="2020-07-01T06:47:42.650Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Variations of GAN">
-<meta name="twitter:description" content="refer to blogs1, blogs2, blogs3 DCGANpaper link  network design latent interpolation using feature from discriminator to train classifier  conditional GANpaper link  using label information to stabliz">
+<meta name="twitter:title" content="Few-shot Image Translation&#x2F;Generation Baselines">
+<meta name="twitter:description" content="few-shot translationFUNIT Few-Shot Unsupervised Image-to-Image Translation  Main ideaDatsetsMetrcisAblation StudySEMIT Semi-supervised Learning for Few-shot Image-to-Image Translation  Main ideaDatset">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://www.yanhong.me/2019/09/19/Variations-of-GAN/">
+  <link rel="canonical" href="https://www.yanhong.me/2020/07/01/Translation-Generation/">
 
 
 
 
 
-  <title>Variations of GAN | Hongyan's Notes</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Few-shot Image Translation/Generation Baselines | Hongyan's Notes</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -307,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/09/19/Variations-of-GAN/">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2020/07/01/Translation-Generation/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hongyan">
@@ -324,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Variations of GAN</h1>
+          <h1 class="post-title" itemprop="name headline">Few-shot Image Translation/Generation Baselines</h1>
         
 
         <div class="post-meta">
@@ -336,8 +336,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-19T10:47:18+08:00">
-                2019-09-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-01T14:35:53+08:00">
+                2020-07-01
               </time>
             
 
@@ -359,8 +359,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Generative-Model/" itemprop="url" rel="index">
-                    <span itemprop="name">Generative Model</span>
+                  <a href="/categories/Baselines/" itemprop="url" rel="index">
+                    <span itemprop="name">Baselines</span>
                   </a>
                 </span>
 
@@ -415,75 +415,16 @@
       
 
       
-        <p>refer to <a href="https://blog.csdn.net/qq_25737169/article/details/84864808" target="_blank" rel="noopener">blogs1</a>, <a href="http://www.sohu.com/a/302267498_473283" target="_blank" rel="noopener">blogs2</a>, <a href="https://juejin.im/post/5d234eb16fb9a07f0870b9be" target="_blank" rel="noopener">blogs3</a></p>
-<h5 id="DCGAN"><a href="#DCGAN" class="headerlink" title="DCGAN"></a>DCGAN</h5><p><a href="https://arxiv.org/pdf/1511.06434.pdf" target="_blank" rel="noopener">paper link</a></p>
-<ul>
-<li>network design</li>
-<li>latent interpolation</li>
-<li>using feature from discriminator to train classifier</li>
+        <h4 id="few-shot-translation"><a href="#few-shot-translation" class="headerlink" title="few-shot translation"></a>few-shot translation</h4><h5 id="FUNIT"><a href="#FUNIT" class="headerlink" title="FUNIT"></a>FUNIT</h5><ul>
+<li><a href="https://arxiv.org/pdf/1905.01723.pdf" target="_blank" rel="noopener">Few-Shot Unsupervised Image-to-Image Translation</a></li>
 </ul>
-<h5 id="conditional-GAN"><a href="#conditional-GAN" class="headerlink" title="conditional GAN"></a>conditional GAN</h5><p><a href="https://arxiv.org/pdf/1411.1784.pdf" target="_blank" rel="noopener">paper link</a></p>
-<ul>
-<li>using label information to stablize the training of GAN</li>
-<li>showing that how to leverage prior information to achieve image-to-image ot text-to-image</li>
+<h6 id="Main-idea"><a href="#Main-idea" class="headerlink" title="Main idea"></a>Main idea</h6><h6 id="Datsets"><a href="#Datsets" class="headerlink" title="Datsets"></a>Datsets</h6><h6 id="Metrcis"><a href="#Metrcis" class="headerlink" title="Metrcis"></a>Metrcis</h6><h6 id="Ablation-Study"><a href="#Ablation-Study" class="headerlink" title="Ablation Study"></a>Ablation Study</h6><h5 id="SEMIT"><a href="#SEMIT" class="headerlink" title="SEMIT"></a>SEMIT</h5><ul>
+<li><a href="https://arxiv.org/pdf/2003.13853.pdf" target="_blank" rel="noopener">Semi-supervised Learning for Few-shot Image-to-Image Translation</a></li>
 </ul>
-<h5 id="bigGAN"><a href="#bigGAN" class="headerlink" title="bigGAN"></a>bigGAN</h5><p><a href="https://arxiv.org/abs/1809.11096" target="_blank" rel="noopener">paper link</a></p>
-<ul>
-<li>self-attention</li>
-<li>Spectral Normalization</li>
-<li>cGAN</li>
+<h6 id="Main-idea-1"><a href="#Main-idea-1" class="headerlink" title="Main idea"></a>Main idea</h6><h6 id="Datsets-1"><a href="#Datsets-1" class="headerlink" title="Datsets"></a>Datsets</h6><h6 id="Metrcis-1"><a href="#Metrcis-1" class="headerlink" title="Metrcis"></a>Metrcis</h6><h6 id="Ablation-Study-1"><a href="#Ablation-Study-1" class="headerlink" title="Ablation Study"></a>Ablation Study</h6><h5 id="TUNIT"><a href="#TUNIT" class="headerlink" title="TUNIT"></a>TUNIT</h5><ul>
+<li><a href="https://arxiv.org/pdf/2006.06500.pdf" target="_blank" rel="noopener">Rethinking the Truly Unsupervised Image-to-Image Translation</a></li>
 </ul>
-<h5 id="styleGAN"><a href="#styleGAN" class="headerlink" title="styleGAN"></a>styleGAN</h5><p><a href="https://arxiv.org/abs/1812.04948" target="_blank" rel="noopener">paper link</a></p>
-<ul>
-<li>control latent space</li>
-<li>using AdaIN mechanism</li>
-</ul>
-<h5 id="cycleGAN"><a href="#cycleGAN" class="headerlink" title="cycleGAN"></a>cycleGAN</h5><p><a href="https://arxiv.org/abs/1703.10593" target="_blank" rel="noopener">paper link</a></p>
-<ul>
-<li>cycle-Consistency loss</li>
-<li>the stablity of GAN training</li>
-</ul>
-<h5 id="Pix2Pix"><a href="#Pix2Pix" class="headerlink" title="Pix2Pix"></a>Pix2Pix</h5><p><a href="https://arxiv.org/abs/1611.07004" target="_blank" rel="noopener">paper link</a></p>
-<ul>
-<li>Unet</li>
-<li>skip connection in ResUnet</li>
-<li>to distinguish the fake image from the real image by patchGAN which observe the small area of image</li>
-</ul>
-<h5 id="stackGAN"><a href="#stackGAN" class="headerlink" title="stackGAN"></a>stackGAN</h5><p><a href="https://arxiv.org/abs/1612.03242" target="_blank" rel="noopener">paper link</a></p>
-<ul>
-<li>text-to-image</li>
-<li>multi-stage (from small to large)</li>
-</ul>
-<h5 id="WGAN"><a href="#WGAN" class="headerlink" title="WGAN"></a>WGAN</h5><p><a href="https://arxiv.org/pdf/1701.07875.pdf" target="_blank" rel="noopener">paper link</a></p>
-<ul>
-<li><p>aim: minimize the distribution distance between real data and generated data.<br>\begin{equation}<br>\delta\left(\mathbb{P}_{r}, \mathbb{P}_{g}\right)=\sup _{A \in \Sigma}\left|\mathbb{P}_{r}(A)-\mathbb{P}_{g}(A)\right|<br>\end{equation}</p>
-</li>
-<li><p>problem: superior discriminator lead to the gradient vanish of the generator, while the gradient of the generator is unaccuracy with inferior discriminator. the ability of discriminator need to be controlled. </p>
-</li>
-</ul>
-<h6 id="different-distance"><a href="#different-distance" class="headerlink" title="different distance"></a>different distance</h6><ul>
-<li>KL: assymetric and possibly infinite</li>
-<li>JS: symmetrical and always defined</li>
-<li>EM(earch mover): the “cost” of the optimal transport plan.<br>\begin{equation}<br>W\left(\mathbb{P}_{r}, \mathbb{P}_{g}\right)=\inf _{\gamma \in \Pi\left(\mathbb{P}_{r}, \mathbb{P}_{g}\right)} \mathbb{E}_{(x, y) \sim \gamma}[|x-y|]<br>\end{equation}</li>
-</ul>
-<h6 id="WGAN-1"><a href="#WGAN-1" class="headerlink" title="WGAN"></a>WGAN</h6><ul>
-<li>using EM to evaluate the distribution distance</li>
-<li>remove sigmoid from the last layer of discriminator</li>
-<li>without log operation for discriminator loss</li>
-<li>restrict the parameter of discriminator to fixted value after each update</li>
-<li>using RMSProp or SGD</li>
-</ul>
-<p>\begin{equation}<br>\max _{|f|_{L} \leq 1} \mathbb{E}_{x \sim \mathbb{P}_{r}}[f(x)]-\mathbb{E}_{x \sim \mathbb{P}_{\theta}}[f(x)]<br>\end{equation}</p>
-<p>where Lipschitz:</p>
-<p>\begin{equation}<br>\left|f\left(x_{1}\right)-f\left(x_{2}\right)\right| \leq K\left|x_{1}-x_{2}\right|<br>\end{equation}</p>
-<p>means that the absolute value of Derivative function lower than fixted K.</p>
-<p>in the restriction, the total loss of WGAN:<br>\begin{equation}<br>L=\mathbb{E}_{x \sim P_{r}}\left[f_{w}(x)\right]-\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]<br>\end{equation} </p>
-<p>for generator:<br>\begin{equation}<br>-\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]<br>\end{equation}</p>
-<p>for discriminator:<br>\begin{equation}<br>\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]-\mathbb{E}_{x \sim P_{r}}\left[f_{w}(x)\right]<br>\end{equation}</p>
-<h5 id="WGAN-GP"><a href="#WGAN-GP" class="headerlink" title="WGAN-GP"></a>WGAN-GP</h5><p>\begin{equation}<br>L=\underset{\tilde{\boldsymbol{x}} \sim \mathbb{P}_{g}}{\mathbb{E}}[D(\tilde{\boldsymbol{x}})]-\underset{\boldsymbol{x} \sim \mathbb{P}_{r}}{\mathbb{E}}[D(\boldsymbol{x})]+ \lambda \underset{\hat{\boldsymbol{x}} \sim \mathbb{P}_{\boldsymbol{x}}}{\mathbb{E}}\left[\left(\left|\nabla_{\hat{\boldsymbol{x}}} D(\hat{\boldsymbol{x}})\right|_{2}-1\right)^{2}\right]<br>\end{equation}</p>
-<p>for generator:<br>\begin{equation}<br>-\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]<br>\end{equation}</p>
-<p>for discriminator:<br>\begin{equation}<br>\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]-\mathbb{E}_{x \sim P_{r}}\left[f_{w}(x)\right] + \lambda \underset{\hat{\boldsymbol{x}} \sim \mathbb{P}_{\boldsymbol{x}}}{\mathbb{E}}\left[\left(\left|\nabla_{\hat{\boldsymbol{x}}} D(\hat{\boldsymbol{x}})\right|_{2}-1\right)^{2}\right]<br>\end{equation}</p>
-
+<h6 id="Main-idea-2"><a href="#Main-idea-2" class="headerlink" title="Main idea"></a>Main idea</h6><h6 id="Datsets-2"><a href="#Datsets-2" class="headerlink" title="Datsets"></a>Datsets</h6><h6 id="Metrcis-2"><a href="#Metrcis-2" class="headerlink" title="Metrcis"></a>Metrcis</h6><h6 id="Ablation-Study-2"><a href="#Ablation-Study-2" class="headerlink" title="Ablation Study"></a>Ablation Study</h6>
       
     </div>
     
@@ -500,7 +441,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/variation/" rel="tag"># variation</a>
+            <a href="/tags/image-generation-translation/" rel="tag"># image generation/translation</a>
           
         </div>
       
@@ -513,8 +454,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/05/Loss-for-VAE-GAN/" rel="next" title="Loss for VAE-GAN">
-                <i class="fa fa-chevron-left"></i> Loss for VAE-GAN
+              <a href="/2020/06/11/2020CVPR-Paper-Reading/" rel="next" title="2020CVPR Paper Reading">
+                <i class="fa fa-chevron-left"></i> 2020CVPR Paper Reading
               </a>
             
           </div>
@@ -522,10 +463,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/10/31/ICCV-Paper-Reading/" rel="prev" title="ICCV-Paper-Reading">
-                ICCV-Paper-Reading <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -680,7 +617,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#DCGAN"><span class="nav-number">1.</span> <span class="nav-text">DCGAN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#conditional-GAN"><span class="nav-number">2.</span> <span class="nav-text">conditional GAN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#bigGAN"><span class="nav-number">3.</span> <span class="nav-text">bigGAN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#styleGAN"><span class="nav-number">4.</span> <span class="nav-text">styleGAN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#cycleGAN"><span class="nav-number">5.</span> <span class="nav-text">cycleGAN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Pix2Pix"><span class="nav-number">6.</span> <span class="nav-text">Pix2Pix</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#stackGAN"><span class="nav-number">7.</span> <span class="nav-text">stackGAN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#WGAN"><span class="nav-number">8.</span> <span class="nav-text">WGAN</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#different-distance"><span class="nav-number">8.1.</span> <span class="nav-text">different distance</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#WGAN-1"><span class="nav-number">8.2.</span> <span class="nav-text">WGAN</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#WGAN-GP"><span class="nav-number">9.</span> <span class="nav-text">WGAN-GP</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#few-shot-translation"><span class="nav-number">1.</span> <span class="nav-text">few-shot translation</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#FUNIT"><span class="nav-number">1.1.</span> <span class="nav-text">FUNIT</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Main-idea"><span class="nav-number">1.1.1.</span> <span class="nav-text">Main idea</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Datsets"><span class="nav-number">1.1.2.</span> <span class="nav-text">Datsets</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Metrcis"><span class="nav-number">1.1.3.</span> <span class="nav-text">Metrcis</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Ablation-Study"><span class="nav-number">1.1.4.</span> <span class="nav-text">Ablation Study</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#SEMIT"><span class="nav-number">1.2.</span> <span class="nav-text">SEMIT</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Main-idea-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">Main idea</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Datsets-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">Datsets</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Metrcis-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">Metrcis</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Ablation-Study-1"><span class="nav-number">1.2.4.</span> <span class="nav-text">Ablation Study</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#TUNIT"><span class="nav-number">1.3.</span> <span class="nav-text">TUNIT</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Main-idea-2"><span class="nav-number">1.3.1.</span> <span class="nav-text">Main idea</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Datsets-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">Datsets</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Metrcis-2"><span class="nav-number">1.3.3.</span> <span class="nav-text">Metrcis</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Ablation-Study-2"><span class="nav-number">1.3.4.</span> <span class="nav-text">Ablation Study</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yanhong.me/"/>
-  <updated>2020-06-11T09:01:38.672Z</updated>
+  <updated>2020-07-01T06:47:42.650Z</updated>
   <id>https://www.yanhong.me/</id>
   
   <author>
@@ -17,13 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Few-shot Image Translation/Generation Baselines</title>
+    <link href="https://www.yanhong.me/2020/07/01/Translation-Generation/"/>
+    <id>https://www.yanhong.me/2020/07/01/Translation-Generation/</id>
+    <published>2020-07-01T06:35:53.000Z</published>
+    <updated>2020-07-01T06:47:42.650Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="few-shot-translation"><a href="#few-shot-translation" class="headerlink" title="few-shot translation"></a>few-shot translation</h4><h5 id="FUNIT"><a href="#FUNIT" class="headerlink" title="FUNIT"></a>FUNIT</h5><ul><li><a href="https://arxiv.org/pdf/1905.01723.pdf" target="_blank" rel="noopener">Few-Shot Unsupervised Image-to-Image Translation</a></li></ul><h6 id="Main-idea"><a href="#Main-idea" class="headerlink" title="Main idea"></a>Main idea</h6><h6 id="Datsets"><a href="#Datsets" class="headerlink" title="Datsets"></a>Datsets</h6><h6 id="Metrcis"><a href="#Metrcis" class="headerlink" title="Metrcis"></a>Metrcis</h6><h6 id="Ablation-Study"><a href="#Ablation-Study" class="headerlink" title="Ablation Study"></a>Ablation Study</h6><h5 id="SEMIT"><a href="#SEMIT" class="headerlink" title="SEMIT"></a>SEMIT</h5><ul><li><a href="https://arxiv.org/pdf/2003.13853.pdf" target="_blank" rel="noopener">Semi-supervised Learning for Few-shot Image-to-Image Translation</a></li></ul><h6 id="Main-idea-1"><a href="#Main-idea-1" class="headerlink" title="Main idea"></a>Main idea</h6><h6 id="Datsets-1"><a href="#Datsets-1" class="headerlink" title="Datsets"></a>Datsets</h6><h6 id="Metrcis-1"><a href="#Metrcis-1" class="headerlink" title="Metrcis"></a>Metrcis</h6><h6 id="Ablation-Study-1"><a href="#Ablation-Study-1" class="headerlink" title="Ablation Study"></a>Ablation Study</h6><h5 id="TUNIT"><a href="#TUNIT" class="headerlink" title="TUNIT"></a>TUNIT</h5><ul><li><a href="https://arxiv.org/pdf/2006.06500.pdf" target="_blank" rel="noopener">Rethinking the Truly Unsupervised Image-to-Image Translation</a></li></ul><h6 id="Main-idea-2"><a href="#Main-idea-2" class="headerlink" title="Main idea"></a>Main idea</h6><h6 id="Datsets-2"><a href="#Datsets-2" class="headerlink" title="Datsets"></a>Datsets</h6><h6 id="Metrcis-2"><a href="#Metrcis-2" class="headerlink" title="Metrcis"></a>Metrcis</h6><h6 id="Ablation-Study-2"><a href="#Ablation-Study-2" class="headerlink" title="Ablation Study"></a>Ablation Study</h6>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;few-shot-translation&quot;&gt;&lt;a href=&quot;#few-shot-translation&quot; class=&quot;headerlink&quot; title=&quot;few-shot translation&quot;&gt;&lt;/a&gt;few-shot translation&lt;/h4&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="Baselines" scheme="https://www.yanhong.me/categories/Baselines/"/>
+    
+    
+      <category term="image generation/translation" scheme="https://www.yanhong.me/tags/image-generation-translation/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2020CVPR Paper Reading</title>
     <link href="https://www.yanhong.me/2020/06/11/2020CVPR-Paper-Reading/"/>
     <id>https://www.yanhong.me/2020/06/11/2020CVPR-Paper-Reading/</id>
     <published>2020-06-11T08:41:06.000Z</published>
-    <updated>2020-06-11T09:01:38.672Z</updated>
+    <updated>2020-06-13T08:27:07.988Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Normalization"><a href="#Normalization" class="headerlink" title="Normalization"></a>Normalization</h2><ul><li><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Zhu_SEAN_Image_Synthesis_With_Semantic_Region-Adaptive_Normalization_CVPR_2020_paper.pdf" target="_blank" rel="noopener">SEAN: Image Synthesis with Semantic Region-Adaptive Normalization</a></li><li><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_Attentive_Normalization_for_Conditional_Image_Generation_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Attentive Normalization for Conditional Image Generation</a></li></ul><h2 id="Diversity"><a href="#Diversity" class="headerlink" title="Diversity"></a>Diversity</h2><ul><li><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Liu_Diverse_Image_Generation_via_Self-Conditioned_GANs_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Diverse Image Generation via Self-Conditioned GANs</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="Normalization"><a href="#Normalization" class="headerlink" title="Normalization"></a>Normalization</h2><ul><li><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Zhu_SEAN_Image_Synthesis_With_Semantic_Region-Adaptive_Normalization_CVPR_2020_paper.pdf" target="_blank" rel="noopener">SEAN: Image Synthesis with Semantic Region-Adaptive Normalization</a></li><li><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_Attentive_Normalization_for_Conditional_Image_Generation_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Attentive Normalization for Conditional Image Generation</a></li></ul><h2 id="Diversity"><a href="#Diversity" class="headerlink" title="Diversity"></a>Diversity</h2><ul><li>[Diverse Image Generation via Self-Conditioned GANs](<a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Liu_Diverse_Image_Generation_via_Self-Conditioned_GANs_CVPR_2020_paper.pdfs" target="_blank" rel="noopener">http://openaccess.thecvf.com/content_CVPR_2020/papers/Liu_Diverse_Image_Generation_via_Self-Conditioned_GANs_CVPR_2020_paper.pdfs</a></li></ul>]]></content>
     
     <summary type="html">
     

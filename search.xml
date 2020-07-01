@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Few-shot Image Translation/Generation Baselines]]></title>
+    <url>%2F2020%2F07%2F01%2FTranslation-Generation%2F</url>
+    <content type="text"><![CDATA[few-shot translationFUNIT Few-Shot Unsupervised Image-to-Image Translation Main ideaDatsetsMetrcisAblation StudySEMIT Semi-supervised Learning for Few-shot Image-to-Image Translation Main ideaDatsetsMetrcisAblation StudyTUNIT Rethinking the Truly Unsupervised Image-to-Image Translation Main ideaDatsetsMetrcisAblation Study]]></content>
+      <categories>
+        <category>Baselines</category>
+      </categories>
+      <tags>
+        <tag>image generation/translation</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[2020CVPR Paper Reading]]></title>
     <url>%2F2020%2F06%2F11%2F2020CVPR-Paper-Reading%2F</url>
-    <content type="text"><![CDATA[Normalization SEAN: Image Synthesis with Semantic Region-Adaptive Normalization Attentive Normalization for Conditional Image Generation Diversity Diverse Image Generation via Self-Conditioned GANs]]></content>
+    <content type="text"><![CDATA[Normalization SEAN: Image Synthesis with Semantic Region-Adaptive Normalization Attentive Normalization for Conditional Image Generation Diversity [Diverse Image Generation via Self-Conditioned GANs](http://openaccess.thecvf.com/content_CVPR_2020/papers/Liu_Diverse_Image_Generation_via_Self-Conditioned_GANs_CVPR_2020_paper.pdfs]]></content>
       <categories>
         <category>Generation</category>
       </categories>

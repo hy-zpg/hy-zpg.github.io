@@ -307,6 +307,238 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/04/09/Overview-of-GAN/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/09/Overview-of-GAN/" itemprop="url">Overview of Generative Models</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-09T18:31:46+08:00">
+                2019-04-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Generative-Model/" itemprop="url" rel="index">
+                    <span itemprop="name">Generative Model</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!-- <img src="https://www.yanhong.me/images/gm.jpg" width="50%" height="50%"> -->
+<!-- <img src="⁨hy-zpg.github.io⁩/source⁩/imgs⁩/gm.jpg" class="full-image" width="180" height="180" title="hello"> -->
+<!-- ![avatar](http://baidu.com/pic/doge.png)-->
+<h2 id="The-detail-of-generative-model-can-refer-to-generative-models"><a href="#The-detail-of-generative-model-can-refer-to-generative-models" class="headerlink" title="The detail of generative model can refer to generative models"></a>The detail of generative model can refer to <a href="https://github.com/w-ww/cs231n/blob/master/slides/cs231n_2018_lecture12.pdf" target="_blank" rel="noopener">generative models</a></h2><h2 id="Definition-of-generative-models"><a href="#Definition-of-generative-models" class="headerlink" title="Definition of generative models"></a>Definition of generative models</h2><p>given training data, generate new samples from same distribution<br>\begin{aligned}<br>\mathrm{p}_{model}(\mathrm{x}) { similar to } \mathrm{p}_(\mathrm{x})<br>\end{aligned}</p>
+<h2 id="Taxonomy-of-Generative-models"><a href="#Taxonomy-of-Generative-models" class="headerlink" title="Taxonomy of Generative models"></a>Taxonomy of Generative models</h2><p><img src="/imgs/gm.jpg" alt="&#39;taxonomy of generative models&#39;"></p>
+<h3 id="PixelsRNN-and-PixelsCNN"><a href="#PixelsRNN-and-PixelsCNN" class="headerlink" title="PixelsRNN and PixelsCNN"></a>PixelsRNN and PixelsCNN</h3><ul>
+<li><p>this method belongs to <strong><em>explicit density model</em></strong>.</p>
+</li>
+<li><p>Using <strong><em>chain rule</em></strong> to decompose likelihood of an image x into product of 1-d distributions:</p>
+</li>
+</ul>
+<p>\begin{aligned}<br> p_{\theta}(x)=\prod_{i=1}^{n} p_{\theta}\left(x_{i} | x_{1}, \ldots, x_{i-1}\right)<br>\end{aligned}</p>
+<p>where $x_i$ represents pixel, $p(x)$ denoets the likelihood of image $x$</p>
+<ul>
+<li><p>it’s important to define <strong><em>ordering</em></strong> of those pixels</p>
+</li>
+<li><p>complex distribution over pixels can be sloved by neural networks</p>
+</li>
+<li><p>pros: <strong><em>explicitly</em></strong> compute likelihood $p(x)$.</p>
+</li>
+<li><p>cons: sequential generation is slow.</p>
+</li>
+</ul>
+<h4 id="PixelsRNN"><a href="#PixelsRNN" class="headerlink" title="PixelsRNN"></a>PixelsRNN</h4><ul>
+<li><p>generating image pixels from corner, and then using RNN(LSTM) to model dependency on previous pixels.</p>
+</li>
+<li><p>drawback is that the process of sequential generation if slow.</p>
+</li>
+</ul>
+<h4 id="PixelsCNN"><a href="#PixelsCNN" class="headerlink" title="PixelsCNN"></a>PixelsCNN</h4><ul>
+<li><p>generating image pixels from corner, and then using CNN to cover context region.</p>
+</li>
+<li><p>generation proceed sequentially is still slow.</p>
+</li>
+</ul>
+<h3 id="Variational-Autoenconders"><a href="#Variational-Autoenconders" class="headerlink" title="Variational Autoenconders"></a>Variational Autoenconders</h3><ul>
+<li><p>general explanation is here <a href="https://zhuanlan.zhihu.com/p/27549418" target="_blank" rel="noopener">VAE</a></p>
+</li>
+<li><p>this method defines <strong><em>intractable density function</em></strong> with latent $z$:</p>
+</li>
+</ul>
+<p>\begin{aligned}<br>p_{\theta}(x)=\int p_{\theta}(z) p_{\theta}(x | z) d z<br>\end{aligned}</p>
+<h4 id="Autoencoders"><a href="#Autoencoders" class="headerlink" title="Autoencoders"></a>Autoencoders</h4><ul>
+<li>mapping image $x$ to features $z$ with deep neural networks, $z$ is regarded to capture meaningful factors of variation in data.</li>
+<li>to learn feature $z$ by reconstruction error: $x$ -&gt; $z$ -&gt; $\hat_{x}$ with encoder and decoder.</li>
+</ul>
+<h4 id="Variational-Autoenconders-for-generation-problem"><a href="#Variational-Autoenconders-for-generation-problem" class="headerlink" title="Variational Autoenconders for generation problem"></a>Variational Autoenconders for generation problem</h4><ul>
+<li><p>Assuming training data $x(i)$ representation $z$ is generated from latent representation $z$. Specifically, first sampling $z$ from true prior $p_{\theta}(z)$, then sampling $x$ from true conditional $p_{\theta}(x|z^(i))$</p>
+</li>
+<li><p>the <strong><em>aim</em></strong> is to estimate the true parameter $\theta$ by <font color="red">maximuming likelihood of training data</font> :</p>
+</li>
+</ul>
+<p>\begin{equation}<br>p_{\theta}(x)=\int p_{\theta}(z) p_{\theta}(x | z) d z<br>\end{equation}</p>
+<p>where $p_{\theta}(z)$ is gaussion prior, and $p_{\theta}(x | z) $ is decoder.</p>
+<ul>
+<li><p>intractable optimization problem, because it’s impossible to compute $p(x | z)$ for every $z$ which means the integral operation is fail in this condition. </p>
+</li>
+<li><p>posterior density $p_{\theta}(z | x)=p_{\theta}(x | z) p_{\theta}(z) / p_{\theta}(x)$ is also intractable, since $p_{\theta}(x)$ is intractable data likelihood. </p>
+</li>
+</ul>
+<h4 id="lower-bound-of-VAE"><a href="#lower-bound-of-VAE" class="headerlink" title="lower bound of VAE"></a>lower bound of VAE</h4><ul>
+<li>why: intractable, transfer optimization </li>
+<li>how: In addition to decoder network modeling $p_\theta(x|z)$, define additional encoder network $q_{\phi}(z|x)$ that approximates $p_\theta(z|x)$</li>
+<li><p>final optimization objective:<br>\begin{aligned}<br>\log p_{\theta}\left(x^{(i)}\right)\\<br>&amp;=\mathbf{E}_{z \sim q_{\phi}\left(z | x^{(i)}\right)}\left[\log p_{\theta}\left(x^{(i)}\right)\right]\\<br>&amp;=\mathbf{E}_{z}\left[\log \frac{p_{\theta}\left(x^{(i)} | z\right) p_{\theta}(z)}{p_{\theta}\left(z | x^{(i)}\right)}\right]\\<br>&amp;=\mathbf{E}_{z}\left[\log \frac{p_{\theta}\left(x^{(i)} | z\right) p_{\theta}(z)}{p_{\theta}\left(z | x^{(i)}\right)} \frac{q_{\phi}\left(z | x^{(i)}\right)}{q_{\phi}\left(z | x^{(i)}\right)}\right]\\<br>&amp;=\mathbf{E}_{z}\left[\log p_{\theta}\left(x^{(i)} | z\right)\right]-\mathbf{E}_{z}\left[\log \frac{q_{\phi}\left(z | x^{(i)}\right)}{p_{\theta}(z)}\right]+\mathbf{E}_{z}\left[\log \frac{q_{\phi}\left(z | x^{(i)}\right)}{p_{\theta}\left(z | x^{(i)}\right)}\right]\\<br>&amp;=\mathbf{E}_{z}\left[\log p_{\theta}\left(x^{(i)} | z\right)\right]-D_{K L}\left(q_{\phi}\left(z | x^{(i)}\right) | p_{\theta}(z)\right)+D_{K L}\left(q_{\phi}\left(z | x^{(i)}\right) | p_{\theta}\left(z | x^{(i)}\right)\right)<br>\end{aligned}<br>where $\mathbf{E}_{z}\left[\log p_{\theta}\left(x^{(i)} | z\right)\right]$ is used to reconstruct the input data, $q_{\phi}\left(z | x^{(i)}\right) | p_{\theta}(z)$ is used to make approximate posterior distribution close to prior.</p>
+</li>
+<li><p>lower bound: <font color="red">transfering intractable problem into tractale problem with lower bounds</font>, introducing encoder $_{\phi}$ to transfer two KL divergence, in which one is tractable while another one is untractabel. Thus, lower bound aims at optimizing the tractable KL divergence.<br><img src="/imgs/lower_bound.jpg" alt="&#39;lower bound&#39;"></p>
+</li>
+<li><p>the detail of optimization procedure as follows:<br><img src="/imgs/procedure.jpg" alt="&#39;procedure of optimization&#39;"></p>
+</li>
+</ul>
+<h3 id="GAN"><a href="#GAN" class="headerlink" title="GAN"></a>GAN</h3><p>\begin{equation}<br>{\min <em>{G} \max </em>{D} V(D, G)=}<br>{\mathbb{E}<em>{\boldsymbol{x} \sim p</em>{\text {data}}(\boldsymbol{x})}[\log D(\boldsymbol{x})]+\mathbb{E}<em>{\boldsymbol{z} \sim p</em>{\boldsymbol{z}}(\boldsymbol{z})}[\log (1-D(G(\boldsymbol{z}))]}<br>\end{equation}</p>
+<p>where $D(x)$ represents the probability of $x$ sourced from real data.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/04/04/Few-shot-Image-generation/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -2131,204 +2363,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/21/Density-Distribution/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/21/Density-Distribution/" itemprop="url">Data Density and Distribution</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-21T15:46:01+08:00">
-                2019-02-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Theory/" itemprop="url" rel="index">
-                    <span itemprop="name">Theory</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Purity-based-density-amp-distribution-distance-based-GMM"><a href="#Purity-based-density-amp-distribution-distance-based-GMM" class="headerlink" title="Purity based density &amp; distribution distance based GMM"></a>Purity based density &amp; distribution distance based GMM</h2><h3 id="Purity-based-density"><a href="#Purity-based-density" class="headerlink" title="Purity based density"></a>Purity based density</h3><blockquote>
-<p>reference：ECCV 2018 <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Sheng_Guo_CurriculumNet_Learning_from_ECCV_2018_paper.pdf" target="_blank" rel="noopener">CurriculumNet: Weakly Supervised Learning from Large-Scale Web Images</a></p>
-<p>original reference： Science 2004 <a href="http://sites.psu.edu/mcnl/files/2017/03/9-2dhti48.pdf" target="_blank" rel="noopener">Clustering by fast search and find of density peaks</a></p>
-</blockquote>
-<h4 id="Creativity"><a href="#Creativity" class="headerlink" title="Creativity"></a>Creativity</h4><ul>
-<li>leveraging data distribution density in feature space to evaluate the complexity of the data<br>ours — evaluating the purity of pseudo label data by data density in feature space</li>
-<li>noisy data can be regared as regularied method to improve the model generalization<br>ours — pesudo labels can improve the model generalization </li>
-</ul>
-<h4 id="Technical-detail"><a href="#Technical-detail" class="headerlink" title="Technical detail"></a>Technical detail</h4><p>Density based clustering algorithm</p>
-<ul>
-<li>generating features</li>
-<li>calculating Euclidean distance D_ij</li>
-<li>calculating local density of each image</li>
-<li>calculating distance of each image: maximun local distance is regarded as cluster centre, image with smaller distance between its distance and cluster centre represents that its label have high confidence </li>
-</ul>
-<h3 id="Distribution-distance-based-GMM"><a href="#Distribution-distance-based-GMM" class="headerlink" title="Distribution distance based GMM"></a>Distribution distance based GMM</h3><h4 id="Clustring-based-GMM"><a href="#Clustring-based-GMM" class="headerlink" title="Clustring based GMM"></a>Clustring based GMM</h4><h5 id="GMM-with-EM"><a href="#GMM-with-EM" class="headerlink" title="GMM with EM"></a>GMM with EM</h5><ul>
-<li><p>original definition<br>\begin{aligned}<br>p(x) &amp; = \sum_{k=1}^K p(k)p(x|k) = \sum_{k=1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)<br>\end{aligned}<br>$\pi_k$  represent the possibility of sample belong to kth category</p>
-</li>
-<li><p>new definition for coding<br>\begin{aligned}<br>\sum_{k} z_k = 1<br>\end{aligned}</p>
-</li>
-</ul>
-<h5 id="Related-code"><a href="#Related-code" class="headerlink" title="Related code"></a>Related code</h5><ul>
-<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html" target="_blank" rel="noopener">sklearn.mixture.GaussianMixture</a></li>
-</ul>
-<h4 id="Data-distribution-distance-EMD"><a href="#Data-distribution-distance-EMD" class="headerlink" title="Data distribution distance EMD"></a>Data distribution distance EMD</h4><blockquote>
-<p>reference： <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cui_Large_Scale_Fine-Grained_CVPR_2018_paper.pdf" target="_blank" rel="noopener"> Large Scale Fine-Grained Categorization and Domain-Specific Transfer Learning</a><br>original reference： <a href="http://robotics.stanford.edu/~rubner/papers/rubnerIjcv00.pdf" target="_blank" rel="noopener">The Earth Mover’s Distance as a Metric for Image Retrieval</a></p>
-</blockquote>
-<ul>
-<li><p>EDM definition: Signature matching can be naturally cast as a transportation problem by de fining one signature as the supplier and the other as the consumer, and by setting the cost for a supplier-consumer pair to equal the ground distance between an element in the fi rst signature and an element in the second</p>
-</li>
-<li><p>EMD data signature:<br>\begin{aligned}<br>s= (feature,weights)<br>\end{aligned}</p>
-</li>
-<li><p>related code</p>
-</li>
-<li><a href="https://github.com/chalmersgit/EMD" target="_blank" rel="noopener">general EMD</a> <a href="http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/RUBNER/emd.htm" target="_blank" rel="noopener">expaination</a></li>
-<li><a href="https://pypi.org/project/pyemd/" target="_blank" rel="noopener">pyemd-1D data</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.wasserstein_distance.html" target="_blank" rel="noopener">scipy.atats.wasserstein_distance</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2379,7 +2413,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-count">45</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2401,7 +2435,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
