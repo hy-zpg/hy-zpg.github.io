@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="few-shot translationFUNIT Few-Shot Unsupervised Image-to-Image Translation  Main ideaDatsetsMetrcisAblation StudySEMIT Semi-supervised Learning for Few-shot Image-to-Image Translation  Main ideaDatset">
+<meta name="description" content="few-shot translationFUNIT Few-Shot Unsupervised Image-to-Image Translation  Main idea disentangled into appearance code and pose code. disadvantage: using seen categories in testing phase, failing to">
 <meta name="keywords" content="image generation&#x2F;translation">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Few-shot Image Translation&#x2F;Generation Baselines">
 <meta property="og:url" content="https://www.yanhong.me/2020/07/01/Translation-Generation/index.html">
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
-<meta property="og:description" content="few-shot translationFUNIT Few-Shot Unsupervised Image-to-Image Translation  Main ideaDatsetsMetrcisAblation StudySEMIT Semi-supervised Learning for Few-shot Image-to-Image Translation  Main ideaDatset">
+<meta property="og:description" content="few-shot translationFUNIT Few-Shot Unsupervised Image-to-Image Translation  Main idea disentangled into appearance code and pose code. disadvantage: using seen categories in testing phase, failing to">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-07-01T06:47:42.650Z">
+<meta property="og:updated_time" content="2020-07-01T07:34:13.417Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Few-shot Image Translation&#x2F;Generation Baselines">
-<meta name="twitter:description" content="few-shot translationFUNIT Few-Shot Unsupervised Image-to-Image Translation  Main ideaDatsetsMetrcisAblation StudySEMIT Semi-supervised Learning for Few-shot Image-to-Image Translation  Main ideaDatset">
+<meta name="twitter:description" content="few-shot translationFUNIT Few-Shot Unsupervised Image-to-Image Translation  Main idea disentangled into appearance code and pose code. disadvantage: using seen categories in testing phase, failing to">
 
 
 
@@ -418,13 +418,86 @@
         <h4 id="few-shot-translation"><a href="#few-shot-translation" class="headerlink" title="few-shot translation"></a>few-shot translation</h4><h5 id="FUNIT"><a href="#FUNIT" class="headerlink" title="FUNIT"></a>FUNIT</h5><ul>
 <li><a href="https://arxiv.org/pdf/1905.01723.pdf" target="_blank" rel="noopener">Few-Shot Unsupervised Image-to-Image Translation</a></li>
 </ul>
-<h6 id="Main-idea"><a href="#Main-idea" class="headerlink" title="Main idea"></a>Main idea</h6><h6 id="Datsets"><a href="#Datsets" class="headerlink" title="Datsets"></a>Datsets</h6><h6 id="Metrcis"><a href="#Metrcis" class="headerlink" title="Metrcis"></a>Metrcis</h6><h6 id="Ablation-Study"><a href="#Ablation-Study" class="headerlink" title="Ablation Study"></a>Ablation Study</h6><h5 id="SEMIT"><a href="#SEMIT" class="headerlink" title="SEMIT"></a>SEMIT</h5><ul>
+<h6 id="Main-idea"><a href="#Main-idea" class="headerlink" title="Main idea"></a>Main idea</h6><ul>
+<li>disentangled into appearance code and pose code.</li>
+<li>disadvantage: using seen categories in testing phase, failing to maintain the category information for translated images. </li>
+</ul>
+<h6 id="Datsets"><a href="#Datsets" class="headerlink" title="Datsets"></a>Datsets</h6><ul>
+<li>Animals Faces</li>
+<li>Flowers</li>
+<li>Nabirds</li>
+<li>Food</li>
+</ul>
+<h6 id="Metrcis"><a href="#Metrcis" class="headerlink" title="Metrcis"></a>Metrcis</h6><ul>
+<li>Translation accuracy: the class information of translated images.</li>
+<li>Domain-invariant perceptual distance: feature distance between content images and translated images.</li>
+<li>IS</li>
+<li>mFID</li>
+</ul>
+<h6 id="Baselines"><a href="#Baselines" class="headerlink" title="Baselines"></a>Baselines</h6><ul>
+<li>StarGAN <a href="https://arxiv.org/pdf/1711.09020.pdf" target="_blank" rel="noopener">Stargan: Unified genera- tive adversarial networks for multi-domain image-to-image translation</a></li>
+<li>CycleGAN   <a href="https://arxiv.org/pdf/1703.10593" target="_blank" rel="noopener">Unpaired image-to-image translation using cycle- consistent adversarial networks</a> </li>
+<li>MUNIT <a href="https://arxiv.org/pdf/1804.04732.pdf" target="_blank" rel="noopener">Multimodal unsupervised image-to-image translation</a></li>
+<li>UNIT <a href="https://arxiv.org/pdf/1901.08242v1.pdf" target="_blank" rel="noopener">Unsupervised Image-to-Image Translation with Self-Attention Networks</a></li>
+</ul>
+<h6 id="Ablation-Study"><a href="#Ablation-Study" class="headerlink" title="Ablation Study"></a>Ablation Study</h6><ul>
+<li>loss term</li>
+<li>1/5/15 shot setting</li>
+</ul>
+<h5 id="SEMIT"><a href="#SEMIT" class="headerlink" title="SEMIT"></a>SEMIT</h5><ul>
 <li><a href="https://arxiv.org/pdf/2003.13853.pdf" target="_blank" rel="noopener">Semi-supervised Learning for Few-shot Image-to-Image Translation</a></li>
 </ul>
-<h6 id="Main-idea-1"><a href="#Main-idea-1" class="headerlink" title="Main idea"></a>Main idea</h6><h6 id="Datsets-1"><a href="#Datsets-1" class="headerlink" title="Datsets"></a>Datsets</h6><h6 id="Metrcis-1"><a href="#Metrcis-1" class="headerlink" title="Metrcis"></a>Metrcis</h6><h6 id="Ablation-Study-1"><a href="#Ablation-Study-1" class="headerlink" title="Ablation Study"></a>Ablation Study</h6><h5 id="TUNIT"><a href="#TUNIT" class="headerlink" title="TUNIT"></a>TUNIT</h5><ul>
+<h6 id="Main-idea-1"><a href="#Main-idea-1" class="headerlink" title="Main idea"></a>Main idea</h6><ul>
+<li>disentangled into appearance code and pose code.</li>
+<li>reducing the amount of required labeled data also from the source domain during training, adding unlabeled data.</li>
+<li>Pseudo-Labeling approach that is trained progressively with a soft- labeling scheme to avoid the noise accumulation problem.</li>
+</ul>
+<h6 id="Datsets-1"><a href="#Datsets-1" class="headerlink" title="Datsets"></a>Datsets</h6><ul>
+<li>Animals Faces</li>
+<li>Flowers</li>
+<li>Nabirds</li>
+<li>Food</li>
+</ul>
+<h6 id="Metrcis-1"><a href="#Metrcis-1" class="headerlink" title="Metrcis"></a>Metrcis</h6><ul>
+<li>Translation accuracy: the class information of translated images.</li>
+<li>IS</li>
+<li>mFID</li>
+</ul>
+<h6 id="Baselines-1"><a href="#Baselines-1" class="headerlink" title="Baselines"></a>Baselines</h6><ul>
+<li>StarGAN <a href="https://arxiv.org/pdf/1711.09020.pdf" target="_blank" rel="noopener">Stargan: Unified genera- tive adversarial networks for multi-domain image-to-image translation</a></li>
+<li>CycleGAN   <a href="https://arxiv.org/pdf/1703.10593" target="_blank" rel="noopener">Unpaired image-to-image translation using cycle- consistent adversarial networks</a> </li>
+<li>MUNIT <a href="https://arxiv.org/pdf/1804.04732.pdf" target="_blank" rel="noopener">Multimodal unsupervised image-to-image translation</a></li>
+<li>FUNIT <a href="https://arxiv.org/pdf/1905.01723.pdf" target="_blank" rel="noopener">Few-Shot Unsupervised Image-to-Image Translation</a></li>
+</ul>
+<h6 id="Ablation-Study-1"><a href="#Ablation-Study-1" class="headerlink" title="Ablation Study"></a>Ablation Study</h6><ul>
+<li>removing/maintain component</li>
+</ul>
+<h5 id="TUNIT"><a href="#TUNIT" class="headerlink" title="TUNIT"></a>TUNIT</h5><ul>
 <li><a href="https://arxiv.org/pdf/2006.06500.pdf" target="_blank" rel="noopener">Rethinking the Truly Unsupervised Image-to-Image Translation</a></li>
 </ul>
-<h6 id="Main-idea-2"><a href="#Main-idea-2" class="headerlink" title="Main idea"></a>Main idea</h6><h6 id="Datsets-2"><a href="#Datsets-2" class="headerlink" title="Datsets"></a>Datsets</h6><h6 id="Metrcis-2"><a href="#Metrcis-2" class="headerlink" title="Metrcis"></a>Metrcis</h6><h6 id="Ablation-Study-2"><a href="#Ablation-Study-2" class="headerlink" title="Ablation Study"></a>Ablation Study</h6>
+<h6 id="Main-idea-2"><a href="#Main-idea-2" class="headerlink" title="Main idea"></a>Main idea</h6><ul>
+<li>disentangled into appearance code and pose code.</li>
+<li>image-to-image translation in a fully unsupervised setting, using unlabeled data.</li>
+<li>setting the number of domains, clustering, using style code to classify the image into corresponding domains.</li>
+</ul>
+<h6 id="Datsets-2"><a href="#Datsets-2" class="headerlink" title="Datsets"></a>Datsets</h6><ul>
+<li>AFHQ</li>
+<li>FFHQ</li>
+<li>LSUN Car </li>
+<li>AnimalFaces-10</li>
+<li>Summer2winter</li>
+</ul>
+<h6 id="Metrcis-2"><a href="#Metrcis-2" class="headerlink" title="Metrcis"></a>Metrcis</h6><ul>
+<li>mFID</li>
+</ul>
+<h6 id="Baselines-2"><a href="#Baselines-2" class="headerlink" title="Baselines"></a>Baselines</h6><ul>
+<li>FUNIT <a href="https://arxiv.org/pdf/1905.01723.pdf" target="_blank" rel="noopener">Few-Shot Unsupervised Image-to-Image Translation</a></li>
+<li>MSGAN <a href="https://arxiv.org/pdf/1903.05628.pdf" target="_blank" rel="noopener">Mode seeking generative adversarial networks for diverse image synthesis</a></li>
+</ul>
+<h6 id="Ablation-Study-2"><a href="#Ablation-Study-2" class="headerlink" title="Ablation Study"></a>Ablation Study</h6><ul>
+<li>without labels, with few labels, vary the ratio of labeled data.</li>
+</ul>
+
       
     </div>
     
@@ -617,7 +690,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#few-shot-translation"><span class="nav-number">1.</span> <span class="nav-text">few-shot translation</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#FUNIT"><span class="nav-number">1.1.</span> <span class="nav-text">FUNIT</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Main-idea"><span class="nav-number">1.1.1.</span> <span class="nav-text">Main idea</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Datsets"><span class="nav-number">1.1.2.</span> <span class="nav-text">Datsets</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Metrcis"><span class="nav-number">1.1.3.</span> <span class="nav-text">Metrcis</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Ablation-Study"><span class="nav-number">1.1.4.</span> <span class="nav-text">Ablation Study</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#SEMIT"><span class="nav-number">1.2.</span> <span class="nav-text">SEMIT</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Main-idea-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">Main idea</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Datsets-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">Datsets</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Metrcis-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">Metrcis</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Ablation-Study-1"><span class="nav-number">1.2.4.</span> <span class="nav-text">Ablation Study</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#TUNIT"><span class="nav-number">1.3.</span> <span class="nav-text">TUNIT</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Main-idea-2"><span class="nav-number">1.3.1.</span> <span class="nav-text">Main idea</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Datsets-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">Datsets</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Metrcis-2"><span class="nav-number">1.3.3.</span> <span class="nav-text">Metrcis</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Ablation-Study-2"><span class="nav-number">1.3.4.</span> <span class="nav-text">Ablation Study</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#few-shot-translation"><span class="nav-number">1.</span> <span class="nav-text">few-shot translation</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#FUNIT"><span class="nav-number">1.1.</span> <span class="nav-text">FUNIT</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Main-idea"><span class="nav-number">1.1.1.</span> <span class="nav-text">Main idea</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Datsets"><span class="nav-number">1.1.2.</span> <span class="nav-text">Datsets</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Metrcis"><span class="nav-number">1.1.3.</span> <span class="nav-text">Metrcis</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Baselines"><span class="nav-number">1.1.4.</span> <span class="nav-text">Baselines</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Ablation-Study"><span class="nav-number">1.1.5.</span> <span class="nav-text">Ablation Study</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#SEMIT"><span class="nav-number">1.2.</span> <span class="nav-text">SEMIT</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Main-idea-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">Main idea</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Datsets-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">Datsets</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Metrcis-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">Metrcis</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Baselines-1"><span class="nav-number">1.2.4.</span> <span class="nav-text">Baselines</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Ablation-Study-1"><span class="nav-number">1.2.5.</span> <span class="nav-text">Ablation Study</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#TUNIT"><span class="nav-number">1.3.</span> <span class="nav-text">TUNIT</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Main-idea-2"><span class="nav-number">1.3.1.</span> <span class="nav-text">Main idea</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Datsets-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">Datsets</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Metrcis-2"><span class="nav-number">1.3.3.</span> <span class="nav-text">Metrcis</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Baselines-2"><span class="nav-number">1.3.4.</span> <span class="nav-text">Baselines</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Ablation-Study-2"><span class="nav-number">1.3.5.</span> <span class="nav-text">Ablation Study</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
