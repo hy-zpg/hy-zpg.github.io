@@ -307,6 +307,203 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2020/09/01/Fewshot-Feature-Generation/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/01/Fewshot-Feature-Generation/" itemprop="url">Fewshot_Feature_Generation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-01T08:50:54+08:00">
+                2020-09-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/FewShot/" itemprop="url" rel="index">
+                    <span itemprop="name">FewShot</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="∆-encoder-an-effective-sample-synthesis-method-for-few-shot-object-recognition"><a href="#∆-encoder-an-effective-sample-synthesis-method-for-few-shot-object-recognition" class="headerlink" title="[∆-encoder: an effective sample synthesis method for few-shot object recognition"></a>[∆-encoder: an effective sample synthesis method for few-shot object recognition</h4><p>](<a href="https://arxiv.org/pdf/1806.04734.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1806.04734.pdf</a>)</p>
+<ul>
+<li>feature augmentation.</li>
+</ul>
+<h4 id="Low-shot-Learning-via-Covariance-Preserving-Adversarial-Augmentation-Networks"><a href="#Low-shot-Learning-via-Covariance-Preserving-Adversarial-Augmentation-Networks" class="headerlink" title="Low-shot Learning via Covariance-Preserving Adversarial Augmentation Networks"></a><a href="https://papers.nips.cc/paper/7376-low-shot-learning-via-covariance-preserving-adversarial-augmentation-networks.pdf" target="_blank" rel="noopener">Low-shot Learning via Covariance-Preserving Adversarial Augmentation Networks</a></h4><ul>
+<li><p>feature augmentation.</p>
+</li>
+<li><p>adressing the problem of <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Hariharan_Low-Shot_Visual_Recognition_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Low-shot Visual Recognition by Shrinking and Hallucinating Features</a>: learn a finite set of transformation mappings between examples in each base category and directly apply them to seed novel points for extra data. However, since mappings are<br>enumerable (even in large amount), this model suffers from poor generalization. </p>
+</li>
+<li><p>intra-class variances of base classes are shareable with any novel classes.</p>
+</li>
+<li><p>building upon the assumption that related classes should have similar intra-class variance, we introduce a new loss term for preserving covariance during the translation process.</p>
+</li>
+<li><p>incorporating extra noise from a mixture of Gaussian distributions could result in more<br>diverse results.</p>
+</li>
+<li><p>preserving covariance information from relevant base classes to a novel class can improve low-shot generation quality.</p>
+</li>
+<li><p>weighted loss: similarity, weights assigned to each training samples (the distance between noval class and base class). No reconstruction method, 2way-2shot.</p>
+</li>
+</ul>
+<h4 id="Feature-Transfer-Learning-for-Face-Recognition-with-Under-Represented-Data"><a href="#Feature-Transfer-Learning-for-Face-Recognition-with-Under-Represented-Data" class="headerlink" title="Feature Transfer Learning for Face Recognition with Under-Represented Data"></a><a href="https://arxiv.org/pdf/1803.09014.pdf" target="_blank" rel="noopener">Feature Transfer Learning for Face Recognition with Under-Represented Data</a></h4><ul>
+<li><p>A Gaussian prior of the variance is assumed across all subjects and the variance from regular ones are transferred to the under-represented ones.</p>
+</li>
+<li><p>generating vague images: translatede results.</p>
+</li>
+</ul>
+<h4 id="Attribute-Guided-Augmentation"><a href="#Attribute-Guided-Augmentation" class="headerlink" title="Attribute-Guided Augmentation"></a><a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Dixit_AGA_Attribute-Guided_Augmentation_CVPR_2017_paper.pdf" target="_blank" rel="noopener">Attribute-Guided Augmentation</a></h4><ul>
+<li><p>feature augmentation.</p>
+</li>
+<li><p>learns a mapping that allows syn- thesis of data such that an attribute of a synthesized sample is at a desired value or strength.</p>
+</li>
+<li><p>This is particularly inter- esting in situations where little data with no attribute an- notation is available for learning, but we have access to an external corpus of heavily annotated samples.</p>
+</li>
+</ul>
+<h4 id="Deep-Representation-Learning-on-Long-tailed-Data-A-Learnable-Embedding-Augmentation-Perspective"><a href="#Deep-Representation-Learning-on-Long-tailed-Data-A-Learnable-Embedding-Augmentation-Perspective" class="headerlink" title="Deep Representation Learning on Long-tailed Data: A Learnable Embedding Augmentation Perspective"></a><a href="https://arxiv.org/pdf/2002.10826.pdf" target="_blank" rel="noopener">Deep Representation Learning on Long-tailed Data: A Learnable Embedding Augmentation Perspective</a></h4><ul>
+<li>Constructing the feature cloud for long-tailed data.</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2020/07/01/Translation-Generation/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1944,234 +2141,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/09/19/Variations-of-GAN/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/19/Variations-of-GAN/" itemprop="url">Variations of GAN</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-19T10:47:18+08:00">
-                2019-09-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Generative-Model/" itemprop="url" rel="index">
-                    <span itemprop="name">Generative Model</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>refer to <a href="https://blog.csdn.net/qq_25737169/article/details/84864808" target="_blank" rel="noopener">blogs1</a>, <a href="http://www.sohu.com/a/302267498_473283" target="_blank" rel="noopener">blogs2</a>, <a href="https://juejin.im/post/5d234eb16fb9a07f0870b9be" target="_blank" rel="noopener">blogs3</a></p>
-<h5 id="DCGAN"><a href="#DCGAN" class="headerlink" title="DCGAN"></a>DCGAN</h5><p><a href="https://arxiv.org/pdf/1511.06434.pdf" target="_blank" rel="noopener">paper link</a></p>
-<ul>
-<li>network design</li>
-<li>latent interpolation</li>
-<li>using feature from discriminator to train classifier</li>
-</ul>
-<h5 id="conditional-GAN"><a href="#conditional-GAN" class="headerlink" title="conditional GAN"></a>conditional GAN</h5><p><a href="https://arxiv.org/pdf/1411.1784.pdf" target="_blank" rel="noopener">paper link</a></p>
-<ul>
-<li>using label information to stablize the training of GAN</li>
-<li>showing that how to leverage prior information to achieve image-to-image ot text-to-image</li>
-</ul>
-<h5 id="bigGAN"><a href="#bigGAN" class="headerlink" title="bigGAN"></a>bigGAN</h5><p><a href="https://arxiv.org/abs/1809.11096" target="_blank" rel="noopener">paper link</a></p>
-<ul>
-<li>self-attention</li>
-<li>Spectral Normalization</li>
-<li>cGAN</li>
-</ul>
-<h5 id="styleGAN"><a href="#styleGAN" class="headerlink" title="styleGAN"></a>styleGAN</h5><p><a href="https://arxiv.org/abs/1812.04948" target="_blank" rel="noopener">paper link</a></p>
-<ul>
-<li>control latent space</li>
-<li>using AdaIN mechanism</li>
-</ul>
-<h5 id="cycleGAN"><a href="#cycleGAN" class="headerlink" title="cycleGAN"></a>cycleGAN</h5><p><a href="https://arxiv.org/abs/1703.10593" target="_blank" rel="noopener">paper link</a></p>
-<ul>
-<li>cycle-Consistency loss</li>
-<li>the stablity of GAN training</li>
-</ul>
-<h5 id="Pix2Pix"><a href="#Pix2Pix" class="headerlink" title="Pix2Pix"></a>Pix2Pix</h5><p><a href="https://arxiv.org/abs/1611.07004" target="_blank" rel="noopener">paper link</a></p>
-<ul>
-<li>Unet</li>
-<li>skip connection in ResUnet</li>
-<li>to distinguish the fake image from the real image by patchGAN which observe the small area of image</li>
-</ul>
-<h5 id="stackGAN"><a href="#stackGAN" class="headerlink" title="stackGAN"></a>stackGAN</h5><p><a href="https://arxiv.org/abs/1612.03242" target="_blank" rel="noopener">paper link</a></p>
-<ul>
-<li>text-to-image</li>
-<li>multi-stage (from small to large)</li>
-</ul>
-<h5 id="WGAN"><a href="#WGAN" class="headerlink" title="WGAN"></a>WGAN</h5><p><a href="https://arxiv.org/pdf/1701.07875.pdf" target="_blank" rel="noopener">paper link</a></p>
-<ul>
-<li><p>aim: minimize the distribution distance between real data and generated data.<br>\begin{equation}<br>\delta\left(\mathbb{P}_{r}, \mathbb{P}_{g}\right)=\sup _{A \in \Sigma}\left|\mathbb{P}_{r}(A)-\mathbb{P}_{g}(A)\right|<br>\end{equation}</p>
-</li>
-<li><p>problem: superior discriminator lead to the gradient vanish of the generator, while the gradient of the generator is unaccuracy with inferior discriminator. the ability of discriminator need to be controlled. </p>
-</li>
-</ul>
-<h6 id="different-distance"><a href="#different-distance" class="headerlink" title="different distance"></a>different distance</h6><ul>
-<li>KL: assymetric and possibly infinite</li>
-<li>JS: symmetrical and always defined</li>
-<li>EM(earch mover): the “cost” of the optimal transport plan.<br>\begin{equation}<br>W\left(\mathbb{P}_{r}, \mathbb{P}_{g}\right)=\inf _{\gamma \in \Pi\left(\mathbb{P}_{r}, \mathbb{P}_{g}\right)} \mathbb{E}_{(x, y) \sim \gamma}[|x-y|]<br>\end{equation}</li>
-</ul>
-<h6 id="WGAN-1"><a href="#WGAN-1" class="headerlink" title="WGAN"></a>WGAN</h6><ul>
-<li>using EM to evaluate the distribution distance</li>
-<li>remove sigmoid from the last layer of discriminator</li>
-<li>without log operation for discriminator loss</li>
-<li>restrict the parameter of discriminator to fixted value after each update</li>
-<li>using RMSProp or SGD</li>
-</ul>
-<p>\begin{equation}<br>\max _{|f|_{L} \leq 1} \mathbb{E}_{x \sim \mathbb{P}_{r}}[f(x)]-\mathbb{E}_{x \sim \mathbb{P}_{\theta}}[f(x)]<br>\end{equation}</p>
-<p>where Lipschitz:</p>
-<p>\begin{equation}<br>\left|f\left(x_{1}\right)-f\left(x_{2}\right)\right| \leq K\left|x_{1}-x_{2}\right|<br>\end{equation}</p>
-<p>means that the absolute value of Derivative function lower than fixted K.</p>
-<p>in the restriction, the total loss of WGAN:<br>\begin{equation}<br>L=\mathbb{E}_{x \sim P_{r}}\left[f_{w}(x)\right]-\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]<br>\end{equation} </p>
-<p>for generator:<br>\begin{equation}<br>-\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]<br>\end{equation}</p>
-<p>for discriminator:<br>\begin{equation}<br>\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]-\mathbb{E}_{x \sim P_{r}}\left[f_{w}(x)\right]<br>\end{equation}</p>
-<h5 id="WGAN-GP"><a href="#WGAN-GP" class="headerlink" title="WGAN-GP"></a>WGAN-GP</h5><p>\begin{equation}<br>L=\underset{\tilde{\boldsymbol{x}} \sim \mathbb{P}_{g}}{\mathbb{E}}[D(\tilde{\boldsymbol{x}})]-\underset{\boldsymbol{x} \sim \mathbb{P}_{r}}{\mathbb{E}}[D(\boldsymbol{x})]+ \lambda \underset{\hat{\boldsymbol{x}} \sim \mathbb{P}_{\boldsymbol{x}}}{\mathbb{E}}\left[\left(\left|\nabla_{\hat{\boldsymbol{x}}} D(\hat{\boldsymbol{x}})\right|_{2}-1\right)^{2}\right]<br>\end{equation}</p>
-<p>for generator:<br>\begin{equation}<br>-\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]<br>\end{equation}</p>
-<p>for discriminator:<br>\begin{equation}<br>\mathbb{E}_{x \sim P_{g}}\left[f_{w}(x)\right]-\mathbb{E}_{x \sim P_{r}}\left[f_{w}(x)\right] + \lambda \underset{\hat{\boldsymbol{x}} \sim \mathbb{P}_{\boldsymbol{x}}}{\mathbb{E}}\left[\left(\left|\nabla_{\hat{\boldsymbol{x}}} D(\hat{\boldsymbol{x}})\right|_{2}-1\right)^{2}\right]<br>\end{equation}</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2222,7 +2191,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2233,7 +2202,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2244,7 +2213,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-count">29</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
