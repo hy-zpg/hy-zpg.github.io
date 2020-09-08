@@ -441,32 +441,33 @@
 <li>applicable for generative tasks.</li>
 </ul>
 <h4 id="LayerNorm"><a href="#LayerNorm" class="headerlink" title="LayerNorm"></a>LayerNorm</h4><ul>
-<li><a href="https://arxiv.org/pdf/1607.06450.pdf" target="_blank" rel="noopener">LN</a></li>
+<li><a href="https://arxiv.org/pdf/1607.06450.pdf" target="_blank" rel="noopener">LN paper</a></li>
 <li>applicable in rnn.</li>
 </ul>
 <h4 id="GroupNorm"><a href="#GroupNorm" class="headerlink" title="GroupNorm"></a>GroupNorm</h4><ul>
-<li><a href="https://arxiv.org/pdf/1803.08494.pdf" target="_blank" rel="noopener">GN</a></li>
+<li><a href="https://arxiv.org/pdf/1803.08494.pdf" target="_blank" rel="noopener">GN paper</a></li>
 <li>tradeoff between LN and IN</li>
 </ul>
 <h4 id="WeightNorm"><a href="#WeightNorm" class="headerlink" title="WeightNorm"></a>WeightNorm</h4><ul>
 <li><a href="https://zhuanlan.zhihu.com/p/55102378" target="_blank" rel="noopener">relationship between bn and wn</a></li>
-<li><a href="https://papers.nips.cc/paper/6114-weight-normalization-a-simple-reparameterization-to-accelerate-training-of-deep-neural-networks.pdf" target="_blank" rel="noopener">WN</a></li>
+<li><a href="https://papers.nips.cc/paper/6114-weight-normalization-a-simple-reparameterization-to-accelerate-training-of-deep-neural-networks.pdf" target="_blank" rel="noopener">WN paper</a></li>
 <li>applicable in rnn and gan.</li>
 <li>normalization in weights of model parameters.</li>
 </ul>
 <h4 id="CosineNorm"><a href="#CosineNorm" class="headerlink" title="CosineNorm"></a>CosineNorm</h4><ul>
-<li><a href="https://arxiv.org/pdf/1702.05870.pdf" target="_blank" rel="noopener">CN</a></li>
+<li><a href="https://arxiv.org/pdf/1702.05870.pdf" target="_blank" rel="noopener">CN paper</a></li>
 </ul>
 <h4 id="AdaptiveInstanceNorm"><a href="#AdaptiveInstanceNorm" class="headerlink" title="AdaptiveInstanceNorm"></a>AdaptiveInstanceNorm</h4><ul>
 <li><a href="https://zhuanlan.zhihu.com/p/57875010" target="_blank" rel="noopener">from bn to in, from in to cin, from cin to adain</a></li>
-<li><a href="https://arxiv.org/pdf/1703.06868.pdf" target="_blank" rel="noopener">AdaIN</a></li>
+<li><a href="https://arxiv.org/pdf/1703.06868.pdf" target="_blank" rel="noopener">AdaIN paper</a></li>
 <li>learning shift and scale from other samples.</li>
 </ul>
 <h4 id="AttentiveNorm"><a href="#AttentiveNorm" class="headerlink" title="AttentiveNorm"></a>AttentiveNorm</h4><ul>
-<li><a href="https://arxiv.org/pdf/2004.03828.pdf" target="_blank" rel="noopener">AN</a></li>
+<li><a href="https://arxiv.org/pdf/2004.03828.pdf" target="_blank" rel="noopener">AN paper</a></li>
 <li>model long-range dependency in class-conditional image generation. It introduces a self-attention module in the convolution-based generator, which is helpful for capturing the relation of distant regions.</li>
 <li>based on IN, preserving semantics spatially. </li>
 <li><a href="https://github.com/shepnerd/AttenNorm/blob/466d727d27fc17dbccd1a5e2090fe91491a26483/inpaint-attnorm/net/network.py#L8" target="_blank" rel="noopener">tf code</a></li>
+<li>can be used in F2GAN(smilar to Class-conditional Image Generation, using the interpolation coefficients as class information)</li>
 </ul>
 
           
