@@ -307,6 +307,215 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2020/09/08/Learning/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/08/Learning/" itemprop="url">Normalization in Deep Learning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-08T09:30:39+08:00">
+                2020-09-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Deep-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Deep learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="Related-links"><a href="#Related-links" class="headerlink" title="Related links"></a>Related links</h4><ul>
+<li><a href="https://zhuanlan.zhihu.com/p/43200897" target="_blank" rel="noopener">1</a></li>
+<li><a href="http://xiaofengshi.com/2019/03/06/深度学习-Normalization/" target="_blank" rel="noopener">2</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/75920414" target="_blank" rel="noopener">3</a></li>
+</ul>
+<h4 id="BatchNorm"><a href="#BatchNorm" class="headerlink" title="BatchNorm"></a>BatchNorm</h4><ul>
+<li><a href="https://arxiv.org/pdf/1502.03167.pdf" target="_blank" rel="noopener">BN</a></li>
+<li>applicable in cnn and mlp, not applicable in rnn.</li>
+<li>statistical data of mini-batch</li>
+<li>sensitve to the batchsize</li>
+<li>widely used on classification task, generally avoid being used in generative tasks.</li>
+<li>training phase: mu and sigma are calculated from feature map of all mini-batch, scale and shift are learned from data.</li>
+<li>testing phase: using the global mu and sigma as the inputs of bn layer, because single sample is tested in inference phase instead of mini-batch.</li>
+</ul>
+<h4 id="InstanceNorm"><a href="#InstanceNorm" class="headerlink" title="InstanceNorm"></a>InstanceNorm</h4><ul>
+<li><a href="https://arxiv.org/pdf/1607.08022.pdf" target="_blank" rel="noopener">IN</a></li>
+<li>mu and sigma are calculated from feature map of single sample.</li>
+<li>scale and shift are different at each channel.</li>
+<li>not applicable for 2-D feature map, like mlp and rnn.</li>
+<li>applicable for generative tasks.</li>
+</ul>
+<h4 id="LayerNorm"><a href="#LayerNorm" class="headerlink" title="LayerNorm"></a>LayerNorm</h4><ul>
+<li><a href="https://arxiv.org/pdf/1607.06450.pdf" target="_blank" rel="noopener">LN</a></li>
+<li>applicable in rnn.</li>
+</ul>
+<h4 id="GroupNorm"><a href="#GroupNorm" class="headerlink" title="GroupNorm"></a>GroupNorm</h4><ul>
+<li><a href="https://arxiv.org/pdf/1803.08494.pdf" target="_blank" rel="noopener">GN</a></li>
+<li>tradeoff between LN and IN</li>
+</ul>
+<h4 id="WeightNorm"><a href="#WeightNorm" class="headerlink" title="WeightNorm"></a>WeightNorm</h4><ul>
+<li><a href="https://zhuanlan.zhihu.com/p/55102378" target="_blank" rel="noopener">relationship between bn and wn</a></li>
+<li><a href="https://papers.nips.cc/paper/6114-weight-normalization-a-simple-reparameterization-to-accelerate-training-of-deep-neural-networks.pdf" target="_blank" rel="noopener">WN</a></li>
+<li>applicable in rnn and gan.</li>
+<li>normalization in weights of model parameters.</li>
+</ul>
+<h4 id="CosineNorm"><a href="#CosineNorm" class="headerlink" title="CosineNorm"></a>CosineNorm</h4><ul>
+<li><a href="https://arxiv.org/pdf/1702.05870.pdf" target="_blank" rel="noopener">CN</a></li>
+</ul>
+<h4 id="AdaptiveInstanceNorm"><a href="#AdaptiveInstanceNorm" class="headerlink" title="AdaptiveInstanceNorm"></a>AdaptiveInstanceNorm</h4><ul>
+<li><a href="https://zhuanlan.zhihu.com/p/57875010" target="_blank" rel="noopener">from bn to in, from in to cin, from cin to adain</a></li>
+<li><a href="https://arxiv.org/pdf/1703.06868.pdf" target="_blank" rel="noopener">AdaIN</a></li>
+<li>learning shift and scale from other samples.</li>
+</ul>
+<h4 id="AttentiveNorm"><a href="#AttentiveNorm" class="headerlink" title="AttentiveNorm"></a>AttentiveNorm</h4><ul>
+<li><a href="https://arxiv.org/pdf/2004.03828.pdf" target="_blank" rel="noopener">AN</a></li>
+<li>model long-range dependency in class-conditional image generation. It introduces a self-attention module in the convolution-based generator, which is helpful for capturing the relation of distant regions.</li>
+<li>based on IN, preserving semantics spatially. </li>
+<li><a href="https://github.com/shepnerd/AttenNorm/blob/466d727d27fc17dbccd1a5e2090fe91491a26483/inpaint-attnorm/net/network.py#L8" target="_blank" rel="noopener">tf code</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2020/09/01/Fewshot-Feature-Generation/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -430,7 +639,7 @@
 <li>paper links: <a href="https://papers.nips.cc/paper/7376-low-shot-learning-via-covariance-preserving-adversarial-augmentation-networks.pdf" target="_blank" rel="noopener">Low-shot Learning via Covariance-Preserving Adversarial Augmentation Networks</a></li>
 <li><p>feature augmentation.</p>
 </li>
-<li><p>adressing the problem of <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Hariharan_Low-Shot_Visual_Recognition_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Low-shot Visual Recognition by Shrinking and Hallucinating Features</a>: learn a finite set of transformation mappings between examples in each base category and directly apply them to seed novel points for extra data. However, since mappings are<br>enumerable (even in large amount), this model suffers from poor generalization. </p>
+<li><p>addressing the problem of <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Hariharan_Low-Shot_Visual_Recognition_ICCV_2017_paper.pdf" target="_blank" rel="noopener">Low-shot Visual Recognition by Shrinking and Hallucinating Features</a>: learn a finite set of transformation mappings between examples in each base category and directly apply them to seed novel points for extra data. However, since mappings are<br>enumerable (even in large amount), this model suffers from poor generalization. </p>
 </li>
 <li><p>intra-class variances of base classes are shareable with any novel classes.</p>
 </li>
@@ -1971,187 +2180,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/10/31/ICCV-Paper-Reading/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/31/ICCV-Paper-Reading/" itemprop="url">ICCV-Paper-Reading</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-31T14:03:49+08:00">
-                2019-10-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Generative/" itemprop="url" rel="index">
-                    <span itemprop="name">Generative</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="sinGAN"><a href="#sinGAN" class="headerlink" title="sinGAN"></a><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Shaham_SinGAN_Learning_a_Generative_Model_From_a_Single_Natural_Image_ICCV_2019_paper.pdf" target="_blank" rel="noopener">sinGAN</a></h4><h5 id="abstract"><a href="#abstract" class="headerlink" title="abstract"></a>abstract</h5><ul>
-<li>unconditional generative model</li>
-<li>capture internal distribution of patches within the image</li>
-<li>generate diverse and high-quality samples that carry the same visual content as the image</li>
-<li>containing a pyramid of fully convolutional GANs, learning the patch distribution at a different scale of image, which can ensure significant variability but remain the global structure.</li>
-<li>generating images from noisy</li>
-</ul>
-<h5 id="method"><a href="#method" class="headerlink" title="method"></a>method</h5><h6 id="training-strategy"><a href="#training-strategy" class="headerlink" title="training strategy"></a>training strategy</h6><ul>
-<li>coarse-to-fine fashion</li>
-<li>multi-scale</li>
-</ul>
-<h6 id="mult-scale-patch-generator"><a href="#mult-scale-patch-generator" class="headerlink" title="mult-scale patch generator"></a>mult-scale patch generator</h6><h6 id="mult-scale-patch-discriminator"><a href="#mult-scale-patch-discriminator" class="headerlink" title="mult-scale patch discriminator"></a>mult-scale patch discriminator</h6><h5 id="RELATED"><a href="#RELATED" class="headerlink" title="RELATED"></a>RELATED</h5><ul>
-<li>patch discriminator </li>
-<li>the standard deviation of noise Z, can be propotional to the root RMSE between reconstructed image and real image.</li>
-</ul>
-<h4 id="inGAN"><a href="#inGAN" class="headerlink" title="inGAN"></a><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Shocher_InGAN_Capturing_and_Retargeting_the_DNA_of_a_Natural_Image_ICCV_2019_paper.pdf" target="_blank" rel="noopener">inGAN</a></h4><h5 id="abstract-1"><a href="#abstract-1" class="headerlink" title="abstract"></a>abstract</h5><ul>
-<li>each image hase its internal statistics captured by its unique distribution of patches.</li>
-<li>image-specific gan, patch-distribution</li>
-<li>generating diverse images that can maintain internal patch distribution</li>
-<li><h5 id="method-1"><a href="#method-1" class="headerlink" title="method"></a>method</h5><h5 id="RELATED-1"><a href="#RELATED-1" class="headerlink" title="RELATED"></a>RELATED</h5></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2202,7 +2230,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2224,7 +2252,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
