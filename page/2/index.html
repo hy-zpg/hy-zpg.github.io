@@ -307,6 +307,189 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/12/19/Attention-Related/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/19/Attention-Related/" itemprop="url">Attention-Related</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-19T13:51:53+08:00">
+                2019-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Attention/" itemprop="url" rel="index">
+                    <span itemprop="name">Attention</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Setting"><a href="#Setting" class="headerlink" title="Setting"></a>Setting</h2><ul>
+<li>given feature map $f(w,h,c1)$</li>
+<li>given feature map $g(w,h,c2)$</li>
+<li>assume learned attention map for g</li>
+</ul>
+<h3 id="Separation-between-channel-and-spatial-Attention-based-Fusion-for-Multi-source-Human-Image-Generation"><a href="#Separation-between-channel-and-spatial-Attention-based-Fusion-for-Multi-source-Human-Image-Generation" class="headerlink" title="Separation between channel and spatial Attention-based Fusion for Multi-source Human Image Generation"></a>Separation between channel and spatial <a href="https://arxiv.org/pdf/1905.02655v1.pdf" target="_blank" rel="noopener">Attention-based Fusion for Multi-source Human Image Generation</a></h3><ul>
+<li>spatial attention s[w,h,1]: concat[f,g] -&gt; feature [w,h,c1+c2] -&gt; convolutional layer [1,1,1] -&gt;sigmoid -&gt; [w,h,1]</li>
+<li>channel attention c[1,1,c1/c2]: concat[f,g] -&gt; feature [w,h,c1+c2] -&gt; avgpool layer -&gt; FC layer[c2] -&gt; sigmoid -&gt; [c2]</li>
+<li>attention map a[w,h,c2]: s[w,h,1] * c[1,1,c2]</li>
+<li>attention feature[w,h,c2]: f/g * a</li>
+</ul>
+<h3 id="Global-attention"><a href="#Global-attention" class="headerlink" title="Global attention"></a>Global attention</h3><ul>
+<li>global attention map a[w,h,c2]: concat[f,g]-&gt; feature [w,h,c1+c2] -&gt; convolutional layer[1,1,c2] -&gt; [w,h,c2]</li>
+<li>attention feature[w,h,c2]: f/g * a</li>
+</ul>
+<h3 id="Self-AttentionSelf-Attention-Generative-Adversarial-Networks"><a href="#Self-AttentionSelf-Attention-Generative-Adversarial-Networks" class="headerlink" title="Self AttentionSelf-Attention Generative Adversarial Networks"></a>Self Attention<a href="https://arxiv.org/pdf/1805.08318.pdf" target="_blank" rel="noopener">Self-Attention Generative Adversarial Networks</a></h3><ul>
+<li>specified channels: channels</li>
+<li>f[w,h,c1] -&gt; convolutional layer[1,1,channels/8] -&gt; ff[w,h,channels/8]</li>
+<li>g[w,h,c2] -&gt; convolutional layer[1,1,channels/8] -&gt; gg[w,h,channels/8]</li>
+<li>attention map: resized ff[w<em>h,channels/8] matmul gg[w</em>h,channels/8] (matrix) -&gt; softmax -&gt; attention map[w<em>h,w</em>h]</li>
+<li>g[w,h,c2] -&gt; convolutional layer[1,1,channels] -&gt; hh[w,h,channels]</li>
+<li>attention feature: resized hh[w<em>h,channels] matmul attention map[w</em>h,w<em>h] -&gt; [w</em>h,channels] -&gt; reshape [w,h,channels]</li>
+</ul>
+<h3 id="Non-local-attention-Non-local-Neural-Networks"><a href="#Non-local-attention-Non-local-Neural-Networks" class="headerlink" title="Non local attention Non-local Neural Networks"></a>Non local attention <a href="https://www.zpascal.net/cvpr2018/Wang_Non-Local_Neural_Networks_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Non-local Neural Networks</a></h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/10/31/ICCV-Paper-Reading/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -2049,191 +2232,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/06/14/Pedestrain-Datasets/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/06/14/Pedestrain-Datasets/" itemprop="url">Pedestrain Datasets</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-14T09:38:51+08:00">
-                2019-06-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Human-Attributes/" itemprop="url" rel="index">
-                    <span itemprop="name">Human Attributes</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h4><p><a href="https://craigie1996.github.io/2018/05/11/Pedestrian-Attribute-Recognition-调研笔记/" target="_blank" rel="noopener">RAP, PETA, PA-100K</a></p>
-<p><a href="https://www.cnblogs.com/wangxiaocvpr/p/10162679.html" target="_blank" rel="noopener">Most dataset and papers links</a></p>
-<p><a href="https://blog.csdn.net/Code_Mart/article/details/87721803" target="_blank" rel="noopener">Most dataset</a></p>
-<h4 id="Simple-introduction"><a href="#Simple-introduction" class="headerlink" title="Simple introduction"></a>Simple introduction</h4><ul>
-<li><p><a href="https://exhibits.stanford.edu/data/catalog/tb980qz1002" target="_blank" rel="noopener">Clothing Attributes Dataset</a>: cloth style(7 categories), ensurely used. accuracy (about 55%) </p>
-</li>
-<li><p><a href="http://mmlab.ie.cuhk.edu.hk/projects/PETA.html" target="_blank" rel="noopener">PETA Dataset</a>: low-resolution, multi-class(age 4 categories), download. accuracy(16,31,46,&gt;61: 83.8, 78.8,76.4,89.0),19,000 images, about 0.82</p>
-</li>
-<li><p><a href="https://jurie.users.greyc.fr/datasets/hat.html" target="_blank" rel="noopener">Database of Human Attributes (HAT)</a>: high-resolution, age(multi-classes), having sent email</p>
-</li>
-<li><p><a href="https://arxiv.org/pdf/1603.07054.pdf" target="_blank" rel="noopener">RAP Dataset</a>: not high-resolution, 3-multi-classes(age 3 categories), waiting to send email.</p>
-</li>
-<li><p>PA-100K Dataset: binary</p>
-</li>
-<li><p>WIDER Attribute Dataset: multi-people</p>
-</li>
-<li><p>Parse27k Dataset: squence, oritation(multi-class), not so much related</p>
-</li>
-<li><p>CRP Dataset: squence, not human centre</p>
-</li>
-<li><p>Berkeley-Attributes of People: binary</p>
-</li>
-<li><p>Deepfashion dataset: cloth related, 289,222 - 50 classes cloth categories: 82%</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2284,7 +2282,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">48</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="multitask,">
+  <meta name="keywords" content="few-shot learning,">
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="high-related reference Learning without Forgetting  distilled knowledge  reference An All-In-One Convolutional Neural Network for Face Analysis  naive joint  reference From Facial Expression Recogniti">
-<meta name="keywords" content="multitask">
+<meta name="description" content="Few-shot image ClassificationRelated baselines Paper1: Matching Networks for One Shot Learning, Code links  Paper2: Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks, Code links  Paper">
+<meta name="keywords" content="few-shot learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Semi-supervised Heteroneous Multitask Learning Baselines">
-<meta property="og:url" content="https://www.yanhong.me/2019/02/28/Semi-Heteroneous-Multitask-Baseline/index.html">
+<meta property="og:title" content="Few-shot Learning Baselines">
+<meta property="og:url" content="https://www.yanhong.me/2020/09/20/Few-shot-Learning-Baselines/index.html">
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
-<meta property="og:description" content="high-related reference Learning without Forgetting  distilled knowledge  reference An All-In-One Convolutional Neural Network for Face Analysis  naive joint  reference From Facial Expression Recogniti">
+<meta property="og:description" content="Few-shot image ClassificationRelated baselines Paper1: Matching Networks for One Shot Learning, Code links  Paper2: Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks, Code links  Paper">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-18T12:41:24.594Z">
+<meta property="og:updated_time" content="2020-09-20T10:06:02.673Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Semi-supervised Heteroneous Multitask Learning Baselines">
-<meta name="twitter:description" content="high-related reference Learning without Forgetting  distilled knowledge  reference An All-In-One Convolutional Neural Network for Face Analysis  naive joint  reference From Facial Expression Recogniti">
+<meta name="twitter:title" content="Few-shot Learning Baselines">
+<meta name="twitter:description" content="Few-shot image ClassificationRelated baselines Paper1: Matching Networks for One Shot Learning, Code links  Paper2: Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks, Code links  Paper">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://www.yanhong.me/2019/02/28/Semi-Heteroneous-Multitask-Baseline/">
+  <link rel="canonical" href="https://www.yanhong.me/2020/09/20/Few-shot-Learning-Baselines/">
 
 
 
 
 
-  <title>Semi-supervised Heteroneous Multitask Learning Baselines | Hongyan's Notes</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Few-shot Learning Baselines | Hongyan's Notes</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -307,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/28/Semi-Heteroneous-Multitask-Baseline/">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2020/09/20/Few-shot-Learning-Baselines/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hongyan">
@@ -324,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Semi-supervised Heteroneous Multitask Learning Baselines</h1>
+          <h1 class="post-title" itemprop="name headline">Few-shot Learning Baselines</h1>
         
 
         <div class="post-meta">
@@ -336,8 +336,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-28T15:23:11+08:00">
-                2019-02-28
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-20T17:37:27+08:00">
+                2020-09-20
               </time>
             
 
@@ -359,8 +359,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">Deep learning</span>
+                  <a href="/categories/Meta-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Meta-learning</span>
                   </a>
                 </span>
 
@@ -415,70 +415,61 @@
       
 
       
-        <h2 id="high-related"><a href="#high-related" class="headerlink" title="high-related"></a>high-related</h2><blockquote>
-<p>reference <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8107520" target="_blank" rel="noopener">Learning without Forgetting</a></p>
-<ul>
-<li>distilled knowledge</li>
-</ul>
-<p>reference <a href="https://arxiv.org/pdf/1611.00851.pdf" target="_blank" rel="noopener">An All-In-One Convolutional Neural Network for Face Analysis</a></p>
-<ul>
-<li>naive joint</li>
-</ul>
-<p>reference <a href="https://arxiv.org/pdf/1609.06426.pdf" target="_blank" rel="noopener">From Facial Expression Recognition to Interpersonal Relation Prediction<br>Zhanpeng</a></p>
-<ul>
-<li>pseudo label</li>
-</ul>
-<p>reference NLP <a href="https://arxiv.org/pdf/1802.09913.pdf" target="_blank" rel="noopener">Multi-task Learning of Pairwise Sequence Classification Tasks Over Disparate Label Spaces</a><br>‘we should be able to not only model their relationship, but also to directly estimate the corresponding label of the target task based on auxiliary predictions.’</p>
-<ul>
-<li>probelm: jointly using unlabelled data and auxiliary, annotated datasets; domain gap; missing labels</li>
-<li>method: training the Label Transfer Network, minimise the squared error between the model predictions and the pseudo label</li>
-<li>baseline: yes (how to calculate loss funtion [squared error] based on pseudo label)</li>
-</ul>
-<p>reference <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Misra_Seeing_Through_the_CVPR_2016_paper.pdf" target="_blank" rel="noopener">Seeing through the Human Reporting Bias: Visual Classifiers from Noisy Human-Centric Labels Ishan</a></p>
-<ul>
-<li>confidence score</li>
-<li>same apply scene</li>
-<li>refer to paper writting</li>
-</ul>
-<p>reference non-DL <a href="http://de.arxiv.org/pdf/1411.6232" target="_blank" rel="noopener">Semi-supervised Feature Analysis by Mining Correlations among Multiple Tasks</a></p>
-<ul>
-<li>problem: ‘Since the objective function is non-smooth and difficult to solve, we propose an iterative algorithm with fast convergence.’ ‘These previous works, however, independently select features for each task, which fails to consider correlations among multiple related tasks.’ ‘Despite of their good performances, these classical algorithms are all implemented only with labeled training data.’</li>
-<li>method: ‘ignoring the correlations among different features -&gt;apply the sparse coefficients to the feature vectors -&gt; proposing multiple feature selection’</li>
-<li>baseline: undetermined (hard to complete)</li>
-</ul>
-<p><a href="https://arxiv.org/pdf/1803.04062.pdf" target="_blank" rel="noopener">Pseudo-task Augmentation: From Deep Multitask Learning to Intratask Sharing—and Back</a></p>
-<ul>
-<li>related work conclude papers of joint training of models for multiple tasks.<ul>
-<li>‘how learned structure is shared across tasks’:<ol>
-<li>supervise different tasks at different depths of the shared structure <a href=""></a></li>
-<li>duplicate the shared structure into columns and define mechanisms for sharing information across columns <a href="https://arxiv.org/pdf/1704.01631.pdf" target="_blank" rel="noopener">Multitask Learning with Low-Level Auxiliary Tasks for Encoder-Decoder Based Speech Recognition
-</a>, using intermediate representations as auxiliary supervision for low-level task recognition to improve final task performance.</li>
-</ol>
+        <h4 id="Few-shot-image-Classification"><a href="#Few-shot-image-Classification" class="headerlink" title="Few-shot image Classification"></a>Few-shot image Classification</h4><h5 id="Related-baselines"><a href="#Related-baselines" class="headerlink" title="Related baselines"></a>Related baselines</h5><ul>
+<li><p>Paper1: <a href="https://arxiv.org/pdf/1606.04080.pdf" target="_blank" rel="noopener">Matching Networks for One Shot Learning</a>, <a href="https://github.com/AntreasAntoniou/MatchingNetworks" target="_blank" rel="noopener">Code links</a></p>
+</li>
+<li><p>Paper2: <a href="https://arxiv.org/pdf/1703.03400.pdf" target="_blank" rel="noopener">Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks</a>, <a href="https://github.com/cbfinn/maml" target="_blank" rel="noopener">Code links</a></p>
+</li>
+<li><p>Paper3: <a href="https://arxiv.org/pdf/1606.04080.pdf" target="_blank" rel="noopener">On First-Order Meta-Learning Algorithms</a>, <a href="https://github.com/openai/supervised-reptile" target="_blank" rel="noopener">Code links</a></p>
+</li>
+<li><p>Paper4: <a href="https://arxiv.org/pdf/1711.06025.pdf" target="_blank" rel="noopener">Learning to Compare: Relation Network for Few-Shot Learning
+</a>, <a href="https://github.com/floodsung/LearningToCompare_FSL" target="_blank" rel="noopener">Code links</a></p>
+</li>
+<li><p>Paper5: <a href="https://arxiv.org/pdf/2003.14247.pdf" target="_blank" rel="noopener">DPGN: Distribution Propagation Graph Network for Few-shot Learning</a>, <a href="https://github.com/megvii-research/DPGN" target="_blank" rel="noopener">Code links</a></p>
 </li>
 </ul>
+<ul>
+<li><p>Paper6: <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Sun_Meta-Transfer_Learning_for_Few-Shot_Learning_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Meta-Transfer Learning for Few-Shot Learning</a>, <a href="https://github.com/y2l/meta-transfer-learning-tensorflow" target="_blank" rel="noopener">Code links</a></p>
 </li>
-<li>baseline: no( pose-emotion both are high-level task, not similar to keypoint detection)</li>
+<li><p>Paper7: <a href="https://github.com/hytseng0509/CrossDomainFewShot" target="_blank" rel="noopener">CROSS-DOMAIN FEW-SHOT CLASSIFICATION<br>VIA LEARNED FEATURE-WISE TRANSFORMATION](https://arxiv.org/pdf/2001.08735.pdf), Code links</a></p>
+</li>
 </ul>
-</blockquote>
-<h2 id="pseudo-method-related"><a href="#pseudo-method-related" class="headerlink" title="pseudo method related"></a>pseudo method related</h2><blockquote>
-<p>reference CVPR 2018<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhao_Pseudo_Mask_Augmented_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Pseudo Mask Augmented Object Detection</a><br> ‘proposing an effective learning approach that progressively improves the quality pseudo from a coarse initialization,the detection network parameters Θ and pseudo masks Mpseudo are alternatively optimized following a EM-like way’</p>
-<ul>
-<li>probelm: object detection without mask annotation</li>
-<li>method: pseudo mask (alternatively,initialization,pseudo mask with refinement algorithm[graphical model, because the pixel charaterization])</li>
-<li>baseline: yes(uing graphical model with learned information as input to refine pseudo label)</li>
+<h5 id="Related-datasets"><a href="#Related-datasets" class="headerlink" title="Related datasets"></a>Related datasets</h5><ul>
+<li><p>Dataset1: [Omniglot]</p>
+</li>
+<li><p>Dataset2: [EMNIST]</p>
+</li>
+<li><p>Dataset3: [miniImagenet]</p>
+</li>
+<li><p>Dataset4: [Few100]</p>
+</li>
+<li><p>Dataset5: [CUB200]</p>
+</li>
 </ul>
-<p>reference <a href="https://arxiv.org/pdf/1703.02391.pdf" target="_blank" rel="noopener">Learning from Noisy Labels with Distillation</a></p>
-<ul>
-<li>interpolation between noisy label and distilled knowledge</li>
-<li>baseline: yes</li>
+<h4 id="Few-shot-image-generation"><a href="#Few-shot-image-generation" class="headerlink" title="Few-shot image generation"></a>Few-shot image generation</h4><h5 id="Related-baselines-1"><a href="#Related-baselines-1" class="headerlink" title="Related baselines"></a>Related baselines</h5><ul>
+<li><p>Paper1: <a href="http://proceedings.mlr.press/v84/bartunov18a/bartunov18a.pdf" target="_blank" rel="noopener">FIGR: Few-shot Image Generation with Reptile</a>, <a href="hhttps://github.com/sbos/gmn" target="_blank" rel="noopener">Code links</a></p>
+</li>
+<li><p>Paper2: <a href="https://arxiv.org/pdf/1901.02199.pdf" target="_blank" rel="noopener">Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks</a>, <a href="https://github.com/LuEE-C/FIGR" target="_blank" rel="noopener">Code links</a></p>
+</li>
+<li><p>Paper3: <a href="https://arxiv.org/pdf/2001.00576" target="_blank" rel="noopener">DAWSON: A do- main adaptive few shot generation framework.</a>, <a href="https://github.com/LC1905/musegan/" target="_blank" rel="noopener">Code links</a></p>
+</li>
 </ul>
-<p>reference <a href="http://papers.nips.cc/paper/4292-clustered-multi-task-learning-via-alternating-structure-optimization.pdf" target="_blank" rel="noopener">Clustered Multi-Task Learning Via Alternating Structure Optimization
-</a></p>
-<ul>
-<li>‘ASO which aims to identify a shared low-dimensional predictive structure for all tasks’,’based on the standard assump- tion that each task can learn equally well from any other task’,’the clustering view of ASO has not been explored before’</li>
-<li>hard to understand, pure theories.</li>
+<h5 id="Related-datasets-1"><a href="#Related-datasets-1" class="headerlink" title="Related datasets"></a>Related datasets</h5><ul>
+<li><p>Dataset1: [Omniglot]</p>
+</li>
+<li><p>Dataset2: [EMNIST]</p>
+</li>
+<li><p>Dataset3: [VGGFace]</p>
+</li>
+<li><p>Dataset4: [Animal Faces]</p>
+</li>
+<li><p>Dataset5: [Flowers]</p>
+</li>
+<li><p>Dataset6: [NABbirds]</p>
+</li>
 </ul>
-</blockquote>
+<p><em>
+</em><br>*</p>
 
       
     </div>
@@ -496,7 +487,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/multitask/" rel="tag"># multitask</a>
+            <a href="/tags/few-shot-learning/" rel="tag"># few-shot learning</a>
           
         </div>
       
@@ -509,8 +500,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/28/Critical-Points-in-Multitask-0/" rel="next" title="Critical Points in Multitask Learning">
-                <i class="fa fa-chevron-left"></i> Critical Points in Multitask Learning
+              <a href="/2020/09/08/Learning/" rel="next" title="Normalization in Deep Learning">
+                <i class="fa fa-chevron-left"></i> Normalization in Deep Learning
               </a>
             
           </div>
@@ -518,10 +509,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/09/Semi-MTL-Related/" rel="prev" title="Semi-MTL Related">
-                Semi-MTL Related <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -676,7 +663,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#high-related"><span class="nav-number">1.</span> <span class="nav-text">high-related</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pseudo-method-related"><span class="nav-number">2.</span> <span class="nav-text">pseudo method related</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Few-shot-image-Classification"><span class="nav-number">1.</span> <span class="nav-text">Few-shot image Classification</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Related-baselines"><span class="nav-number">1.1.</span> <span class="nav-text">Related baselines</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Related-datasets"><span class="nav-number">1.2.</span> <span class="nav-text">Related datasets</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Few-shot-image-generation"><span class="nav-number">2.</span> <span class="nav-text">Few-shot image generation</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Related-baselines-1"><span class="nav-number">2.1.</span> <span class="nav-text">Related baselines</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Related-datasets-1"><span class="nav-number">2.2.</span> <span class="nav-text">Related datasets</span></a></li></ol></li></ol></div>
             
 
           </div>

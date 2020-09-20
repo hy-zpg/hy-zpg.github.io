@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Few-shot Learning Baselines]]></title>
+    <url>%2F2020%2F09%2F20%2FFew-shot-Learning-Baselines%2F</url>
+    <content type="text"><![CDATA[Few-shot image ClassificationRelated baselines Paper1: Matching Networks for One Shot Learning, Code links Paper2: Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks, Code links Paper3: On First-Order Meta-Learning Algorithms, Code links Paper4: Learning to Compare: Relation Network for Few-Shot Learning , Code links Paper5: DPGN: Distribution Propagation Graph Network for Few-shot Learning, Code links Paper6: Meta-Transfer Learning for Few-Shot Learning, Code links Paper7: CROSS-DOMAIN FEW-SHOT CLASSIFICATIONVIA LEARNED FEATURE-WISE TRANSFORMATION](https://arxiv.org/pdf/2001.08735.pdf), Code links Related datasets Dataset1: [Omniglot] Dataset2: [EMNIST] Dataset3: [miniImagenet] Dataset4: [Few100] Dataset5: [CUB200] Few-shot image generationRelated baselines Paper1: FIGR: Few-shot Image Generation with Reptile, Code links Paper2: Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks, Code links Paper3: DAWSON: A do- main adaptive few shot generation framework., Code links Related datasets Dataset1: [Omniglot] Dataset2: [EMNIST] Dataset3: [VGGFace] Dataset4: [Animal Faces] Dataset5: [Flowers] Dataset6: [NABbirds] *]]></content>
+      <categories>
+        <category>Meta-learning</category>
+      </categories>
+      <tags>
+        <tag>few-shot learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Normalization in Deep Learning]]></title>
     <url>%2F2020%2F09%2F08%2FLearning%2F</url>
     <content type="text"><![CDATA[Related links 1 2 3 BatchNorm BN applicable in cnn and mlp, not applicable in rnn. statistical data of mini-batch sensitve to the batchsize widely used on classification task, generally avoid being used in generative tasks. training phase: mu and sigma are calculated from feature map of all mini-batch, scale and shift are learned from data. testing phase: using the global mu and sigma as the inputs of bn layer, because single sample is tested in inference phase instead of mini-batch. InstanceNorm IN mu and sigma are calculated from feature map of single sample. scale and shift are different at each channel. not applicable for 2-D feature map, like mlp and rnn. applicable for generative tasks. LayerNorm LN paper applicable in rnn. GroupNorm GN paper tradeoff between LN and IN WeightNorm relationship between bn and wn WN paper applicable in rnn and gan. normalization in weights of model parameters. CosineNorm CN paper AdaptiveInstanceNorm from bn to in, from in to cin, from cin to adain AdaIN paper learning shift and scale from other samples. AttentiveNorm AN paper model long-range dependency in class-conditional image generation. It introduces a self-attention module in the convolution-based generator, which is helpful for capturing the relation of distant regions. based on IN, preserving semantics spatially. tf code can be used in F2GAN(smilar to Class-conditional Image Generation, using the interpolation coefficients as class information)]]></content>

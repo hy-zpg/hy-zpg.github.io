@@ -307,6 +307,214 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/04/23/Comparion-between-VAE-and-GAN/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/23/Comparion-between-VAE-and-GAN/" itemprop="url">Comparion between VAE and GAN</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-23T11:01:57+08:00">
+                2019-04-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Generative-Model/" itemprop="url" rel="index">
+                    <span itemprop="name">Generative Model</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Similarity"><a href="#Similarity" class="headerlink" title="Similarity"></a>Similarity</h3><ul>
+<li><p>Both aim at constructing a model that can map latent variabels $z$ to object data $p_{data}$. specifically, the trained model $\mathbf{X} = g(\mathbf{Z})$ where $Z$ is general distribution such as normal distribution and gaussian distribution, $\mathbf{X}$ represents the probability distribution of training data. So they both aim at <font color="red">distribution transformation</font>.</p>
+</li>
+<li><p>Both have generative problem that it’s difficult to obtain distribution expression of generated distribution and true distribution, only samples from two distribution are available.</p>
+</li>
+</ul>
+<ul>
+<li>$KL$ divergence only be applied to calculte distribution differene on the condition that complete distribution expressions are provided, so it is unapplicable in this scenario.</li>
+</ul>
+<h3 id="Difference"><a href="#Difference" class="headerlink" title="Difference"></a>Difference</h3><ul>
+<li><p><font color="red">Measurement method</font>: manmade measurement rule for VAE while this measurement rule of GAN is trained by neural network.</p>
+</li>
+<li><p>GAN: proposed to leverage deep neural networks to measure distribution difference because there isn’t suitable measurement method.</p>
+</li>
+<li><p>VAE: adopt a roundabout skill to leverage $KL$ divergence.</p>
+</li>
+</ul>
+<h3 id="VAE"><a href="#VAE" class="headerlink" title="VAE"></a>VAE</h3><h4 id="Important-points"><a href="#Important-points" class="headerlink" title="Important points"></a>Important points</h4><ul>
+<li>The detail is here <a href="https://zhuanlan.zhihu.com/p/34998569" target="_blank" rel="noopener">VAE’s blog</a> </li>
+</ul>
+<p><img src="/imgs/vae.jpg" alt="&#39;VAE&#39;"></p>
+<ul>
+<li><p><font color="red">Notes</font>: each sample has a gaussian distribution constructed by multivariate Gaussion and then obtain $z$ by sampling it from this distribution:<br>\begin{equation}<br>\log q_{\phi}\left(\mathbf{z} | \mathbf{x}^{(i)}\right)=\log \mathcal{N}\left(\mathbf{z} ; \boldsymbol{\mu}^{(i)}, \boldsymbol{\sigma}^{2(i)} \mathbf{I}\right)<br>\end{equation}</p>
+</li>
+<li><p><font color="red">Notes</font>: $log \boldsymbol{\mu_k} = f_1(x_k), \boldsymbol{\sigma}^{2(k)} = f_2(x_k)$ which are both fitted by neural network.</p>
+</li>
+<li><p><font color="red">Noise</font> from constructed $z$ can be calculated from $\sigma$ which can be controlled to zero, so noise takes no effect.</p>
+</li>
+<li><p><font color="red">Generative ability</font> is based on the condition that all $p(Z\X)$ close to gaussion distribution.</p>
+</li>
+</ul>
+<p>\begin{equation}<br>p(Z)=\sum_{X} p(Z | X) p(X)=\sum_{X} \mathcal{N}(0, I) p(X)=\mathcal{N}(0, I) \sum_{X} p(X)=\mathcal{N}(0, I)<br>\end{equation}</p>
+<p>so $p(Z)$ subjects to normal distribution, which satisfy the prior.</p>
+<ul>
+<li><p>how: intruducing reconstruction loss:<br>direct method:<br>\begin{equation}<br>\mathcal{L}_{\mu}=\left|f_{1}\left(X_{k}\right)\right|^{2}<br>\end{equation}</p>
+<p>\begin{equation}<br>\mathcal{L}_{\sigma^{2}}=\left|f_{2}\left(X_{k}\right)\right|^{2}<br>\end{equation}</p>
+<p>it’s difficult to measure those loss, so it’s reasonable to introduce $KL$ divegence between standard gaussion distribution and independent gaussion distribution $K L\left(N\left(\mu, \sigma^{\wedge}\right) | N(0, l)\right)$:<br>\begin{equation}<br>\mathcal{L}_{\mu, \sigma^{2}}=\frac{1}{2} \sum_{i=1}^{d}\left(\mu_{(i)}^{2}+\sigma_{(i)}^{2}-\log \sigma_{(i)}^{2}-1\right)<br>\end{equation}<br>where $d$ is the dimension of $z$ </p>
+</li>
+</ul>
+<h4 id="Essence-of-VAE"><a href="#Essence-of-VAE" class="headerlink" title="Essence of VAE"></a>Essence of VAE</h4><ul>
+<li><p>Two encoder: $f_1$ for $\mu$ while $f_2$ for $\sigma$</p>
+</li>
+<li><p>Reconstruction process: the loss of decoder assume that there is no noise; Sample $z$ process: the loss of encoder assume that there is gaussion noise.</p>
+</li>
+</ul>
+<h3 id="GAN"><a href="#GAN" class="headerlink" title="GAN"></a>GAN</h3><h4 id="Important-points-1"><a href="#Important-points-1" class="headerlink" title="Important points"></a>Important points</h4><ul>
+<li>GAN is used to map normal distribution $p(z)$ into specfic distribution $p(x)$.</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/04/22/Generative-Matching-Networks/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -2154,173 +2362,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/02/27/Cross-stitch-network/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/27/Cross-stitch-network/" itemprop="url">Cross Stitch Network</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-27T14:03:23+08:00">
-                2019-02-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">Deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="cross-stitch-network"><a href="#cross-stitch-network" class="headerlink" title="cross-stitch-network"></a>cross-stitch-network</h2><blockquote>
-<p>reference CVPR 2016<a href="https://arxiv.org/pdf/1604.03539.pdf" target="_blank" rel="noopener">Cross-stitch Networks for Multi-task Learning</a> <a href="https://github.com/helloyide/Cross-stitch-Networks-for-Multi-task-Learning/blob/master/gender_age_multi_task_learning.py" target="_blank" rel="noopener">tensorflow-code</a></p>
-</blockquote>
-<ul>
-<li>problem: existing multi-task approaches rely on enumerating multiple net- work architectures specific to the tasks at hand, that do not generalize.</li>
-<li>method: proposing a new sharing unit: “cross-stitch” unit. These units combine the activations from multiple networks.</li>
-</ul>
-<h2 id="self-defined-cross-stitch-layer-in-keras-with-tensorflow-as-backbone"><a href="#self-defined-cross-stitch-layer-in-keras-with-tensorflow-as-backbone" class="headerlink" title="self-defined cross-stitch layer in keras with tensorflow as backbone"></a>self-defined cross-stitch layer in keras with tensorflow as backbone</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class Cross_stitch(Layer):</span><br><span class="line">	<span class="comment"># basic parameter setting</span></span><br><span class="line">    def __init__(self,input_shape_1,input_shape_2, **kwargs):</span><br><span class="line">        super(Cross_stitch, self).__init__(**kwargs)</span><br><span class="line">        self.input_shape_1 = input_shape_1</span><br><span class="line">        self.input_shape_2 = input_shape_2</span><br><span class="line">    <span class="comment"># apply trainable parameters in network, similar to convolutional layer </span></span><br><span class="line">    <span class="comment"># shape is important, you must to calculate specific size based on the shape of input and output</span></span><br><span class="line">    <span class="comment"># in cross-stitch network: [xa,xb]*[papameter]=[xa',xb'], the detail refer to the paper</span></span><br><span class="line">    def build(self, input_shape):</span><br><span class="line">        shape = self.input_shape_1 + self.input_shape_2</span><br><span class="line">        self.cross_stitch = self.add_weight(</span><br><span class="line">            shape=(shape,shape),</span><br><span class="line">            initializer=tf.initializers.identity(),</span><br><span class="line">            name=<span class="string">'cross_stitch'</span>)</span><br><span class="line">        self.built = True</span><br><span class="line">    <span class="comment"># conduct implement of the detailed algorithm calculation</span></span><br><span class="line">    <span class="comment"># inputs represent the output of upper layer, such as x=Dense(parameter)(inputs)</span></span><br><span class="line">    def call(self,inputs):</span><br><span class="line">        inputss = tf.concat((inputs[0], inputs[1]), axis=1)</span><br><span class="line">        output = tf.matmul(inputss, self.cross_stitch)</span><br><span class="line">        output1 = tf.reshape(output[:,:self.input_shape_1],shape=[-1,self.input_shape_1])</span><br><span class="line">        output2 = tf.reshape(output[:,self.input_shape_2:],shape=[-1,self.input_shape_2])</span><br><span class="line">        <span class="built_in">return</span> [output1, output2]</span><br><span class="line">    def get_config(self):</span><br><span class="line">        config = &#123;<span class="string">'input_shape_1'</span>: self.input_shape_1,<span class="string">'input_shape_2'</span>: self.input_shape_2&#125;</span><br><span class="line">        base_config = super(Cross_stitch, self).get_config()</span><br><span class="line">        <span class="built_in">return</span> dict(list(base_config.items()) + list(config.items()))</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2371,7 +2412,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">48</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
