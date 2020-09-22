@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yanhong.me/"/>
-  <updated>2020-09-22T02:57:08.398Z</updated>
+  <updated>2020-09-22T03:05:22.268Z</updated>
   <id>https://www.yanhong.me/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Incremental/Real-time Generative Adversarial Network</title>
+    <link href="https://www.yanhong.me/2020/09/22/Network/"/>
+    <id>https://www.yanhong.me/2020/09/22/Network/</id>
+    <published>2020-09-22T03:03:10.000Z</published>
+    <updated>2020-09-22T03:05:22.268Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>Paper1: <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Xiang_Incremental_Learning_Using_Conditional_Adversarial_Networks_ICCV_2019_paper.pdf" target="_blank" rel="noopener">Incremental Learning Using Conditional Adversarial Networks</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;Paper1: &lt;a href=&quot;https://openaccess.thecvf.com/content_ICCV_2019/papers/Xiang_Incremental_Learning_Using_Conditional_Adversarial_Ne
+      
+    
+    </summary>
+    
+      <category term="Few-shot Generation" scheme="https://www.yanhong.me/categories/Few-shot-Generation/"/>
+    
+    
+      <category term="Incremental/Real-time" scheme="https://www.yanhong.me/tags/Incremental-Real-time/"/>
+    
+  </entry>
   
   <entry>
     <title>Few-shot Learning Baselines</title>
