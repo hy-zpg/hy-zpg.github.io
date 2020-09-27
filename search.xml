@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[video-based Re-identification]]></title>
+    <url>%2F2020%2F09%2F25%2FRe-identification%2F</url>
+    <content type="text"><![CDATA[Paper1 Exploiting Temporal Coherence for Self-Supervised One-shot Video Re-identification]]></content>
+      <categories>
+        <category>Person Re-identification</category>
+      </categories>
+      <tags>
+        <tag>video reid</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Incremental/Real-time Generative Adversarial Network]]></title>
     <url>%2F2020%2F09%2F22%2FNetwork%2F</url>
     <content type="text"><![CDATA[Paper1: Incremental Learning Using Conditional Adversarial Networks Paper2: Incremental learning for the detection and classification of GAN-generated images]]></content>

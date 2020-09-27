@@ -1,5 +1,5 @@
+https://www.yanhong.me/2020/09/25/Re-identification/
 https://www.yanhong.me/2020/09/22/Network/
 https://www.yanhong.me/2020/09/20/Few-shot-Learning-Baselines/
 https://www.yanhong.me/2020/09/08/Learning/
 https://www.yanhong.me/2020/09/01/Fewshot-Feature-Generation/
-https://www.yanhong.me/2020/07/01/Translation-Generation/
