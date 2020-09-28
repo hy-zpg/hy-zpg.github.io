@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yanhong.me/"/>
-  <updated>2020-09-27T12:29:30.682Z</updated>
+  <updated>2020-09-28T02:27:34.000Z</updated>
   <id>https://www.yanhong.me/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Disentangle_GAN</title>
+    <link href="https://www.yanhong.me/2020/09/28/Disentangle-GAN/"/>
+    <id>https://www.yanhong.me/2020/09/28/Disentangle-GAN/</id>
+    <published>2020-09-28T01:06:26.000Z</published>
+    <updated>2020-09-28T02:27:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Deformation-aware-Unpaired-Image-Translation-for-Pose-Estimation-on-Laboratory-Animals"><a href="#Deformation-aware-Unpaired-Image-Translation-for-Pose-Estimation-on-Laboratory-Animals" class="headerlink" title="Deformation-aware Unpaired Image Translation for Pose Estimation on Laboratory Animals"></a><a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Li_Deformation-Aware_Unpaired_Image_Translation_for_Pose_Estimation_on_Laboratory_Animals_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Deformation-aware Unpaired Image Translation for Pose Estimation on Laboratory Animals</a></h4><ul><li>Deformation-aware</li></ul><h4 id="Reusing-Discriminators-for-Encoding-Towards-Unsupervised-Image-to-Image-Translation"><a href="#Reusing-Discriminators-for-Encoding-Towards-Unsupervised-Image-to-Image-Translation" class="headerlink" title="Reusing Discriminators for Encoding: Towards Unsupervised Image-to-Image Translation"></a><a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Chen_Reusing_Discriminators_for_Encoding_Towards_Unsupervised_Image-to-Image_Translation_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Reusing Discriminators for Encoding: Towards Unsupervised Image-to-Image Translation</a></h4><ul><li>reusing part parameters of discriminator in generator</li></ul><h4 id="Semi-supervised-Learning-for-Few-shot-Image-to-Image-Translation"><a href="#Semi-supervised-Learning-for-Few-shot-Image-to-Image-Translation" class="headerlink" title="Semi-supervised Learning for Few-shot Image-to-Image Translation"></a><a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_Semi-Supervised_Learning_for_Few-Shot_Image-to-Image_Translation_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Semi-supervised Learning for Few-shot Image-to-Image Translation</a></h4><ul><li>noisy label</li></ul><h4 id="Unsupervised-Multi-Modal-Image-Registration-via-Geometry-Preserving-Image-to-Image-Translation"><a href="#Unsupervised-Multi-Modal-Image-Registration-via-Geometry-Preserving-Image-to-Image-Translation" class="headerlink" title="Unsupervised Multi-Modal Image Registration via Geometry Preserving Image-to-Image Translation"></a><a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Arar_Unsupervised_Multi-Modal_Image_Registration_via_Geometry_Preserving_Image-to-Image_Translation_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Unsupervised Multi-Modal Image Registration via Geometry Preserving Image-to-Image Translation</a></h4><ul><li>spatial transformation network and a translation network</li></ul><h4 id="One-Shot-Domain-Adaptation-For-Face-Generation"><a href="#One-Shot-Domain-Adaptation-For-Face-Generation" class="headerlink" title="One-Shot Domain Adaptation For Face Generation"></a><a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Yang_One-Shot_Domain_Adaptation_for_Face_Generation_CVPR_2020_paper.pdf" target="_blank" rel="noopener">One-Shot Domain Adaptation For Face Generation</a></h4><ul><li><p>how to mimic a complete distribution of the target image given just one example. </p></li><li><p>our method aims to mimic a complete distribution of the target domain given just one example.</p></li><li><p>we directly manipulate the distribution in the image space.</p></li><li><p>a face manip- ulation detector.</p></li><li><p>For each random style vector s that we sampled with the mapping network, we replace the final layers of s with those of sI before giving it as input to the generator so that the generated random image g(s) inherits the low-level color and textures from I.</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;Deformation-aware-Unpaired-Image-Translation-for-Pose-Estimation-on-Laboratory-Animals&quot;&gt;&lt;a href=&quot;#Deformation-aware-Unpaired-Image-T
+      
+    
+    </summary>
+    
+      <category term="Generative Model" scheme="https://www.yanhong.me/categories/Generative-Model/"/>
+    
+    
+      <category term="disentangle" scheme="https://www.yanhong.me/tags/disentangle/"/>
+    
+  </entry>
+  
+  <entry>
     <title>video-based Re-identification</title>
     <link href="https://www.yanhong.me/2020/09/25/Re-identification/"/>
     <id>https://www.yanhong.me/2020/09/25/Re-identification/</id>
     <published>2020-09-25T07:20:06.000Z</published>
-    <updated>2020-09-27T12:29:30.682Z</updated>
+    <updated>2020-09-28T01:06:31.133Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Paper1"><a href="#Paper1" class="headerlink" title="Paper1"></a>Paper1</h4><ul><li><p><a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123720256.pdf" target="_blank" rel="noopener">Exploiting Temporal Coherence for Self-Supervised One-shot Video Re-identification</a></p></li><li></li></ul>]]></content>
     
