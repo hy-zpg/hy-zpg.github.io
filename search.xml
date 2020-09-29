@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[video-based Re-identification]]></title>
     <url>%2F2020%2F09%2F25%2FRe-identification%2F</url>
-    <content type="text"><![CDATA[Paper1 Exploiting Temporal Coherence for Self-Supervised One-shot Video Re-identification combining pseudo-labels and representation learning from temperoal cohenrence novel: representation learning.]]></content>
+    <content type="text"><![CDATA[Paper1 Exploiting Temporal Coherence for Self-Supervised One-shot Video Re-identification one-shot: one tracklet combining pseudo-labels and representation learning from temperoal cohenrence novel: representation learning. Paper2 Exploit the Unknown Gradually: One-Shot Video-Based Person Re-Identification by Stepwise Learning one-shot: one tracklet Paper3 One-Shot Metric Learning for Person Re-identification one-shot: single-pair]]></content>
       <categories>
         <category>Person Re-identification</category>
       </categories>
