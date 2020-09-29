@@ -46,9 +46,9 @@
     <link href="https://www.yanhong.me/2020/09/25/Re-identification/"/>
     <id>https://www.yanhong.me/2020/09/25/Re-identification/</id>
     <published>2020-09-25T07:20:06.000Z</published>
-    <updated>2020-09-28T01:06:31.133Z</updated>
+    <updated>2020-09-29T02:56:05.628Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="Paper1"><a href="#Paper1" class="headerlink" title="Paper1"></a>Paper1</h4><ul><li><p><a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123720256.pdf" target="_blank" rel="noopener">Exploiting Temporal Coherence for Self-Supervised One-shot Video Re-identification</a></p></li><li></li></ul>]]></content>
+    <content type="html"><![CDATA[<h4 id="Paper1"><a href="#Paper1" class="headerlink" title="Paper1"></a>Paper1</h4><ul><li><p><a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123720256.pdf" target="_blank" rel="noopener">Exploiting Temporal Coherence for Self-Supervised One-shot Video Re-identification</a></p></li><li><p>combining pseudo-labels and representation learning from temperoal cohenrence</p></li><li><p>novel: representation learning.</p></li></ul>]]></content>
     
     <summary type="html">
     
