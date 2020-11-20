@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Abnormal Detection]]></title>
+    <url>%2F2020%2F11%2F20%2FDetection%2F</url>
+    <content type="text"><![CDATA[Updated Links1 Related General ADUpdated Links2 Related Image AD Definition not a binary classification because of the limited defected images Coarse Categoriesrefer open-set recognition: labeled data (category information) + unknown data unlabeled data: clean (training samples are all positive), polluted(there are a few defected images in training set) Strategy open-set recognition (labeled data): classifier -&gt; (predicted category + confidence, {confidence &lt; threshold} is abnormal sample) unlabeled data: training data (normal samples) + testing data(normal + abnormal) One Class (Anomaly) Classification targetOut-of-Distribution(OOD) Detection targetUnsupervised Anomaly Segmentation targetDefect generation]]></content>
+      <tags>
+        <tag>AD</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Disentangle_GAN]]></title>
     <url>%2F2020%2F09%2F28%2FDisentangle-GAN%2F</url>
     <content type="text"><![CDATA[Deformation-aware Unpaired Image Translation for Pose Estimation on Laboratory Animals Deformation-aware Reusing Discriminators for Encoding: Towards Unsupervised Image-to-Image Translation reusing part parameters of discriminator in generator Semi-supervised Learning for Few-shot Image-to-Image Translation noisy label Unsupervised Multi-Modal Image Registration via Geometry Preserving Image-to-Image Translation spatial transformation network and a translation network One-Shot Domain Adaptation For Face Generation how to mimic a complete distribution of the target image given just one example. our method aims to mimic a complete distribution of the target domain given just one example. we directly manipulate the distribution in the image space. a face manip- ulation detector. For each random style vector s that we sampled with the mapping network, we replace the final layers of s with those of sI before giving it as input to the generator so that the generated random image g(s) inherits the low-level color and textures from I.]]></content>

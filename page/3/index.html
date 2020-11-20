@@ -307,6 +307,200 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/07/15/Paper-related-Image-Generation/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/15/Paper-related-Image-Generation/" itemprop="url">Papers related Few-shot Image Generation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-15T13:38:29+08:00">
+                2019-07-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Few-shot-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Few-shot learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="∆-encoder-an-effective-sample-synthesis-method-for-few-shot-object-recognition"><a href="#∆-encoder-an-effective-sample-synthesis-method-for-few-shot-object-recognition" class="headerlink" title="∆-encoder: an effective sample synthesis method for few-shot object recognition"></a><a href="http://papers.nips.cc/paper/7549-delta-encoder-an-effective-sample-synthesis-method-for-few-shot-object-recognition.pdf" target="_blank" rel="noopener">∆-encoder: an effective sample synthesis method for few-shot object recognition</a></h4><ul>
+<li><p>datasets: miniImageNet, CIFAR100, CUB, Caltech-256, APY, SUN and AWA2</p>
+</li>
+<li><p>how to generate images: learning to extract transferable intra-class deformations between same-class pairs of training examples and using this deformations to generate samples conditioned on few provided examples. </p>
+</li>
+<li><p>how to aid classification task: constructing feeding augmented images into a simple linear N-class classifier (one dense layer followed by softmax) over about 1024 samples of each category</p>
+</li>
+<li><p>how to evaluate the effectiveness of generated images: using trained generative model to generate thousands of images conditioned on provided few shots and using those generated images to train a simple classifier (training fc layer with convolutional layers of vgg16 or resnet18 pre-trained on Imagenet, another way is to pre-train those convulutional layers by samples from all training categories). Finally, comparing the results with the accuracy of other few-shot classifiers.</p>
+</li>
+</ul>
+<h4 id="DADA-Deep-Adversarial-Data-Augmentation-for-Extremely-Low-Data-Regime-Classification"><a href="#DADA-Deep-Adversarial-Data-Augmentation-for-Extremely-Low-Data-Regime-Classification" class="headerlink" title="DADA: Deep Adversarial Data Augmentation for Extremely Low Data Regime Classification"></a><a href="https://arxiv.org/pdf/1809.00981.pdf" target="_blank" rel="noopener">DADA: Deep Adversarial Data Augmentation for Extremely Low Data Regime Classification</a></h4><ul>
+<li><p>how to generate images: using a class-conditional GAN with a novel loss to generate diverse and category-specific images.</p>
+</li>
+<li><p>how to aid classification task: coupling the generation process and classification process.  Using 2k loss to distinguish fake data from real data, also to predict the category of fake data and real data. </p>
+</li>
+<li><p>how to evaluate the effectiveness of generated images: experiments are not conducted in few-shot setting, instead sampling 50-1000 samples of each category to simulate extremely low data regime. comparing the results with other GAN methods, such as Improved-GAN.</p>
+</li>
+</ul>
+<h4 id="FEW-SHOT-AUTOREGRESSIVE-DENSITY-ESTIMATION-TOWARDS-LEARNING-TO-LEARN-DISTRIBUTIONS"><a href="#FEW-SHOT-AUTOREGRESSIVE-DENSITY-ESTIMATION-TOWARDS-LEARNING-TO-LEARN-DISTRIBUTIONS" class="headerlink" title="FEW-SHOT AUTOREGRESSIVE DENSITY ESTIMATION: TOWARDS LEARNING TO LEARN DISTRIBUTIONS"></a><a href="https://arxiv.org/pdf/1710.10304.pdf" target="_blank" rel="noopener">FEW-SHOT AUTOREGRESSIVE DENSITY ESTIMATION: TOWARDS LEARNING TO LEARN DISTRIBUTIONS</a></h4><ul>
+<li><p>how to generate images: modified pixelCNN to achieve few-shot density estimation and extend the model to generate natural images.</p>
+</li>
+<li><p>how to aid classification task: None, only density extimation NLL</p>
+</li>
+<li><p>how to evaluate the effectiveness of generated images: visualization of the generated images, comparing the results with the NLL of other pixelCNN methods.</p>
+</li>
+</ul>
+<h4 id="The-Variational-Homoencoder-Learning-to-learn-high-capacity-generative-models-from-few-examples"><a href="#The-Variational-Homoencoder-Learning-to-learn-high-capacity-generative-models-from-few-examples" class="headerlink" title="The Variational Homoencoder:Learning to learn high capacity generative models from few examples"></a><a href="https://arxiv.org/pdf/1807.08919.pdf" target="_blank" rel="noopener">The Variational Homoencoder:Learning to learn high capacity generative models from few examples</a></h4><ul>
+<li><p>how to generate images: modified VAE to produces a hierarchical latent variable model which better utilises latent variables.</p>
+</li>
+<li><p>how to aid classification task: classifying an example x the estimation of the expected conditional likelihood under the variational posterior.</p>
+</li>
+<li><p>how to evaluate the effectiveness of generated images: one-shot generation, one-shot classification and the value of likelihood.</p>
+</li>
+</ul>
+<h4 id="Distribution-Matching-in-Variational-Inference"><a href="#Distribution-Matching-in-Variational-Inference" class="headerlink" title="Distribution Matching in Variational Inference"></a><a href="https://arxiv.org/pdf/1802.06847" target="_blank" rel="noopener">Distribution Matching in Variational Inference</a></h4>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/07/09/Combination-between-GAN-and-VAE/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1958,256 +2152,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/05/04/Paper-Writting/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/04/Paper-Writting/" itemprop="url">Paper Writting</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-04T09:14:19+08:00">
-                2019-05-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Writting/" itemprop="url" rel="index">
-                    <span itemprop="name">Writting</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Rules"><a href="#Rules" class="headerlink" title="Rules"></a>Rules</h3><p>well-organized: storyline -&gt; abstract and introduction -&gt; methods -&gt; related work -&gt; experiment</p>
-<ol>
-<li><p>Storyline</p>
-<ul>
-<li>Make sure that the storyline is reasonable and fluent before your writting.</li>
-</ul>
-</li>
-<li><p>Abstract &amp; introduction: </p>
-<ul>
-<li>Based on the refined storyline, to form abstract and introduction, a extension of abstract.</li>
-</ul>
-</li>
-<li><p>Related work</p>
-<ul>
-<li>It related to our selected baselines, so I think it belong to the survey work before this research project, and to update it when you read related papers. </li>
-<li>Another important point is to divide the sub-fields of your current research topic, you can find related works accurately and comprehensively.</li>
-</ul>
-</li>
-<li><p>Methods</p>
-<ul>
-<li>To fully understand the proposed method, generally the method is inspired by other papers or books. </li>
-<li>It’s important to know about what the method is and how it can deal with your problem. </li>
-<li>More importantly, forming core combined method based on those refered algorithm can help us to explain our story line in therotical analysis.</li>
-</ul>
-</li>
-<li><p>Experiment</p>
-<ul>
-<li>Comparion is important and classify those baselines into serveral group based on its relateness. </li>
-<li>To ablate the role of parameters in experiments and introduce ‘special case’ to outline the effect of the proposed method.</li>
-</ul>
-</li>
-</ol>
-<h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><p>well-written: abstract -&gt; introduction -&gt; method -&gt; experiment -&gt; conclusion</p>
-<ol>
-<li><p>Abstract </p>
-<ul>
-<li>Describing the scenario of your reserch problem.</li>
-<li>The shortcoming of the existing methods.</li>
-<li>Our inspiration, which means what sub-field we selected as research point for this prolem.</li>
-<li>What problem we will encounter in using this sub-field method, eg.. 1 …, 2… </li>
-<li>To highly summarize how our approach to solve thos problems.</li>
-<li>To brief describe the experimental results.</li>
-</ul>
-</li>
-<li><p>Introduction</p>
-<ul>
-<li>From large research point (MTL) to sub-field research point (MTL with disjoint datasets).</li>
-<li>Describing this scenario and the disadvantage of existing methods.</li>
-<li>Our method, explain it.</li>
-<li>Concluding contributios.</li>
-</ul>
-</li>
-<li><p>Related work</p>
-<ul>
-<li>Directly related work.</li>
-<li>Methods related works.</li>
-</ul>
-</li>
-<li><p>Method</p>
-<ul>
-<li>To describe the problem in mathmatical method (inputs [images and labels], trainable parameters).</li>
-<li>Inspiration work</li>
-<li><font color="red">Hierarchical method description</font>, for example, data selection(confident [confidence score, local density], distribution), label vector interpolation.</li>
-</ul>
-</li>
-</ol>
-<ol>
-<li><p>Experiment</p>
-<ul>
-<li>Datasets: split rule (make sure before experiment).</li>
-<li>Comparison: directly related to the part of related work, brief how you reproduce those baseline in your prpblem scenario. and then to analyze the result to outligh the advantage of the proposed method.</li>
-<li>Ablation: explaining the introduced hyper-parameter, surely, it’s necessary to classify those ‘special case’ to facilate the description.</li>
-<li>Considering the qualitative analysis if possible.</li>
-</ul>
-</li>
-<li><p>Conclusion</p>
-<ul>
-<li>Highly conclude what the proposed method and how it deal with problem.</li>
-<li>The demonstration of the experimental results.</li>
-</ul>
-</li>
-</ol>
-<h3 id="Accumulated-core-experience"><a href="#Accumulated-core-experience" class="headerlink" title="Accumulated core experience"></a>Accumulated core experience</h3><ol>
-<li><p><font color="red">Paper organization</font>: overall organization and the organization of each part.</p>
-</li>
-<li><p><font color="red">Hierarchical description in each part</font>: logical description in each paragragh.</p>
-</li>
-<li><p><font color="red">Expressions of mathematical formulas</font>: unification of superscript and subscript in formula, and refining it during writting.</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2258,7 +2202,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">52</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2280,7 +2224,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

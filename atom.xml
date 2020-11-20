@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yanhong.me/"/>
-  <updated>2020-09-28T02:27:34.000Z</updated>
+  <updated>2020-11-20T13:23:37.128Z</updated>
   <id>https://www.yanhong.me/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Abnormal Detection</title>
+    <link href="https://www.yanhong.me/2020/11/20/Detection/"/>
+    <id>https://www.yanhong.me/2020/11/20/Detection/</id>
+    <published>2020-11-20T01:42:42.000Z</published>
+    <updated>2020-11-20T13:23:37.128Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/yzhao062/anomaly-detection-resources" target="_blank" rel="noopener">Updated Links1 Related General AD</a><br><a href="https://github.com/hoya012/awesome-anomaly-detection" target="_blank" rel="noopener">Updated Links2 Related Image AD</a></p><h2 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h2><ul><li>not a binary classification because of the limited defected images</li></ul><h2 id="Coarse-Categories"><a href="#Coarse-Categories" class="headerlink" title="Coarse Categories"></a>Coarse Categories</h2><p><a href="https://zhuanlan.zhihu.com/p/116235115" target="_blank" rel="noopener">refer</a></p><ul><li>open-set recognition: labeled data (category information) + unknown data </li><li>unlabeled data: clean (training samples are all positive), polluted(there are a few defected images in training set)<br><img src="figures/AD_category.jpg" alt=""></li></ul><h2 id="Strategy"><a href="#Strategy" class="headerlink" title="Strategy"></a>Strategy</h2><ul><li><p>open-set recognition (labeled data): classifier -&gt; (predicted category + confidence, {confidence &lt; threshold} is abnormal sample)</p></li><li><p>unlabeled data: training data (normal samples) + testing data(normal + abnormal)</p></li></ul><h3 id="One-Class-Anomaly-Classification-target"><a href="#One-Class-Anomaly-Classification-target" class="headerlink" title="One Class (Anomaly) Classification target"></a>One Class (Anomaly) Classification target</h3><h3 id="Out-of-Distribution-OOD-Detection-target"><a href="#Out-of-Distribution-OOD-Detection-target" class="headerlink" title="Out-of-Distribution(OOD) Detection target"></a>Out-of-Distribution(OOD) Detection target</h3><h3 id="Unsupervised-Anomaly-Segmentation-target"><a href="#Unsupervised-Anomaly-Segmentation-target" class="headerlink" title="Unsupervised Anomaly Segmentation target"></a>Unsupervised Anomaly Segmentation target</h3><h2 id="Defect-generation"><a href="#Defect-generation" class="headerlink" title="Defect generation"></a><a href="https://ieeexplore.ieee.org/document/9000806" target="_blank" rel="noopener">Defect generation</a></h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://github.com/yzhao062/anomaly-detection-resources&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Updated Links1 Related General AD&lt;/a&gt;&lt;br
+      
+    
+    </summary>
+    
+    
+      <category term="AD" scheme="https://www.yanhong.me/tags/AD/"/>
+    
+  </entry>
   
   <entry>
     <title>Disentangle_GAN</title>

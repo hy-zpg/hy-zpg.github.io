@@ -307,6 +307,181 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2020/06/08/From-Generation-to-Fewshot-Generation/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/08/From-Generation-to-Fewshot-Generation/" itemprop="url">From Image Generation to Fewshot Image Generation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-08T10:27:58+08:00">
+                2020-06-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Survey/" itemprop="url" rel="index">
+                    <span itemprop="name">Survey</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="pix2pix"><a href="#pix2pix" class="headerlink" title="pix2pix"></a><a href="https://arxiv.org/pdf/1611.07004.pdf" target="_blank" rel="noopener">pix2pix</a></h4><ul>
+<li>conditional discrimiantor (channel-wise concat)</li>
+<li>unet generator with skip connections</li>
+<li>patch discriminator</li>
+</ul>
+<h4 id="pix2pixHD"><a href="#pix2pixHD" class="headerlink" title="pix2pixHD"></a><a href="https://research.nvidia.com/sites/default/files/pubs/2017-12_High-Resolution-Image-Synthesis/1711.11585.pdf" target="_blank" rel="noopener">pix2pixHD</a></h4><ul>
+<li>generating high-resolution images.</li>
+<li>a coarse-to-fine generator: a globale generator and a local enhancer networks (G1-G2)</li>
+<li>a multi-scale discriminator architecture: multiple discriminators are used to deal with different scale images.</li>
+<li>a robust adversarial learning objective function: feature matching between discrinative features from real samples and fake samples.</li>
+</ul>
+<h4 id="SPADE"><a href="#SPADE" class="headerlink" title="SPADE"></a><a href="https://arxiv.org/pdf/1903.07291.pdf" target="_blank" rel="noopener">SPADE</a></h4><ul>
+<li>SPADE is a generalization of several existing normalization layers, the proposed SPADE is better suited for semantic image synthesis.</li>
+<li>SPADE can be added into generator and discriminator.</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2020/03/24/Style-Translation-Framework/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1917,200 +2092,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/07/15/Paper-related-Image-Generation/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/15/Paper-related-Image-Generation/" itemprop="url">Papers related Few-shot Image Generation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-15T13:38:29+08:00">
-                2019-07-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Few-shot-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">Few-shot learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="∆-encoder-an-effective-sample-synthesis-method-for-few-shot-object-recognition"><a href="#∆-encoder-an-effective-sample-synthesis-method-for-few-shot-object-recognition" class="headerlink" title="∆-encoder: an effective sample synthesis method for few-shot object recognition"></a><a href="http://papers.nips.cc/paper/7549-delta-encoder-an-effective-sample-synthesis-method-for-few-shot-object-recognition.pdf" target="_blank" rel="noopener">∆-encoder: an effective sample synthesis method for few-shot object recognition</a></h4><ul>
-<li><p>datasets: miniImageNet, CIFAR100, CUB, Caltech-256, APY, SUN and AWA2</p>
-</li>
-<li><p>how to generate images: learning to extract transferable intra-class deformations between same-class pairs of training examples and using this deformations to generate samples conditioned on few provided examples. </p>
-</li>
-<li><p>how to aid classification task: constructing feeding augmented images into a simple linear N-class classifier (one dense layer followed by softmax) over about 1024 samples of each category</p>
-</li>
-<li><p>how to evaluate the effectiveness of generated images: using trained generative model to generate thousands of images conditioned on provided few shots and using those generated images to train a simple classifier (training fc layer with convolutional layers of vgg16 or resnet18 pre-trained on Imagenet, another way is to pre-train those convulutional layers by samples from all training categories). Finally, comparing the results with the accuracy of other few-shot classifiers.</p>
-</li>
-</ul>
-<h4 id="DADA-Deep-Adversarial-Data-Augmentation-for-Extremely-Low-Data-Regime-Classification"><a href="#DADA-Deep-Adversarial-Data-Augmentation-for-Extremely-Low-Data-Regime-Classification" class="headerlink" title="DADA: Deep Adversarial Data Augmentation for Extremely Low Data Regime Classification"></a><a href="https://arxiv.org/pdf/1809.00981.pdf" target="_blank" rel="noopener">DADA: Deep Adversarial Data Augmentation for Extremely Low Data Regime Classification</a></h4><ul>
-<li><p>how to generate images: using a class-conditional GAN with a novel loss to generate diverse and category-specific images.</p>
-</li>
-<li><p>how to aid classification task: coupling the generation process and classification process.  Using 2k loss to distinguish fake data from real data, also to predict the category of fake data and real data. </p>
-</li>
-<li><p>how to evaluate the effectiveness of generated images: experiments are not conducted in few-shot setting, instead sampling 50-1000 samples of each category to simulate extremely low data regime. comparing the results with other GAN methods, such as Improved-GAN.</p>
-</li>
-</ul>
-<h4 id="FEW-SHOT-AUTOREGRESSIVE-DENSITY-ESTIMATION-TOWARDS-LEARNING-TO-LEARN-DISTRIBUTIONS"><a href="#FEW-SHOT-AUTOREGRESSIVE-DENSITY-ESTIMATION-TOWARDS-LEARNING-TO-LEARN-DISTRIBUTIONS" class="headerlink" title="FEW-SHOT AUTOREGRESSIVE DENSITY ESTIMATION: TOWARDS LEARNING TO LEARN DISTRIBUTIONS"></a><a href="https://arxiv.org/pdf/1710.10304.pdf" target="_blank" rel="noopener">FEW-SHOT AUTOREGRESSIVE DENSITY ESTIMATION: TOWARDS LEARNING TO LEARN DISTRIBUTIONS</a></h4><ul>
-<li><p>how to generate images: modified pixelCNN to achieve few-shot density estimation and extend the model to generate natural images.</p>
-</li>
-<li><p>how to aid classification task: None, only density extimation NLL</p>
-</li>
-<li><p>how to evaluate the effectiveness of generated images: visualization of the generated images, comparing the results with the NLL of other pixelCNN methods.</p>
-</li>
-</ul>
-<h4 id="The-Variational-Homoencoder-Learning-to-learn-high-capacity-generative-models-from-few-examples"><a href="#The-Variational-Homoencoder-Learning-to-learn-high-capacity-generative-models-from-few-examples" class="headerlink" title="The Variational Homoencoder:Learning to learn high capacity generative models from few examples"></a><a href="https://arxiv.org/pdf/1807.08919.pdf" target="_blank" rel="noopener">The Variational Homoencoder:Learning to learn high capacity generative models from few examples</a></h4><ul>
-<li><p>how to generate images: modified VAE to produces a hierarchical latent variable model which better utilises latent variables.</p>
-</li>
-<li><p>how to aid classification task: classifying an example x the estimation of the expected conditional likelihood under the variational posterior.</p>
-</li>
-<li><p>how to evaluate the effectiveness of generated images: one-shot generation, one-shot classification and the value of likelihood.</p>
-</li>
-</ul>
-<h4 id="Distribution-Matching-in-Variational-Inference"><a href="#Distribution-Matching-in-Variational-Inference" class="headerlink" title="Distribution Matching in Variational Inference"></a><a href="https://arxiv.org/pdf/1802.06847" target="_blank" rel="noopener">Distribution Matching in Variational Inference</a></h4>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2161,7 +2142,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">52</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2183,7 +2164,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

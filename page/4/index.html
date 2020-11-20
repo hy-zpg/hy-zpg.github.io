@@ -307,6 +307,256 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/05/04/Paper-Writting/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/04/Paper-Writting/" itemprop="url">Paper Writting</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-04T09:14:19+08:00">
+                2019-05-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Writting/" itemprop="url" rel="index">
+                    <span itemprop="name">Writting</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Rules"><a href="#Rules" class="headerlink" title="Rules"></a>Rules</h3><p>well-organized: storyline -&gt; abstract and introduction -&gt; methods -&gt; related work -&gt; experiment</p>
+<ol>
+<li><p>Storyline</p>
+<ul>
+<li>Make sure that the storyline is reasonable and fluent before your writting.</li>
+</ul>
+</li>
+<li><p>Abstract &amp; introduction: </p>
+<ul>
+<li>Based on the refined storyline, to form abstract and introduction, a extension of abstract.</li>
+</ul>
+</li>
+<li><p>Related work</p>
+<ul>
+<li>It related to our selected baselines, so I think it belong to the survey work before this research project, and to update it when you read related papers. </li>
+<li>Another important point is to divide the sub-fields of your current research topic, you can find related works accurately and comprehensively.</li>
+</ul>
+</li>
+<li><p>Methods</p>
+<ul>
+<li>To fully understand the proposed method, generally the method is inspired by other papers or books. </li>
+<li>It’s important to know about what the method is and how it can deal with your problem. </li>
+<li>More importantly, forming core combined method based on those refered algorithm can help us to explain our story line in therotical analysis.</li>
+</ul>
+</li>
+<li><p>Experiment</p>
+<ul>
+<li>Comparion is important and classify those baselines into serveral group based on its relateness. </li>
+<li>To ablate the role of parameters in experiments and introduce ‘special case’ to outline the effect of the proposed method.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><p>well-written: abstract -&gt; introduction -&gt; method -&gt; experiment -&gt; conclusion</p>
+<ol>
+<li><p>Abstract </p>
+<ul>
+<li>Describing the scenario of your reserch problem.</li>
+<li>The shortcoming of the existing methods.</li>
+<li>Our inspiration, which means what sub-field we selected as research point for this prolem.</li>
+<li>What problem we will encounter in using this sub-field method, eg.. 1 …, 2… </li>
+<li>To highly summarize how our approach to solve thos problems.</li>
+<li>To brief describe the experimental results.</li>
+</ul>
+</li>
+<li><p>Introduction</p>
+<ul>
+<li>From large research point (MTL) to sub-field research point (MTL with disjoint datasets).</li>
+<li>Describing this scenario and the disadvantage of existing methods.</li>
+<li>Our method, explain it.</li>
+<li>Concluding contributios.</li>
+</ul>
+</li>
+<li><p>Related work</p>
+<ul>
+<li>Directly related work.</li>
+<li>Methods related works.</li>
+</ul>
+</li>
+<li><p>Method</p>
+<ul>
+<li>To describe the problem in mathmatical method (inputs [images and labels], trainable parameters).</li>
+<li>Inspiration work</li>
+<li><font color="red">Hierarchical method description</font>, for example, data selection(confident [confidence score, local density], distribution), label vector interpolation.</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>Experiment</p>
+<ul>
+<li>Datasets: split rule (make sure before experiment).</li>
+<li>Comparison: directly related to the part of related work, brief how you reproduce those baseline in your prpblem scenario. and then to analyze the result to outligh the advantage of the proposed method.</li>
+<li>Ablation: explaining the introduced hyper-parameter, surely, it’s necessary to classify those ‘special case’ to facilate the description.</li>
+<li>Considering the qualitative analysis if possible.</li>
+</ul>
+</li>
+<li><p>Conclusion</p>
+<ul>
+<li>Highly conclude what the proposed method and how it deal with problem.</li>
+<li>The demonstration of the experimental results.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Accumulated-core-experience"><a href="#Accumulated-core-experience" class="headerlink" title="Accumulated core experience"></a>Accumulated core experience</h3><ol>
+<li><p><font color="red">Paper organization</font>: overall organization and the organization of each part.</p>
+</li>
+<li><p><font color="red">Hierarchical description in each part</font>: logical description in each paragragh.</p>
+</li>
+<li><p><font color="red">Expressions of mathematical formulas</font>: unification of superscript and subscript in formula, and refining it during writting.</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/04/29/Few-shot-Setings/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -2130,232 +2380,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/03/09/Semi-MTL-Related/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/09/Semi-MTL-Related/" itemprop="url">Semi-MTL Related</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-09T14:59:07+08:00">
-                2019-03-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">Deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="MTL"><a href="#MTL" class="headerlink" title="MTL"></a>MTL</h2><h3 id="Learning-Methods"><a href="#Learning-Methods" class="headerlink" title="Learning Methods"></a>Learning Methods</h3><ul>
-<li>Supervised</li>
-<li>Semi-supervised</li>
-</ul>
-<h3 id="Scenarios"><a href="#Scenarios" class="headerlink" title="Scenarios"></a>Scenarios</h3><ul>
-<li>Homogeneous</li>
-<li>Heterogeneous<ul>
-<li>Heterogeneous Tasks (Document &amp; Images &amp; Audio)</li>
-<li>Hterogeneous Datsets (Each dataset with a set of labels)</li>
-</ul>
-</li>
-</ul>
-<h3 id="Improvement-Ideas"><a href="#Improvement-Ideas" class="headerlink" title="Improvement Ideas"></a>Improvement Ideas</h3><ul>
-<li>Network Structure</li>
-<li>Feature Selection</li>
-</ul>
-<h3 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h3><ul>
-<li>CV</li>
-<li>NLP</li>
-</ul>
-<p>ALL MTL is the combination of above mentioned.<br>Our method is semi-supervised MTL with heterogeneous datasets, comparison including supervised or semi-supervised MTL with heterogeneous dataset.</p>
-<blockquote>
-<p>reference <a href="https://arxiv.org/pdf/1411.6232.pdf" target="_blank" rel="noopener">Semi-supervised Feature Analysis by Mining Correlations among Multiple Tasks</a></p>
-</blockquote>
-<ul>
-<li>semi-supervised, heterogeneou datasets, feature selection.</li>
-<li>scenario: CV, dataset A for tasks A[labeled and unlabeled], dataset B for tasks B[labeled and unlabeled]</li>
-<li>method: manifold learning, mining feature correlation by sparse coefficients.</li>
-<li>No</li>
-</ul>
-<blockquote>
-<p>reference <a href="https://arxiv.org/pdf/1604.01335.pdf" target="_blank" rel="noopener">Deep Cross Residual Learning for Multitask Visual Recognition</a></p>
-</blockquote>
-<ul>
-<li>supervised, heterogeneou datasets, network structure.</li>
-<li>scenario: CV, dataset A for tasks A[labeled], dataset B for tasks B[labeled]</li>
-<li>method: enables intuitive learning across multiple related tasks using cross-connections called cross-residuals</li>
-<li>Yes? Netowrk realization?</li>
-</ul>
-<blockquote>
-<p>reference <a href="http://www.jmlr.org/papers/volume6/ando05a/ando05a.pdf" target="_blank" rel="noopener">A Framework for Learning Predictive Structures from Multiple Tasks and Unlabeled Data</a></p>
-</blockquote>
-<ul>
-<li>semi-supervised, heterogeneou datasets, network structure.</li>
-<li>scenario: </li>
-<li>method: </li>
-<li>No</li>
-</ul>
-<blockquote>
-<p>reference <a href="https://arxiv.org/pdf/1802.09913.pdf" target="_blank" rel="noopener">Multi-task Learning of Pairwise Sequence Classification Tasks Over Disparate Label Spaces</a></p>
-</blockquote>
-<ul>
-<li>supervised, heterogeneou datasets, network structure.</li>
-<li>scenario: text classification, dataset A for tasks A[labeled], dataset B for tasks B[labeled]</li>
-<li>method: combining multi-task learning and semi- supervised learning by inducing a joint embed- ding space between disparate label spaces and learning transfer functions between label embeddings. LTN can be used to label unlabelled and auxiliary task data by utilising the ‘distilling knowledge’ contained in auxiliary model predictions. not only model their relationship, but also to directly estimate the cor- responding label of the target task based on auxil- iary predictions</li>
-<li>Yes: embedding, prediction, output, temperature=1, embedding can be realized with cross-stich network</li>
-</ul>
-<blockquote>
-<p>reference <a href="http://www.aclweb.org/anthology/D16-1070" target="_blank" rel="noopener">Neural Network for Heterogeneous Annotations</a></p>
-</blockquote>
-<ul>
-<li>supervised, heterogeneou datasets, multi-view &amp; stacking setting</li>
-<li>scenario: NLP, dataset A for tasks A[labeled], dataset B for tasks B[labeled]</li>
-<li>method: multi-view, stacking, neurual network</li>
-<li>Yes: not understand</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2406,7 +2430,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">52</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2428,7 +2452,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
