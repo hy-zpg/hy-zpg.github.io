@@ -1,5 +1,5 @@
+https://www.yanhong.me/2020/11/21/Shadow-Generation/
 https://www.yanhong.me/2020/11/20/Detection/
 https://www.yanhong.me/2020/09/28/Disentangle-GAN/
 https://www.yanhong.me/2020/09/25/Re-identification/
 https://www.yanhong.me/2020/09/22/Network/
-https://www.yanhong.me/2020/09/20/Few-shot-Learning-Baselines/

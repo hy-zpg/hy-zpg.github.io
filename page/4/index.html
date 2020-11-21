@@ -307,6 +307,213 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/05/07/GAN-Metrics/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/07/GAN-Metrics/" itemprop="url">GAN Metrics</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-07T14:23:24+08:00">
+                2019-05-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Generative-Model/" itemprop="url" rel="index">
+                    <span itemprop="name">Generative Model</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Paper <a href="https://arxiv.org/pdf/1806.07755.pdf" target="_blank" rel="noopener">An empirical study on evaluation metrics of generative adversarial networks</a><br>Notes<a href="https://www.jianshu.com/p/fc5526b1fe3b" target="_blank" rel="noopener">gan metrics notes</a></p>
+<p>There are two categories evaluation metric:</p>
+<ol>
+<li>sample-based</li>
+<li>other</li>
+</ol>
+<h3 id="Sample-based-metrics"><a href="#Sample-based-metrics" class="headerlink" title="Sample-based metrics"></a>Sample-based metrics</h3><h4 id="The-Inception-Score"><a href="#The-Inception-Score" class="headerlink" title="The Inception Score"></a>The Inception Score</h4><ul>
+<li>how: inception-v3 trained on Imagenet, the output of softmax, the input is the generated images.</li>
+<li>evaluation:<ul>
+<li>quality: the conditional possibility distriution $p(y | \mathbf{x})$, which is the probability of the vector of softmax layer (1000) and explicitly belong to which category.</li>
+<li>diversity: the marginal possibility distriution $p(y)$, close to uniform distribution, which represents that the number of generated samples in each categoty is comparable.</li>
+</ul>
+</li>
+<li>calculation:<br>\begin{equation}<br>\mathbf{I S}(G)=\exp \left(\mathbb{E}_{\mathbf{x} \sim p_{g}} D_{K L}(p(y | \mathbf{x}) | p(y))\right)<br>\end{equation}</li>
+<li>the larger, the better. quality and diversity.</li>
+</ul>
+<h4 id="The-Mode-Score"><a href="#The-Mode-Score" class="headerlink" title="The Mode Score"></a>The Mode Score</h4><ul>
+<li>how: improvement of The Inception Score, considering the distribution of real images</li>
+<li>evaluation:<ul>
+<li>quality:</li>
+<li>diversity:</li>
+<li>dissimilarity between the real distriution and fake distribution</li>
+</ul>
+</li>
+<li>calcualtion</li>
+<li>the larger, the better. quality and diversity.</li>
+</ul>
+<h4 id="Kernel-MMD"><a href="#Kernel-MMD" class="headerlink" title="Kernel MMD"></a>Kernel MMD</h4><ul>
+<li>how: improved measurement to dissimilarity between the real distriution and fake distribution for some fixed kernel function.</li>
+<li>evaluation: real samples and fake samples, lower MMD means close</li>
+<li>the smaller, the better. quality.</li>
+</ul>
+<h4 id="The-Wasserstein-distance"><a href="#The-Wasserstein-distance" class="headerlink" title="The Wasserstein distance"></a>The Wasserstein distance</h4><ul>
+<li>how: further improved measurement to dissimilarity between the real distriution and fake distribution</li>
+<li>evaluation: real samples and fake samples, lower Wasserstein distance means close</li>
+<li>the smaller, the better. depending on the selection of feature space.</li>
+</ul>
+<h4 id="The-Fréchet-Inception-Distance-FID"><a href="#The-Fréchet-Inception-Distance-FID" class="headerlink" title="The Fréchet Inception Distance (FID)"></a>The Fréchet Inception Distance (FID)</h4><ul>
+<li>how: convulutional network is used to extract feature, modeling the Gaussian random variables with mean value and covariance from real and fake feature space.</li>
+<li>evaluation: measuring the two Gaussian distribution</li>
+<li>the smaller, the better. efficiency.</li>
+</ul>
+<h4 id="The-1-Nearest-Neighbor-classifier"><a href="#The-1-Nearest-Neighbor-classifier" class="headerlink" title="The 1-Nearest Neighbor classifier"></a>The 1-Nearest Neighbor classifier</h4><ul>
+<li>how: assessing the two distriution are identical.</li>
+<li>evaluation: about 50% leave-one-out, the accuracy of generated images</li>
+<li>several measurement index: accuracy, recall ….. ideal evaluation metric</li>
+</ul>
+<h3 id="other-metrics"><a href="#other-metrics" class="headerlink" title="other metrics"></a>other metrics</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/05/04/Paper-Writting/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -2192,194 +2399,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.me/2019/03/18/Manifold-Learning/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/18/Manifold-Learning/" itemprop="url">Manifold Learning</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-18T16:24:56+08:00">
-                2019-03-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">Deep learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Manifold-Leanring-for-Semi-supervised-Learning"><a href="#Manifold-Leanring-for-Semi-supervised-Learning" class="headerlink" title="Manifold Leanring for Semi-supervised Learning"></a>Manifold Leanring for Semi-supervised Learning</h2><ul>
-<li>the model trained with labeled samples and unlabeled samples</li>
-<li>introducing manifold learning to learn the geometry of marginal distribution &gt;reference first paper<a href="http://www.jmlr.org/papers/volume7/belkin06a/belkin06a.pdf" target="_blank" rel="noopener">Manifold Regularization: A Geometric Framework for Learning from Labeled and Unlabeled Examples</a> <ul>
-<li>explanation in Chinese(<a href="https://zhuanlan.zhihu.com/p/33006509" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/33006509</a>)</li>
-<li>aim: data-depend regularization to exploit geometry of the marginal distribution</li>
-</ul>
-</li>
-</ul>
-<h3 id="Manifold-learning"><a href="#Manifold-learning" class="headerlink" title="Manifold learning"></a>Manifold learning</h3><ul>
-<li>non-linear dimensionality reduction method to obtain intrinsic feature &gt;reference PAMI</li>
-</ul>
-<h3 id="Semi-supervised-Learning-with-Manifold-Learning"><a href="#Semi-supervised-Learning-with-Manifold-Learning" class="headerlink" title="Semi-supervised Learning with Manifold Learning"></a>Semi-supervised Learning with Manifold Learning</h3><ul>
-<li>reason: leveraging a few of training samples to train model always fail to reflect the dataset distribution, which means that the trained model only adapt to the supervised label without learning the intrinsic feature. Introducing manifold learning to combine labeled samples and unlabeled samples can exploit the geometr of marginal distribution.</li>
-</ul>
-<h3 id="Semi-supervised-Multi-task-Learning-with-Manifold-Learning"><a href="#Semi-supervised-Multi-task-Learning-with-Manifold-Learning" class="headerlink" title="Semi-supervised Multi-task Learning with Manifold Learning"></a>Semi-supervised Multi-task Learning with Manifold Learning</h3><blockquote>
-<p>reference [Semisupervised feature analysis by mining correlations among multiple tasks]{<a href="https://arxiv.org/pdf/1411.6232.pdf}" target="_blank" rel="noopener">https://arxiv.org/pdf/1411.6232.pdf}</a></p>
-<ul>
-<li>aim: feature selection in semi-supervised MTL</li>
-<li>method: sparce coefficients learnt<br>\begin{aligned}<br>p(x) &amp; = \min_{w<em>t} \sum\</em>(l=1}^t (loss(w_l) + \alpha ||w_l||_{1,2} + \gamma ||w||_{*})<br>\end{aligned}</li>
-</ul>
-</blockquote>
-<p>including $l_{1,2}$ norm and Laplacian norm:</p>
-<p>\begin{aligned}<br>\gamma ||w|| = \min_{w,b}\sum_{l=1}{t}Tr(w^Tx_lL_lx_l^Tw)<br>\end{aligned}</p>
-<blockquote>
-<p>reference [Semi-supervised multitask learning]{<a href="http://papers.nips.cc/paper/3198-semi-supervised-multitask-learning.pdf}" target="_blank" rel="noopener">http://papers.nips.cc/paper/3198-semi-supervised-multitask-learning.pdf}</a></p>
-<p>reference [Semi-supervised multi-task learning with task regularizations]{<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.194.1854&amp;rep=rep1&amp;type=pdf}" target="_blank" rel="noopener">http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.194.1854&amp;rep=rep1&amp;type=pdf}</a></p>
-<p>reference [Semi-supervised multitask learning for scene recognition]{<a href="https://www.researchgate.net/profile/Lichao_Mou/publication/268880603_Semi-Supervised_Multitask_Learning_for_Scene_Recognition/links/567a67f608ae7fea2e9a08f1.pdf}" target="_blank" rel="noopener">https://www.researchgate.net/profile/Lichao_Mou/publication/268880603_Semi-Supervised_Multitask_Learning_for_Scene_Recognition/links/567a67f608ae7fea2e9a08f1.pdf}</a></p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2430,7 +2449,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-count">53</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2452,7 +2471,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">35</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

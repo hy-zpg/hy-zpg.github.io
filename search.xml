@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Shadow Generation]]></title>
+    <url>%2F2020%2F11%2F21%2FShadow-Generation%2F</url>
+    <content type="text"><![CDATA[Shadow DetectionDatasets SBU UCF CUHK-Shadow Revisiting Shadow Detection:A New Benchmark Dataset for Complex World Papers Distraction-aware Shadow Detection Shadow RemovalDatasets LRSS UIUC LRSS ISTD Stacked Conditional Generative Adversarial Networks for Jointly Learning Shadow Detection and Shadow Removal Papers DeshadowNet: A Multi-context Embedding Deep Network for Shadow Removal Stacked Conditional Generative Adversarial Networks for Jointly Learning Shadow Detection and Shadow Removal Mask-ShadowGAN: Learning to Remove Shadows from Unpaired Data Towards Ghost-free Shadow Removal viaDual Hierarchical Aggregation Network and Shadow Matting GAN Shadow Removal via Shadow Image Decomposition ARGAN: Attentive Recurrent Generative Adversarial Network for Shadow Detection and Removal RIS-GAN: Explore Residual and Illumination with Generative Adversarial Networks for Shadow Removal Instance ShadowDatasets SOBA Instance Shadow Detection PapersShadow GenerationDatasets 3D rendering generated ShadowGAN: Shadow synthesis for virtual objects with conditional adversarial networks Papers ShadowGAN: Shadow synthesis for virtual objects with conditional adversarial networks Adversarial Image Composition with Auxiliary Illumination]]></content>
+      <tags>
+        <tag>Shadow</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Abnormal Detection]]></title>
     <url>%2F2020%2F11%2F20%2FDetection%2F</url>
     <content type="text"><![CDATA[Updated Links1 Related General ADUpdated Links2 Related Image AD Definition not a binary classification because of the limited defected images Coarse Categoriesrefer open-set recognition: labeled data (category information) + unknown data unlabeled data: clean (training samples are all positive), polluted(there are a few defected images in training set) Strategy open-set recognition (labeled data): classifier -&gt; (predicted category + confidence, {confidence &lt; threshold} is abnormal sample) unlabeled data: training data (normal samples) + testing data(normal + abnormal) One Class (Anomaly) Classification targetOut-of-Distribution(OOD) Detection targetUnsupervised Anomaly Segmentation targetDefect generation]]></content>
