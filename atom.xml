@@ -5,9 +5,9 @@
   <subtitle>Cheatsheet</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://www.yanhong.me/"/>
+  <link href="https://www.yanhong.website/"/>
   <updated>2020-11-24T04:20:05.841Z</updated>
-  <id>https://www.yanhong.me/</id>
+  <id>https://www.yanhong.website/</id>
   
   <author>
     <name>Hongyan</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Shadow Generation</title>
-    <link href="https://www.yanhong.me/2020/11/21/Shadow-Generation/"/>
-    <id>https://www.yanhong.me/2020/11/21/Shadow-Generation/</id>
+    <link href="https://www.yanhong.website/2020/11/21/Shadow-Generation/"/>
+    <id>https://www.yanhong.website/2020/11/21/Shadow-Generation/</id>
     <published>2020-11-21T03:14:40.000Z</published>
     <updated>2020-11-24T04:20:05.841Z</updated>
     
@@ -35,14 +35,14 @@
     </summary>
     
     
-      <category term="Shadow" scheme="https://www.yanhong.me/tags/Shadow/"/>
+      <category term="Shadow" scheme="https://www.yanhong.website/tags/Shadow/"/>
     
   </entry>
   
   <entry>
     <title>Abnormal Generation for Abnormal Detection</title>
-    <link href="https://www.yanhong.me/2020/11/20/Detection/"/>
-    <id>https://www.yanhong.me/2020/11/20/Detection/</id>
+    <link href="https://www.yanhong.website/2020/11/20/Detection/"/>
+    <id>https://www.yanhong.website/2020/11/20/Detection/</id>
     <published>2020-11-20T01:42:42.000Z</published>
     <updated>2020-11-21T07:06:40.213Z</updated>
     
@@ -58,14 +58,14 @@
     </summary>
     
     
-      <category term="AD" scheme="https://www.yanhong.me/tags/AD/"/>
+      <category term="AD" scheme="https://www.yanhong.website/tags/AD/"/>
     
   </entry>
   
   <entry>
     <title>Disentangle_GAN</title>
-    <link href="https://www.yanhong.me/2020/09/28/Disentangle-GAN/"/>
-    <id>https://www.yanhong.me/2020/09/28/Disentangle-GAN/</id>
+    <link href="https://www.yanhong.website/2020/09/28/Disentangle-GAN/"/>
+    <id>https://www.yanhong.website/2020/09/28/Disentangle-GAN/</id>
     <published>2020-09-28T01:06:26.000Z</published>
     <updated>2020-09-28T02:27:34.000Z</updated>
     
@@ -80,17 +80,17 @@
     
     </summary>
     
-      <category term="Generative Model" scheme="https://www.yanhong.me/categories/Generative-Model/"/>
+      <category term="Generative Model" scheme="https://www.yanhong.website/categories/Generative-Model/"/>
     
     
-      <category term="disentangle" scheme="https://www.yanhong.me/tags/disentangle/"/>
+      <category term="disentangle" scheme="https://www.yanhong.website/tags/disentangle/"/>
     
   </entry>
   
   <entry>
     <title>video-based Re-identification</title>
-    <link href="https://www.yanhong.me/2020/09/25/Re-identification/"/>
-    <id>https://www.yanhong.me/2020/09/25/Re-identification/</id>
+    <link href="https://www.yanhong.website/2020/09/25/Re-identification/"/>
+    <id>https://www.yanhong.website/2020/09/25/Re-identification/</id>
     <published>2020-09-25T07:20:06.000Z</published>
     <updated>2020-10-07T07:46:56.017Z</updated>
     
@@ -105,17 +105,17 @@
     
     </summary>
     
-      <category term="Person Re-identification" scheme="https://www.yanhong.me/categories/Person-Re-identification/"/>
+      <category term="Person Re-identification" scheme="https://www.yanhong.website/categories/Person-Re-identification/"/>
     
     
-      <category term="video reid" scheme="https://www.yanhong.me/tags/video-reid/"/>
+      <category term="video reid" scheme="https://www.yanhong.website/tags/video-reid/"/>
     
   </entry>
   
   <entry>
     <title>Incremental/Real-time Generative Adversarial Network</title>
-    <link href="https://www.yanhong.me/2020/09/22/Network/"/>
-    <id>https://www.yanhong.me/2020/09/22/Network/</id>
+    <link href="https://www.yanhong.website/2020/09/22/Network/"/>
+    <id>https://www.yanhong.website/2020/09/22/Network/</id>
     <published>2020-09-22T03:03:10.000Z</published>
     <updated>2020-09-22T06:15:46.006Z</updated>
     
@@ -131,17 +131,17 @@
     
     </summary>
     
-      <category term="Few-shot Generation" scheme="https://www.yanhong.me/categories/Few-shot-Generation/"/>
+      <category term="Few-shot Generation" scheme="https://www.yanhong.website/categories/Few-shot-Generation/"/>
     
     
-      <category term="Incremental/Real-time" scheme="https://www.yanhong.me/tags/Incremental-Real-time/"/>
+      <category term="Incremental/Real-time" scheme="https://www.yanhong.website/tags/Incremental-Real-time/"/>
     
   </entry>
   
   <entry>
     <title>Few-shot Learning Baselines</title>
-    <link href="https://www.yanhong.me/2020/09/20/Few-shot-Learning-Baselines/"/>
-    <id>https://www.yanhong.me/2020/09/20/Few-shot-Learning-Baselines/</id>
+    <link href="https://www.yanhong.website/2020/09/20/Few-shot-Learning-Baselines/"/>
+    <id>https://www.yanhong.website/2020/09/20/Few-shot-Learning-Baselines/</id>
     <published>2020-09-20T09:37:27.000Z</published>
     <updated>2020-09-22T13:34:30.698Z</updated>
     
@@ -156,17 +156,17 @@
     
     </summary>
     
-      <category term="Meta-learning" scheme="https://www.yanhong.me/categories/Meta-learning/"/>
+      <category term="Meta-learning" scheme="https://www.yanhong.website/categories/Meta-learning/"/>
     
     
-      <category term="few-shot learning" scheme="https://www.yanhong.me/tags/few-shot-learning/"/>
+      <category term="few-shot learning" scheme="https://www.yanhong.website/tags/few-shot-learning/"/>
     
   </entry>
   
   <entry>
     <title>Normalization in Deep Learning</title>
-    <link href="https://www.yanhong.me/2020/09/08/Learning/"/>
-    <id>https://www.yanhong.me/2020/09/08/Learning/</id>
+    <link href="https://www.yanhong.website/2020/09/08/Learning/"/>
+    <id>https://www.yanhong.website/2020/09/08/Learning/</id>
     <published>2020-09-08T01:30:39.000Z</published>
     <updated>2020-09-08T03:09:41.096Z</updated>
     
@@ -182,17 +182,17 @@
     
     </summary>
     
-      <category term="Deep learning" scheme="https://www.yanhong.me/categories/Deep-learning/"/>
+      <category term="Deep learning" scheme="https://www.yanhong.website/categories/Deep-learning/"/>
     
     
-      <category term="normalization" scheme="https://www.yanhong.me/tags/normalization/"/>
+      <category term="normalization" scheme="https://www.yanhong.website/tags/normalization/"/>
     
   </entry>
   
   <entry>
     <title>Fewshot Feature Generation</title>
-    <link href="https://www.yanhong.me/2020/09/01/Fewshot-Feature-Generation/"/>
-    <id>https://www.yanhong.me/2020/09/01/Fewshot-Feature-Generation/</id>
+    <link href="https://www.yanhong.website/2020/09/01/Fewshot-Feature-Generation/"/>
+    <id>https://www.yanhong.website/2020/09/01/Fewshot-Feature-Generation/</id>
     <published>2020-09-01T00:50:54.000Z</published>
     <updated>2020-09-01T07:14:47.558Z</updated>
     
@@ -208,17 +208,17 @@
     
     </summary>
     
-      <category term="FewShot" scheme="https://www.yanhong.me/categories/FewShot/"/>
+      <category term="FewShot" scheme="https://www.yanhong.website/categories/FewShot/"/>
     
     
-      <category term="delta_related" scheme="https://www.yanhong.me/tags/delta-related/"/>
+      <category term="delta_related" scheme="https://www.yanhong.website/tags/delta-related/"/>
     
   </entry>
   
   <entry>
     <title>Few-shot Image Translation/Generation Baselines</title>
-    <link href="https://www.yanhong.me/2020/07/01/Translation-Generation/"/>
-    <id>https://www.yanhong.me/2020/07/01/Translation-Generation/</id>
+    <link href="https://www.yanhong.website/2020/07/01/Translation-Generation/"/>
+    <id>https://www.yanhong.website/2020/07/01/Translation-Generation/</id>
     <published>2020-07-01T06:35:53.000Z</published>
     <updated>2020-07-01T07:35:27.453Z</updated>
     
@@ -233,17 +233,17 @@
     
     </summary>
     
-      <category term="Baselines" scheme="https://www.yanhong.me/categories/Baselines/"/>
+      <category term="Baselines" scheme="https://www.yanhong.website/categories/Baselines/"/>
     
     
-      <category term="image generation/translation" scheme="https://www.yanhong.me/tags/image-generation-translation/"/>
+      <category term="image generation/translation" scheme="https://www.yanhong.website/tags/image-generation-translation/"/>
     
   </entry>
   
   <entry>
     <title>2020CVPR Paper Reading</title>
-    <link href="https://www.yanhong.me/2020/06/11/2020CVPR-Paper-Reading/"/>
-    <id>https://www.yanhong.me/2020/06/11/2020CVPR-Paper-Reading/</id>
+    <link href="https://www.yanhong.website/2020/06/11/2020CVPR-Paper-Reading/"/>
+    <id>https://www.yanhong.website/2020/06/11/2020CVPR-Paper-Reading/</id>
     <published>2020-06-11T08:41:06.000Z</published>
     <updated>2020-06-13T08:27:07.988Z</updated>
     
@@ -259,17 +259,17 @@
     
     </summary>
     
-      <category term="Generation" scheme="https://www.yanhong.me/categories/Generation/"/>
+      <category term="Generation" scheme="https://www.yanhong.website/categories/Generation/"/>
     
     
-      <category term="survey" scheme="https://www.yanhong.me/tags/survey/"/>
+      <category term="survey" scheme="https://www.yanhong.website/tags/survey/"/>
     
   </entry>
   
   <entry>
     <title>Geometry-aware Generation</title>
-    <link href="https://www.yanhong.me/2020/06/08/Geometry-aware-Generation/"/>
-    <id>https://www.yanhong.me/2020/06/08/Geometry-aware-Generation/</id>
+    <link href="https://www.yanhong.website/2020/06/08/Geometry-aware-Generation/"/>
+    <id>https://www.yanhong.website/2020/06/08/Geometry-aware-Generation/</id>
     <published>2020-06-08T11:44:22.000Z</published>
     <updated>2020-06-09T11:06:50.667Z</updated>
     
@@ -284,17 +284,17 @@
     
     </summary>
     
-      <category term="Survey" scheme="https://www.yanhong.me/categories/Survey/"/>
+      <category term="Survey" scheme="https://www.yanhong.website/categories/Survey/"/>
     
     
-      <category term="image generation" scheme="https://www.yanhong.me/tags/image-generation/"/>
+      <category term="image generation" scheme="https://www.yanhong.website/tags/image-generation/"/>
     
   </entry>
   
   <entry>
     <title>From Image Generation to Fewshot Image Generation</title>
-    <link href="https://www.yanhong.me/2020/06/08/From-Generation-to-Fewshot-Generation/"/>
-    <id>https://www.yanhong.me/2020/06/08/From-Generation-to-Fewshot-Generation/</id>
+    <link href="https://www.yanhong.website/2020/06/08/From-Generation-to-Fewshot-Generation/"/>
+    <id>https://www.yanhong.website/2020/06/08/From-Generation-to-Fewshot-Generation/</id>
     <published>2020-06-08T02:27:58.000Z</published>
     <updated>2020-06-10T01:31:26.823Z</updated>
     
@@ -309,17 +309,17 @@
     
     </summary>
     
-      <category term="Survey" scheme="https://www.yanhong.me/categories/Survey/"/>
+      <category term="Survey" scheme="https://www.yanhong.website/categories/Survey/"/>
     
     
-      <category term="image generation" scheme="https://www.yanhong.me/tags/image-generation/"/>
+      <category term="image generation" scheme="https://www.yanhong.website/tags/image-generation/"/>
     
   </entry>
   
   <entry>
     <title>Style Translation Framework</title>
-    <link href="https://www.yanhong.me/2020/03/24/Style-Translation-Framework/"/>
-    <id>https://www.yanhong.me/2020/03/24/Style-Translation-Framework/</id>
+    <link href="https://www.yanhong.website/2020/03/24/Style-Translation-Framework/"/>
+    <id>https://www.yanhong.website/2020/03/24/Style-Translation-Framework/</id>
     <published>2020-03-24T02:53:06.000Z</published>
     <updated>2020-03-24T07:46:48.800Z</updated>
     
@@ -334,17 +334,17 @@
     
     </summary>
     
-      <category term="Translation" scheme="https://www.yanhong.me/categories/Translation/"/>
+      <category term="Translation" scheme="https://www.yanhong.website/categories/Translation/"/>
     
     
-      <category term="style translation" scheme="https://www.yanhong.me/tags/style-translation/"/>
+      <category term="style translation" scheme="https://www.yanhong.website/tags/style-translation/"/>
     
   </entry>
   
   <entry>
     <title>fewshot-classifier-baselines</title>
-    <link href="https://www.yanhong.me/2020/01/17/fewshot-classifier-baselines/"/>
-    <id>https://www.yanhong.me/2020/01/17/fewshot-classifier-baselines/</id>
+    <link href="https://www.yanhong.website/2020/01/17/fewshot-classifier-baselines/"/>
+    <id>https://www.yanhong.website/2020/01/17/fewshot-classifier-baselines/</id>
     <published>2020-01-17T06:22:46.000Z</published>
     <updated>2020-01-17T06:27:42.149Z</updated>
     
@@ -359,17 +359,17 @@
     
     </summary>
     
-      <category term="Baselines" scheme="https://www.yanhong.me/categories/Baselines/"/>
+      <category term="Baselines" scheme="https://www.yanhong.website/categories/Baselines/"/>
     
     
-      <category term="few-shot classification" scheme="https://www.yanhong.me/tags/few-shot-classification/"/>
+      <category term="few-shot classification" scheme="https://www.yanhong.website/tags/few-shot-classification/"/>
     
   </entry>
   
   <entry>
     <title>Diversity tricks</title>
-    <link href="https://www.yanhong.me/2020/01/05/Diversity-tricks/"/>
-    <id>https://www.yanhong.me/2020/01/05/Diversity-tricks/</id>
+    <link href="https://www.yanhong.website/2020/01/05/Diversity-tricks/"/>
+    <id>https://www.yanhong.website/2020/01/05/Diversity-tricks/</id>
     <published>2020-01-05T01:47:16.000Z</published>
     <updated>2020-01-05T01:50:28.710Z</updated>
     
@@ -384,17 +384,17 @@
     
     </summary>
     
-      <category term="Generative Model" scheme="https://www.yanhong.me/categories/Generative-Model/"/>
+      <category term="Generative Model" scheme="https://www.yanhong.website/categories/Generative-Model/"/>
     
     
-      <category term="generation diversity" scheme="https://www.yanhong.me/tags/generation-diversity/"/>
+      <category term="generation diversity" scheme="https://www.yanhong.website/tags/generation-diversity/"/>
     
   </entry>
   
   <entry>
     <title>Attention-Related</title>
-    <link href="https://www.yanhong.me/2019/12/19/Attention-Related/"/>
-    <id>https://www.yanhong.me/2019/12/19/Attention-Related/</id>
+    <link href="https://www.yanhong.website/2019/12/19/Attention-Related/"/>
+    <id>https://www.yanhong.website/2019/12/19/Attention-Related/</id>
     <published>2019-12-19T05:51:53.000Z</published>
     <updated>2019-12-19T06:31:31.323Z</updated>
     
@@ -411,17 +411,17 @@
     
     </summary>
     
-      <category term="Attention" scheme="https://www.yanhong.me/categories/Attention/"/>
+      <category term="Attention" scheme="https://www.yanhong.website/categories/Attention/"/>
     
     
-      <category term="attention" scheme="https://www.yanhong.me/tags/attention/"/>
+      <category term="attention" scheme="https://www.yanhong.website/tags/attention/"/>
     
   </entry>
   
   <entry>
     <title>ICCV-Paper-Reading</title>
-    <link href="https://www.yanhong.me/2019/10/31/ICCV-Paper-Reading/"/>
-    <id>https://www.yanhong.me/2019/10/31/ICCV-Paper-Reading/</id>
+    <link href="https://www.yanhong.website/2019/10/31/ICCV-Paper-Reading/"/>
+    <id>https://www.yanhong.website/2019/10/31/ICCV-Paper-Reading/</id>
     <published>2019-10-31T06:03:49.000Z</published>
     <updated>2019-12-23T01:45:19.993Z</updated>
     
@@ -436,17 +436,17 @@
     
     </summary>
     
-      <category term="Generative" scheme="https://www.yanhong.me/categories/Generative/"/>
+      <category term="Generative" scheme="https://www.yanhong.website/categories/Generative/"/>
     
     
-      <category term="image generation" scheme="https://www.yanhong.me/tags/image-generation/"/>
+      <category term="image generation" scheme="https://www.yanhong.website/tags/image-generation/"/>
     
   </entry>
   
   <entry>
     <title>Variations of GAN</title>
-    <link href="https://www.yanhong.me/2019/09/19/Variations-of-GAN/"/>
-    <id>https://www.yanhong.me/2019/09/19/Variations-of-GAN/</id>
+    <link href="https://www.yanhong.website/2019/09/19/Variations-of-GAN/"/>
+    <id>https://www.yanhong.website/2019/09/19/Variations-of-GAN/</id>
     <published>2019-09-19T02:47:18.000Z</published>
     <updated>2019-10-18T03:12:27.810Z</updated>
     
@@ -461,17 +461,17 @@
     
     </summary>
     
-      <category term="Generative Model" scheme="https://www.yanhong.me/categories/Generative-Model/"/>
+      <category term="Generative Model" scheme="https://www.yanhong.website/categories/Generative-Model/"/>
     
     
-      <category term="variation" scheme="https://www.yanhong.me/tags/variation/"/>
+      <category term="variation" scheme="https://www.yanhong.website/tags/variation/"/>
     
   </entry>
   
   <entry>
     <title>Loss for VAE-GAN</title>
-    <link href="https://www.yanhong.me/2019/09/05/Loss-for-VAE-GAN/"/>
-    <id>https://www.yanhong.me/2019/09/05/Loss-for-VAE-GAN/</id>
+    <link href="https://www.yanhong.website/2019/09/05/Loss-for-VAE-GAN/"/>
+    <id>https://www.yanhong.website/2019/09/05/Loss-for-VAE-GAN/</id>
     <published>2019-09-05T07:17:15.000Z</published>
     <updated>2019-09-07T01:40:42.857Z</updated>
     
@@ -486,17 +486,17 @@
     
     </summary>
     
-      <category term="Generative Model" scheme="https://www.yanhong.me/categories/Generative-Model/"/>
+      <category term="Generative Model" scheme="https://www.yanhong.website/categories/Generative-Model/"/>
     
     
-      <category term="design of loss" scheme="https://www.yanhong.me/tags/design-of-loss/"/>
+      <category term="design of loss" scheme="https://www.yanhong.website/tags/design-of-loss/"/>
     
   </entry>
   
   <entry>
     <title>Learning without Forgetting</title>
-    <link href="https://www.yanhong.me/2019/08/16/Learning-without-Forgetting/"/>
-    <id>https://www.yanhong.me/2019/08/16/Learning-without-Forgetting/</id>
+    <link href="https://www.yanhong.website/2019/08/16/Learning-without-Forgetting/"/>
+    <id>https://www.yanhong.website/2019/08/16/Learning-without-Forgetting/</id>
     <published>2019-08-16T07:17:39.000Z</published>
     <updated>2019-08-19T01:06:22.494Z</updated>
     
@@ -511,17 +511,17 @@
     
     </summary>
     
-      <category term="Deep learning" scheme="https://www.yanhong.me/categories/Deep-learning/"/>
+      <category term="Deep learning" scheme="https://www.yanhong.website/categories/Deep-learning/"/>
     
     
-      <category term="multitask" scheme="https://www.yanhong.me/tags/multitask/"/>
+      <category term="multitask" scheme="https://www.yanhong.website/tags/multitask/"/>
     
   </entry>
   
   <entry>
     <title>MTL related Papers</title>
-    <link href="https://www.yanhong.me/2019/07/23/MTL-related-Papers/"/>
-    <id>https://www.yanhong.me/2019/07/23/MTL-related-Papers/</id>
+    <link href="https://www.yanhong.website/2019/07/23/MTL-related-Papers/"/>
+    <id>https://www.yanhong.website/2019/07/23/MTL-related-Papers/</id>
     <published>2019-07-23T11:28:03.000Z</published>
     <updated>2019-07-23T14:07:13.920Z</updated>
     
@@ -536,17 +536,17 @@
     
     </summary>
     
-      <category term="Deep learning" scheme="https://www.yanhong.me/categories/Deep-learning/"/>
+      <category term="Deep learning" scheme="https://www.yanhong.website/categories/Deep-learning/"/>
     
     
-      <category term="multitask" scheme="https://www.yanhong.me/tags/multitask/"/>
+      <category term="multitask" scheme="https://www.yanhong.website/tags/multitask/"/>
     
   </entry>
   
   <entry>
     <title>Papers related Few-shot Image Generation</title>
-    <link href="https://www.yanhong.me/2019/07/15/Paper-related-Image-Generation/"/>
-    <id>https://www.yanhong.me/2019/07/15/Paper-related-Image-Generation/</id>
+    <link href="https://www.yanhong.website/2019/07/15/Paper-related-Image-Generation/"/>
+    <id>https://www.yanhong.website/2019/07/15/Paper-related-Image-Generation/</id>
     <published>2019-07-15T05:38:29.000Z</published>
     <updated>2019-07-16T01:05:03.560Z</updated>
     
@@ -561,17 +561,17 @@
     
     </summary>
     
-      <category term="Few-shot learning" scheme="https://www.yanhong.me/categories/Few-shot-learning/"/>
+      <category term="Few-shot learning" scheme="https://www.yanhong.website/categories/Few-shot-learning/"/>
     
     
-      <category term="few-shot image generation" scheme="https://www.yanhong.me/tags/few-shot-image-generation/"/>
+      <category term="few-shot image generation" scheme="https://www.yanhong.website/tags/few-shot-image-generation/"/>
     
   </entry>
   
   <entry>
     <title>Combination between GAN and VAE</title>
-    <link href="https://www.yanhong.me/2019/07/09/Combination-between-GAN-and-VAE/"/>
-    <id>https://www.yanhong.me/2019/07/09/Combination-between-GAN-and-VAE/</id>
+    <link href="https://www.yanhong.website/2019/07/09/Combination-between-GAN-and-VAE/"/>
+    <id>https://www.yanhong.website/2019/07/09/Combination-between-GAN-and-VAE/</id>
     <published>2019-07-09T02:34:44.000Z</published>
     <updated>2019-07-10T09:16:49.032Z</updated>
     
@@ -587,17 +587,17 @@
     
     </summary>
     
-      <category term="Generative Model" scheme="https://www.yanhong.me/categories/Generative-Model/"/>
+      <category term="Generative Model" scheme="https://www.yanhong.website/categories/Generative-Model/"/>
     
     
-      <category term="GAN and VAE" scheme="https://www.yanhong.me/tags/GAN-and-VAE/"/>
+      <category term="GAN and VAE" scheme="https://www.yanhong.website/tags/GAN-and-VAE/"/>
     
   </entry>
   
   <entry>
     <title>CVAE-GAN</title>
-    <link href="https://www.yanhong.me/2019/07/01/CVAE-GAN/"/>
-    <id>https://www.yanhong.me/2019/07/01/CVAE-GAN/</id>
+    <link href="https://www.yanhong.website/2019/07/01/CVAE-GAN/"/>
+    <id>https://www.yanhong.website/2019/07/01/CVAE-GAN/</id>
     <published>2019-07-01T03:30:07.000Z</published>
     <updated>2019-07-09T02:34:00.740Z</updated>
     
@@ -613,17 +613,17 @@
     
     </summary>
     
-      <category term="Generative Model" scheme="https://www.yanhong.me/categories/Generative-Model/"/>
+      <category term="Generative Model" scheme="https://www.yanhong.website/categories/Generative-Model/"/>
     
     
-      <category term="combination" scheme="https://www.yanhong.me/tags/combination/"/>
+      <category term="combination" scheme="https://www.yanhong.website/tags/combination/"/>
     
   </entry>
   
   <entry>
     <title>Paper Reading Related GAN</title>
-    <link href="https://www.yanhong.me/2019/06/19/Simialr-to-DAGAN/"/>
-    <id>https://www.yanhong.me/2019/06/19/Simialr-to-DAGAN/</id>
+    <link href="https://www.yanhong.website/2019/06/19/Simialr-to-DAGAN/"/>
+    <id>https://www.yanhong.website/2019/06/19/Simialr-to-DAGAN/</id>
     <published>2019-06-19T01:03:25.000Z</published>
     <updated>2019-12-23T02:58:28.152Z</updated>
     
@@ -638,17 +638,17 @@
     
     </summary>
     
-      <category term="Generative Model" scheme="https://www.yanhong.me/categories/Generative-Model/"/>
+      <category term="Generative Model" scheme="https://www.yanhong.website/categories/Generative-Model/"/>
     
     
-      <category term="GAN" scheme="https://www.yanhong.me/tags/GAN/"/>
+      <category term="GAN" scheme="https://www.yanhong.website/tags/GAN/"/>
     
   </entry>
   
   <entry>
     <title>Pedestrain Datasets</title>
-    <link href="https://www.yanhong.me/2019/06/14/Pedestrain-Datasets/"/>
-    <id>https://www.yanhong.me/2019/06/14/Pedestrain-Datasets/</id>
+    <link href="https://www.yanhong.website/2019/06/14/Pedestrain-Datasets/"/>
+    <id>https://www.yanhong.website/2019/06/14/Pedestrain-Datasets/</id>
     <published>2019-06-14T01:38:51.000Z</published>
     <updated>2019-06-16T03:50:47.883Z</updated>
     
@@ -663,17 +663,17 @@
     
     </summary>
     
-      <category term="Human Attributes" scheme="https://www.yanhong.me/categories/Human-Attributes/"/>
+      <category term="Human Attributes" scheme="https://www.yanhong.website/categories/Human-Attributes/"/>
     
     
-      <category term="datasets" scheme="https://www.yanhong.me/tags/datasets/"/>
+      <category term="datasets" scheme="https://www.yanhong.website/tags/datasets/"/>
     
   </entry>
   
   <entry>
     <title>Variations of U-Net</title>
-    <link href="https://www.yanhong.me/2019/06/10/U-Net/"/>
-    <id>https://www.yanhong.me/2019/06/10/U-Net/</id>
+    <link href="https://www.yanhong.website/2019/06/10/U-Net/"/>
+    <id>https://www.yanhong.website/2019/06/10/U-Net/</id>
     <published>2019-06-10T06:56:57.000Z</published>
     <updated>2019-09-19T03:05:40.127Z</updated>
     
@@ -689,17 +689,17 @@
     
     </summary>
     
-      <category term="Generative Network" scheme="https://www.yanhong.me/categories/Generative-Network/"/>
+      <category term="Generative Network" scheme="https://www.yanhong.website/categories/Generative-Network/"/>
     
     
-      <category term="variation" scheme="https://www.yanhong.me/tags/variation/"/>
+      <category term="variation" scheme="https://www.yanhong.website/tags/variation/"/>
     
   </entry>
   
   <entry>
     <title>Interpolation in Latent Space</title>
-    <link href="https://www.yanhong.me/2019/06/05/Interpolation-in-Latent-Space/"/>
-    <id>https://www.yanhong.me/2019/06/05/Interpolation-in-Latent-Space/</id>
+    <link href="https://www.yanhong.website/2019/06/05/Interpolation-in-Latent-Space/"/>
+    <id>https://www.yanhong.website/2019/06/05/Interpolation-in-Latent-Space/</id>
     <published>2019-06-05T06:13:03.000Z</published>
     <updated>2019-06-05T06:17:38.919Z</updated>
     
@@ -714,17 +714,17 @@
     
     </summary>
     
-      <category term="Generative Model" scheme="https://www.yanhong.me/categories/Generative-Model/"/>
+      <category term="Generative Model" scheme="https://www.yanhong.website/categories/Generative-Model/"/>
     
     
-      <category term="interpolation" scheme="https://www.yanhong.me/tags/interpolation/"/>
+      <category term="interpolation" scheme="https://www.yanhong.website/tags/interpolation/"/>
     
   </entry>
   
   <entry>
     <title>Normalization_for_Input_of_GAN</title>
-    <link href="https://www.yanhong.me/2019/05/27/Normalization-for-Input-of-GAN/"/>
-    <id>https://www.yanhong.me/2019/05/27/Normalization-for-Input-of-GAN/</id>
+    <link href="https://www.yanhong.website/2019/05/27/Normalization-for-Input-of-GAN/"/>
+    <id>https://www.yanhong.website/2019/05/27/Normalization-for-Input-of-GAN/</id>
     <published>2019-05-27T08:05:16.000Z</published>
     <updated>2019-05-27T08:15:19.690Z</updated>
     
@@ -739,17 +739,17 @@
     
     </summary>
     
-      <category term="GAN" scheme="https://www.yanhong.me/categories/GAN/"/>
+      <category term="GAN" scheme="https://www.yanhong.website/categories/GAN/"/>
     
     
-      <category term="data preprocess" scheme="https://www.yanhong.me/tags/data-preprocess/"/>
+      <category term="data preprocess" scheme="https://www.yanhong.website/tags/data-preprocess/"/>
     
   </entry>
   
   <entry>
     <title>Related Work about Few-shot Image Generation</title>
-    <link href="https://www.yanhong.me/2019/05/21/Related-Work-about-Few-shot-Image-Generation/"/>
-    <id>https://www.yanhong.me/2019/05/21/Related-Work-about-Few-shot-Image-Generation/</id>
+    <link href="https://www.yanhong.website/2019/05/21/Related-Work-about-Few-shot-Image-Generation/"/>
+    <id>https://www.yanhong.website/2019/05/21/Related-Work-about-Few-shot-Image-Generation/</id>
     <published>2019-05-21T00:58:12.000Z</published>
     <updated>2019-05-21T00:58:12.605Z</updated>
     
@@ -762,8 +762,8 @@
   
   <entry>
     <title>GAN Metrics</title>
-    <link href="https://www.yanhong.me/2019/05/07/GAN-Metrics/"/>
-    <id>https://www.yanhong.me/2019/05/07/GAN-Metrics/</id>
+    <link href="https://www.yanhong.website/2019/05/07/GAN-Metrics/"/>
+    <id>https://www.yanhong.website/2019/05/07/GAN-Metrics/</id>
     <published>2019-05-07T06:23:24.000Z</published>
     <updated>2019-05-07T08:26:11.802Z</updated>
     
@@ -778,17 +778,17 @@
     
     </summary>
     
-      <category term="Generative Model" scheme="https://www.yanhong.me/categories/Generative-Model/"/>
+      <category term="Generative Model" scheme="https://www.yanhong.website/categories/Generative-Model/"/>
     
     
-      <category term="evaluation" scheme="https://www.yanhong.me/tags/evaluation/"/>
+      <category term="evaluation" scheme="https://www.yanhong.website/tags/evaluation/"/>
     
   </entry>
   
   <entry>
     <title>Paper Writting</title>
-    <link href="https://www.yanhong.me/2019/05/04/Paper-Writting/"/>
-    <id>https://www.yanhong.me/2019/05/04/Paper-Writting/</id>
+    <link href="https://www.yanhong.website/2019/05/04/Paper-Writting/"/>
+    <id>https://www.yanhong.website/2019/05/04/Paper-Writting/</id>
     <published>2019-05-04T01:14:19.000Z</published>
     <updated>2019-05-04T02:51:06.550Z</updated>
     
@@ -803,17 +803,17 @@
     
     </summary>
     
-      <category term="Writting" scheme="https://www.yanhong.me/categories/Writting/"/>
+      <category term="Writting" scheme="https://www.yanhong.website/categories/Writting/"/>
     
     
-      <category term="experience" scheme="https://www.yanhong.me/tags/experience/"/>
+      <category term="experience" scheme="https://www.yanhong.website/tags/experience/"/>
     
   </entry>
   
   <entry>
     <title>Few-shot Settings</title>
-    <link href="https://www.yanhong.me/2019/04/29/Few-shot-Setings/"/>
-    <id>https://www.yanhong.me/2019/04/29/Few-shot-Setings/</id>
+    <link href="https://www.yanhong.website/2019/04/29/Few-shot-Setings/"/>
+    <id>https://www.yanhong.website/2019/04/29/Few-shot-Setings/</id>
     <published>2019-04-29T05:42:29.000Z</published>
     <updated>2019-05-07T06:22:49.817Z</updated>
     
@@ -829,17 +829,17 @@
     
     </summary>
     
-      <category term="Setting" scheme="https://www.yanhong.me/categories/Setting/"/>
+      <category term="Setting" scheme="https://www.yanhong.website/categories/Setting/"/>
     
     
-      <category term="few-shot generation" scheme="https://www.yanhong.me/tags/few-shot-generation/"/>
+      <category term="few-shot generation" scheme="https://www.yanhong.website/tags/few-shot-generation/"/>
     
   </entry>
   
   <entry>
     <title>Few-shot Datasets</title>
-    <link href="https://www.yanhong.me/2019/04/28/Few-shot-Datasets/"/>
-    <id>https://www.yanhong.me/2019/04/28/Few-shot-Datasets/</id>
+    <link href="https://www.yanhong.website/2019/04/28/Few-shot-Datasets/"/>
+    <id>https://www.yanhong.website/2019/04/28/Few-shot-Datasets/</id>
     <published>2019-04-28T15:32:34.000Z</published>
     <updated>2019-04-28T16:10:56.543Z</updated>
     
@@ -854,17 +854,17 @@
     
     </summary>
     
-      <category term="Datasets" scheme="https://www.yanhong.me/categories/Datasets/"/>
+      <category term="Datasets" scheme="https://www.yanhong.website/categories/Datasets/"/>
     
     
-      <category term="few-shot learning" scheme="https://www.yanhong.me/tags/few-shot-learning/"/>
+      <category term="few-shot learning" scheme="https://www.yanhong.website/tags/few-shot-learning/"/>
     
   </entry>
   
   <entry>
     <title>VAE-GAN</title>
-    <link href="https://www.yanhong.me/2019/04/24/VAE-GAN/"/>
-    <id>https://www.yanhong.me/2019/04/24/VAE-GAN/</id>
+    <link href="https://www.yanhong.website/2019/04/24/VAE-GAN/"/>
+    <id>https://www.yanhong.website/2019/04/24/VAE-GAN/</id>
     <published>2019-04-24T02:44:42.000Z</published>
     <updated>2019-04-24T02:44:42.968Z</updated>
     
@@ -877,8 +877,8 @@
   
   <entry>
     <title>Comparion between VAE and GAN</title>
-    <link href="https://www.yanhong.me/2019/04/23/Comparion-between-VAE-and-GAN/"/>
-    <id>https://www.yanhong.me/2019/04/23/Comparion-between-VAE-and-GAN/</id>
+    <link href="https://www.yanhong.website/2019/04/23/Comparion-between-VAE-and-GAN/"/>
+    <id>https://www.yanhong.website/2019/04/23/Comparion-between-VAE-and-GAN/</id>
     <published>2019-04-23T03:01:57.000Z</published>
     <updated>2019-04-25T01:41:16.447Z</updated>
     
@@ -894,17 +894,17 @@
     
     </summary>
     
-      <category term="Generative Model" scheme="https://www.yanhong.me/categories/Generative-Model/"/>
+      <category term="Generative Model" scheme="https://www.yanhong.website/categories/Generative-Model/"/>
     
     
-      <category term="comparison" scheme="https://www.yanhong.me/tags/comparison/"/>
+      <category term="comparison" scheme="https://www.yanhong.website/tags/comparison/"/>
     
   </entry>
   
   <entry>
     <title>Generative Matching Networks</title>
-    <link href="https://www.yanhong.me/2019/04/22/Generative-Matching-Networks/"/>
-    <id>https://www.yanhong.me/2019/04/22/Generative-Matching-Networks/</id>
+    <link href="https://www.yanhong.website/2019/04/22/Generative-Matching-Networks/"/>
+    <id>https://www.yanhong.website/2019/04/22/Generative-Matching-Networks/</id>
     <published>2019-04-22T02:02:57.000Z</published>
     <updated>2019-05-12T08:41:11.642Z</updated>
     
@@ -919,17 +919,17 @@
     
     </summary>
     
-      <category term="Generative Model" scheme="https://www.yanhong.me/categories/Generative-Model/"/>
+      <category term="Generative Model" scheme="https://www.yanhong.website/categories/Generative-Model/"/>
     
     
-      <category term="few-shot generation" scheme="https://www.yanhong.me/tags/few-shot-generation/"/>
+      <category term="few-shot generation" scheme="https://www.yanhong.website/tags/few-shot-generation/"/>
     
   </entry>
   
   <entry>
     <title>Meta Learning</title>
-    <link href="https://www.yanhong.me/2019/04/18/meta-learning/"/>
-    <id>https://www.yanhong.me/2019/04/18/meta-learning/</id>
+    <link href="https://www.yanhong.website/2019/04/18/meta-learning/"/>
+    <id>https://www.yanhong.website/2019/04/18/meta-learning/</id>
     <published>2019-04-18T05:47:45.000Z</published>
     <updated>2019-04-18T05:50:06.603Z</updated>
     
@@ -942,8 +942,8 @@
   
   <entry>
     <title>Overview of Generative Models</title>
-    <link href="https://www.yanhong.me/2019/04/09/Overview-of-GAN/"/>
-    <id>https://www.yanhong.me/2019/04/09/Overview-of-GAN/</id>
+    <link href="https://www.yanhong.website/2019/04/09/Overview-of-GAN/"/>
+    <id>https://www.yanhong.website/2019/04/09/Overview-of-GAN/</id>
     <published>2019-04-09T10:31:46.000Z</published>
     <updated>2019-04-25T01:36:33.309Z</updated>
     
@@ -959,17 +959,17 @@
     
     </summary>
     
-      <category term="Generative Model" scheme="https://www.yanhong.me/categories/Generative-Model/"/>
+      <category term="Generative Model" scheme="https://www.yanhong.website/categories/Generative-Model/"/>
     
     
-      <category term="overview" scheme="https://www.yanhong.me/tags/overview/"/>
+      <category term="overview" scheme="https://www.yanhong.website/tags/overview/"/>
     
   </entry>
   
   <entry>
     <title>Few-shot Image generation</title>
-    <link href="https://www.yanhong.me/2019/04/04/Few-shot-Image-generation/"/>
-    <id>https://www.yanhong.me/2019/04/04/Few-shot-Image-generation/</id>
+    <link href="https://www.yanhong.website/2019/04/04/Few-shot-Image-generation/"/>
+    <id>https://www.yanhong.website/2019/04/04/Few-shot-Image-generation/</id>
     <published>2019-04-04T05:44:00.000Z</published>
     <updated>2019-04-18T13:32:08.639Z</updated>
     
@@ -984,17 +984,17 @@
     
     </summary>
     
-      <category term="Meta-learning" scheme="https://www.yanhong.me/categories/Meta-learning/"/>
+      <category term="Meta-learning" scheme="https://www.yanhong.website/categories/Meta-learning/"/>
     
     
-      <category term="few-shot learning" scheme="https://www.yanhong.me/tags/few-shot-learning/"/>
+      <category term="few-shot learning" scheme="https://www.yanhong.website/tags/few-shot-learning/"/>
     
   </entry>
   
   <entry>
     <title>Manifold Learning</title>
-    <link href="https://www.yanhong.me/2019/03/18/Manifold-Learning/"/>
-    <id>https://www.yanhong.me/2019/03/18/Manifold-Learning/</id>
+    <link href="https://www.yanhong.website/2019/03/18/Manifold-Learning/"/>
+    <id>https://www.yanhong.website/2019/03/18/Manifold-Learning/</id>
     <published>2019-03-18T08:24:56.000Z</published>
     <updated>2019-04-18T13:05:41.169Z</updated>
     
@@ -1009,17 +1009,17 @@
     
     </summary>
     
-      <category term="Deep learning" scheme="https://www.yanhong.me/categories/Deep-learning/"/>
+      <category term="Deep learning" scheme="https://www.yanhong.website/categories/Deep-learning/"/>
     
     
-      <category term="feature regularization" scheme="https://www.yanhong.me/tags/feature-regularization/"/>
+      <category term="feature regularization" scheme="https://www.yanhong.website/tags/feature-regularization/"/>
     
   </entry>
   
   <entry>
     <title>Semi-MTL Related</title>
-    <link href="https://www.yanhong.me/2019/03/09/Semi-MTL-Related/"/>
-    <id>https://www.yanhong.me/2019/03/09/Semi-MTL-Related/</id>
+    <link href="https://www.yanhong.website/2019/03/09/Semi-MTL-Related/"/>
+    <id>https://www.yanhong.website/2019/03/09/Semi-MTL-Related/</id>
     <published>2019-03-09T06:59:07.000Z</published>
     <updated>2019-03-21T05:35:00.749Z</updated>
     
@@ -1034,17 +1034,17 @@
     
     </summary>
     
-      <category term="Deep learning" scheme="https://www.yanhong.me/categories/Deep-learning/"/>
+      <category term="Deep learning" scheme="https://www.yanhong.website/categories/Deep-learning/"/>
     
     
-      <category term="multitask" scheme="https://www.yanhong.me/tags/multitask/"/>
+      <category term="multitask" scheme="https://www.yanhong.website/tags/multitask/"/>
     
   </entry>
   
   <entry>
     <title>Semi-supervised Heteroneous Multitask Learning Baselines</title>
-    <link href="https://www.yanhong.me/2019/02/28/Semi-Heteroneous-Multitask-Baseline/"/>
-    <id>https://www.yanhong.me/2019/02/28/Semi-Heteroneous-Multitask-Baseline/</id>
+    <link href="https://www.yanhong.website/2019/02/28/Semi-Heteroneous-Multitask-Baseline/"/>
+    <id>https://www.yanhong.website/2019/02/28/Semi-Heteroneous-Multitask-Baseline/</id>
     <published>2019-02-28T07:23:11.000Z</published>
     <updated>2019-04-18T12:41:24.594Z</updated>
     
@@ -1060,17 +1060,17 @@
     
     </summary>
     
-      <category term="Deep learning" scheme="https://www.yanhong.me/categories/Deep-learning/"/>
+      <category term="Deep learning" scheme="https://www.yanhong.website/categories/Deep-learning/"/>
     
     
-      <category term="multitask" scheme="https://www.yanhong.me/tags/multitask/"/>
+      <category term="multitask" scheme="https://www.yanhong.website/tags/multitask/"/>
     
   </entry>
   
   <entry>
     <title>Critical Points in Multitask Learning</title>
-    <link href="https://www.yanhong.me/2019/02/28/Critical-Points-in-Multitask-0/"/>
-    <id>https://www.yanhong.me/2019/02/28/Critical-Points-in-Multitask-0/</id>
+    <link href="https://www.yanhong.website/2019/02/28/Critical-Points-in-Multitask-0/"/>
+    <id>https://www.yanhong.website/2019/02/28/Critical-Points-in-Multitask-0/</id>
     <published>2019-02-28T03:16:26.000Z</published>
     <updated>2019-04-18T12:43:25.498Z</updated>
     
@@ -1085,17 +1085,17 @@
     
     </summary>
     
-      <category term="Deep learning" scheme="https://www.yanhong.me/categories/Deep-learning/"/>
+      <category term="Deep learning" scheme="https://www.yanhong.website/categories/Deep-learning/"/>
     
     
-      <category term="multitask" scheme="https://www.yanhong.me/tags/multitask/"/>
+      <category term="multitask" scheme="https://www.yanhong.website/tags/multitask/"/>
     
   </entry>
   
   <entry>
     <title>Parameters Selection for Pseudo</title>
-    <link href="https://www.yanhong.me/2019/02/27/Parameters-Selection-for-Pseudo/"/>
-    <id>https://www.yanhong.me/2019/02/27/Parameters-Selection-for-Pseudo/</id>
+    <link href="https://www.yanhong.website/2019/02/27/Parameters-Selection-for-Pseudo/"/>
+    <id>https://www.yanhong.website/2019/02/27/Parameters-Selection-for-Pseudo/</id>
     <published>2019-02-27T07:52:24.000Z</published>
     <updated>2019-04-18T12:41:50.655Z</updated>
     
@@ -1110,17 +1110,17 @@
     
     </summary>
     
-      <category term="Deep learning" scheme="https://www.yanhong.me/categories/Deep-learning/"/>
+      <category term="Deep learning" scheme="https://www.yanhong.website/categories/Deep-learning/"/>
     
     
-      <category term="pesudo labels" scheme="https://www.yanhong.me/tags/pesudo-labels/"/>
+      <category term="pesudo labels" scheme="https://www.yanhong.website/tags/pesudo-labels/"/>
     
   </entry>
   
   <entry>
     <title>Cross Stitch Network</title>
-    <link href="https://www.yanhong.me/2019/02/27/Cross-stitch-network/"/>
-    <id>https://www.yanhong.me/2019/02/27/Cross-stitch-network/</id>
+    <link href="https://www.yanhong.website/2019/02/27/Cross-stitch-network/"/>
+    <id>https://www.yanhong.website/2019/02/27/Cross-stitch-network/</id>
     <published>2019-02-27T06:03:23.000Z</published>
     <updated>2019-04-18T12:42:51.710Z</updated>
     
@@ -1135,17 +1135,17 @@
     
     </summary>
     
-      <category term="Deep learning" scheme="https://www.yanhong.me/categories/Deep-learning/"/>
+      <category term="Deep learning" scheme="https://www.yanhong.website/categories/Deep-learning/"/>
     
     
-      <category term="multitask" scheme="https://www.yanhong.me/tags/multitask/"/>
+      <category term="multitask" scheme="https://www.yanhong.website/tags/multitask/"/>
     
   </entry>
   
   <entry>
     <title>Heterogeneous Multitask</title>
-    <link href="https://www.yanhong.me/2019/02/26/Heterogeneous-Multitask/"/>
-    <id>https://www.yanhong.me/2019/02/26/Heterogeneous-Multitask/</id>
+    <link href="https://www.yanhong.website/2019/02/26/Heterogeneous-Multitask/"/>
+    <id>https://www.yanhong.website/2019/02/26/Heterogeneous-Multitask/</id>
     <published>2019-02-26T07:46:30.000Z</published>
     <updated>2019-03-21T05:35:00.748Z</updated>
     
@@ -1160,17 +1160,17 @@
     
     </summary>
     
-      <category term="Deep learning" scheme="https://www.yanhong.me/categories/Deep-learning/"/>
+      <category term="Deep learning" scheme="https://www.yanhong.website/categories/Deep-learning/"/>
     
     
-      <category term="multitask" scheme="https://www.yanhong.me/tags/multitask/"/>
+      <category term="multitask" scheme="https://www.yanhong.website/tags/multitask/"/>
     
   </entry>
   
   <entry>
     <title>Why and How to Use Pseudo</title>
-    <link href="https://www.yanhong.me/2019/02/22/Why-How-Pseudo/"/>
-    <id>https://www.yanhong.me/2019/02/22/Why-How-Pseudo/</id>
+    <link href="https://www.yanhong.website/2019/02/22/Why-How-Pseudo/"/>
+    <id>https://www.yanhong.website/2019/02/22/Why-How-Pseudo/</id>
     <published>2019-02-22T02:53:37.000Z</published>
     <updated>2019-04-18T13:01:51.784Z</updated>
     
@@ -1189,17 +1189,17 @@
     
     </summary>
     
-      <category term="Theory" scheme="https://www.yanhong.me/categories/Theory/"/>
+      <category term="Theory" scheme="https://www.yanhong.website/categories/Theory/"/>
     
     
-      <category term="pesudo labels" scheme="https://www.yanhong.me/tags/pesudo-labels/"/>
+      <category term="pesudo labels" scheme="https://www.yanhong.website/tags/pesudo-labels/"/>
     
   </entry>
   
   <entry>
     <title>Data Density and Distribution</title>
-    <link href="https://www.yanhong.me/2019/02/21/Density-Distribution/"/>
-    <id>https://www.yanhong.me/2019/02/21/Density-Distribution/</id>
+    <link href="https://www.yanhong.website/2019/02/21/Density-Distribution/"/>
+    <id>https://www.yanhong.website/2019/02/21/Density-Distribution/</id>
     <published>2019-02-21T07:46:01.000Z</published>
     <updated>2019-04-18T12:42:33.192Z</updated>
     
@@ -1214,17 +1214,17 @@
     
     </summary>
     
-      <category term="Theory" scheme="https://www.yanhong.me/categories/Theory/"/>
+      <category term="Theory" scheme="https://www.yanhong.website/categories/Theory/"/>
     
     
-      <category term="pesudo labels" scheme="https://www.yanhong.me/tags/pesudo-labels/"/>
+      <category term="pesudo labels" scheme="https://www.yanhong.website/tags/pesudo-labels/"/>
     
   </entry>
   
   <entry>
     <title>Pseudo Purity and Dataset Distribution Distance</title>
-    <link href="https://www.yanhong.me/2019/02/17/Pseudo-purity&amp;distribution-distance/"/>
-    <id>https://www.yanhong.me/2019/02/17/Pseudo-purity&amp;distribution-distance/</id>
+    <link href="https://www.yanhong.website/2019/02/17/Pseudo-purity&amp;distribution-distance/"/>
+    <id>https://www.yanhong.website/2019/02/17/Pseudo-purity&amp;distribution-distance/</id>
     <published>2019-02-17T10:07:47.000Z</published>
     <updated>2019-04-18T12:41:42.176Z</updated>
     
@@ -1239,17 +1239,17 @@
     
     </summary>
     
-      <category term="Theory" scheme="https://www.yanhong.me/categories/Theory/"/>
+      <category term="Theory" scheme="https://www.yanhong.website/categories/Theory/"/>
     
     
-      <category term="pesudo labels" scheme="https://www.yanhong.me/tags/pesudo-labels/"/>
+      <category term="pesudo labels" scheme="https://www.yanhong.website/tags/pesudo-labels/"/>
     
   </entry>
   
   <entry>
     <title>Cross Entropy Loss</title>
-    <link href="https://www.yanhong.me/2019/01/16/Cross_entropy_loss/"/>
-    <id>https://www.yanhong.me/2019/01/16/Cross_entropy_loss/</id>
+    <link href="https://www.yanhong.website/2019/01/16/Cross_entropy_loss/"/>
+    <id>https://www.yanhong.website/2019/01/16/Cross_entropy_loss/</id>
     <published>2019-01-16T02:37:13.000Z</published>
     <updated>2019-04-18T12:42:43.625Z</updated>
     
@@ -1264,17 +1264,17 @@
     
     </summary>
     
-      <category term="Deep learning" scheme="https://www.yanhong.me/categories/Deep-learning/"/>
+      <category term="Deep learning" scheme="https://www.yanhong.website/categories/Deep-learning/"/>
     
     
-      <category term="tensorflow" scheme="https://www.yanhong.me/tags/tensorflow/"/>
+      <category term="tensorflow" scheme="https://www.yanhong.website/tags/tensorflow/"/>
     
   </entry>
   
   <entry>
     <title>MMD and Density</title>
-    <link href="https://www.yanhong.me/2019/01/15/GMM/"/>
-    <id>https://www.yanhong.me/2019/01/15/GMM/</id>
+    <link href="https://www.yanhong.website/2019/01/15/GMM/"/>
+    <id>https://www.yanhong.website/2019/01/15/GMM/</id>
     <published>2019-01-15T02:31:01.000Z</published>
     <updated>2019-04-18T12:33:20.432Z</updated>
     
@@ -1289,17 +1289,17 @@
     
     </summary>
     
-      <category term="Theory" scheme="https://www.yanhong.me/categories/Theory/"/>
+      <category term="Theory" scheme="https://www.yanhong.website/categories/Theory/"/>
     
     
-      <category term="pseudo labels" scheme="https://www.yanhong.me/tags/pseudo-labels/"/>
+      <category term="pseudo labels" scheme="https://www.yanhong.website/tags/pseudo-labels/"/>
     
   </entry>
   
   <entry>
     <title>Numpy Learning</title>
-    <link href="https://www.yanhong.me/2019/01/14/Numpy%20learning/"/>
-    <id>https://www.yanhong.me/2019/01/14/Numpy learning/</id>
+    <link href="https://www.yanhong.website/2019/01/14/Numpy%20learning/"/>
+    <id>https://www.yanhong.website/2019/01/14/Numpy learning/</id>
     <published>2019-01-14T14:25:55.000Z</published>
     <updated>2019-06-19T01:17:48.130Z</updated>
     
@@ -1317,10 +1317,10 @@
     
     </summary>
     
-      <category term="Codes" scheme="https://www.yanhong.me/categories/Codes/"/>
+      <category term="Codes" scheme="https://www.yanhong.website/categories/Codes/"/>
     
     
-      <category term="numpy" scheme="https://www.yanhong.me/tags/numpy/"/>
+      <category term="numpy" scheme="https://www.yanhong.website/tags/numpy/"/>
     
   </entry>
   
