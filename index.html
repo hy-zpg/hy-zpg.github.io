@@ -422,9 +422,28 @@
             <h3 id="Few-shot-Image-Generation-with-Elastic-Weight-Consolidation"><a href="#Few-shot-Image-Generation-with-Elastic-Weight-Consolidation" class="headerlink" title="Few-shot Image Generation with Elastic Weight Consolidation"></a>Few-shot Image Generation with Elastic Weight Consolidation</h3><ul>
 <li><a href="https://proceedings.neurips.cc/paper/2020/file/b6d767d2f8ed5d21a44b0e5886680cb9-Paper.pdf" target="_blank" rel="noopener">paper</a></li>
 <li>core idea: preserving the diversity of source domain, adapting the information of source domain to the target domain with a few sampels from target domain.</li>
-<li>setting: big domain without considering the category of source domain and target domain.</li>
-<li>storyline: 70,000 images for just a specific domain (aligned faces) [16] or 1.3M images across different classes -&gt; in the artistic domain, it is at best cumbersome, and at times prohibitive, to hire artists to make thousands of creations -&gt; our goal is to generalize from a few, new examples.  <font color="red">our setting need much data belonging to same domain such as flowers, animal faces, then using a few samples from different category like funit regarding category as domain</font></li>
+<li>storyline:<ol>
+<li>70,000 images for just a specific domain (aligned faces) [16] or 1.3M images across different classes -&gt; in the artistic domain, it is at best cumbersome, and at times prohibitive, to hire artists to make thousands of creations -&gt; our goal is to generalize from a few, new examples.  <font color="red">our setting need much data belonging to same domain such as flowers, animal faces, then using a few samples from different category like funit regarding category as domain</font>.</li>
+<li>training an algorithm to generate more data of a target domain, given only a few examples. An underlying assumption with this setup is that the source and target domains share some latent factors, with some differences related to their distinct difference in appearance. <font color="red">finding shared some latent code, how near or how far</font>.</li>
+<li>propose a straightforward and effective adaptation technique, adapting the pretrained model’s weights, without introducing additional parameters. Fixing the architecture implies that tedious manual designs on new parameters are not necessary.</li>
+<li>A key property to note is that weights have different levels of importance; thus, each parameter should not be treated equally in the adaptation, or tuning process.  we consider there will always be an inherent trade-off between preserving information from the source and adapting to the target domain. <font color="red">the number of target examples and the dissimilarity between the source and target domain</font>.</li>
+</ol>
+</li>
+<li>method: </li>
 </ul>
+<ol>
+<li>we do the adaptation with a few examples, some weights in the last layer are more important and should be better preserved than those in other layers.</li>
+<li>we could directly use F as an importance measure for weights and add a regularization loss to penalize the weight change.</li>
+</ol>
+<ul>
+<li>setting: big domain without considering the category of source domain and target domain. real faces vs. emoji faces.</li>
+<li>experiment:</li>
+</ul>
+<ol>
+<li>datasets: real faces (200k) vs. emoji faces (80k), animal faces (10 <em> 5000) vs. portrait paintings (16 </em> 10). landscape photos (5000) vs. pencil landscape drawings(10).</li>
+<li>evaluation metrics: FID(user study) for more taget images (less target images) and LPIPS.</li>
+<li>visualization.</li>
+</ol>
 <h3 id="CharacterGAN-Few-Shot-Keypoint-Character-Animation-and-Reposing"><a href="#CharacterGAN-Few-Shot-Keypoint-Character-Animation-and-Reposing" class="headerlink" title="CharacterGAN: Few-Shot Keypoint Character Animation and Reposing"></a>CharacterGAN: Few-Shot Keypoint Character Animation and Reposing</h3><ul>
 <li><a href="https://arxiv.org/pdf/2102.03141.pdf" target="_blank" rel="noopener">paper</a></li>
 </ul>
