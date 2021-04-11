@@ -307,6 +307,193 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.website/2021/04/10/few-shot-image-generation-methods/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/04/10/few-shot-image-generation-methods/" itemprop="url">Few-shot Image Generation Methods</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-04-10T09:43:48+08:00">
+                2021-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Meta-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Meta-learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Few-shot-Image-Generation-with-Elastic-Weight-Consolidation"><a href="#Few-shot-Image-Generation-with-Elastic-Weight-Consolidation" class="headerlink" title="Few-shot Image Generation with Elastic Weight Consolidation"></a>Few-shot Image Generation with Elastic Weight Consolidation</h3><ul>
+<li><a href="https://proceedings.neurips.cc/paper/2020/file/b6d767d2f8ed5d21a44b0e5886680cb9-Paper.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>core idea: preserving the diversity of source domain, adapting the information of source domain to the target domain with a few sampels from target domain.</li>
+<li>setting: big domain without considering the category of source domain and target domain.</li>
+<li>storyline: 70,000 images for just a specific domain (aligned faces) [16] or 1.3M images across different classes -&gt; in the artistic domain, it is at best cumbersome, and at times prohibitive, to hire artists to make thousands of creations -&gt; our goal is to generalize from a few, new examples.  <font color="red">our setting need much data belonging to same domain such as flowers, animal faces, then using a few samples from different category like funit regarding category as domain</font></li>
+</ul>
+<h3 id="CharacterGAN-Few-Shot-Keypoint-Character-Animation-and-Reposing"><a href="#CharacterGAN-Few-Shot-Keypoint-Character-Animation-and-Reposing" class="headerlink" title="CharacterGAN: Few-Shot Keypoint Character Animation and Reposing"></a>CharacterGAN: Few-Shot Keypoint Character Animation and Reposing</h3><ul>
+<li><a href="https://arxiv.org/pdf/2102.03141.pdf" target="_blank" rel="noopener">paper</a></li>
+</ul>
+<h3 id="FEW-SHOT-ADAPTATION-OF-GENERATIVE-ADVERSARIAL-NETWORKS"><a href="#FEW-SHOT-ADAPTATION-OF-GENERATIVE-ADVERSARIAL-NETWORKS" class="headerlink" title="FEW-SHOT ADAPTATION OF GENERATIVE ADVERSARIAL NETWORKS"></a>FEW-SHOT ADAPTATION OF GENERATIVE ADVERSARIAL NETWORKS</h3><ul>
+<li><a href="https://openreview.net/pdf?id=6R51jA4fOB" target="_blank" rel="noopener">paper</a></li>
+</ul>
+<h3 id="GAN-Memory-with-No-Forgetting"><a href="#GAN-Memory-with-No-Forgetting" class="headerlink" title="GAN Memory with No Forgetting"></a>GAN Memory with No Forgetting</h3><ul>
+<li><a href="https://papers.nips.cc/paper/2020/file/bf201d5407a6509fa536afc4b380577e-Paper.pdf" target="_blank" rel="noopener">paper</a></li>
+</ul>
+<h3 id="On-Leveraging-Pretrained-GANs-for-Generation-with-Limited-Data"><a href="#On-Leveraging-Pretrained-GANs-for-Generation-with-Limited-Data" class="headerlink" title="On Leveraging Pretrained GANs for Generation with Limited Data"></a>On Leveraging Pretrained GANs for Generation with Limited Data</h3><ul>
+<li><a href="http://proceedings.mlr.press/v119/zhao20a/zhao20a.pdf" target="_blank" rel="noopener">paper</a></li>
+</ul>
+<h3 id="Differentiable-Augmentation-for-Data-Efficient-GAN-Training"><a href="#Differentiable-Augmentation-for-Data-Efficient-GAN-Training" class="headerlink" title="Differentiable Augmentation for Data-Efficient GAN Training"></a>Differentiable Augmentation for Data-Efficient GAN Training</h3><ul>
+<li><a href="https://proceedings.neurips.cc//paper/2020/file/55479c55ebd1efd3ff125f1337100388-Paper.pdf" target="_blank" rel="noopener">paper</a></li>
+</ul>
+<h3 id="Training-Generative-Adversarial-Networks-with-Limited-Data"><a href="#Training-Generative-Adversarial-Networks-with-Limited-Data" class="headerlink" title="Training Generative Adversarial Networks with Limited Data"></a>Training Generative Adversarial Networks with Limited Data</h3><ul>
+<li><a href="https://papers.nips.cc/paper/2020/file/8d30aa96e72440759f74bd2306c1fa3d-Paper.pdf" target="_blank" rel="noopener">paper</a></li>
+</ul>
+<h3 id="Image-Generation-From-Small-Datasets-via-Batch-Statistics-Adaptation"><a href="#Image-Generation-From-Small-Datasets-via-Batch-Statistics-Adaptation" class="headerlink" title="Image Generation From Small Datasets via Batch Statistics Adaptation"></a>Image Generation From Small Datasets via Batch Statistics Adaptation</h3><ul>
+<li><a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Noguchi_Image_Generation_From_Small_Datasets_via_Batch_Statistics_Adaptation_ICCV_2019_paper.pdf" target="_blank" rel="noopener">paper</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.website/2020/11/21/Shadow-Generation/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -2109,175 +2296,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.website/2020/06/11/2020CVPR-Paper-Reading/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/06/11/2020CVPR-Paper-Reading/" itemprop="url">2020CVPR Paper Reading</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-11T16:41:06+08:00">
-                2020-06-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Generation/" itemprop="url" rel="index">
-                    <span itemprop="name">Generation</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Normalization"><a href="#Normalization" class="headerlink" title="Normalization"></a>Normalization</h2><ul>
-<li><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Zhu_SEAN_Image_Synthesis_With_Semantic_Region-Adaptive_Normalization_CVPR_2020_paper.pdf" target="_blank" rel="noopener">SEAN: Image Synthesis with Semantic Region-Adaptive Normalization
-</a></li>
-<li><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_Attentive_Normalization_for_Conditional_Image_Generation_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Attentive Normalization for Conditional Image Generation
-</a></li>
-</ul>
-<h2 id="Diversity"><a href="#Diversity" class="headerlink" title="Diversity"></a>Diversity</h2><ul>
-<li>[Diverse Image Generation via Self-Conditioned GANs](<a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Liu_Diverse_Image_Generation_via_Self-Conditioned_GANs_CVPR_2020_paper.pdfs" target="_blank" rel="noopener">http://openaccess.thecvf.com/content_CVPR_2020/papers/Liu_Diverse_Image_Generation_via_Self-Conditioned_GANs_CVPR_2020_paper.pdfs</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2328,7 +2346,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">53</span>
+                  <span class="site-state-item-count">54</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
