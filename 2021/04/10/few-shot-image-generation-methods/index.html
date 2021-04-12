@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
 <meta property="og:description" content="Few-shot Image GenerationFew-shot Image Generation with Elastic Weight Consolidation paper core idea: preserving the diversity of source domain, adapting the information of source domain to the target">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-04-11T13:49:58.972Z">
+<meta property="og:updated_time" content="2021-04-12T01:44:28.145Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Few-shot Image Generation Methods">
 <meta name="twitter:description" content="Few-shot Image GenerationFew-shot Image Generation with Elastic Weight Consolidation paper core idea: preserving the diversity of source domain, adapting the information of source domain to the target">
@@ -436,7 +436,7 @@
 <li>experiment:</li>
 </ul>
 <ol>
-<li>datasets: real faces (200k) vs. emoji faces (80k), animal faces (10 <em> 5000) vs. portrait paintings (16 </em> 10). landscape photos (5000) vs. pencil landscape drawings(10).</li>
+<li>datasets: real faces (200k) vs. emoji faces (80k), animal faces (10 <em> 5000) vs. portrait paintings (16 </em> 10). landscape photos (5000) vs. pencil landscape drawings(10). <font color="red">data size 10-80k</font></li>
 <li>evaluation metrics: FID(user study) for more taget images (less target images) and LPIPS.</li>
 <li>visualization.</li>
 </ol>
@@ -454,16 +454,26 @@
 <li>experiments:</li>
 </ul>
 <ol>
-<li>datasets: LSUN Churches→ Van Gogh paintings(30), FFHQ→Art portraits(5-100), FFHQ→Anime Rem ID(25).  </li>
+<li>datasets: LSUN Churches→ Van Gogh paintings(30), FFHQ→Art portraits(5-100), FFHQ→Anime Rem ID(25).  <font color="red">data size 5-100</font></li>
 <li>metrics: FID, sharpness, and face quality index (FQI).</li>
 </ol>
-<h3 id="Inspiration"><a href="#Inspiration" class="headerlink" title="Inspiration"></a>Inspiration</h3><ul>
-<li>source domain: category information, conditional GAN -&gt; targte domain: category information, presevring diversity information and distinctive feature among different categories. Given a few samples from different category of target domain.</li>
+<h3 id="Augmentation-Interpolative-AutoEncoders-for-Unsupervised-Few-Shot-Image-Generation"><a href="#Augmentation-Interpolative-AutoEncoders-for-Unsupervised-Few-Shot-Image-Generation" class="headerlink" title="Augmentation-Interpolative AutoEncoders for Unsupervised Few-Shot Image Generation"></a>Augmentation-Interpolative AutoEncoders for Unsupervised Few-Shot Image Generation</h3><ul>
+<li><a href="https://arxiv.org/pdf/2011.13026.pdf" target="_blank" rel="noopener">paper</a></li>
 </ul>
+<h3 id="MineGAN-effective-knowledge-transfer-from-GANs-to-target-domains-with-few-images"><a href="#MineGAN-effective-knowledge-transfer-from-GANs-to-target-domains-with-few-images" class="headerlink" title="MineGAN: effective knowledge transfer from GANs to target domains with few images"></a>MineGAN: effective knowledge transfer from GANs to target domains with few images</h3><ul>
+<li><a href="https://arxiv.org/pdf/1912.05270.pdf" target="_blank" rel="noopener">paper</a></li>
+<li>core idea: using a miner network that identifies which part of the generative distribution of each pretrained GAN outputs samples closest to the target domain.</li>
+<li>storyline: high-quality pretrained models -&gt; combining high-quality pretrained models with other models and adjust them to a target distribution is a desirable objective -&gt; knowledge transfer for generative models has received significantly less attention, possibly due to its great difficulty, especially when transferring to target domains with few images -&gt; previous works severely limits the flexibility of the knowledge transfer, mode collapse -&gt; a miner network that transforms a multivariate normal distribution into a distribution on the input space of the pretrained GAN in such a way that the generated images resemble those of the target domain.</li>
+<li>experiment:</li>
+</ul>
+<ol>
+<li>dataset: CelebA→FFHQ children, <font color="blue">data size 100-1000</font> </li>
+<li>evaluation: MV, KMMD, FID</li>
+</ol>
 <h3 id="CharacterGAN-Few-Shot-Keypoint-Character-Animation-and-Reposing"><a href="#CharacterGAN-Few-Shot-Keypoint-Character-Animation-and-Reposing" class="headerlink" title="CharacterGAN: Few-Shot Keypoint Character Animation and Reposing"></a>CharacterGAN: Few-Shot Keypoint Character Animation and Reposing</h3><ul>
 <li><a href="https://arxiv.org/pdf/2102.03141.pdf" target="_blank" rel="noopener">paper</a></li>
 <li>core idea:</li>
-<li>storyline:</li>
+<li>storyline: </li>
 <li></li>
 </ul>
 <h3 id="GAN-Memory-with-No-Forgetting"><a href="#GAN-Memory-with-No-Forgetting" class="headerlink" title="GAN Memory with No Forgetting"></a>GAN Memory with No Forgetting</h3><ul>
@@ -481,7 +491,12 @@
 <h3 id="Image-Generation-From-Small-Datasets-via-Batch-Statistics-Adaptation"><a href="#Image-Generation-From-Small-Datasets-via-Batch-Statistics-Adaptation" class="headerlink" title="Image Generation From Small Datasets via Batch Statistics Adaptation"></a>Image Generation From Small Datasets via Batch Statistics Adaptation</h3><ul>
 <li><a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Noguchi_Image_Generation_From_Small_Datasets_via_Batch_Statistics_Adaptation_ICCV_2019_paper.pdf" target="_blank" rel="noopener">paper</a></li>
 </ul>
-<h2 id="Few-shot-Font-Generation"><a href="#Few-shot-Font-Generation" class="headerlink" title="Few-shot Font Generation"></a>Few-shot Font Generation</h2>
+<h2 id="Inspiration"><a href="#Inspiration" class="headerlink" title="Inspiration"></a>Inspiration</h2><ul>
+<li><font color="red"> source domain: category information, conditional GAN -> targte domain: category information, presevring diversity information and distinctive feature among different categories. Given a few samples from different category of target domain </font> 
+
+</li>
+</ul>
+<h2 id="Few-shot-Font-Generation"><a href="#Few-shot-Font-Generation" class="headerlink" title="Few-shot Font Generation"></a>Few-shot Font Generation</h2><h3 id=""><a href="#" class="headerlink" title=" "></a> </h3>
       
     </div>
     
@@ -674,7 +689,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Few-shot-Image-Generation"><span class="nav-number">1.</span> <span class="nav-text">Few-shot Image Generation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Few-shot-Image-Generation-with-Elastic-Weight-Consolidation"><span class="nav-number">1.1.</span> <span class="nav-text">Few-shot Image Generation with Elastic Weight Consolidation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FEW-SHOT-ADAPTATION-OF-GENERATIVE-ADVERSARIAL-NETWORKS"><span class="nav-number">1.2.</span> <span class="nav-text">FEW-SHOT ADAPTATION OF GENERATIVE ADVERSARIAL NETWORKS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Inspiration"><span class="nav-number">1.3.</span> <span class="nav-text">Inspiration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CharacterGAN-Few-Shot-Keypoint-Character-Animation-and-Reposing"><span class="nav-number">1.4.</span> <span class="nav-text">CharacterGAN: Few-Shot Keypoint Character Animation and Reposing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GAN-Memory-with-No-Forgetting"><span class="nav-number">1.5.</span> <span class="nav-text">GAN Memory with No Forgetting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#On-Leveraging-Pretrained-GANs-for-Generation-with-Limited-Data"><span class="nav-number">1.6.</span> <span class="nav-text">On Leveraging Pretrained GANs for Generation with Limited Data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Differentiable-Augmentation-for-Data-Efficient-GAN-Training"><span class="nav-number">1.7.</span> <span class="nav-text">Differentiable Augmentation for Data-Efficient GAN Training</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Training-Generative-Adversarial-Networks-with-Limited-Data"><span class="nav-number">1.8.</span> <span class="nav-text">Training Generative Adversarial Networks with Limited Data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Image-Generation-From-Small-Datasets-via-Batch-Statistics-Adaptation"><span class="nav-number">1.9.</span> <span class="nav-text">Image Generation From Small Datasets via Batch Statistics Adaptation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Few-shot-Font-Generation"><span class="nav-number">2.</span> <span class="nav-text">Few-shot Font Generation</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Few-shot-Image-Generation"><span class="nav-number">1.</span> <span class="nav-text">Few-shot Image Generation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Few-shot-Image-Generation-with-Elastic-Weight-Consolidation"><span class="nav-number">1.1.</span> <span class="nav-text">Few-shot Image Generation with Elastic Weight Consolidation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FEW-SHOT-ADAPTATION-OF-GENERATIVE-ADVERSARIAL-NETWORKS"><span class="nav-number">1.2.</span> <span class="nav-text">FEW-SHOT ADAPTATION OF GENERATIVE ADVERSARIAL NETWORKS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Augmentation-Interpolative-AutoEncoders-for-Unsupervised-Few-Shot-Image-Generation"><span class="nav-number">1.3.</span> <span class="nav-text">Augmentation-Interpolative AutoEncoders for Unsupervised Few-Shot Image Generation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MineGAN-effective-knowledge-transfer-from-GANs-to-target-domains-with-few-images"><span class="nav-number">1.4.</span> <span class="nav-text">MineGAN: effective knowledge transfer from GANs to target domains with few images</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CharacterGAN-Few-Shot-Keypoint-Character-Animation-and-Reposing"><span class="nav-number">1.5.</span> <span class="nav-text">CharacterGAN: Few-Shot Keypoint Character Animation and Reposing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GAN-Memory-with-No-Forgetting"><span class="nav-number">1.6.</span> <span class="nav-text">GAN Memory with No Forgetting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#On-Leveraging-Pretrained-GANs-for-Generation-with-Limited-Data"><span class="nav-number">1.7.</span> <span class="nav-text">On Leveraging Pretrained GANs for Generation with Limited Data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Differentiable-Augmentation-for-Data-Efficient-GAN-Training"><span class="nav-number">1.8.</span> <span class="nav-text">Differentiable Augmentation for Data-Efficient GAN Training</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Training-Generative-Adversarial-Networks-with-Limited-Data"><span class="nav-number">1.9.</span> <span class="nav-text">Training Generative Adversarial Networks with Limited Data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Image-Generation-From-Small-Datasets-via-Batch-Statistics-Adaptation"><span class="nav-number">1.10.</span> <span class="nav-text">Image Generation From Small Datasets via Batch Statistics Adaptation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Inspiration"><span class="nav-number">2.</span> <span class="nav-text">Inspiration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Few-shot-Font-Generation"><span class="nav-number">3.</span> <span class="nav-text">Few-shot Font Generation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#"><span class="nav-number">3.1.</span> <span class="nav-text"> </span></a></li></ol></li></ol></div>
             
 
           </div>
