@@ -457,6 +457,7 @@
 <li>storyline: high-quality pretrained models -&gt; combining high-quality pretrained models with other models and adjust them to a target distribution is a desirable objective -&gt; knowledge transfer for generative models has received significantly less attention, possibly due to its great difficulty, especially when transferring to target domains with few images -&gt; previous works severely limits the flexibility of the knowledge transfer, mode collapse -&gt; a miner network that transforms a multivariate normal distribution into a distribution on the input space of the pretrained GAN in such a way that the generated images resemble those of the target domain.</li>
 </ul>
 <ul>
+<li>setting: big domain without considering the category of source domain and target domain. human faces vs. children faces.</li>
 <li>experiment:<br><strong> dataset: CelebA→FFHQ children, <font color="blue">data size 100-1000</font> 
 </strong> evaluation: MV, KMMD, FID</li>
 </ul>
@@ -479,6 +480,11 @@
 </ul>
 <h3 id="Image-Generation-From-Small-Datasets-via-Batch-Statistics-Adaptation"><a href="#Image-Generation-From-Small-Datasets-via-Batch-Statistics-Adaptation" class="headerlink" title="Image Generation From Small Datasets via Batch Statistics Adaptation"></a>Image Generation From Small Datasets via Batch Statistics Adaptation</h3><ul>
 <li><a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Noguchi_Image_Generation_From_Small_Datasets_via_Batch_Statistics_Adaptation_ICCV_2019_paper.pdf" target="_blank" rel="noopener">2019 ICCV paper</a></li>
+<li>core idea: Using such prior knowledge, the model can generate images leveraging some common sense that cannot be acquired from a small datase.</li>
+<li>method: we propose a novel method focusing on the pa- rameters for batch statistics, scale and shift, of the hidden layers in the generator. By training only these parameters in a supervised manner, we achieved stable training of the generator, and our method can generate higher quality images compared to previous methods without collapsing, even when the dataset is small (∼<font color="blue">data size 25 ~ 500 </font> ).</li>
+<li>setting: selecting pretrained model SNGAN and BigGAN. All experiments in this paper are not class conditional, but our method can be easily extended to be class-conditional by learning BatchNorm- statistics for each class independently.</li>
+<li>experiment:<br><strong> dataset: FFHQ dataset -&gt; anime face datase, imagenet -&gt; oxford flowers. 
+</strong> metrics: FID, KMMD</li>
 </ul>
 <h2 id="Inspiration"><a href="#Inspiration" class="headerlink" title="Inspiration"></a>Inspiration</h2><ul>
 <li><font color="red"> source domain: category information, conditional GAN -> targte domain: category information, presevring diversity information and distinctive feature among different categories. Given a few samples from different category of target domain </font> 
