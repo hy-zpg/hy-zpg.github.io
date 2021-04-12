@@ -474,14 +474,22 @@
 </ul>
 <h3 id="Differentiable-Augmentation-for-Data-Efficient-GAN-Training"><a href="#Differentiable-Augmentation-for-Data-Efficient-GAN-Training" class="headerlink" title="Differentiable Augmentation for Data-Efficient GAN Training"></a>Differentiable Augmentation for Data-Efficient GAN Training</h3><ul>
 <li><a href="https://proceedings.neurips.cc//paper/2020/file/55479c55ebd1efd3ff125f1337100388-Paper.pdf" target="_blank" rel="noopener">NIPS 2020 paper</a></li>
+<li>method:  improving the data efficiency of GANs by imposing various types of differentiable augmentations on both real and fake samples.</li>
+<li>storyline:<br><strong> The performance of generative adversarial networks (GANs) heavily deteriorates given a limited amount of training data. This is mainly because the discriminator is memorizing the exact training set.
+</strong> it is of critical importance to eliminate the need of immense datasets for GAN training.<br><strong> suggesting that the discriminator is simply memorizing the entire training set. This severe over-fitting problem disrupts the training dynamics and leads to degraded image quality.
+</strong> augmentations (cropping, flipping, scaling, color jittering, and region masking) in real images, the generator would be encouraged to match the distribution of the augmented images.<br><strong> augmentation need to be done in real images and generate images, which breaks the subtle balance between the generator and discriminator, leading to poor convergence as they are optimizing completely different objectives.
+</strong> DiffAugment, which applies the same differentiable augmentation to both real and fake images for both generator and discriminator training. It enables the gradients to be propagated through the augmentation back to the generator, regularizes the discriminator without manipulating the target distribution, and maintains the balance of training dynamics.</li>
+<li>setting: training set  <font color="blue">data size 25% ~ 100% </font> </li>
 </ul>
 <h3 id="Training-Generative-Adversarial-Networks-with-Limited-Data"><a href="#Training-Generative-Adversarial-Networks-with-Limited-Data" class="headerlink" title="Training Generative Adversarial Networks with Limited Data"></a>Training Generative Adversarial Networks with Limited Data</h3><ul>
 <li><a href="https://papers.nips.cc/paper/2020/file/8d30aa96e72440759f74bd2306c1fa3d-Paper.pdf" target="_blank" rel="noopener">NIPS 2020 paper</a></li>
+<li>methods: augmentation strtegies in discriminator.</li>
+<li>setting: training set <font color="blue">data size 1k ~ 200k </font> </li>
 </ul>
 <h3 id="Image-Generation-From-Small-Datasets-via-Batch-Statistics-Adaptation"><a href="#Image-Generation-From-Small-Datasets-via-Batch-Statistics-Adaptation" class="headerlink" title="Image Generation From Small Datasets via Batch Statistics Adaptation"></a>Image Generation From Small Datasets via Batch Statistics Adaptation</h3><ul>
 <li><a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Noguchi_Image_Generation_From_Small_Datasets_via_Batch_Statistics_Adaptation_ICCV_2019_paper.pdf" target="_blank" rel="noopener">2019 ICCV paper</a></li>
 <li>core idea: Using such prior knowledge, the model can generate images leveraging some common sense that cannot be acquired from a small datase.</li>
-<li>method: we propose a novel method focusing on the pa- rameters for batch statistics, scale and shift, of the hidden layers in the generator. By training only these parameters in a supervised manner, we achieved stable training of the generator, and our method can generate higher quality images compared to previous methods without collapsing, even when the dataset is small (∼<font color="blue">data size 25 ~ 500 </font> ).</li>
+<li>method: we propose a novel method focusing on the pa- rameters for batch statistics, scale and shift, of the hidden layers in the generator. By training only these parameters in a supervised manner, we achieved stable training of the generator, and our method can generate higher quality images compared to previous methods without collapsing, even when the dataset is small (<font color="blue">data size 25 ~ 500 </font> ).</li>
 <li>setting: selecting pretrained model SNGAN and BigGAN. All experiments in this paper are not class conditional, but our method can be easily extended to be class-conditional by learning BatchNorm- statistics for each class independently.</li>
 <li>experiment:<br><strong> dataset: FFHQ dataset -&gt; anime face datase, imagenet -&gt; oxford flowers. 
 </strong> metrics: FID, KMMD</li>
