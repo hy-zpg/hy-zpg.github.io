@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
 <meta property="og:description" content="Few-shot Image GenerationFew-shot Image Generation with Elastic Weight Consolidation NIPS 2020 paper  core idea: preserving the diversity of source domain, adapting the information of source domain to">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-04-12T06:59:43.719Z">
+<meta property="og:updated_time" content="2021-04-12T07:43:13.887Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Few-shot Image Generation Methods and Applications">
 <meta name="twitter:description" content="Few-shot Image GenerationFew-shot Image Generation with Elastic Weight Consolidation NIPS 2020 paper  core idea: preserving the diversity of source domain, adapting the information of source domain to">
@@ -430,7 +430,7 @@
 <p>** we do the adaptation with a few examples, some weights in the last layer are more important and should be better preserved than those in other layers.</p>
 <p>** we could directly use Fisher information as an importance measure for weights and add a regularization loss to penalize the weight change.</p>
 </li>
-<li><p>setting: <font color="red">big domain without considering the category of source domain and target domain. real faces vs. emoji faces.</font></p>
+<li><p>setting: <font color="green">big domain without considering the category of source domain and target domain. real faces vs. emoji faces.</font></p>
 </li>
 </ul>
 <ul>
@@ -467,8 +467,10 @@
 <p>** previous methods need large labeled datasets of hundreds of classes, substantial computation at test time, highly domain-specific, generalizing only across very similar classes.</p>
 <p>** We leverage the finding that although the latent spaces of powerful generative models, such as VAEs and GANs, do not generalize to new classes, the representations learned by autoencoders (AEs) generalize extremely well -&gt; Interpolative AutoEncoders -&gt; Augmentation-Interpolative Autoencoder (AugIntAE) achieves simple, robust, highly general, and completely unsupervised few-shot image generation.</p>
 </li>
-<li><p>setting: given  a large, unlabelled collection of images depicting objects from a set of seen classes and  a very small set of images - as few as two - belonging to a novel class, Our goal is to train a network on seen classes and generates images clearly belonging to the novel class. interpolating a pair of unseen images to generate new images belonging to the novel class.</p>
+<li><p>setting: <font color="green">given  a large, unlabelled collection of images depicting objects from a set of seen classes and  a very small set of images - as few as two - belonging to a novel class, Our goal is to train a network on seen classes and generates images clearly belonging to the novel class. interpolating a pair of unseen images to generate new images belonging to the novel class.</font></p>
 </li>
+</ul>
+<ul>
 <li><p>experiments:</p>
 <p>** datasets:MNIST → EMNIST , Omniglot (train → test), CelebA (male → female) , CIFAR-10 → CIFAR-100</p>
 <p>** metrics: FID score and train/test classification error.</p>
@@ -513,8 +515,9 @@
 <p>** augmentation need to be done in real images and generate images, which breaks the subtle balance between the generator and discriminator, leading to poor convergence as they are optimizing completely different objectives.</p>
 <p>** DiffAugment, which applies the same differentiable augmentation to both real and fake images for both generator and discriminator training. It enables the gradients to be propagated through the augmentation back to the generator, regularizes the discriminator without manipulating the target distribution, and maintains the balance of training dynamics.</p>
 </li>
-<li><p>setting: training set  <font color="blue">data size 25% ~ 100% </font> </p>
-</li>
+</ul>
+<ul>
+<li>setting: training set  <font color="blue">data size 25% ~ 100% </font> </li>
 </ul>
 <h3 id="Training-Generative-Adversarial-Networks-with-Limited-Data"><a href="#Training-Generative-Adversarial-Networks-with-Limited-Data" class="headerlink" title="Training Generative Adversarial Networks with Limited Data"></a>Training Generative Adversarial Networks with Limited Data</h3><ul>
 <li><p><a href="https://papers.nips.cc/paper/2020/file/8d30aa96e72440759f74bd2306c1fa3d-Paper.pdf" target="_blank" rel="noopener">NIPS 2020 paper</a></p>
@@ -531,7 +534,9 @@
 </li>
 <li><p>method: we propose a novel method focusing on the pa- rameters for batch statistics, scale and shift, of the hidden layers in the generator. By training only these parameters in a supervised manner, we achieved stable training of the generator, and our method can generate higher quality images compared to previous methods without collapsing, even when the dataset is small (<font color="blue">data size 25 ~ 500 </font> ).</p>
 </li>
-<li><p>setting: selecting pretrained model SNGAN and BigGAN. All experiments in this paper are not class conditional, but our method can be easily extended to be class-conditional by learning BatchNorm statistics for each class independently.</p>
+</ul>
+<ul>
+<li><p>setting: <font color="green">selecting pretrained model SNGAN and BigGAN. All experiments in this paper are not class conditional, but our method can be easily extended to be class-conditional by learning BatchNorm statistics for each class independently.</font></p>
 </li>
 <li><p>experiment:</p>
 <p>** dataset: FFHQ dataset -&gt; anime face datase, imagenet -&gt; oxford flowers. </p>
