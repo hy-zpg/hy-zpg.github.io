@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
 <meta property="og:description" content="Few-shot Image GenerationFew-shot Image Generation with Elastic Weight Consolidation NIPS 2020 paper  core idea: preserving the diversity of source domain, adapting the information of source domain to">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-04-12T06:48:05.361Z">
+<meta property="og:updated_time" content="2021-04-12T06:49:40.162Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Few-shot Image Generation Methods and Applications">
 <meta name="twitter:description" content="Few-shot Image GenerationFew-shot Image Generation with Elastic Weight Consolidation NIPS 2020 paper  core idea: preserving the diversity of source domain, adapting the information of source domain to">
@@ -421,13 +421,14 @@
 <li><p>core idea: preserving the diversity of source domain, adapting the information of source domain to the target domain with a few sampels from target domain with adapting the pretrained model’s weights.</p>
 </li>
 <li><p>storyline:</p>
-<p>** 70,000 images for just a specific domain (aligned faces) [16] or 1.3M images across different classes -&gt; in the artistic domain, it is at best cumbersome, and at times prohibitive, to hire artists to make thousands of creations -&gt; our goal is to generalize from a few, new examples.  <font color="blue">our setting need much data belonging to same domain such as flowers, animal faces, then using a few samples from different category like funit regarding category as domain</font>.</p>
+<p>** 70,000 images for just a specific domain (aligned faces) or 1.3M images across different classes -&gt; in the artistic domain, it is at best cumbersome, and at times prohibitive, to hire artists to make thousands of creations -&gt; our goal is to generalize from a few, new examples.  <font color="blue">our setting need much data belonging to same domain such as flowers, animal faces, then using a few samples from different category like funit regarding category as domain</font>.</p>
 <p>** training an algorithm to generate more data of a target domain, given only a few examples. An underlying assumption with this setup is that the source and target domains share some latent factors, with some differences related to their distinct difference in appearance. <font color="blue">finding shared some latent code, how near or how far</font>.</p>
 <p>** propose a straightforward and effective adaptation technique, adapting the pretrained model’s weights, without introducing additional parameters. Fixing the architecture implies that tedious manual designs on new parameters are not necessary.</p>
 <p>** A key property to note is that weights have different levels of importance; thus, each parameter should not be treated equally in the adaptation, or tuning process.  we consider there will always be an inherent trade-off between preserving information from the source and adapting to the target domain. <font color="blue">the number of target examples and the dissimilarity between the source and target domain</font>.</p>
 </li>
-<li><p>method:<br>** we do the adaptation with a few examples, some weights in the last layer are more important and should be better preserved than those in other layers.</p>
-<p>** we could directly use F as an importance measure for weights and add a regularization loss to penalize the weight change.</p>
+<li><p>method: </p>
+<p>** we do the adaptation with a few examples, some weights in the last layer are more important and should be better preserved than those in other layers.</p>
+<p>** we could directly use Fisher information as an importance measure for weights and add a regularization loss to penalize the weight change.</p>
 </li>
 <li><p>setting: big domain without considering the category of source domain and target domain. real faces vs. emoji faces.</p>
 </li>
@@ -438,7 +439,8 @@
 </li>
 </ul>
 <h3 id="Few-shot-adaptation-of-generative-adversarial-networks"><a href="#Few-shot-adaptation-of-generative-adversarial-networks" class="headerlink" title="Few-shot adaptation of generative adversarial networks"></a>Few-shot adaptation of generative adversarial networks</h3><ul>
-<li><a href="https://openreview.net/pdf?id=6R51jA4fOB" target="_blank" rel="noopener">ICLR 2021 paper</a></li>
+<li><p><a href="https://openreview.net/pdf?id=6R51jA4fOB" target="_blank" rel="noopener">ICLR 2021 paper</a></p>
+</li>
 <li><p>core idea: proposesing a simple and effective method, Few-Shot GAN (FSGAN), for adapting GANs in few-shot settings (less than 100 images) by repurposing component analysis techniques and learns to adapt the singular values of the pre-trained weights while freezing the corresponding singular vectors.</p>
 </li>
 <li><p>storyline:</p>
@@ -454,7 +456,8 @@
 </li>
 </ul>
 <h3 id="Augmentation-Interpolative-AutoEncoders-for-Unsupervised-Few-Shot-Image-Generation"><a href="#Augmentation-Interpolative-AutoEncoders-for-Unsupervised-Few-Shot-Image-Generation" class="headerlink" title="Augmentation-Interpolative AutoEncoders for Unsupervised Few-Shot Image Generation"></a>Augmentation-Interpolative AutoEncoders for Unsupervised Few-Shot Image Generation</h3><ul>
-<li><a href="https://arxiv.org/pdf/2011.13026.pdf" target="_blank" rel="noopener">paper</a></li>
+<li><p><a href="https://arxiv.org/pdf/2011.13026.pdf" target="_blank" rel="noopener">paper</a></p>
+</li>
 <li><p>core idea: autoencoders generalize extremely well to new domains, even when trained on highly constrained data.</p>
 </li>
 <li><p>storyline: </p>
