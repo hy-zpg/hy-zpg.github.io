@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="multitask,">
+  <meta name="keywords" content="Hongyan's Notes, NexT">
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="Several tips for heterogeneous multitask learning core problem - heterogeneity structrues in tasks[age and gender], source[documents and images], feature[generated from model for classification or reg">
-<meta name="keywords" content="multitask">
+<meta name="description" content="Implicit Semantic Data Augmentation for Deep Networks NIPS 2019 PAPER  Generating Diverse Structure for Image Inpainting With Hierarchical VQ-VAE 2021 PAPER  Taming Transformers for High-Resolution Im">
+<meta name="keywords" content="Coding &amp;&amp; Learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Critical Points in Multitask Learning">
-<meta property="og:url" content="https://www.yanhong.website/2019/02/28/Critical-Points-in-Multitask-0/index.html">
+<meta property="og:title" content="Image Generation">
+<meta property="og:url" content="https://www.yanhong.website/2021/04/12/Generation/index.html">
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
-<meta property="og:description" content="Several tips for heterogeneous multitask learning core problem - heterogeneity structrues in tasks[age and gender], source[documents and images], feature[generated from model for classification or reg">
+<meta property="og:description" content="Implicit Semantic Data Augmentation for Deep Networks NIPS 2019 PAPER  Generating Diverse Structure for Image Inpainting With Hierarchical VQ-VAE 2021 PAPER  Taming Transformers for High-Resolution Im">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-18T12:43:25.498Z">
+<meta property="og:updated_time" content="2021-04-16T02:32:39.625Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Critical Points in Multitask Learning">
-<meta name="twitter:description" content="Several tips for heterogeneous multitask learning core problem - heterogeneity structrues in tasks[age and gender], source[documents and images], feature[generated from model for classification or reg">
+<meta name="twitter:title" content="Image Generation">
+<meta name="twitter:description" content="Implicit Semantic Data Augmentation for Deep Networks NIPS 2019 PAPER  Generating Diverse Structure for Image Inpainting With Hierarchical VQ-VAE 2021 PAPER  Taming Transformers for High-Resolution Im">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://www.yanhong.website/2019/02/28/Critical-Points-in-Multitask-0/">
+  <link rel="canonical" href="https://www.yanhong.website/2021/04/12/Generation/">
 
 
 
 
 
-  <title>Critical Points in Multitask Learning | Hongyan's Notes</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Image Generation | Hongyan's Notes</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -307,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.website/2019/02/28/Critical-Points-in-Multitask-0/">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.website/2021/04/12/Generation/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hongyan">
@@ -324,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Critical Points in Multitask Learning</h1>
+          <h1 class="post-title" itemprop="name headline">Image Generation</h1>
         
 
         <div class="post-meta">
@@ -336,8 +336,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-28T11:16:26+08:00">
-                2019-02-28
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-04-12T19:59:19+08:00">
+                2021-04-12
               </time>
             
 
@@ -359,8 +359,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Deep-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">Deep learning</span>
+                  <a href="/categories/Generative-Model/" itemprop="url" rel="index">
+                    <span itemprop="name">Generative Model</span>
                   </a>
                 </span>
 
@@ -415,17 +415,36 @@
       
 
       
-        <h2 id="Several-tips-for-heterogeneous-multitask-learning"><a href="#Several-tips-for-heterogeneous-multitask-learning" class="headerlink" title="Several tips for heterogeneous multitask learning"></a>Several tips for heterogeneous multitask learning</h2><ul>
-<li>core problem - heterogeneity structrues in tasks[age and gender], source[documents and images], feature[generated from model for classification or regression tasks], samples[one labeled with age while another annotated with gender]</li>
+        <h3 id="Implicit-Semantic-Data-Augmentation-for-Deep-Networks"><a href="#Implicit-Semantic-Data-Augmentation-for-Deep-Networks" class="headerlink" title="Implicit Semantic Data Augmentation for Deep Networks"></a>Implicit Semantic Data Augmentation for Deep Networks</h3><ul>
+<li><a href="https://arxiv.org/pdf/1909.12220.pdf" target="_blank" rel="noopener">NIPS 2019 PAPER</a></li>
 </ul>
-<ol>
-<li>network with suitabel initialization and learning rate</li>
-<li>construct feature relationship in network, offering trainable parameters, refer to [cross-stitch network]</li>
-<li>feature selection, sparsity and factorization, which means that the specific branch layers to ontain task-specific fearures in a common feature space.</li>
-</ol>
-<h2 id="Research-directions"><a href="#Research-directions" class="headerlink" title="Research directions"></a>Research directions</h2><ul>
-<li>feature relationship from the level of network.</li>
-<li>feature processing from the level fo feature space, such as selection, sparsity and facorization.</li>
+<h3 id="Generating-Diverse-Structure-for-Image-Inpainting-With-Hierarchical-VQ-VAE"><a href="#Generating-Diverse-Structure-for-Image-Inpainting-With-Hierarchical-VQ-VAE" class="headerlink" title="Generating Diverse Structure for Image Inpainting With Hierarchical VQ-VAE"></a>Generating Diverse Structure for Image Inpainting With Hierarchical VQ-VAE</h3><ul>
+<li><a href="https://arxiv.org/pdf/2103.10022.pdf" target="_blank" rel="noopener">2021 PAPER</a></li>
+</ul>
+<h3 id="Taming-Transformers-for-High-Resolution-Image-Synthesis"><a href="#Taming-Transformers-for-High-Resolution-Image-Synthesis" class="headerlink" title="Taming Transformers for High-Resolution Image Synthesis"></a>Taming Transformers for High-Resolution Image Synthesis</h3><ul>
+<li><p><a href="http://xxx.itp.ac.cn/pdf/2012.09841v1" target="_blank" rel="noopener">CVPR 2021 PAPER</a></p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1711.00937.pdf" target="_blank" rel="noopener">Related paper NIPS 2017: Neural Discrete Representation Learning</a></p>
+<p> ** based on VAE, but different from VAE: the encoder network outputs discrete, rather than continuous, codes; and the prior is learnt rather than static.</p>
+<p> ** the reason of VQ: discrete representations which are potentially a more natural fit for many of the modalities we are interested in. Furthermore, discrete representations are a natural fit for complex reasoning, planning and predictive learning.</p>
+<p> ** learning discrete representation: vector quantization. </p>
+<p> ** methods: testing by removing encoder and using autogressive model pixelCNN to build relation aming the dimension of sampling Z. </p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1906.00446.pdf" target="_blank" rel="noopener">Related paper NIPS 2019: Generating Diverse High-Fidelity Images with VQ-VAE-2</a><br> ** improvement: scaling and enhancing the autoregressive priors used in VQ-VAE to generate synthetic samples of much higher coherence and fidelity than possible before.</p>
+<p> ** using hierarchical VQ-VAE: top latent code to model global information, while bottom latent code conditioned on top latent code to represent local detail.</p>
+</li>
+<li><p>target: demonstrate how combining the effectiveness of the inductive bias of CNNs with the expressivity of transformers enables them to model and thereby synthesize high-resolution images.</p>
+</li>
+<li><p>core idea: use CNNs to learn a contextrich vocabulary of image constituents by a learning a codebook; utilize transformers to efficiently model their composition within high-resolution images.</p>
+</li>
+<li><p>method: using VQGAN to learn a codebook, different from VQ-VAE.</p>
+</li>
+</ul>
+<h3 id="GIQA-Generated-Image-Quality-Assessment"><a href="#GIQA-Generated-Image-Quality-Assessment" class="headerlink" title="GIQA: Generated Image Quality Assessment"></a>GIQA: Generated Image Quality Assessment</h3><ul>
+<li><a href="https://arxiv.org/pdf/2003.08932.pdf" target="_blank" rel="noopener">ECCV 2020 PAPER</a></li>
+</ul>
+<h2 id="Inspiration"><a href="#Inspiration" class="headerlink" title="Inspiration"></a>Inspiration</h2><ul>
+<li><font color="red"> using VQ-VAE or VQ-GAN to achieve few-shot image generation </font> </li>
 </ul>
 
       
@@ -442,12 +461,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/multitask/" rel="tag"># multitask</a>
-          
-        </div>
-      
 
       
       
@@ -457,8 +470,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/27/Parameters-Selection-for-Pseudo/" rel="next" title="Parameters Selection for Pseudo">
-                <i class="fa fa-chevron-left"></i> Parameters Selection for Pseudo
+              <a href="/2021/04/10/few-shot-image-generation-methods/" rel="next" title="Few-shot Image Generation Methods and Applications">
+                <i class="fa fa-chevron-left"></i> Few-shot Image Generation Methods and Applications
               </a>
             
           </div>
@@ -466,10 +479,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/28/Semi-Heteroneous-Multitask-Baseline/" rel="prev" title="Semi-supervised Heteroneous Multitask Learning Baselines">
-                Semi-supervised Heteroneous Multitask Learning Baselines <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -624,7 +633,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Several-tips-for-heterogeneous-multitask-learning"><span class="nav-number">1.</span> <span class="nav-text">Several tips for heterogeneous multitask learning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Research-directions"><span class="nav-number">2.</span> <span class="nav-text">Research directions</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Implicit-Semantic-Data-Augmentation-for-Deep-Networks"><span class="nav-number">1.</span> <span class="nav-text">Implicit Semantic Data Augmentation for Deep Networks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generating-Diverse-Structure-for-Image-Inpainting-With-Hierarchical-VQ-VAE"><span class="nav-number">2.</span> <span class="nav-text">Generating Diverse Structure for Image Inpainting With Hierarchical VQ-VAE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Taming-Transformers-for-High-Resolution-Image-Synthesis"><span class="nav-number">3.</span> <span class="nav-text">Taming Transformers for High-Resolution Image Synthesis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GIQA-Generated-Image-Quality-Assessment"><span class="nav-number">4.</span> <span class="nav-text">GIQA: Generated Image Quality Assessment</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Inspiration"><span class="nav-number"></span> <span class="nav-text">Inspiration</span></a></li></div>
             
 
           </div>

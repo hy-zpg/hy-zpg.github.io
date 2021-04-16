@@ -307,6 +307,197 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.website/2021/04/12/Generation/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/04/12/Generation/" itemprop="url">Image Generation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-04-12T19:59:19+08:00">
+                2021-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Generative-Model/" itemprop="url" rel="index">
+                    <span itemprop="name">Generative Model</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Implicit-Semantic-Data-Augmentation-for-Deep-Networks"><a href="#Implicit-Semantic-Data-Augmentation-for-Deep-Networks" class="headerlink" title="Implicit Semantic Data Augmentation for Deep Networks"></a>Implicit Semantic Data Augmentation for Deep Networks</h3><ul>
+<li><a href="https://arxiv.org/pdf/1909.12220.pdf" target="_blank" rel="noopener">NIPS 2019 PAPER</a></li>
+</ul>
+<h3 id="Generating-Diverse-Structure-for-Image-Inpainting-With-Hierarchical-VQ-VAE"><a href="#Generating-Diverse-Structure-for-Image-Inpainting-With-Hierarchical-VQ-VAE" class="headerlink" title="Generating Diverse Structure for Image Inpainting With Hierarchical VQ-VAE"></a>Generating Diverse Structure for Image Inpainting With Hierarchical VQ-VAE</h3><ul>
+<li><a href="https://arxiv.org/pdf/2103.10022.pdf" target="_blank" rel="noopener">2021 PAPER</a></li>
+</ul>
+<h3 id="Taming-Transformers-for-High-Resolution-Image-Synthesis"><a href="#Taming-Transformers-for-High-Resolution-Image-Synthesis" class="headerlink" title="Taming Transformers for High-Resolution Image Synthesis"></a>Taming Transformers for High-Resolution Image Synthesis</h3><ul>
+<li><p><a href="http://xxx.itp.ac.cn/pdf/2012.09841v1" target="_blank" rel="noopener">CVPR 2021 PAPER</a></p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1711.00937.pdf" target="_blank" rel="noopener">Related paper NIPS 2017: Neural Discrete Representation Learning</a></p>
+<p> ** based on VAE, but different from VAE: the encoder network outputs discrete, rather than continuous, codes; and the prior is learnt rather than static.</p>
+<p> ** the reason of VQ: discrete representations which are potentially a more natural fit for many of the modalities we are interested in. Furthermore, discrete representations are a natural fit for complex reasoning, planning and predictive learning.</p>
+<p> ** learning discrete representation: vector quantization. </p>
+<p> ** methods: testing by removing encoder and using autogressive model pixelCNN to build relation aming the dimension of sampling Z. </p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/1906.00446.pdf" target="_blank" rel="noopener">Related paper NIPS 2019: Generating Diverse High-Fidelity Images with VQ-VAE-2</a><br> ** improvement: scaling and enhancing the autoregressive priors used in VQ-VAE to generate synthetic samples of much higher coherence and fidelity than possible before.</p>
+<p> ** using hierarchical VQ-VAE: top latent code to model global information, while bottom latent code conditioned on top latent code to represent local detail.</p>
+</li>
+<li><p>target: demonstrate how combining the effectiveness of the inductive bias of CNNs with the expressivity of transformers enables them to model and thereby synthesize high-resolution images.</p>
+</li>
+<li><p>core idea: use CNNs to learn a contextrich vocabulary of image constituents by a learning a codebook; utilize transformers to efficiently model their composition within high-resolution images.</p>
+</li>
+<li><p>method: using VQGAN to learn a codebook, different from VQ-VAE.</p>
+</li>
+</ul>
+<h3 id="GIQA-Generated-Image-Quality-Assessment"><a href="#GIQA-Generated-Image-Quality-Assessment" class="headerlink" title="GIQA: Generated Image Quality Assessment"></a>GIQA: Generated Image Quality Assessment</h3><ul>
+<li><a href="https://arxiv.org/pdf/2003.08932.pdf" target="_blank" rel="noopener">ECCV 2020 PAPER</a></li>
+</ul>
+<h2 id="Inspiration"><a href="#Inspiration" class="headerlink" title="Inspiration"></a>Inspiration</h2><ul>
+<li><font color="red"> using VQ-VAE or VQ-GAN to achieve few-shot image generation </font> </li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.website/2021/04/10/few-shot-image-generation-methods/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -2177,248 +2368,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.website/2020/07/01/Translation-Generation/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/07/01/Translation-Generation/" itemprop="url">Few-shot Image Translation/Generation Baselines</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-01T14:35:53+08:00">
-                2020-07-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Baselines/" itemprop="url" rel="index">
-                    <span itemprop="name">Baselines</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="few-shot-translation"><a href="#few-shot-translation" class="headerlink" title="few-shot translation"></a>few-shot translation</h4><h5 id="FUNIT"><a href="#FUNIT" class="headerlink" title="FUNIT"></a>FUNIT</h5><ul>
-<li><a href="https://arxiv.org/pdf/1905.01723.pdf" target="_blank" rel="noopener">Few-Shot Unsupervised Image-to-Image Translation</a></li>
-</ul>
-<h6 id="Main-idea"><a href="#Main-idea" class="headerlink" title="Main idea"></a>Main idea</h6><ul>
-<li>disentangled into appearance code and pose code.</li>
-<li>disadvantage: using seen categories in testing phase, failing to maintain the category information for translated images. </li>
-</ul>
-<h6 id="Datsets"><a href="#Datsets" class="headerlink" title="Datsets"></a>Datsets</h6><ul>
-<li>Animals Faces</li>
-<li>Flowers</li>
-<li>Nabirds</li>
-<li>Food</li>
-</ul>
-<h6 id="Metrcis"><a href="#Metrcis" class="headerlink" title="Metrcis"></a>Metrcis</h6><ul>
-<li>Translation accuracy: the class information of translated images.</li>
-<li>Domain-invariant perceptual distance: feature distance between content images and translated images.</li>
-<li>IS</li>
-<li>mFID</li>
-</ul>
-<h6 id="Baselines"><a href="#Baselines" class="headerlink" title="Baselines"></a>Baselines</h6><ul>
-<li>StarGAN <a href="https://arxiv.org/pdf/1711.09020.pdf" target="_blank" rel="noopener">Stargan: Unified genera- tive adversarial networks for multi-domain image-to-image translation</a></li>
-<li>CycleGAN   <a href="https://arxiv.org/pdf/1703.10593" target="_blank" rel="noopener">Unpaired image-to-image translation using cycle- consistent adversarial networks</a> </li>
-<li>MUNIT <a href="https://arxiv.org/pdf/1804.04732.pdf" target="_blank" rel="noopener">Multimodal unsupervised image-to-image translation</a></li>
-<li>UNIT <a href="https://arxiv.org/pdf/1901.08242v1.pdf" target="_blank" rel="noopener">Unsupervised Image-to-Image Translation with Self-Attention Networks</a></li>
-</ul>
-<h6 id="Ablation-Study"><a href="#Ablation-Study" class="headerlink" title="Ablation Study"></a>Ablation Study</h6><ul>
-<li>loss term</li>
-<li>1/5/15 shot setting</li>
-</ul>
-<h5 id="SEMIT"><a href="#SEMIT" class="headerlink" title="SEMIT"></a>SEMIT</h5><ul>
-<li><a href="https://arxiv.org/pdf/2003.13853.pdf" target="_blank" rel="noopener">Semi-supervised Learning for Few-shot Image-to-Image Translation</a></li>
-</ul>
-<h6 id="Main-idea-1"><a href="#Main-idea-1" class="headerlink" title="Main idea"></a>Main idea</h6><ul>
-<li>disentangled into appearance code and pose code.</li>
-<li>reducing the amount of required labeled data also from the source domain during training, adding unlabeled data.</li>
-<li>Pseudo-Labeling approach that is trained progressively with a soft- labeling scheme to avoid the noise accumulation problem.</li>
-</ul>
-<h6 id="Datsets-1"><a href="#Datsets-1" class="headerlink" title="Datsets"></a>Datsets</h6><ul>
-<li>Animals Faces</li>
-<li>Flowers</li>
-<li>Nabirds</li>
-<li>Food</li>
-</ul>
-<h6 id="Metrcis-1"><a href="#Metrcis-1" class="headerlink" title="Metrcis"></a>Metrcis</h6><ul>
-<li>Translation accuracy: the class information of translated images.</li>
-<li>IS</li>
-<li>mFID</li>
-</ul>
-<h6 id="Baselines-1"><a href="#Baselines-1" class="headerlink" title="Baselines"></a>Baselines</h6><ul>
-<li>StarGAN <a href="https://arxiv.org/pdf/1711.09020.pdf" target="_blank" rel="noopener">Stargan: Unified genera- tive adversarial networks for multi-domain image-to-image translation</a></li>
-<li>CycleGAN   <a href="https://arxiv.org/pdf/1703.10593" target="_blank" rel="noopener">Unpaired image-to-image translation using cycle- consistent adversarial networks</a> </li>
-<li>MUNIT <a href="https://arxiv.org/pdf/1804.04732.pdf" target="_blank" rel="noopener">Multimodal unsupervised image-to-image translation</a></li>
-<li>FUNIT <a href="https://arxiv.org/pdf/1905.01723.pdf" target="_blank" rel="noopener">Few-Shot Unsupervised Image-to-Image Translation</a></li>
-</ul>
-<h6 id="Ablation-Study-1"><a href="#Ablation-Study-1" class="headerlink" title="Ablation Study"></a>Ablation Study</h6><ul>
-<li>removing/maintain component</li>
-</ul>
-<h5 id="TUNIT"><a href="#TUNIT" class="headerlink" title="TUNIT"></a>TUNIT</h5><ul>
-<li><a href="https://arxiv.org/pdf/2006.06500.pdf" target="_blank" rel="noopener">Rethinking the Truly Unsupervised Image-to-Image Translation</a></li>
-</ul>
-<h6 id="Main-idea-2"><a href="#Main-idea-2" class="headerlink" title="Main idea"></a>Main idea</h6><ul>
-<li>disentangled into appearance code and pose code.</li>
-<li>image-to-image translation in a fully unsupervised setting, using unlabeled data.</li>
-<li>setting the number of domains, clustering, using style code to classify the image into corresponding domains.</li>
-</ul>
-<h6 id="Datsets-2"><a href="#Datsets-2" class="headerlink" title="Datsets"></a>Datsets</h6><ul>
-<li>AFHQ</li>
-<li>FFHQ</li>
-<li>LSUN Car </li>
-<li>AnimalFaces-10</li>
-<li>Summer2winter</li>
-</ul>
-<h6 id="Metrcis-2"><a href="#Metrcis-2" class="headerlink" title="Metrcis"></a>Metrcis</h6><ul>
-<li>mFID</li>
-</ul>
-<h6 id="Baselines-2"><a href="#Baselines-2" class="headerlink" title="Baselines"></a>Baselines</h6><ul>
-<li>FUNIT <a href="https://arxiv.org/pdf/1905.01723.pdf" target="_blank" rel="noopener">Few-Shot Unsupervised Image-to-Image Translation</a></li>
-<li>MSGAN <a href="https://arxiv.org/pdf/1903.05628.pdf" target="_blank" rel="noopener">Mode seeking generative adversarial networks for diverse image synthesis</a></li>
-</ul>
-<h6 id="Ablation-Study-2"><a href="#Ablation-Study-2" class="headerlink" title="Ablation Study"></a>Ablation Study</h6><ul>
-<li>without labels, with few labels, vary the ratio of labeled data.</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2469,7 +2418,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">54</span>
+                  <span class="site-state-item-count">55</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

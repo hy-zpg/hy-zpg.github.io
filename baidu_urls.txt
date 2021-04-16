@@ -1,5 +1,5 @@
+https://www.yanhong.website/2021/04/12/Generation/
 https://www.yanhong.website/2021/04/10/few-shot-image-generation-methods/
 https://www.yanhong.website/2020/11/21/Shadow-Generation/
 https://www.yanhong.website/2020/11/20/Detection/
 https://www.yanhong.website/2020/09/28/Disentangle-GAN/
-https://www.yanhong.website/2020/09/25/Re-identification/

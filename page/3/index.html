@@ -307,6 +307,175 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yanhong.website/2019/09/05/Loss-for-VAE-GAN/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongyan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongyan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/05/Loss-for-VAE-GAN/" itemprop="url">Loss for VAE-GAN</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-05T15:17:15+08:00">
+                2019-09-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Generative-Model/" itemprop="url" rel="index">
+                    <span itemprop="name">Generative Model</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="L1-loss-for-image-translation"><a href="#L1-loss-for-image-translation" class="headerlink" title="L1 loss for image translation"></a>L1 loss for image translation</h4><p>(Image-to-Image Translation with Conditional Adversarial Networks)[<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf" target="_blank" rel="noopener">http://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf</a>]</p>
+<p>\begin{aligned}<br>\mathcal{L}_{L<em>1}(G)=\mathbb{E}\</em>{x, y, z}\left[|y-G(x, z)|_{1}\right]<br>\end{aligned}</p>
+<p>L1 term to force low-frequency correctness, L1 alone leads to reason- able but blurry results ($\lamda = 100$) </p>
+<h4 id="Mean-feature-matching-for-image-generation-in-general-setting"><a href="#Mean-feature-matching-for-image-generation-in-general-setting" class="headerlink" title="Mean feature matching for image generation in general setting"></a>Mean feature matching for image generation in general setting</h4><p>(CVAE-GAN: Fine-Grained Image Generation through Asymmetric Training<br>)[<a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Bao_CVAE-GAN_Fine-Grained_Image_ICCV_2017_paper.pdf" target="_blank" rel="noopener">http://openaccess.thecvf.com/content_ICCV_2017/papers/Bao_CVAE-GAN_Fine-Grained_Image_ICCV_2017_paper.pdf</a>]</p>
+<!-- \begin{aligned}
+\mathcal{L}\_{G D}=\frac{1}{2}\left\|\mathbb{E}\_{\boldsymbol{x} \sim P_{r}} f_{D}(\boldsymbol{x})-\mathbb{E}\_{\boldsymbol{z} \sim P_{\boldsymbol{z}}} f_{D}(G(\boldsymbol{z}))\right\|\_{2}^{2}
+\end{aligned} -->
+<p>\begin{equation}<br>\mathcal{L}_{G D}=\frac{1}{2}\left|\mathbb{E}_{\boldsymbol{x} \sim P_{r}} f<em>{D}(\boldsymbol{x})-\mathbb{E}\</em>{\boldsymbol{z} \sim P_{\boldsymbol{z}}} f_{D}(G(\boldsymbol{z}))\right|_{2}^{2}<br>\end{equation}</p>
+<p>to deal with the unstable gradient of G</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.yanhong.website/2019/08/16/Learning-without-Forgetting/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1984,170 +2153,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yanhong.website/2019/05/27/Normalization-for-Input-of-GAN/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongyan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hongyan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/27/Normalization-for-Input-of-GAN/" itemprop="url">Normalization_for_Input_of_GAN</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-27T16:05:16+08:00">
-                2019-05-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/GAN/" itemprop="url" rel="index">
-                    <span itemprop="name">GAN</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Normalization-methods-for-the-input-of-GAN-and-visualization"><a href="#Normalization-methods-for-the-input-of-GAN-and-visualization" class="headerlink" title="Normalization methods for the input of GAN and visualization"></a>Normalization methods for the input of GAN and visualization</h3><h4 id="simple"><a href="#simple" class="headerlink" title="simple"></a>simple</h4><p>input<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def normalization(data):</span><br><span class="line">    data = data - 127.5</span><br><span class="line">    data = data / 127.5</span><br><span class="line">    <span class="built_in">return</span> data</span><br></pre></td></tr></table></figure></p>
-<p>visualization<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fake = G(z)</span><br><span class="line">def unnormalization(data):</span><br><span class="line">    data = data * 127.5</span><br><span class="line">    data = data + 127.5</span><br><span class="line">    <span class="built_in">return</span> data</span><br><span class="line">visual_image = unnormalization(fake)</span><br></pre></td></tr></table></figure></p>
-<h4 id="mean-and-std"><a href="#mean-and-std" class="headerlink" title="mean and std"></a>mean and std</h4><p>input (using the mean and std of training set)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def normalization(self):</span><br><span class="line">        <span class="string">""</span><span class="string">"</span></span><br><span class="line"><span class="string">        Normalizes our data, to have a mean of 0 and sdt of 1</span></span><br><span class="line"><span class="string">        "</span><span class="string">""</span></span><br><span class="line">        self.mean = np.mean(self.x_train)</span><br><span class="line">        self.std = np.std(self.x_train)</span><br><span class="line">        self.x_train = (self.x_train - self.mean) / self.std</span><br><span class="line">        self.x_val = (self.x_val - self.mean) / self.std</span><br><span class="line">        self.x_test = (self.x_test - self.mean) / self.std</span><br></pre></td></tr></table></figure></p>
-<p>visualization(using the mean and std of training set)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def unnormalization(self,fake):</span><br><span class="line">        <span class="string">""</span><span class="string">"</span></span><br><span class="line"><span class="string">        Normalizes our data, to have a mean of 0 and sdt of 1</span></span><br><span class="line"><span class="string">        "</span><span class="string">""</span></span><br><span class="line">        self.mean = np.mean(self.x_train)</span><br><span class="line">        self.std = np.std(self.x_train)</span><br><span class="line">        visual_image = fake*self.std + self.mean</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2198,7 +2203,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">54</span>
+                  <span class="site-state-item-count">55</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
