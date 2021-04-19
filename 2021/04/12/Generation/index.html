@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
 <meta property="og:description" content="Generating Diverse Structure for Image Inpainting With Hierarchical VQ-VAE 2021 PAPER  Taming Transformers for High-Resolution Image Synthesis CVPR 2021 PAPER  Related paper NIPS 2017: Neural Discrete">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-04-19T02:37:38.879Z">
+<meta property="og:updated_time" content="2021-04-19T02:38:49.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Image Generation">
 <meta name="twitter:description" content="Generating Diverse Structure for Image Inpainting With Hierarchical VQ-VAE 2021 PAPER  Taming Transformers for High-Resolution Image Synthesis CVPR 2021 PAPER  Related paper NIPS 2017: Neural Discrete">
@@ -427,7 +427,7 @@
 <p> ** learning discrete representation: vector quantization. </p>
 <p> ** methods: testing by removing encoder and using autogressive model pixelCNN to build relation aming the dimension of sampling Z. </p>
 <p> ** <a href="https://kexue.fm/archives/6760" target="_blank" rel="noopener">blog</a></p>
-<p> <em>* my understanding: discrete representations are more natural fit for many of modalities (langauge is discrete, images can be desscibed by discrete language). VAE has <font color="red"> posterior  collapse </font>  which ignores the learnt latent code, as the powerful decoder, which can generate/reconstruct image with noise generated from <font color="red">reparameterize </font>.  Inspired from pixelCNN with autogressive model by discribe a image with discrete pixel, VQ-VAE face two problems: recursive order designs, speeding up sampling (because sampling in autogressive model is slow). The shortcoming of autogressive model in pixel space is ignoring the relationship among continous pixels. VQ-VAE is designed to dimenstion reduction in latent code space, and then using autogressive model to model discrete code. In detail, using <font color="red">neighbor reconstruction</font> to generate m </em> m matrix to achieve discrete coding, using <font color="red">straight-thought estimator</font> to optimize the function without gradient. </p>
+<p> <em>* my understanding: discrete representations are more natural fit for many of modalities (langauge is discrete, images can be desscibed by discrete language). VAE has <font color="blue"> posterior  collapse </font>  which ignores the learnt latent code, as the powerful decoder, which can generate/reconstruct image with noise generated from <font color="blue">reparameterize </font>.  Inspired from pixelCNN with autogressive model by discribe a image with discrete pixel, VQ-VAE face two problems: recursive order designs, speeding up sampling (because sampling in autogressive model is slow). The shortcoming of autogressive model in pixel space is ignoring the relationship among continous pixels. VQ-VAE is designed to dimenstion reduction in latent code space, and then using autogressive model to model discrete code. In detail, using <font color="blue">neighbor reconstruction</font> to generate m </em> m matrix to achieve discrete coding, using <font color="blue">straight-thought estimator</font> to optimize the function without gradient. </p>
 <p> ** related concepts: AE: x-z-x, using compressed latent code to describe a image, VAE: x - $\tilde{z}$ -&gt; x, enforce the latent code z to obey normal distribution and the sampling new latent code from the normal distribution. VAE: advantage is that ideal VAE can model each training samples without mode collapse, disadvantage is that VAE suffer from posterior collapse which ignores the latent code due to the powerful decoder, which can generate/reconstruct image with the noise introduced from reparamerization.</p>
 <p> ** related concepts: autogressive model, such as pixelCNN using conditional probability distribution to generte image in pixel space. the advantage is the effective probability estimation, the disacvantage is the slow sampling speed.</p>
 </li>
@@ -450,9 +450,12 @@
 </li>
 <li><p>method: using VQGAN to learn a codebook, different from VQ-VAE.</p>
 </li>
-<li><p>difference from VQ-VAE: using transforer to deal with higher resolution image (VQ-VAE:256 <em> 256 images, dimension reduction 32 </em> 32 in discrete codebook space, VQGAN: 1280 <em> 460 images, dimension reduction 16 </em> 16 in discrete codebook space). VQ procedure: using adversarial loss to replace reconstruction loss. autogressive precedure: using transformer  to replace pixelCNN.</p>
+<li><font color="red"> difference from VQ-VAE: using transforer to deal with higher resolution image (VQ-VAE:256 * 256 images, dimension reduction 32 * 32 in discrete codebook space, VQGAN: 1280 * 460 images, dimension reduction 16 * 16 in discrete codebook space). VQ procedure: using adversarial loss to replace reconstruction loss. autogressive precedure: using transformer  to replace pixelCNN.</font>
 </li>
-<li><p>same idea: Using discrete representation can discraite natual modality better (introducing VQ, or other discrete methods). Using autogressive model can conduct effective probability estimation, but which should be implemented in low-dimensiton space rather than large pixel space (introducing autogressive models, such as pixelCNN, transformer). </p>
+<li><font color="red"> same idea: Using discrete representation can discraite natual modality better (introducing VQ, or other discrete methods). Using autogressive model can conduct effective probability estimation, but which should be implemented in low-dimensiton space rather than large pixel space (introducing autogressive models, such as pixelCNN, transformer).</font> 
+
+
+
 </li>
 </ul>
 <h3 id="GIQA-Generated-Image-Quality-Assessment"><a href="#GIQA-Generated-Image-Quality-Assessment" class="headerlink" title="GIQA: Generated Image Quality Assessment"></a>GIQA: Generated Image Quality Assessment</h3><ul>
