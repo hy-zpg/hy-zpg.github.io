@@ -436,7 +436,7 @@
 <p> ** related concepts: autogressive model, such as pixelCNN using conditional probability distribution to generte image in pixel space. the advantage is the effective probability estimation, the disacvantage is the slow sampling speed.</p>
 </li>
 <li><p><a href="https://arxiv.org/pdf/1906.00446.pdf" target="_blank" rel="noopener">Related paper NIPS 2019: Generating Diverse High-Fidelity Images with VQ-VAE-2</a><br> ** improvement: scaling and enhancing the autoregressive priors used in VQ-VAE to generate synthetic samples of much higher coherence and fidelity than possible before.</p>
-<p> ** using hierarchical VQ-VAE: top latent code to model global information, while bottom latent code conditioned on top latent code to represent local detail.</p>
+<p> <em>* using hierarchical VQ-VAE: top latent code (32 </em> 32) to model global information, while bottom latent code (64 * 64) conditioned on top latent code to represent local detail.</p>
 </li>
 <li><p><a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Gidaris_Learning_Representations_by_Predicting_Bags_of_Visual_Words_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Related paper CVPR 2020: Learning Representations by Predicting Bags of Visual Words</a></p>
 <ul>
@@ -453,6 +453,10 @@
 <li><p>core idea: use CNNs to learn a contextrich vocabulary of image constituents by a learning a codebook; utilize transformers to efficiently model their composition within high-resolution images.</p>
 </li>
 <li><p>method: using VQGAN to learn a codebook, different from VQ-VAE.</p>
+</li>
+<li><p>difference from VQ-VAE: using transforer to deal with higher resolution image (VQ-VAE:256 <em> 256 images, dimension reduction 32 </em> 32 in discrete codebook space, VQGAN: 1280 <em> 460 images, dimension reduction 16 </em> 16 in discrete codebook space). VQ procedure: using adversarial loss to replace reconstruction loss. autogressive precedure: using transformer  to replace pixelCNN.</p>
+</li>
+<li><p>same idea: Using discrete representation can discraite natual modality better (introducing VQ, or other discrete methods). Using autogressive model can conduct effective probability estimation, but which should be implemented in low-dimensiton space rather than large pixel space (introducing autogressive models, such as pixelCNN, transformer). </p>
 </li>
 </ul>
 <h3 id="GIQA-Generated-Image-Quality-Assessment"><a href="#GIQA-Generated-Image-Quality-Assessment" class="headerlink" title="GIQA: Generated Image Quality Assessment"></a>GIQA: Generated Image Quality Assessment</h3><ul>
