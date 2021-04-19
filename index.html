@@ -419,10 +419,7 @@
       
         
           
-            <h3 id="Generating-Diverse-Structure-for-Image-Inpainting-With-Hierarchical-VQ-VAE"><a href="#Generating-Diverse-Structure-for-Image-Inpainting-With-Hierarchical-VQ-VAE" class="headerlink" title="Generating Diverse Structure for Image Inpainting With Hierarchical VQ-VAE"></a>Generating Diverse Structure for Image Inpainting With Hierarchical VQ-VAE</h3><ul>
-<li><a href="https://arxiv.org/pdf/2103.10022.pdf" target="_blank" rel="noopener">2021 PAPER</a></li>
-</ul>
-<h3 id="Taming-Transformers-for-High-Resolution-Image-Synthesis"><a href="#Taming-Transformers-for-High-Resolution-Image-Synthesis" class="headerlink" title="Taming Transformers for High-Resolution Image Synthesis"></a>Taming Transformers for High-Resolution Image Synthesis</h3><ul>
+            <h3 id="Taming-Transformers-for-High-Resolution-Image-Synthesis"><a href="#Taming-Transformers-for-High-Resolution-Image-Synthesis" class="headerlink" title="Taming Transformers for High-Resolution Image Synthesis"></a>Taming Transformers for High-Resolution Image Synthesis</h3><ul>
 <li><p><a href="http://xxx.itp.ac.cn/pdf/2012.09841v1" target="_blank" rel="noopener">CVPR 2021 PAPER</a></p>
 </li>
 <li><p><a href="https://arxiv.org/pdf/1711.00937.pdf" target="_blank" rel="noopener">Related paper NIPS 2017: Neural Discrete Representation Learning</a></p>
@@ -462,11 +459,25 @@
 
 </li>
 </ul>
-<h3 id="GIQA-Generated-Image-Quality-Assessment"><a href="#GIQA-Generated-Image-Quality-Assessment" class="headerlink" title="GIQA: Generated Image Quality Assessment"></a>GIQA: Generated Image Quality Assessment</h3><ul>
-<li><a href="https://arxiv.org/pdf/2003.08932.pdf" target="_blank" rel="noopener">ECCV 2020 PAPER</a></li>
+<h3 id="Generating-Diverse-Structure-for-Image-Inpainting-With-Hierarchical-VQ-VAE"><a href="#Generating-Diverse-Structure-for-Image-Inpainting-With-Hierarchical-VQ-VAE" class="headerlink" title="Generating Diverse Structure for Image Inpainting With Hierarchical VQ-VAE"></a>Generating Diverse Structure for Image Inpainting With Hierarchical VQ-VAE</h3><ul>
+<li><p><a href="https://arxiv.org/pdf/2103.10022.pdf" target="_blank" rel="noopener">2021 PAPER</a></p>
+</li>
+<li><p>Application of VQ-VAE(VQ-VAE-2)</p>
+</li>
+<li><p>similar idea to VQ-VAE-2: using hirearchical VQ-VAE to genrate top(tructual) latent code and bottom(texture) latent code. using pixelCNN to generate structural top latent code, which can aviod mode collapse occured in GAN and ensure the diversity of structure.</p>
+</li>
 </ul>
 <h2 id="Inspiration"><a href="#Inspiration" class="headerlink" title="Inspiration"></a>Inspiration</h2><ul>
-<li><font color="red"> using VQ-VAE or VQ-GAN to achieve few-shot image generation </font> </li>
+<li><font color="red"> using idea of VQ-GAN to achieve specific application, such as high-resolution few-shot image generation. </font> 
+</li>
+<li><font color="red"> using idea of VQ-VAE (VQ-VAE-2: hirearchical VQ-vae) or VQ-GAN to achieve fuion-based few-shot image generation, which can also using top latent code to ensure the diversity of structures and using bottom latent code to model local detail. </font> 
+
+
+
+</li>
+</ul>
+<h3 id="GIQA-Generated-Image-Quality-Assessment"><a href="#GIQA-Generated-Image-Quality-Assessment" class="headerlink" title="GIQA: Generated Image Quality Assessment"></a>GIQA: Generated Image Quality Assessment</h3><ul>
+<li><a href="https://arxiv.org/pdf/2003.08932.pdf" target="_blank" rel="noopener">ECCV 2020 PAPER</a></li>
 </ul>
 
           
