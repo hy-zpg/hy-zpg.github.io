@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
 <meta property="og:description" content="Generative Model Conlusion categories: VAE-based, GAN-based, autogressive model based, flow-based.  advantage and disadvantage: vae-based (ad: model each training samples, ideal vae-based model withou">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-04-25T13:11:10.862Z">
+<meta property="og:updated_time" content="2021-04-26T03:15:43.487Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Image Generation">
 <meta name="twitter:description" content="Generative Model Conlusion categories: VAE-based, GAN-based, autogressive model based, flow-based.  advantage and disadvantage: vae-based (ad: model each training samples, ideal vae-based model withou">
@@ -488,30 +488,39 @@
 <h3 id="Using-VQGAN"><a href="#Using-VQGAN" class="headerlink" title="Using VQGAN"></a>Using VQGAN</h3><ul>
 <li><p>background knowledge</p>
 <ul>
-<li>word embedding</li>
+<li>word embedding<ul>
 <li><a href="https://www.zhihu.com/question/32275069" target="_blank" rel="noopener">blog</a></li>
 <li>procedure: creating a group of features for each word, for examples using 1024d vector to represent each indice in codebook, and then conducting distribution representation for the group of features.</li>
 <li>how to learn the word embedding: using neural network with supervision.</li>
 <li>effect: leart the context information among those words, for example the relation among the indices of codebook.</li>
-<li>transformer</li>
+</ul>
+</li>
+<li>transformer<ul>
 <li>sequence2sequence + selfattention</li>
 <li><a href="https://zhuanlan.zhihu.com/p/82391768" target="_blank" rel="noopener">blog1</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/48508221" target="_blank" rel="noopener">blog2</a></li>
 <li><a href="https://www.zhihu.com/search?type=content&amp;q=transformer实现" target="_blank" rel="noopener">blog3</a></li>
 </ul>
 </li>
+</ul>
+</li>
 <li><p>detailed implmentation</p>
 <ul>
-<li>VQ: x(b,w’,h’,c) -&gt; z(b, w, h, c<em>{z}) <font color="red"> lenght = w * h, which need to be inferred from the transformer, representing the numbers of indices of codebook.</font> -&gt; embedding f</em>{z}(1024, n_z), each dimension of c_z is embedded with a 1024d feature -&gt; mini-encoding(b <em> w </em> h, 1024), mini-encoding-indices(b <em> w </em> h, 1) used to search of quantized z in codebook.</li>
-<li><p>understanding of VG: discrete representation, model much training samples in this discrete feature space, each local component (w * h) represents different meaning, combing them to reconstruct different image. The relationship among this component is potential and is to be excavated.</p>
+<li><p>VQ</p>
+<ul>
+<li>implementation：  x(b,w’,h’,c) -&gt; z(b, w, h, c<em>{z}) <font color="red"> lenght = w * h, which need to be inferred from the transformer, representing the numbers of indices of codebook.</font> -&gt; embedding f</em>{z}(1024, n_z), each dimension of c_z is embedded with a 1024d feature -&gt; mini-encoding(b <em> w </em> h, 1024), mini-encoding-indices(b <em> w </em> h, 1) used to search of quantized z in codebook.</li>
+<li>understanding of VG: discrete representation, model much training samples in this discrete feature space, each local component (w * h) represents different meaning, combing them to reconstruct different image. The relationship among this component is potential and is to be excavated.</li>
+</ul>
 </li>
 <li><p>transformer</p>
-</li>
+<ul>
 <li>training phase: indices<em>{x}(b, w * h) is indices of codebook of input x, indices</em>{c}(b, w <em> h) is indices of codebook of condition c, cating (indicese<em>{c}, indices</em>{x}) to obtain indices_{cat}(b, w </em> h <em> 2), using transformer(indices<em>{cat}[b,-1]) to regress the indices</em>{cat}[-1], supervised by the real indices_{cat}(b, w </em> h * 2), in this way, the autogressive model is built.</li>
 <li>tesing phase: giving indices<em>{c} (or indices</em>{c} + part indices<em>{x}) to predict the indices</em>{x} with needed steps.</li>
 <li>understanding of transformer<ul>
 <li>unconditional senario: using same depth image downsample to obtain indices and upsample to obtain reconstruction image, build complex relationship among discrete codebook of input image.</li>
 <li>conditional: using different conditional image to obtain different discrete indices, build complex relationship among discrete codebook of input and discreate codebook of conditional image.</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
