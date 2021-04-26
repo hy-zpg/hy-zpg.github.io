@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Hongyan&#39;s Notes">
 <meta property="og:description" content="Generative Model Conlusion categories: VAE-based, GAN-based, autogressive model based, flow-based.  advantage and disadvantage: vae-based (ad: model each training samples, ideal vae-based model withou">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-04-26T03:15:43.487Z">
+<meta property="og:updated_time" content="2021-04-26T06:58:42.274Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Image Generation">
 <meta name="twitter:description" content="Generative Model Conlusion categories: VAE-based, GAN-based, autogressive model based, flow-based.  advantage and disadvantage: vae-based (ad: model each training samples, ideal vae-based model withou">
@@ -522,6 +522,17 @@
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+</li>
+<li><p>few-shot transforer</p>
+<ul>
+<li><p>transformation-based: given a input image from a category, selecting another image from the same category as conditional image, using VQGAN to learn same codebook of input image and conditional image. In transformer learning, using indices of conditional image as conditional information to learn relationship among those codebook (including input codebook and conditional codebook)</p>
+<ul>
+<li>problem: pairs are not unique, don’t like  input image and its corresponding depth image</li>
+</ul>
+</li>
+<li><p>fusion-based: using the indices of several conditional images as conditional information, using transformer to learn the relationship. </p>
 </li>
 </ul>
 </li>
